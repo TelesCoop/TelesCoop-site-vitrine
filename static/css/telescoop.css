@@ -30,6 +30,17 @@ h2{
   height: 100%;
 }
 
+.client{
+  transition: .4s ease opacity,.4s ease-out height;
+}
+.client.hide {
+  opacity: 0;
+  height: 0;
+}
+.client.show {
+  opacity: 1;
+  height: initial;
+}
 .client img{
   width: 80px;
 }
@@ -48,11 +59,23 @@ h2{
   font-size: 30px;
   position: absolute;
 }
+.client .fa-chevron-right, .client .fa-chevron-left{
+  font-size: 4rem;
+  color: var(--color1);
+  position: absolute;
+  top: 5px;
+}
+.client .fa-chevron-right{
+  left: calc(50% + 120px);
+}
+.client .fa-chevron-left{
+  left: calc(50% - 160px);
+}
 div.client-name{
   width: 100%;
   padding-right: 45px;
   font-size: 1.1rem;
-  font-style: oblique;
+  font-style: normal;
   color: var(--color2);
   text-align: right;
 }
@@ -70,4 +93,19 @@ div.client-name{
 .employee .employee-title{
   font-size: 1.2rem;
   font-style: oblique;
+}
+.solution-holder{
+  transition: width 0.3s ease;
+}
+.box.solution{
+  transition: box-shadow 0.3s ease;
+}
+.box.solution:hover {
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.4), 0 0px 0 1px rgba(10, 10, 10, 0.2);
+}
+.details .solution-details{
+  display: block;
+}
+.solution-details{
+  display: none;
 }

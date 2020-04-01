@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="static/css/bulma.css">
   <link rel="stylesheet" type="text/css" href="static/css/telescoop.css">
   <link rel="stylesheet" href="static/css/all.min.css" crossorigin="anonymous">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body style="background: var(--bgcolor)">
 
@@ -52,13 +52,27 @@
   <div class="section container">
     <h2 class="title is-2">nous développons des solutions sur-mesure</h2>
 
-    <div class="columns is-tablet is-centered">
-      <div class="column is-3-desktop is-4-tablet">
+    <div class="columns is-tablet is-centered" style="flex-wrap: wrap">
+      <div class="column is-3-desktop is-4-tablet solution-holder" style="cursor: pointer"
+           onclick="console.log(this); this.classList.remove('is-3-desktop', 'is-4-tablet'); this.classList.add('is-12', 'details')"
+           onmouseleave="console.log(this); this.classList.add('is-3-desktop', 'is-4-tablet'); this.classList.remove('is-12', 'details')">
         <div class="box solution">
           <div>
             <i class="fas fa-tools"></i>
           </div>
           <h4 class="title is-4">outils internes</h4>
+          <div class="solution-details">
+            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
+            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
+            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
+            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
+            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
+            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
+            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
+            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
+            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
+            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
+          </div>
         </div>
       </div>
 
@@ -119,10 +133,16 @@
       solidarité, écologie, sobriété
     </h2>
 
-    <div class="client">
-      <div style="text-align: center;">
+    <div class="client show">
+      <div style="text-align: center; position: relative">
         <img src="https://www.excellents-excedents.fr/wp-content/themes/e-e2/library/images/logo.png"
              alt="excellent excédents">
+        <div>
+          <i class="fas fa-chevron-right" onclick="nextClient()"></i>
+        </div>
+        <div>
+          <i class="fas fa-chevron-left" onclick="previousClient()"></i>
+        </div>
       </div>
 
       <div class="client-description columns is-centered">
@@ -136,17 +156,18 @@
 
       <div class="">
         <div class="columns is-centered">
-          <div class="client-quote column is-8-desktop is-10-tablet is-12-mobile">
+          <div class="client-quote column is-8-desktop is-10-tablet is-12-mobile" style="font-style: oblique;">
             <div class="quote-left">
               <i class="fas fa-quote-left"></i>
             </div>
             <div class="quote-right">
               <i class="fas fa-quote-right"></i>
             </div>
-            Excellents Excédents est une entreprise qui récupère des invendus de restauration collective, pour finir
-            à bas prix des cantines solidaires comme les Restos du Coeur. La logistique est au coeur du métier, et
-            nous avons développé pour eux une solution sur-mesure qui leur permet de gérer les collectes, le stock
-            et la planifications des distributions.
+            teles.coop a sû être à notre écoute pour développer un logiciel sur mesure. N'ayant pas
+            beaucoup de budget, nous avons développé le logiciel brique par brique de manière agile.
+            Nous avons ainsi gagné beaucoup de temps, alors que nous avions du mal à définir un
+            cahier des charges. Le résultat nous convient parfaitement et le tarif est beaucoup plus
+            compétitif que les autres devis reçus.
 
             <div class="client-name">
               Anne Tison, co-fondatrice de Excellents Excédents
@@ -155,6 +176,49 @@
         </div>
       </div>
     </div>
+
+    <div class="client hide">
+      <div style="text-align: center; position: relative">
+        <img src="https://www.excellents-excedents.fr/wp-content/themes/e-e2/library/images/logo.png"
+             alt="excellent excédents">
+        <div>
+          <i class="fas fa-chevron-right" onclick="nextClient()"></i>
+        </div>
+        <div>
+          <i class="fas fa-chevron-left" onclick="previousClient()"></i>
+        </div>
+      </div>
+
+      <div class="client-description columns is-centered">
+        <div class="column is-8-desktop is-10-tablet is-12-mobile">
+          blaballafljsd
+        </div>
+      </div>
+
+      <div class="">
+        <div class="columns is-centered">
+          <div class="client-quote column is-8-desktop is-10-tablet is-12-mobile" style="font-style: oblique;">
+            <div class="quote-left">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <div class="quote-right">
+              <i class="fas fa-quote-right"></i>
+            </div>
+            f lkjadslk;f jasdl jfkldasj flkajdsfl;kj asdlkfkjf kalsjfkl;ad sjf;lkadsj kldj a;sf
+            f lkjadslk;f jasdl jfkldasj flkajdsfl;kj asdlkfkjf kalsjfkl;ad sjf;lkadsj kldj a;sf
+            f lkjadslk;f jasdl jfkldasj flkajdsfl;kj asdlkfkjf kalsjfkl;ad sjf;lkadsj kldj a;sf
+            f lkjadslk;f jasdl jfkldasj flkajdsfl;kj asdlkfkjf kalsjfkl;ad sjf;lkadsj kldj a;sf
+            f lkjadslk;f jasdl jfkldasj flkajdsfl;kj asdlkfkjf kalsjfkl;ad sjf;lkadsj kldj a;sf
+            <div class="client-name">
+              Anne Tison, co-fondatrice de Excellents Excédents
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
   </div>
 </section>
 
@@ -179,7 +243,7 @@
           Maxime est diplôme de l'Ecole Centrale Paris depuis 2015. Passionné d'informatique, il possède
           6 ans d'expérience en développement web, traitement de données (Machine Learning) et en
           recherche appliquée. Après s'être engagé dans plusieurs associations (Pour un Réveil Écologique,
-          Alternatiba), il a a coeur d'aider les acteurs de la transition écologique.
+          Alternatiba), il a à coeur d'aider les acteurs de la transition écologique.
         </div>
       </div>
     </div>
