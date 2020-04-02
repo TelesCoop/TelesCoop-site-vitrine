@@ -31,7 +31,7 @@ h2{
 }
 
 .client{
-  transition: .4s ease opacity,.4s ease-out height;
+  transition: .4s ease opacity;
 }
 .client.hide {
   opacity: 0;
