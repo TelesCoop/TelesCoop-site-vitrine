@@ -33,17 +33,20 @@ function previousClient() {
   if (currentClient < 0) {
     currentClient = 0;
   }
-  updateShowClients();
+  updateShowClients(true);
 }
-function updateShowClients(){
-  for (var clientIx = 0; clientIx < clients.length; clientIx++) {
-    console.log('client', clients[clientIx], 'show ?', clientIx === currentClient);
+function updateShowClients(reverse){
+  for (var ix = 0; ix < clients.length; ix++) {
+    var clientIx = reverse ? clients.length - 1 - ix : ix;
+    var client = clients[clientIx];
     if (clientIx === currentClient) {
-      clients[clientIx].classList.remove("hide");
-      clients[clientIx].classList.add("show");
+      client.classList.add("show");
+      client.classList.remove("hide");
+      console.log('show', client, reverse);
     } else {
-      clients[clientIx].classList.remove("show");
-      clients[clientIx].classList.add("hide");
+      console.log('hide', client, reverse);
+      client.classList.add("hide");
+      client.classList.remove("show");
     }
   }
 }
