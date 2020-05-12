@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="static/css/all.min.css" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body style="background: var(--bgcolor)">
+<body style="background: var(--bgcolor); width: 100vw;">
 
 <section style="position: relative">
   <div id="particles-js" style="height: 100vh; width: 100vw;">
@@ -48,7 +48,7 @@
   </div>
 </section>
 
-<section id="second-section">
+<section id="second-section" class="has-bg-2">
   <div class="section container">
     <h2 class="title is-2">
       Nous développons des applications web et mobiles <br>
@@ -150,14 +150,13 @@
   </div>
 </section>
 
-<section>
+<section class="has-bg-2">
   <div class="section container">
     <h2 class="title is-2">
-      nous partageons les valeurs de nos clients<br>
-      solidarité, écologie, sobriété
+      Nous partageons les valeurs de nos clients
     </h2>
 
-    <div class="client show">
+    <div class="client hideable show">
       <div style="text-align: center; position: relative">
         <img src="https://www.excellents-excedents.fr/wp-content/themes/e-e2/library/images/logo.png"
              alt="excellent excédents">
@@ -200,7 +199,7 @@
       </div>
     </div>
 
-    <div class="client hide">
+    <div class="client hideable hide">
       <div style="text-align: center; position: relative">
         <img src="/static/img/akomis_3.png"
              alt="Akuo Energy">
@@ -255,9 +254,39 @@
 
 <section>
   <div class="section container">
-    <h2 class="title is-2">une équipe expérimentée et engagée</h2>
+    <h2 class="title is-2">Une équipe expérimentée et engagée</h2>
 
-    <div class="employee" style="text-align: center;">
+    <div class="employee hideable show" style="text-align: center;">
+      <div style="text-align: center; position: relative">
+        <img src="static/img/Maxime%20Coiquil-Bellec.jpg" alt="Maxime Coiquil-Bellec" style="border-radius: 50%;">
+        <div>
+          <i class="fas fa-chevron-right" onclick="nextEmployee()"></i>
+        </div>
+        <div>
+          <i class="fas fa-chevron-left" onclick="previousEmployee()"></i>
+        </div>
+      </div>
+
+      <div class="emphasis">
+        Maxime Coiquil-Bellec
+      </div>
+      <div class="employee-title">
+        ingénieur engagé et développeur polyvalent
+      </div>
+
+      <div class="columns is-centered" style="margin-top: 22px;">
+        <div class="client-quote column is-8-desktop is-10-tablet is-12-mobile" style="text-align: left;">
+          Maxime est diplômé de l'Ecole Centrale Paris depuis 2015. Passionné d'informatique, il possède
+          6 ans d'expérience en développement web, traitement de données (Machine Learning) et en
+          recherche appliquée. Après s'être engagé dans plusieurs associations
+          (<a href="https://pour-un-reveil-ecologique.org/">Pour un Réveil Écologique</a>,
+          <a href="http://alternatiba.eu/">Alternatiba</a>),
+          il a à coeur d'aider les acteurs de la transition écologique.
+        </div>
+      </div>
+    </div>
+
+    <div class="employee hideable hide" style="text-align: center;">
       <div style="text-align: center">
         <img src="static/img/Maxime%20Coiquil-Bellec.jpg" alt="Maxime Coiquil-Bellec" style="border-radius: 50%;">
       </div>
@@ -284,7 +313,7 @@
   </div>
 </section>
 
-<section>
+<section class="has-bg-2">
   <div class="section container">
     <h2 class="title is-2">contactez-nous</h2>
 

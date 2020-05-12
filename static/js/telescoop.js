@@ -1,5 +1,7 @@
 var currentClient = 0;
+var currentEmployee = 0;
 var clients = document.getElementsByClassName("client");
+var employees = document.getElementsByClassName("employee");
 
 // nice scroll to anchors
 // https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
@@ -19,13 +21,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.querySelector(".client .fa-chevron-left").style.display = 'none';
 var rights = document.querySelectorAll(".client .fa-chevron-right");
 rights[rights.length - 1].style.display = 'none';
+
 function nextClient() {
   console.log('### next client', currentClient);
   currentClient += 1;
   if (currentClient >= clients.length) {
     currentClient = clients.length - 1;
   }
-  updateShowClients();
+  updateShowItems(clients, currentClient, false);
 }
 function previousClient() {
   console.log('### prev client', currentClient);
@@ -33,20 +36,38 @@ function previousClient() {
   if (currentClient < 0) {
     currentClient = 0;
   }
-  updateShowClients(true);
+  updateShowItems(clients, currentClient, false);
 }
-function updateShowClients(reverse){
-  for (var ix = 0; ix < clients.length; ix++) {
-    var clientIx = reverse ? clients.length - 1 - ix : ix;
-    var client = clients[clientIx];
-    if (clientIx === currentClient) {
-      client.classList.add("show");
-      client.classList.remove("hide");
-      console.log('show', client, reverse);
+
+function nextEmployee() {
+  console.log('### next client', currentEmployee);
+  currentEmployee += 1;
+  if (currentEmployee >= employees.length) {
+    currentEmployee = employees.length - 1;
+  }
+  updateShowItems(employees, currentEmployee, false);
+}
+function previousEmployee() {
+  console.log('### prev client', currentEmployee);
+  currentEmployee -= 1;
+  if (currentEmployee < 0) {
+    currentEmployee = 0;
+  }
+  updateShowItems(employees, currentEmployee, false);
+}
+
+function updateShowItems(items, currentItem, reverse) {
+  for (var ix = 0; ix < items.length; ix++) {
+    var itemIx = reverse ? items.length - 1 - ix : ix;
+    var item = items[itemIx];
+    if (itemIx === currentItem) {
+      item.classList.add("show");
+      item.classList.remove("hide");
+      console.log('show', item, reverse);
     } else {
-      console.log('hide', client, reverse);
-      client.classList.add("hide");
-      client.classList.remove("show");
+      console.log('hide', item, reverse);
+      item.classList.add("hide");
+      item.classList.remove("show");
     }
   }
 }
