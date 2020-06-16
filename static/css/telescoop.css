@@ -7,6 +7,32 @@
   --bgcolor: var(--color5);
 }
 
+@media (max-width: 1100px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 900px) {
+  .tagline1{ font-size: 1.2em !important}
+  .tagline2{font-size: 1.1em !important}
+  .title.is-2{font-size: 2rem}
+}
+
+@media (max-width: 750px) {
+  .tagline1{ font-size: 1em !important}
+  .tagline2{font-size: 0.9em !important}
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+.tagline1{ font-size: 1.4em}
+.tagline2{font-size: 1.3em}
+
 .title.is-2 {
   color: var(--color1) !important;
 }
