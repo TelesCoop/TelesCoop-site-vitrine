@@ -1,1 +1,1 @@
-ssh interfas "cd telescoop && eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa_telescoop &&  git pull &&"
+ssh interfas "cd telescoop && /root/.ssh/id_rsa_telescoop && git pull)"
