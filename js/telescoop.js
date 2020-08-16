@@ -5,7 +5,7 @@ var employees = document.getElementsByClassName("employee");
 
 // nice scroll to anchors
 // https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
     anchor.addEventListener('click', function (e) {
     e.preventDefault();
 
@@ -21,6 +21,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.querySelector(".client .fa-chevron-left").style.display = 'none';
 var rights = document.querySelectorAll(".client .fa-chevron-right");
 rights[rights.length - 1].style.display = 'none';
+// hide all clients but fort one
+console.log('hide clients', clients);
+for (var i = 1; i < clients.length; i++) {
+  clients[i].classList.add('hide');
+}
 
 function nextClient() {
   console.log('### next client', currentClient);
