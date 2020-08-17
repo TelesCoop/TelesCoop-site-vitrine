@@ -1,0 +1,23 @@
+{
+  "name": "telescoop",
+  "version": "1.0.0",
+  "description": "## Deploy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxbellec/telescoop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxbellec/telescoop/issues"
+  },
+  "homepage": "https://github.com/maxbellec/telescoop#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
