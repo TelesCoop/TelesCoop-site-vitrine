@@ -1,11 +1,81 @@
+---
+headline1: Nous développons des applications web et mobiles
+headline2: pour que vous ayez plus d'impact
+app_types1:
+- text: outils internes
+  icon: tools
+- text: site internet grand public
+  icon: desktop
+- text: visualisation de données
+  icon: chart-bar
+app_types2:
+- text: carte interactive
+  icon: map-marked-alt
+- text: e-commerce
+  icon: search-dollar
+- text: autre outil sur-mesure
+  icon: magic
+clients:
+- image_src: https://www.excellents-excedents.fr/wp-content/themes/e-e2/library/images/logo.png
+  image_alt: Excellents Excédents
+  description: Excellents Excédents est une entreprise de l'Economie Sociale et Solidaire qui valorise les excédents
+    de la restauration collective, pour fournir à bas prix des repas de qualité et équilibrés aux acteurs
+    de la solidarité alimentaire (associations, cantines solidaires).
+    La logistique est au cœur de son métier, et nous avons développé pour eux une solution sur-mesure qui
+    leur permet de gérer les collectes, le stock et la planification des distributions.
+  quote_text: teles.coop a su être à notre écoute pour développer un logiciel sur mesure. Nous avons développé le
+    logiciel brique par brique de manière agile, en même temps que nous formalisions les besoins
+    fonctionnels; cela nous a permis de gagner beaucoup de temps. Le résultat est un excellent rapport
+    qualité / coût.
+  quote_author: Anne Tison, co-fondatrice de Excellents Excédents
+- image_src: img/anthakarana.png
+  image_alt: Anthakarana
+  description: Anthakarana est une agence de production artistique et musicale créée par la chanteuse ZAZ.
+    Anthakarana est une entreprise qui met l’humain au cœur de ses préoccupations et
+    intègre dans chacune de ses missions une démarche RSE.
+    Dans le cadre de la démarche de bilan
+    carbone de ses tournées artistiques, Anthakarana souhaitait disposer d'une solution pour
+    sensibiliser le public à l'impact environnemental de ses déplacements. Nous avons développé une
+    borne carbone qui permet en quelques clics sur un écran tactile d'estimer
+    les émissions de Gaz à Effet de Serre du déplacement pour aller au concert.
+  quote_text: Nous avions besoin d'une solution efficace avec un budget maîtrisé. L'interface utilisateur
+    étant importante pour ce projet, nous avons choisi de faire un développement sur-mesure.
+    Teles.coop a pu développer en quelques jours le projet, et nous sommes très heureux du
+    résultat, notamment de l'ergonomie. La borne carbone a aujourd'hui été utilisée avec succès
+    par des milliers de personnes lors de la tournée, ce qui nous a permis de préciser les modes
+    de déplacements et les impacts associés de l'ensemble des spectateurs. Merci Teles.coop !
+  quote_author: Olivier Malignaud, Directeur général d'Anthakarana Group
+# TODO Akuo à valider
+# - image_src: img/akomis_3.png
+#  image_alt: Akuo Energy
+#  description: Akuo Energy est une entreprise française qui développe des énergies renouvelables, sur
+#    toutes la chaîne : dimensionnement, installation, exploitation.
+#    Akuo disposait d'une solution de simulation de la centrale de production, mais elle
+#    était un peu lourde et souffrait de quelques bugs. Nous avons construit ensemble
+#    une nouvelle solution élégante et efficace.
+#  quote_text: Nous voulions développer rapidement une solution dont le cahier des charges était déjà
+#    prêt dans les grandes lignes. teles.coop a parfaitement répondu à nos attentes en
+#    développant ce que nous avions en tête. Avec nos rendez-vous quotidien, nous pouvions
+#    suivre le progrès, nous assurer d'être toujours en phase et corriger au fur et à mesure
+#    ce qui n'allait pas.
+#  quote_author: Olivier Malignaud, Directeur général d'Anthakarana Group
+employees:
+- img_src: img/Maxime%20Coiquil-Bellec.jpg
+  name: Maxime Coiquil-Bellec
+  title: ingénieur engagé et développeur polyvalent
+  description: Maxime est diplômé de l'Ecole Centrale Paris depuis 2015. Passionné d'informatique, il possède
+    6 ans d'expérience en développement web, traitement de données (Machine Learning) et en
+    recherche appliquée. Après s'être engagé dans plusieurs associations
+    (Pour un Réveil Écologique, Alternatiba), il a à cœur d'aider les acteurs de la transition écologique.
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>teles.coop</title>
-  <link rel="stylesheet" type="text/css" href="static/css/bulma.css">
-  <link rel="stylesheet" type="text/css" href="static/css/telescoop.css">
-  <link rel="stylesheet" href="static/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/bulma.css">
+  <link rel="stylesheet" type="text/css" href="css/telescoop.css">
+  <link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body style="background: var(--bgcolor); width: 100vw;">
@@ -51,80 +121,34 @@
 <section id="second-section" class="has-bg-2">
   <div class="section container">
     <h2 class="title is-2">
-      Nous développons des applications web et mobiles <br>
-      pour que vous ayez plus d'impact
+      {{ headline1 }} <br>
+      {{ headline2 }}
     </h2>
 
     <div class="columns is-tablet is-centered" style="flex-wrap: wrap">
-      <div class="column is-3-desktop is-4-tablet solution-holder" style="cursor: initial"
-           onclick="console.log(this); return false; this.classList.remove('is-3-desktop', 'is-4-tablet'); this.classList.add('is-12', 'details')"
-           onmouseleave="console.log(this); this.classList.add('is-3-desktop', 'is-4-tablet'); this.classList.remove('is-12', 'details')">
-        <div class="box solution">
-          <div>
-            <i class="fas fa-tools"></i>
-          </div>
-          <h4 class="title is-4">outils internes</h4>
-          <div class="solution-details">
-            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
-            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
-            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
-            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
-            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
-            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
-            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
-            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
-            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
-            safjl ksdjf kfdjlkad sjfkldsj fkalsdjf lkdsjf klsdjf lkadsf jklasdj fklasdjf kladsjf lksdaj fkladsjf
+      {% for app_type in app_types1 %}
+        <div class="column is-3-desktop is-4-tablet">
+          <div class="box solution">
+            <div>
+              <i class="fas fa-{{app_type.icon}}"></i>
+            </div>
+            <h4 class="title is-4">{{app_type.text}}</h4>
           </div>
         </div>
-      </div>
-
-      <div class="column is-3-desktop is-4-tablet">
-        <div class="box solution">
-          <div>
-            <i class="fas fa-desktop"></i>
-          </div>
-          <h4 class="title is-4">site internet grand public</h4>
-        </div>
-      </div>
-
-      <div class="column is-3-desktop is-4-tablet">
-        <div class="box solution">
-          <div>
-            <i class="fas fa-chart-bar"></i>
-          </div>
-          <h4 class="title is-4">visualisation de données</h4>
-        </div>
-      </div>
+      {% endfor %}
     </div>
 
-    <div class="columns is-tablet is-centered">
-      <div class="column is-3-desktop is-4-tablet">
-        <div class="box solution">
-          <div>
-            <i class="fas fa-map-marked-alt"></i>
+    <div class="columns is-tablet is-centered" style="flex-wrap: wrap">
+      {% for app_type in app_types2 %}
+        <div class="column is-3-desktop is-4-tablet">
+          <div class="box solution">
+            <div>
+              <i class="fas fa-{{app_type.icon}}"></i>
+            </div>
+            <h4 class="title is-4">{{app_type.text}}</h4>
           </div>
-          <h4 class="title is-4">carte interactive</h4>
         </div>
-      </div>
-
-      <div class="column is-3-desktop is-4-tablet">
-        <div class="box solution">
-          <div>
-            <i class="fas fa-search-dollar"></i>
-          </div>
-          <h4 class="title is-4">e-commerce</h4>
-        </div>
-      </div>
-
-      <div class="column is-3-desktop is-4-tablet">
-        <div class="box solution">
-          <div>
-            <i class="fas fa-magic"></i>
-          </div>
-          <h4 class="title is-4">autre outil sur-mesure</h4>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -172,149 +196,45 @@
       Nos clients sont plus efficaces dans leur métier
     </h2>
 
-    <div class="client hideable show">
-      <div style="text-align: center; position: relative">
-        <img src="https://www.excellents-excedents.fr/wp-content/themes/e-e2/library/images/logo.png"
-             alt="excellent excédents">
-        <div>
-          <i class="fas fa-chevron-right" onclick="nextClient()"></i>
+    {% for client in clients %}
+      <div class="client hideable">
+        <div style="text-align: center; position: relative">
+          <img src="{{client.image_src}}"
+               alt="{{client.image_alt}}">
+          <div>
+            <i class="fas fa-chevron-right" onclick="nextClient()"></i>
+          </div>
+          <div>
+            <i class="fas fa-chevron-left" onclick="previousClient()"></i>
+          </div>
         </div>
-        <div>
-          <i class="fas fa-chevron-left" onclick="previousClient()"></i>
-        </div>
-      </div>
 
-      <div class="client-description columns is-centered">
-        <div class="column is-8-desktop is-10-tablet is-12-mobile">
-          Excellents Excédents est une entreprise de l'Economie Sociale et Solidaire qui valorise les excédents
-          de la restauration collective, pour fournir à bas prix des repas de qualité et équilibrés aux acteurs
-          de la solidarité alimentaire (associations, cantines solidaires).
-          La logistique est au cœur de son métier, et nous avons développé pour eux une solution sur-mesure qui
-          leur permet de gérer les collectes, le stock et la planification des distributions.
+        <div class="client-description columns is-centered">
+          <div class="column is-8-desktop is-10-tablet is-12-mobile">
+            {{client.description}}
+          </div>
         </div>
-      </div>
 
-      <div class="">
-        <div class="columns is-centered">
-          <div class="client-quote column is-8-desktop is-10-tablet is-12-mobile" style="font-style: oblique;">
-            <div class="quote-left">
-              <i class="fas fa-quote-left"></i>
-            </div>
-            <div class="quote-right">
-              <i class="fas fa-quote-right"></i>
-            </div>
-            teles.coop a su être à notre écoute pour développer un logiciel sur mesure. Nous avons développé le
-            logiciel brique par brique de manière agile, en même temps que nous formalisions les besoins
-            fonctionnels; cela nous a permis de gagner beaucoup de temps. Le résultat est un excellent rapport
-            qualité / coût.
-            <div class="client-name">
-              Anne Tison, co-fondatrice de Excellents Excédents
+        <div class="">
+          <div class="columns is-centered">
+            <div class="client-quote column is-8-desktop is-10-tablet is-12-mobile" style="font-style: oblique;">
+              <div class="quote-left">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <div class="quote-right">
+                <i class="fas fa-quote-right"></i>
+              </div>
+              {{client.quote_text}}
+
+              <div class="client-name">
+                {{client.quote_author}}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    {% endfor %}
 
-<!--    TODO Akuo à valider-->
-<!--    <div class="client hideable hide">-->
-<!--      <div style="text-align: center; position: relative">-->
-<!--        <img src="/static/img/akomis_3.png"-->
-<!--             alt="Akuo Energy">-->
-<!--        <div>-->
-<!--          <i class="fas fa-chevron-right" onclick="nextClient()"></i>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--          <i class="fas fa-chevron-left" onclick="previousClient()"></i>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <div class="client-description columns is-centered">-->
-<!--        <div class="column is-8-desktop is-10-tablet is-12-mobile">-->
-<!--          <p>-->
-<!--            Akuo Energy est une entreprise française qui développe des énergies renouvelables, sur-->
-<!--            toutes la chaîne : dimensionnement, installation, exploitation.-->
-<!--          </p>-->
-<!--          <p>-->
-<!--            Akuo disposait d'une solution de simulation de la centrale de production, mais elle-->
-<!--            était un peu lourde et souffrait de quelques bugs. Nous avons construit ensemble-->
-<!--            une nouvelle solution élégante et efficace.-->
-<!--          </p>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <div class="">-->
-<!--        <div class="columns is-centered">-->
-<!--          <div class="client-quote column is-8-desktop is-10-tablet is-12-mobile" style="font-style: oblique;">-->
-<!--            <div class="quote-left">-->
-<!--              <i class="fas fa-quote-left"></i>-->
-<!--            </div>-->
-<!--            <div class="quote-right">-->
-<!--              <i class="fas fa-quote-right"></i>-->
-<!--            </div>-->
-<!--            Nous voulions développer rapidement une solution dont le cahier des charges était déjà-->
-<!--            prêt dans les grandes lignes. teles.coop a parfaitement répondu à nos attentes en-->
-<!--            développant ce que nous avions en tête. Avec nos rendez-vous quotidien, nous pouvions-->
-<!--            suivre le progrès, nous assurer d'être toujours en phase et corriger au fur et à mesure-->
-<!--            ce qui n'allait pas.-->
-<!--            <div class="client-name">-->
-<!--              Jean-Paul Ochon, directeur technique-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-
-    <div class="client hideable hide">
-      <div style="text-align: center; position: relative">
-        <img src="/static/img/anthakarana.png"
-             alt="Anthakarana">
-        <div>
-          <i class="fas fa-chevron-right" onclick="nextClient()"></i>
-        </div>
-        <div>
-          <i class="fas fa-chevron-left" onclick="previousClient()"></i>
-        </div>
-      </div>
-
-      <div class="client-description columns is-centered">
-        <div class="column is-8-desktop is-10-tablet is-12-mobile">
-          <p>
-            Anthakarana est une agence de production artistique et musicale créée par la chanteuse ZAZ.
-            Anthakarana est une entreprise qui met l’humain au cœur de ses préoccupations et
-            intègre dans chacune de ses missions une démarche RSE.
-          </p>
-          <p>
-            Dans le cadre de la démarche de bilan
-            carbone de ses tournées artistiques, Anthakarana souhaitait disposer d'une solution pour
-            sensibiliser le public à l'impact environnemental de ses déplacements. Nous avons développé une
-            borne carbone qui permet en quelques clics sur un écran tactile d'estimer
-            les émissions de Gaz à Effet de Serre du déplacement pour aller au concert.
-          </p>
-        </div>
-      </div>
-
-      <div class="">
-        <div class="columns is-centered">
-          <div class="client-quote column is-8-desktop is-10-tablet is-12-mobile" style="font-style: oblique;">
-            <div class="quote-left">
-              <i class="fas fa-quote-left"></i>
-            </div>
-            <div class="quote-right">
-              <i class="fas fa-quote-right"></i>
-            </div>
-            Nous avions besoin d'une solution efficace avec un budget maîtrisé. L'interface utilisateur
-            étant importante pour ce projet, nous avons choisi de faire un développement sur-mesure.
-            Teles.coop a pu développer en quelques jours le projet, et nous sommes très heureux du
-            résultat, notamment de l'ergonomie. La borne carbone a aujourd'hui été utilisée avec succès
-            par des milliers de personnes lors de la tournée, ce qui nous a permis de préciser les modes
-            de déplacements et les impacts associés de l'ensemble des spectateurs. Merci Teles.coop !
-            <div class="client-name">
-              Olivier Malignaud, Directeur général d'Anthakarana Group
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -323,59 +243,32 @@
   <div class="section container">
     <h2 class="title is-2">Une équipe expérimentée et engagée</h2>
 
-    <div class="employee hideable show" style="text-align: center;">
-      <div style="text-align: center; position: relative">
-        <img src="static/img/Maxime%20Coiquil-Bellec.jpg" alt="Maxime Coiquil-Bellec" style="border-radius: 50%;">
-        <div>
-          <i class="fas fa-chevron-right" onclick="nextEmployee()" style="display: none"></i>
+    {% for employee in employees %}
+      <div class="employee hideable show" style="text-align: center;">
+        <div style="text-align: center; position: relative">
+          <img src="{{employee.img_src}}" alt="{{employee.name}}" style="border-radius: 50%;">
+          <div>
+            <i class="fas fa-chevron-right" onclick="nextEmployee()" style="display: none"></i>
+          </div>
+          <div>
+            <i class="fas fa-chevron-left" onclick="previousEmployee()" style="display: none"></i>
+          </div>
         </div>
-        <div>
-          <i class="fas fa-chevron-left" onclick="previousEmployee()" style="display: none"></i>
+
+        <div class="emphasis">
+          {{ employee.name }}
         </div>
-      </div>
+        <div class="employee-title">
+          {{ employee.title }}
+        </div>
 
-      <div class="emphasis">
-        Maxime Coiquil-Bellec
-      </div>
-      <div class="employee-title">
-        ingénieur engagé et développeur polyvalent
-      </div>
-
-      <div class="columns is-centered" style="margin-top: 22px;">
-        <div class="client-quote column is-8-desktop is-10-tablet is-12-mobile" style="text-align: left;">
-          Maxime est diplômé de l'Ecole Centrale Paris depuis 2015. Passionné d'informatique, il possède
-          6 ans d'expérience en développement web, traitement de données (Machine Learning) et en
-          recherche appliquée. Après s'être engagé dans plusieurs associations
-          (<a href="https://pour-un-reveil-ecologique.org/">Pour un Réveil Écologique</a>,
-          <a href="http://alternatiba.eu/">Alternatiba</a>),
-          il a à cœur d'aider les acteurs de la transition écologique.
+        <div class="columns is-centered" style="margin-top: 22px;">
+          <div class="client-quote column is-8-desktop is-10-tablet is-12-mobile" style="text-align: left;">
+            {{ employee.description }}
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="employee hideable hide" style="text-align: center;">
-      <div style="text-align: center">
-        <img src="static/img/Maxime%20Coiquil-Bellec.jpg" alt="Maxime Coiquil-Bellec" style="border-radius: 50%;">
-      </div>
-
-      <div class="emphasis">
-        Maxime Coiquil-Bellec
-      </div>
-      <div class="employee-title">
-        ingénieur engagé et développeur polyvalent
-      </div>
-
-      <div class="columns is-centered" style="margin-top: 22px;">
-        <div class="client-quote column is-8-desktop is-10-tablet is-12-mobile" style="text-align: left;">
-          Maxime est diplômé de l'Ecole Centrale Paris depuis 2015. Passionné d'informatique, il possède
-          6 ans d'expérience en développement web, traitement de données (Machine Learning) et en
-          recherche appliquée. Après s'être engagé dans plusieurs associations
-          (<a href="https://pour-un-reveil-ecologique.org/">Pour un Réveil Écologique</a>,
-          <a href="http://alternatiba.eu/">Alternatiba</a>),
-          il a à cœur d'aider les acteurs de la transition écologique.
-        </div>
-      </div>
-    </div>
+    {% endfor %}
 
     <div class="columns is-centered" style="margin-top: 22px;">
       <div class="column is-8-desktop is-10-tablet is-12-mobile" style="text-align: left;">
@@ -416,10 +309,10 @@
   </div>
 </section>
 
-<script type="application/javascript" src="static/js/telescoop.js"></script>
-<script type="application/javascript" src="static/js/particles.js"></script>
+<script type="application/javascript" src="js/telescoop.js"></script>
+<script type="application/javascript" src="js/particles.js"></script>
 <script>
-  particlesJS.load('particles-js', 'static/js/particlesjs-config.json', function() {
+  particlesJS.load('particles-js', 'js/particlesjs-config.json', function() {
     console.log('callback - particles.js config loaded');
   });
 </script>
