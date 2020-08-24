@@ -1,0 +1,11 @@
+{
+    "beautify.language": {
+        "js": {
+            "type": ["javascript", "json"],
+            "filename": [".jshintrc", ".jsbeautifyrc"],
+            "ext": ["js", "json"]
+        },
+        "css": ["css", "scss"],
+        "html": ["htm", "html"]
+    }
+}
