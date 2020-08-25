@@ -1,125 +1,269 @@
----
-headline1: Nous développons des applications web et mobiles
-headline2: pour que vous ayez plus d'impact
-app_types1:
-- text: outils internes
-icon: tools
-- text: site internet grand public
-icon: desktop
-- text: visualisation de données
-icon: chart-bar
-app_types2:
-- text: carte interactive
-icon: map-marked-alt
-- text: e-commerce
-icon: search-dollar
-- text: autre outil sur-mesure
-icon: magic
-clients:
-- image_src: https://www.excellents-excedents.fr/wp-content/themes/e-e2/library/images/logo.png
-image_alt: Excellents Excédents
-description: Excellents Excédents est une entreprise de l'Economie Sociale et Solidaire qui valorise les excédents
-de la restauration collective, pour fournir à bas prix des repas de qualité et équilibrés aux acteurs
-de la solidarité alimentaire (associations, cantines solidaires).
-La logistique est au cœur de son métier, et nous avons développé pour eux une solution sur-mesure qui
-leur permet de gérer les collectes, le stock et la planification des distributions.
-quote_text: teles.coop a su être à notre écoute pour développer un logiciel sur mesure. Nous avons développé le
-logiciel brique par brique de manière agile, en même temps que nous formalisions les besoins
-fonctionnels; cela nous a permis de gagner beaucoup de temps. Le résultat est un excellent rapport
-qualité / coût.
-quote_author: Anne Tison, co-fondatrice de Excellents Excédents
-- image_src: img/anthakarana.png
-image_alt: Anthakarana
-description: Anthakarana est une agence de production artistique et musicale créée par la chanteuse ZAZ.
-Anthakarana est une entreprise qui met l’humain au cœur de ses préoccupations et
-intègre dans chacune de ses missions une démarche RSE.
-Dans le cadre de la démarche de bilan
-carbone de ses tournées artistiques, Anthakarana souhaitait disposer d'une solution pour
-sensibiliser le public à l'impact environnemental de ses déplacements. Nous avons développé une
-borne carbone qui permet en quelques clics sur un écran tactile d'estimer
-les émissions de Gaz à Effet de Serre du déplacement pour aller au concert.
-quote_text: Nous avions besoin d'une solution efficace avec un budget maîtrisé. L'interface utilisateur
-étant importante pour ce projet, nous avons choisi de faire un développement sur-mesure.
-Teles.coop a pu développer en quelques jours le projet, et nous sommes très heureux du
-résultat, notamment de l'ergonomie. La borne carbone a aujourd'hui été utilisée avec succès
-par des milliers de personnes lors de la tournée, ce qui nous a permis de préciser les modes
-de déplacements et les impacts associés de l'ensemble des spectateurs. Merci Teles.coop !
-quote_author: Olivier Malignaud, Directeur général d'Anthakarana Group
-# TODO Akuo à valider
-# - image_src: img/akomis_3.png
-# image_alt: Akuo Energy
-# description: Akuo Energy est une entreprise française qui développe des énergies renouvelables, sur
-# toutes la chaîne : dimensionnement, installation, exploitation.
-# Akuo disposait d'une solution de simulation de la centrale de production, mais elle
-# était un peu lourde et souffrait de quelques bugs. Nous avons construit ensemble
-# une nouvelle solution élégante et efficace.
-# quote_text: Nous voulions développer rapidement une solution dont le cahier des charges était déjà
-# prêt dans les grandes lignes. teles.coop a parfaitement répondu à nos attentes en
-# développant ce que nous avions en tête. Avec nos rendez-vous quotidien, nous pouvions
-# suivre le progrès, nous assurer d'être toujours en phase et corriger au fur et à mesure
-# ce qui n'allait pas.
-# quote_author: Olivier Malignaud, Directeur général d'Anthakarana Group
-employees:
-- img_src: img/Maxime%20Coiquil-Bellec.jpg
-name: Maxime Coiquil-Bellec
-title: ingénieur engagé et développeur polyvalent
-description: Maxime est diplômé de l'Ecole Centrale Paris depuis 2015. Passionné d'informatique, il possède
-6 ans d'expérience en développement web, traitement de données (Machine Learning) et en
-recherche appliquée. Après s'être engagé dans plusieurs associations
-(Pour un Réveil Écologique, Alternatiba), il a à cœur d'aider les acteurs de la transition écologique.
----
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <title>teles.coop</title>
-    <link rel="stylesheet" type="text/css" href="css/bulma.css">
-    <link rel="stylesheet" type="text/css" href="css/telescoop.css">
-    <link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <title>{{metadata.title}}</title>
+    <link rel="stylesheet" type="text/css" href="css/bulma.css" />
+    <link rel="stylesheet" type="text/css" href="css/telescoop.css" />
+    <link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&family=Roboto+Slab:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
-<body>
-    <section class="section">
-        <div class="container">
-            <div class="columns bg-yellow">
-                <div class="column is-half">
-                    <h1 class="title">Découvrez le modèle coopératif</h1>
-                    <h2 class="subtitle">
-                        Le Réseau COOP souhaite être l’accompagnateur de tous les temps des coopératives de la coopération du travail. Cela implique une présence à chacune des étapes, du démarrage au développement en passant par la consolidation.
-                        Le Réseau COOP se veut être l’instance de référence des coopératives pour toute problématique touchant la coopération du travail.
-                    </h2>
+<body class="main-bg">
+    <nav class="navbar is-transparent is-fixed-top">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28" />
+            </a>
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="https://bulma.io/">
+                    Home
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
+                        Docs
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
+                            Overview
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/overview/modifiers/">
+                            Modifiers
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
+                            Columns
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
+                            Layout
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
+                            Form
+                        </a>
+                        <hr class="navbar-divider" />
+                        <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
+                            Elements
+                        </a>
+                        <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
+                            Components
+                        </a>
+                    </div>
                 </div>
-                <div class="column is-half">Auto</div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms">
+                                <span class="icon">
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                                <span>
+                                    Tweet
+                                </span>
+                            </a>
+                        </p>
+                        <p class="control">
+                            <a class="button is-primary" href="https://github.com/jgthms/bulma/releases/download/0.9.0/bulma-0.9.0.zip">
+                                <span class="icon">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span>Download</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="hero-body p-0">
+        <div class="container has-text-left is-fluid p-0">
+            <div class="columns">
+                <div class="column is-half service-container--content bg-yellow">
+                    <h1 class="title">
+                        {{metadata.title}}
+                    </h1>
+                    <p>
+                        {{metadata.subtitle}}
+                    </p>
+                </div>
             </div>
         </div>
     </section>
+    <div class="small-spacer"></div>
+    <section class="hero-body p-0">
+        <div class="container is-fluid">
+            <div class="columns">
+                <div class="column is-half service-container--content">
+                    <div class="header--background-shape background-shape fill-green">
+                        <svg class="sprite">
+                            <use xlink:href="#header-shape-01"></use>
+                        </svg>
+                    </div>
+                    <h2 class="title">Initiez-vous à la coopérative du travail</h2>
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="">
+                                “There are two hard things in computer science: cache
+                                invalidation, naming things, and off-by-one errors.”
+                            </p>
+                            <p class="subtitle">
+                                Jeff Atwood
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-half service-container--content bg-purple">
+                    <h2 class="title has-text-left">Nos valeurs</h2>
+                    <p>
+                        Nous sommes convaincus de la nécessité d'une transition écologique
+                        et sociale, et souhaitons mettre notre énergie au service de ceux
+                        qui y œuvrent. Chacun a une opinion différente sur ce que cette
+                        transition signifie et implique. Les questions que nous nous
+                        posons dans le choix des projets dans lesquels nous voulons nous
+                        investir sont :
+                    </p>
+                    <ul class="list pa-1">
+                        <li class="list-item">
+                            Est-ce que le service répond à un besoin essentiel ?
+                            (alimentation, transport, logement, accès à l'énergie,
+                            pédagogie, communication)
+                        </li>
+                        <li class="list-item">
+                            Est-ce que le service incite à plus de consommation de
+                            ressources non renouvelable ?
+                        </li>
+                        <li class="list-item">
+                            Est-ce un service qui bénéficie à tous, à ceux qui en ont le
+                            plus besoin, ou seulement à une poignée de privilégiés ?
+                        </li>
+                    </ul>
+                    <p>
+                        Aujourd'hui, peu de services répondent parfaitement à tous ces
+                        critères, si vous vous considérez comme un acteur de la transition
+                        écologique et sociale, nous serons heureux de voir ensemble ce que
+                        nous pouvons vous apporter. De notre côté, nous sommes bien sûr
+                        sensibles à l'impact de notre activité. Nous développons des
+                        applications éco-conçues, c'est-à-dire dont l'impact énergétique
+                        est minimisé. Selon les cas, cela veut dire un faible poids de la
+                        page, un code optimisé pour un faible temps de calcul ou une mise
+                        en cache des résultats.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="small-spacer"></div>
+    <section class="hero-body p-0">
+        <div class="container has-text-left is-fluid p-0">
+            <div class="columns">
+                <div class="column is-half service-container--content is-vcentered bg-yellow">
+                    <h2 class="title">
+                        Vous avez un projet responsable ? Intéressé par le milieu
+                        coopératif ?
+                    </h2>
+                    <p>
+                        {{metadata.presentation}}
+                    </p>
+                </div>
+                {{ '/img/workshop.svg' | svgContents("workshop-svg") }}
+            </div>
+        </div>
+    </section>
+    <section class="hero-body p-0">
+        <div class="columns">
+            <div class="column is-half">
+                {% for employee in employees %}
+                <div class="employee hideable show" style="text-align: center;">
+                    <div style="text-align: center; position: relative;">
+                        <img src="{{employee.img_src}}" alt="{{employee.name}}" style="border-radius: 50%;" />
+                        <div>
+                            <i class="fas fa-chevron-right" onclick="nextEmployee()" style="display: none;"></i>
+                        </div>
+                        <div>
+                            <i class="fas fa-chevron-left" onclick="previousEmployee()" style="display: none;"></i>
+                        </div>
+                    </div>
+
+                    <div class="emphasis">
+                        {{ employee.name }}
+                    </div>
+                    <div class="employee-title">
+                        {{ employee.title }}
+                    </div>
+
+                    <div class="columns is-centered" style="margin-top: 22px;">
+                        <div class="client-quote column is-8-desktop is-10-tablet is-12-mobile" style="text-align: left;">
+                            {{ employee.description }}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                    is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+                </p>
+                <p>
+                    <a class="icon" href="https://github.com/jgthms/bulma">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
+{% comment %}
 
 <body style="background: var(--bgcolor); width: 100vw;">
-    <section style="position: relative">
-        <div id="particles-js" style="height: 100vh; width: 100vw;">
-
-        </div>
+    <section style="position: relative;">
         <div style="position: absolute; top: 0; left: 0; width: 100vw;">
-            <div style="text-align: center; position: absolute; left: 0; top: 0; user-select: none; width: 100%">
-                <a href="/" style="font-size: 4em">
-                    <span style="color: var(--color1)">teles</span><span style="color: var(--color2)">.coop</span>
+            <div style="
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            user-select: none;
+            width: 100%;
+          ">
+                <a href="/" style="font-size: 4em;">
+                    <span style="color: var(--color1);">teles</span><span style="color: var(--color2);">.coop</span>
                 </a>
             </div>
 
-            <div style="position: absolute; top: calc(50vh - 50px); width: 100vw; pointer-events: none; user-select: none;">
+            <div style="
+            position: absolute;
+            top: calc(50vh - 50px);
+            width: 100vw;
+            pointer-events: none;
+            user-select: none;
+          ">
                 <h1 class="title" style="text-align: center; color: var(--color1);">
                     <span class="tagline1">
-                        <span style="color: var(--color2)">
+                        <span style="color: var(--color2);">
                             vous
                         </span>
                         préparez un futur plus durable,
                     </span>
-                    <br>
+                    <br />
                     <span class="tagline2">
-                        <span style="color: var(--color2)">
+                        <span style="color: var(--color2);">
                             nous
                         </span>
                         développons les outils dont vous avez besoin
@@ -127,9 +271,18 @@ recherche appliquée. Après s'être engagé dans plusieurs associations
                 </h1>
             </div>
 
-            <div style="position: absolute; width: 100vw; left: 0; bottom: 0; height: 80px; text-align: center; top: calc(100vh - 100px); cursor: pointer;">
-                <a href="#second-section" style="color: var(--color1)">
-                    <i class="fas fa-chevron-down" style="font-size: 100px" onclick="chevronClick()"></i>
+            <div style="
+            position: absolute;
+            width: 100vw;
+            left: 0;
+            bottom: 0;
+            height: 80px;
+            text-align: center;
+            top: calc(100vh - 100px);
+            cursor: pointer;
+          ">
+                <a href="#second-section" style="color: var(--color1);">
+                    <i class="fas fa-chevron-down" style="font-size: 100px;" onclick="chevronClick()"></i>
                 </a>
             </div>
         </div>
@@ -138,11 +291,11 @@ recherche appliquée. Après s'être engagé dans plusieurs associations
     <section id="second-section" class="has-bg-2">
         <div class="section container">
             <h2 class="title is-2">
-                {{ headline1 }} <br>
+                {{ headline1 }} <br />
                 {{ headline2 }}
             </h2>
 
-            <div class="columns is-tablet is-centered" style="flex-wrap: wrap">
+            <div class="columns is-tablet is-centered" style="flex-wrap: wrap;">
                 {% for app_type in app_types1 %}
                 <div class="column is-3-desktop is-4-tablet">
                     <div class="box solution">
@@ -155,7 +308,7 @@ recherche appliquée. Après s'être engagé dans plusieurs associations
                 {% endfor %}
             </div>
 
-            <div class="columns is-tablet is-centered" style="flex-wrap: wrap">
+            <div class="columns is-tablet is-centered" style="flex-wrap: wrap;">
                 {% for app_type in app_types2 %}
                 <div class="column is-3-desktop is-4-tablet">
                     <div class="box solution">
@@ -173,37 +326,50 @@ recherche appliquée. Après s'être engagé dans plusieurs associations
     <section>
         <div class="section container">
             <h2 class="title is-2">Nos valeurs</h2>
-
             <div class="columns is-centered" style="margin-top: 22px;">
                 <div class="column is-8-desktop is-10-tablet is-12-mobile" style="text-align: left;">
                     <p class="has-text-weight-bold">
-                        Nous sommes convaincus de la nécessité d'une transition écologique et sociale, et souhaitons mettre notre énergie
-                        au service de ceux qui y œuvrent.
+                        Nous sommes convaincus de la nécessité d'une transition écologique
+                        et sociale, et souhaitons mettre notre énergie au service de ceux
+                        qui y œuvrent.
                     </p>
-                    <p style="margin-top: 15px">
-                        Chacun a une opinion différente sur ce que cette transition signifie et implique. Les questions que nous nous
-                        posons dans le choix des projets dans lesquels nous voulons nous investir sont :
+                    <p style="margin-top: 15px;">
+                        Chacun a une opinion différente sur ce que cette transition
+                        signifie et implique. Les questions que nous nous posons dans le
+                        choix des projets dans lesquels nous voulons nous investir sont :
                     </p>
                     <div class="content">
                         <ul>
-                            <li>Est-ce que le service répond à un besoin essentiel ? (alimentation, transport, logement, accès à l'énergie, pédagogie, communication)</li>
-                            <li>Est-ce que le service incite à plus de consommation de ressources non renouvelable ?</li>
-                            <li>Est-ce un service qui bénéficie à tous, à ceux qui en ont le plus besoin, ou seulement à une poignée de privilégiés ?</li>
+                            <li>
+                                Est-ce que le service répond à un besoin essentiel ?
+                                (alimentation, transport, logement, accès à l'énergie,
+                                pédagogie, communication)
+                            </li>
+                            <li>
+                                Est-ce que le service incite à plus de consommation de
+                                ressources non renouvelable ?
+                            </li>
+                            <li>
+                                Est-ce un service qui bénéficie à tous, à ceux qui en ont le
+                                plus besoin, ou seulement à une poignée de privilégiés ?
+                            </li>
                         </ul>
                     </div>
                     <p>
-                        Bien sûr, peu de services répondent parfaitement à tous ces critères, si vous vous considérez comme un acteur de
-                        la transition écologique et sociale, nous serons heureux de voir ensemble ce que nous pouvons vous apporter.
+                        Bien sûr, peu de services répondent parfaitement à tous ces
+                        critères, si vous vous considérez comme un acteur de la transition
+                        écologique et sociale, nous serons heureux de voir ensemble ce que
+                        nous pouvons vous apporter.
                     </p>
-                    <p style="margin-top: 15px">
-                        De notre côté, nous sommes bien sûr sensibles à l'impact de notre activité. Nous développons des
-                        <span class="has-text-weight-bold">applications éco-conçues</span>, c'est-à-dire dont l'impact énergétique
-                        est minimisé. Selon les cas, cela veut dire un faible poids de la page, un code optimisé pour un faible temps
-                        de calcul ou une mise en cache des résultats.
+                    <p style="margin-top: 15px;">
+                        De notre côté, nous sommes bien sûr sensibles à l'impact de notre
+                        activité. Nous développons des
+                        <span class="has-text-weight-bold">applications éco-conçues</span>, c'est-à-dire dont l'impact énergétique est minimisé. Selon les
+                        cas, cela veut dire un faible poids de la page, un code optimisé
+                        pour un faible temps de calcul ou une mise en cache des résultats.
                     </p>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -215,8 +381,8 @@ recherche appliquée. Après s'être engagé dans plusieurs associations
 
             {% for client in clients %}
             <div class="client hideable">
-                <div style="text-align: center; position: relative">
-                    <img src="{{client.image_src}}" alt="{{client.image_alt}}">
+                <div style="text-align: center; position: relative;">
+                    <img src="{{client.image_src}}" alt="{{client.image_alt}}" />
                     <div>
                         <i class="fas fa-chevron-right" onclick="nextClient()"></i>
                     </div>
@@ -250,8 +416,6 @@ recherche appliquée. Après s'être engagé dans plusieurs associations
                 </div>
             </div>
             {% endfor %}
-
-
         </div>
     </section>
 
@@ -261,13 +425,13 @@ recherche appliquée. Après s'être engagé dans plusieurs associations
 
             {% for employee in employees %}
             <div class="employee hideable show" style="text-align: center;">
-                <div style="text-align: center; position: relative">
-                    <img src="{{employee.img_src}}" alt="{{employee.name}}" style="border-radius: 50%;">
+                <div style="text-align: center; position: relative;">
+                    <img src="{{employee.img_src}}" alt="{{employee.name}}" style="border-radius: 50%;" />
                     <div>
-                        <i class="fas fa-chevron-right" onclick="nextEmployee()" style="display: none"></i>
+                        <i class="fas fa-chevron-right" onclick="nextEmployee()" style="display: none;"></i>
                     </div>
                     <div>
-                        <i class="fas fa-chevron-left" onclick="previousEmployee()" style="display: none"></i>
+                        <i class="fas fa-chevron-left" onclick="previousEmployee()" style="display: none;"></i>
                     </div>
                 </div>
 
@@ -288,21 +452,20 @@ recherche appliquée. Après s'être engagé dans plusieurs associations
 
             <div class="columns is-centered" style="margin-top: 22px;">
                 <div class="column is-8-desktop is-10-tablet is-12-mobile" style="text-align: left;">
-                    <div class="notification" style="background: hsl(230, 54%, 92%)">
+                    <div class="notification" style="background: hsl(230, 54%, 92%);">
                         <h3 class="subtitle is-4">Nous recrutons !</h3>
                         <p>
-                            Si vous êtes développeurs et que vous chercher un métier qui a du sens, contactez-nous !
+                            Si vous êtes développeurs et que vous chercher un métier qui a
+                            du sens, contactez-nous !
                         </p>
                         <p>
-                            Nous recherchons idéalement un développeur web full-stack avec plusieurs années d'expérience. Télétravail et
-                            temps partiel possibles.
+                            Nous recherchons idéalement un développeur web full-stack avec
+                            plusieurs années d'expérience. Télétravail et temps partiel
+                            possibles.
                         </p>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     </section>
 
@@ -312,13 +475,20 @@ recherche appliquée. Après s'être engagé dans plusieurs associations
 
             <div class="columns is-centered" style="margin-top: 22px;">
                 <div class="column is-8-desktop is-10-tablet is-12-mobile" style="text-align: left;">
-                    Si vous êtes un acteur de la transition et que vous avez un projet informatique, si vous êtes développeur et que
-                    vous souhaitez rejoindre l'équipe ou si vous voulez en savoir plus sur notre projet, contactez-nous !
+                    Si vous êtes un acteur de la transition et que vous avez un projet
+                    informatique, si vous êtes développeur et que vous souhaitez
+                    rejoindre l'équipe ou si vous voulez en savoir plus sur notre
+                    projet, contactez-nous !
                 </div>
             </div>
 
-            <div style="text-align: center; color: var(--color2); font-size: 1.6rem; user-select: none">
-                <a href="mailto:contact@telescoop.fr" style="color: var(--color3)">
+            <div style="
+            text-align: center;
+            color: var(--color2);
+            font-size: 1.6rem;
+            user-select: none;
+          ">
+                <a href="mailto:contact@telescoop.fr" style="color: var(--color3);">
                     contact@telescoop.fr
                 </a>
             </div>
@@ -328,10 +498,15 @@ recherche appliquée. Après s'être engagé dans plusieurs associations
     <script type="application/javascript" src="js/telescoop.js"></script>
     <script type="application/javascript" src="js/particles.js"></script>
     <script>
-        particlesJS.load('particles-js', 'js/particlesjs-config.json', function() {
-            console.log('callback - particles.js config loaded');
-        });
+        particlesJS.load(
+            'particles-js',
+            'js/particlesjs-config.json',
+            function() {
+                console.log('callback - particles.js config loaded');
+            }
+        );
     </script>
 </body>
+{% endcomment %}
 
 </html>
