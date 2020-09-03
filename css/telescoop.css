@@ -1,257 +1,274 @@
 :root {
-    --color1: #05386b;
-    --color2: #379683;
-    --color3: #5cdb95;
-    --color4: #8ee4af;
-    --color5: #edf6e1;
-    --bgcolor: var(--color5);
+  --color1: #05386b;
+  --color2: #379683;
+  --color3: #5cdb95;
+  --color4: #8ee4af;
+  --color5: #edf6e1;
+  --bgcolor: var(--color5);
 }
 
 h1 {
-    font-family: "Roboto Slab", monospace;
+  font-family: 'Roboto Slab', monospace;
 }
 
 h2 {
-    font-family: "Roboto Slab", monospace;
-    font-weight: 600;
-    font-size: 3rem;
+  font-family: 'Roboto Slab', monospace;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.tile.is-child.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tile.is-ancestor {
+  flex-wrap: wrap;
+}
+
+.tile.is-parent {
+  flex: 1 0 50%;
 }
 
 .list-item {
-    font-family: "Roboto Slab", monospace;
+  font-family: 'Roboto Slab', monospace;
 }
 
 .header--background-shape {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    fill: #150035;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  fill: #150035;
 }
 
 .sprite {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-
 p {
-    font-family: "Roboto Mono", monospace;
+  font-family: 'Overpass Mono', monospace;
 }
 
 .bg-yellow {
-    background-color: #ffd972;
+  background-color: #ffd972;
 }
 
 .bg-purple {
-    background-color: #9999cc;
+  background-color: #9999cc;
 }
 
 .main-bg {
-    background-color: #f7f7f2;
+  background-color: #f7f7f2;
 }
 
 .small-spacer {
-    height: 3rem;
+  height: 3rem;
 }
 
 .workshop-svg {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .p-0 {
-    padding: 0 !important;
+  padding: 1em !important;
 }
 
 .pa-1 {
-    padding: 0.75em;
+  padding: 0.75em;
+}
+
+.m-1 {
+  margin: 0.75em;
 }
 
 @media (max-width: 1100px) {
-    html {
-        font-size: 14px;
-    }
+  html {
+    font-size: 14px;
+  }
 }
 
 .service-container--content {
-    padding: 10rem 3rem;
+  padding: 10rem 3rem;
 }
 
 .title {
-    font-size: 3.75rem;
+  font-size: 3.75rem;
 }
 
 @media (max-width: 900px) {
-    .tagline1 {
-        font-size: 1.2em !important;
-    }
+  .tagline1 {
+    font-size: 1.2em !important;
+  }
 
-    .tagline2 {
-        font-size: 1.1em !important;
-    }
+  .tagline2 {
+    font-size: 1.1em !important;
+  }
 
-    .title.is-2 {
-        font-size: 2rem;
-    }
+  .title.is-2 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 750px) {
-    .tagline1 {
-        font-size: 1em !important;
-    }
+  .tagline1 {
+    font-size: 1em !important;
+  }
 
-    .tagline2 {
-        font-size: 0.9em !important;
-    }
+  .tagline2 {
+    font-size: 0.9em !important;
+  }
 }
 
 @media (max-width: 600px) {
-    html {
-        font-size: 13px;
-    }
+  html {
+    font-size: 13px;
+  }
 }
 
 .tagline1 {
-    font-size: 1.4em;
+  font-size: 1.4em;
 }
 
 .tagline2 {
-    font-size: 1.3em;
+  font-size: 1.3em;
 }
 
 .title.is-2 {
-    color: var(--color1) !important;
+  color: var(--color1) !important;
 }
 
 h2 {
-    text-align: center;
-    font-weight: 300 !important;
+  text-align: center;
+  font-weight: 300 !important;
 }
 
 .solution h4 {
-    margin-top: 25px;
-    color: var(--color2);
-    font-size: 1.23rem !important;
+  margin-top: 25px;
+  color: var(--color2);
+  font-size: 1.23rem !important;
 }
 
 .solution i {
-    font-size: 50px;
-    color: var(--color1);
+  font-size: 50px;
+  color: var(--color1);
 }
 
 .solution {
-    text-align: center;
-    height: 100%;
+  text-align: center;
+  height: 100%;
 }
 
 .hideable.hide {
-    opacity: 0;
-    height: 0;
-    display: none;
+  opacity: 0;
+  height: 0;
+  display: none;
 }
 
 .hideable.show {
-    opacity: 1;
-    height: initial;
+  opacity: 1;
+  height: initial;
 }
 
 .hideable {
-    transition: 0.4s ease opacity;
+  transition: 0.4s ease opacity;
 }
 
 .client img {
-    height: 70px;
+  height: 70px;
 }
 
 .client-quote {
-    position: relative;
+  position: relative;
 }
 
 .client-quote .quote-left {
-    left: -30px;
-    top: -10px;
+  left: -30px;
+  top: -10px;
 }
 
 .client-quote .quote-right {
-    right: -10px;
-    bottom: -20px;
+  right: -10px;
+  bottom: -20px;
 }
 
-.client-quote>div {
-    font-size: 30px;
-    position: absolute;
+.client-quote > div {
+  font-size: 30px;
+  position: absolute;
 }
 
 .hideable .fa-chevron-right,
 .hideable .fa-chevron-left {
-    font-size: 4rem;
-    color: var(--color1);
-    position: absolute;
-    top: 5px;
+  font-size: 4rem;
+  color: var(--color1);
+  position: absolute;
+  top: 5px;
 }
 
 .hideable .fa-chevron-right {
-    left: calc(50% + 120px);
+  left: calc(50% + 120px);
 }
 
 .hideable .fa-chevron-left {
-    left: calc(50% - 160px);
+  left: calc(50% - 160px);
 }
 
 div.client-name {
-    width: 100%;
-    padding-right: 45px;
-    font-size: 1.1rem;
-    font-style: normal;
-    color: var(--color2);
-    text-align: right;
+  width: 100%;
+  padding-right: 45px;
+  font-size: 1.1rem;
+  font-style: normal;
+  color: var(--color2);
+  text-align: right;
 }
 
 .employee img {
-    width: 200px;
+  width: 200px;
 }
 
 .employee-image {
-    border-radius: 999px;
+  border-radius: 999px;
 }
 
 .employee .emphasis {
-    font-size: 1.4rem;
-    color: var(--color2);
+  font-size: 1.4rem;
+  color: var(--color2);
 }
 
 .employee .employee-title {
-    font-size: 1.2rem;
-    font-style: oblique;
+  font-size: 1.2rem;
+  font-style: oblique;
 }
 
 .employee .fa-chevron-right,
 .employee .fa-chevron-left {
-    top: 68px;
+  top: 68px;
 }
 
 .solution-holder {
-    transition: width 0.3s ease;
+  transition: width 0.3s ease;
 }
 
 .box.solution {
-    transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 /*.box.solution:hover {*/
 /*  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.4), 0 0px 0 1px rgba(10, 10, 10, 0.2);*/
 /*}*/
 .details .solution-details {
-    display: block;
+  display: block;
 }
 
 .solution-details {
-    display: none;
+  display: none;
 }
 
 .has-bg-2 {
-    background-color: #f7f7f7;
+  background-color: #f7f7f7;
 }
