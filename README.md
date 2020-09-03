@@ -2,7 +2,7 @@
 
 ## How to install the project ?
 
-The project use eleventy as a static files generator built with JavaScript.
+The project use **eleventy** as a static files generator built with JavaScript. We use the templating langage Nunjucks as an engine to generate HTML files.
 In order to setting up the project, you need to install globally the eleventy library:
 
 # with yarn
