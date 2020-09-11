@@ -18,7 +18,7 @@
     <nav class="navbar is-transparent is-fixed-top">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
-                <span>Telescoop</span>
+                <span class="logo">Tele<span class="bold">scoop</span></span>
             </a>
         </div>
         <div id="main-navigation" class="navbar-menu">
@@ -86,11 +86,11 @@
     <section class="hero-body p-0">
         <div class="container has-text-left is-fluid p-0">
             <div class="columns is-vcentered">
-                <div class="column is-half service-container--content bg-yellow mb-2">
+                <div class="column is-half service-container--content mb-2">
                     <h1 class="title">{{metadata.title}}</h1>
                     <p>{{metadata.subtitle}}</p>
                 </div>
-                <div class="column is-half service-container--content">
+                <div class="column is-half service-container--content bg-yellow">
                     {{ '/img/development.svg' | svgContents("workshop-svg") }}
                 </div>
             </div>
@@ -98,22 +98,22 @@
     </section>
     <section class="hero-body p-0">
         <div class="container is-fluid">
-            <div class="columns">
-                <div class="column is-half service-container--content">
+            <div class="columns ">
+                <div class="column is-half bg-purple">
                     <div class="header--background-shape background-shape fill-green">
                         <svg class="sprite">
                             <use xlink:href="#header-shape-01"></use>
                         </svg>
                     </div>
                     {{ '/img/work.svg' | svgContents("workshop-svg") }}
-                    <div class="card">
+                    <!-- <div class="card">
                         <div class="card-content">
                             <p class="">{{metadata.about_us_quote}}</p>
                             <p class="subtitle">{{metadata.about_us_author_quote}}</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="column is-half service-container--content bg-purple">
+                <div class="column is-half service-container--content">
                     <h2 class="title has-text-left">Nos valeurs</h2>
                     <p>{{metadata.about_us_content}}</p>
                     <ul class="list m-1">
@@ -129,7 +129,7 @@
     <section class="hero-body p-0">
         <div class="container has-text-left is-fluid p-0">
             <div class="columns is-vcentered">
-                <div class="column is-half service-container--content bg-yellow">
+                <div class="column is-half service-container--content">
                     <h2 class="title has-text-left">
                         Des applications avec plus d'impact
                     </h2>
@@ -164,27 +164,27 @@
                         {% endfor %}
                     </div>
                 </div>
-                <div class="column is-half service-container--content">
+                <div class="column is-half service-container--content bg-yellow">
                     {{ '/img/development.svg' | svgContents("workshop-svg") }}
                 </div>
             </div>
         </div>
     </section>
+
     <section class="hero-body p-0">
         <div class="container has-text-left is-fluid p-0">
-            <div class="columns is-vcentered">
-                <div class="column is-half  is-vcentered">
-                    <h3 class="title">Une équipe expérimentée et engagée
-                    </h3>
+            <div class="columns">
+                <div class="column is-half is-vcentered service-container--content bg-purple">
+                    <h3 class="title">Une équipe expérimentée et engagée</h3>
                     <div class="box">
-                        <div class="siema">
+                        <div class="employeesCarousel">
                             {% for employee in employees %}
                             <div class="card no-box-shadow">
                                 <div class="card-content">
                                     <div class="media">
                                         <div class="media-left">
                                             <figure class="image is-48x48">
-                                                <img src="img/maxime.jpg" alt="Placeholder image" />
+                                                <img src="img/maxime.jpg" alt="{{employee.name}}" />
                                             </figure>
                                         </div>
                                         <div class="media-content">
@@ -197,15 +197,69 @@
                             </div>
                             {% endfor %}
                         </div>
-                        <button class="prev button">précédent</button>
-                        <button class="next button">suivant</button>
+                        <button class="prev-employees button">précédent</button>
+                        <button class="next-employees button">suivant</button>
                     </div>
                 </div>
-                <div class="column is-half service-container--content is-vcentered bg-yellow">
+                <div class="column is-half service-container--content is-vcentered">
                     <h2 class="title">{{metadata.join_us_title}}</h2>
                     <p>{{metadata.join_us_subtitle}}</p>
                 </div>
                 {{ '/img/all.svg' | svgContents("workshop-svg") }}
+            </div>
+        </div>
+    </section>
+    <section class="p-0">
+        <div class="container has-text-left p-0">
+            <div class="columns is-vcentered">
+                <div class="column is-half service-container--content">
+                    <h2 class="title has-text-left">
+                        Nos clients sont plus efficaces dans leur métier
+                    </h2>
+                    <p>
+                        Nos développeurs sont motivés avant tout par la création
+                        d’applications à impact social ou écologique.Nous suivons une
+                        méthodologie agile, ce qui nous permet de développer en temps
+                        record des applications efficaces et intuitives.
+                    </p>
+                </div>
+                <div class="column is-half bg-yellow">
+                    <div class="box">
+                        <div class="testimonialsCarousel">
+                            {% for testimonial in testimonials %}
+                            <div class="card no-box-shadow">
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <figure class="image is-48x48">
+                                                <img src="{{testimonial.logo}}" alt="{{testimonial.name}}" />
+                                            </figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <p class="title is-4">{{testimonial.name}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="content">{{testimonial.description}}</div>
+                                    <div class="content testimonial">
+                                        {{testimonial.testimonial}}
+                                    </div>
+                                </div>
+                                <footer class="card-footer">
+                                    <p>
+                                        {{testimonial.reference}}, {{testimonial.reference_poste}}
+                                    </p>
+                                </footer>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <button class="prev-testimonials button-testimonials button">
+                            précédent
+                        </button>
+                        <button class="next-testimonials button-testimonials button">
+                            suivant
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -215,7 +269,11 @@
     <footer class="footer">
         <div class="container">
             <div class="content has-text-centered">
-                <p>Editeur : Ce site est produit par Telescop SARL. Pour toute question concernant l’utilisation du site www.telescoop.com vous pouvez nous contacter directement en ligne.</p>
+                <p>
+                    Editeur : Ce site est produit par Telescop SARL. Pour toute question
+                    concernant l’utilisation du site www.telescoop.com vous pouvez nous
+                    contacter directement en ligne.
+                </p>
                 <p><a href="/">Code of conduct</a></p>
             </div>
         </div>
@@ -223,10 +281,9 @@
     <script type="application/javascript" src="js/telescoop.js"></script>
     <script src="js/siema.min.js"></script>
     <script>
-        const employeesCarousel = new Siema({
-            selector: '.siema',
-            duration: 200,
-            easing: 'ease-out',
+        const carouselConfig = {
+            duration: 500,
+            easing: 'ease-in',
             perPage: 1,
             startIndex: 0,
             draggable: true,
@@ -236,12 +293,29 @@
             rtl: false,
             onInit: () => {},
             onChange: () => {},
+        };
+        const employeesCarousel = new Siema({
+            ...carouselConfig,
+            selector: '.employeesCarousel',
         });
+
+        const testimonialsCarousel = new Siema({
+            ...carouselConfig,
+            selector: '.testimonialsCarousel',
+        });
+        console.log(testimonialsCarousel);
+
         document
-            .querySelector('.prev')
-            .addEventListener('click', () => employeesCarousel.prev());
+            .querySelector('.prev-testimonials')
+            .addEventListener('click', (el) => testimonialsCarousel.prev());
         document
-            .querySelector('.next')
+            .querySelector('.prev-employees')
+            .addEventListener('click', (el) => employeesCarousel.prev());
+        document
+            .querySelector('.next-testimonials')
+            .addEventListener('click', () => testimonialsCarousel.next());
+        document
+            .querySelector('.next-employees')
             .addEventListener('click', () => employeesCarousel.next());
     </script>
 </body>
