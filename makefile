@@ -1,3 +1,3 @@
 deploy: 
 	git pull 
-	ln -s /root/telescoop/telescoop-nginx.conf /etc/nginx/sites-enabled/
+	ln -s ./telescoop-nginx.conf /etc/nginx/sites-enabled/
