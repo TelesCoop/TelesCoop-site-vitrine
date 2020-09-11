@@ -203,6 +203,10 @@ div.client-name {
     align-items: center;
 }
 
+.rotate-180 {
+    transform: rotate(180deg)
+}
+
 .sprite {
     width: 100%;
     height: 100%;
