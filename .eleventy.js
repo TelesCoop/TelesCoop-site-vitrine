@@ -4,6 +4,7 @@ module.exports = function(eleventyConfig) {
     // Copy the static assets to the output folder
     eleventyConfig.addPassthroughCopy('js');
     eleventyConfig.addPassthroughCopy('css');
+    eleventyConfig.addPassthroughCopy('img');
     eleventyConfig.addPlugin(svgContents);
 
     // You can return your Config object (optional).

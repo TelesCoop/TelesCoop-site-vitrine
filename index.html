@@ -18,7 +18,7 @@
     <nav class="navbar is-transparent is-fixed-top">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
-                <span class="logo">Tele<span class="bold">scoop</span></span>
+                <span class="logo">Teles<span class="bold">coop</span></span>
             </a>
         </div>
         <div id="main-navigation" class="navbar-menu">
@@ -83,7 +83,7 @@
             </div> -->
         </div>
     </nav>
-    <section class="hero-body p-0">
+    <section class="p-0">
         <div class="container has-text-left is-fluid p-0">
             <div class="columns is-vcentered">
                 <div class="column is-half service-container--content mb-2">
@@ -96,7 +96,7 @@
             </div>
         </div>
     </section>
-    <section class="hero-body p-0">
+    <section class="p-0">
         <div class="container is-fluid">
             <div class="columns ">
                 <div class="column is-half bg-purple is-vcentered">
@@ -126,7 +126,7 @@
             </div>
         </div>
     </section>
-    <section class="hero-body p-0">
+    <section class="p-0">
         <div class="container has-text-left is-fluid p-0">
             <div class="columns is-vcentered">
                 <div class="column is-half service-container--content">
@@ -170,8 +170,7 @@
             </div>
         </div>
     </section>
-
-    <section class="hero-body p-0">
+    <section class="p-0">
         <div class="container has-text-left is-fluid p-0">
             <div class="columns is-vcentered ">
                 <div class="column is-half service-container--content bg-purple">
@@ -183,8 +182,8 @@
                                 <div class="card-content">
                                     <div class="media">
                                         <div class="media-left">
-                                            <figure class="image is-48x48">
-                                                <img src="img/akomis_3.png" alt="{{employee.name}}" />
+                                            <figure class="image is-48x48 has-image-centered ">
+                                                <img class="is-rounded" src=" {{employee.img}}" alt="{{employee.name}}" />
                                             </figure>
                                         </div>
                                         <div class="media-content">
@@ -231,7 +230,7 @@
                                 <div class="card-content">
                                     <div class="media">
                                         <div class="media-left">
-                                            <figure class="image is-48x48">
+                                            <figure class="image is-48x48 has-image-centered">
                                                 <img src="{{testimonial.logo}}" alt="{{testimonial.name}}" />
                                             </figure>
                                         </div>
@@ -262,9 +261,6 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="hero-body p-0">
-        <div class="columns is-vcentered"></div>
     </section>
     <footer class="footer">
         <div class="container">
@@ -303,7 +299,6 @@
             ...carouselConfig,
             selector: '.testimonialsCarousel',
         });
-        console.log(testimonialsCarousel);
 
         document
             .querySelector('.prev-testimonials')
