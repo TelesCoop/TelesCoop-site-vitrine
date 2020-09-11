@@ -193,6 +193,10 @@ div.client-name {
     fill: #150035;
 }
 
+.footer {
+    padding: 3rem 1.5rem 3rem;
+}
+
 .logo {
     font-size: 32px;
     font-family: 'Roboto Slab';
