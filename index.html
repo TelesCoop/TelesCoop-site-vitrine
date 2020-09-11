@@ -196,13 +196,14 @@
                             </div>
                             {% endfor %}
                         </div>
-                        <button class="prev-employees button">précédent</button>
-                        <button class="next-employees button">suivant</button>
+                        <button class="prev-employees button rotate-180">❯</button>
+                        <button class="next-employees button">❯</button>
                     </div>
                 </div>
                 <div class="column is-half service-container--content">
                     <h2 class="title">{{metadata.join_us_title}}</h2>
                     <p>{{metadata.join_us_subtitle}}</p>
+                    <a class="button mt-1 bg-yellow" href="mailto:contact@telescoop.fr">Nous contacter</a>
                 </div>
                 {{ '/img/all.svg' | svgContents("workshop-svg") }}
             </div>
@@ -221,6 +222,7 @@
                         méthodologie agile, ce qui nous permet de développer en temps
                         record des applications efficaces et intuitives.
                     </p>
+                    <a class="button mt-1 bg-purple" href="mailto:contact@telescoop.fr">Nous contacter</a>
                 </div>
                 <div class="column is-half bg-yellow">
                     <div class="box">
@@ -251,11 +253,11 @@
                             </div>
                             {% endfor %}
                         </div>
-                        <button class="prev-testimonials button-testimonials button">
-                            précédent
+                        <button class="prev-testimonials button-testimonials button rotate-180">
+                            ❯
                         </button>
                         <button class="next-testimonials button-testimonials button">
-                            suivant
+                            ❯
                         </button>
                     </div>
                 </div>
@@ -267,10 +269,9 @@
             <div class="content has-text-centered">
                 <p>
                     Editeur : Ce site est produit par Telescop SARL. Pour toute question
-                    concernant l’utilisation du site www.telescoop.com vous pouvez nous
+                    concernant l’utilisation du site www.telescoop.fr vous pouvez nous
                     contacter directement en ligne.
                 </p>
-                <p><a href="/">Code of conduct</a></p>
             </div>
         </div>
     </footer>
