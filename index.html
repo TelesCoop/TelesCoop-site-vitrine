@@ -86,19 +86,19 @@
     <section class="p-0">
         <div class="container has-text-left is-fluid p-0">
             <div class="columns is-vcentered">
-                <div class="column is-half service-container--content mb-2">
+                <div class="column is-half container-content mb-2">
                     <h1 class="title">{{metadata.title}}</h1>
                     <p>{{metadata.subtitle}}</p>
                 </div>
-                <div class="column is-half service-container--content bg-yellow">
+                <div class="column is-half container-content bg-yellow">
                     {{ '/img/development.svg' | svgContents("workshop-svg") }}
                 </div>
             </div>
         </div>
     </section>
     <section class="p-0">
-        <div class="container is-fluid">
-            <div class="columns ">
+        <div class="container is-fluid p-0">
+            <div class="columns">
                 <div class="column is-half bg-purple is-vcentered">
                     <div class="background-shape fill-green">
                         <svg class="sprite">
@@ -113,7 +113,7 @@
                         </div>
                     </div> -->
                 </div>
-                <div class="column is-half service-container--content">
+                <div class="column is-half container-content">
                     <h2 class="title has-text-left">Nos valeurs</h2>
                     <p>{{metadata.about_us_content}}</p>
                     <ul class="list m-1">
@@ -129,7 +129,7 @@
     <section class="p-0">
         <div class="container has-text-left is-fluid p-0">
             <div class="columns is-vcentered">
-                <div class="column is-half service-container--content">
+                <div class="column is-half">
                     <h2 class="title has-text-left">
                         Des applications avec plus d'impact
                     </h2>
@@ -164,7 +164,7 @@
                         {% endfor %}
                     </div>
                 </div>
-                <div class="column is-half service-container--content bg-yellow">
+                <div class="column is-half container-content bg-yellow">
                     {{ '/img/development.svg' | svgContents("workshop-svg") }}
                 </div>
             </div>
@@ -173,7 +173,7 @@
     <section class="p-0">
         <div class="container has-text-left is-fluid p-0">
             <div class="columns is-vcentered ">
-                <div class="column is-half service-container--content bg-purple">
+                <div class="column is-half container-content bg-purple">
                     <h3 class="title">Une équipe expérimentée et engagée</h3>
                     <div class="box">
                         <div class="employeesCarousel">
@@ -196,11 +196,14 @@
                             </div>
                             {% endfor %}
                         </div>
-                        <button class="prev-employees button rotate-180">❯</button>
-                        <button class="next-employees button">❯</button>
+                        <div class="buttons-carousel has-text-centered">
+                            <button class="prev-employees button button-carousel is-borderless is-paddingless is-size-2">❮</button>
+                            <button class="next-employees button button-carousel is-borderless is-paddingless is-size-2">❯</button>
+
+                        </div>
                     </div>
                 </div>
-                <div class="column is-half service-container--content">
+                <div class="column is-half container-content">
                     <h2 class="title">{{metadata.join_us_title}}</h2>
                     <p>{{metadata.join_us_subtitle}}</p>
                     <a class="button mt-1 bg-yellow" href="mailto:contact@telescoop.fr">Nous contacter</a>
@@ -212,7 +215,7 @@
     <section class="p-0">
         <div class="container has-text-left p-0">
             <div class="columns is-vcentered">
-                <div class="column is-half service-container--content">
+                <div class="column is-half container-content">
                     <h2 class="title has-text-left">
                         Nos clients sont plus efficaces dans leur métier
                     </h2>
@@ -253,12 +256,14 @@
                             </div>
                             {% endfor %}
                         </div>
-                        <button class="prev-testimonials button-testimonials button rotate-180">
-                            ❯
-                        </button>
-                        <button class="next-testimonials button-testimonials button">
-                            ❯
-                        </button>
+                        <div class="buttons-carousel has-text-centered">
+                            <button class="prev-testimonials button-carousel button is-borderless is-paddingless is-size-2">
+                                ❮
+                            </button>
+                            <button class="next-testimonials button-carousel button is-borderless is-paddingless is-size-2">
+                                ❯
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
