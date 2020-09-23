@@ -59,6 +59,11 @@ h2 {
     margin-bottom: 0.75em;
 }
 
+.px-3 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
 .is-borderless {
     border: none;
 }
