@@ -1,2 +1,3 @@
-deploy: 
-	sh update_production.sh
+deploy:
+	npx @11ty/eleventy
+	scp -r _site/* telescoop_website:/root/telescoop/
