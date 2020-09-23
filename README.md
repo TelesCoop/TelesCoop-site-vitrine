@@ -19,8 +19,7 @@ Notes: Eleventy is available on npm and requires version 8 of Node.js or higher.
 
 ## Run the project locally
 
-Start the local server with this command:
-`eleventy --serve`
+Start the local server with `make serve`.
 
 If you have some issues with the Javascript and CSS files (missing files or what else), you probably need to copy the
 content of the Javascript and CSS in the _\_site_ folder.
@@ -33,7 +32,7 @@ Steps:
    `eleventyConfig.addPassthroughCopy("js");`
    `eleventyConfig.addPassthroughCopy('css')`
 3. Start the server
-   `eleventy --serve`
+   `make serve`
 
 ## Deploy to the production server
 
