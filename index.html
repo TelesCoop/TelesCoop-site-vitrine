@@ -85,7 +85,7 @@
     <section class="p-0">
       <div class="container has-text-left is-fluid p-0">
         <div class="columns is-vcentered">
-          <div class="column is-half container-content mb-2">
+          <div class="column is-half mb-2" style="padding: 0 3rem">
             <h1 class="title">{{metadata.title}}</h1>
             <p>{{metadata.subtitle}}</p>
             <div class="has-text-centered">
@@ -229,7 +229,7 @@
       </div>
     </section>
     <section class="p-0">
-      <div class="container has-text-left p-0">
+      <div class="container is-fluid has-text-left p-0">
         <div class="columns is-vcentered">
           <div class="column is-half container-content">
             <h2 class="title has-text-left">
@@ -244,7 +244,7 @@
             <a class="button is-large mt-1 bg-purple" href="mailto:contact@telescoop.fr">Nous contacter</a>
           </div>
           <div class="column is-half bg-yellow">
-            <div class="box">
+            <div class="box" style="max-width: 600px; margin: auto">
               <div class="testimonialsCarousel">
                 {% for testimonial in testimonials %}
                 <div class="card no-box-shadow">
