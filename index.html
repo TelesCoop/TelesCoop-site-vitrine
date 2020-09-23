@@ -1,349 +1,319 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <title>{{metadata.title}}</title>
     <link rel="stylesheet" type="text/css" href="css/bulma.css" />
     <link rel="stylesheet" type="text/css" href="css/telescoop.css" />
     <link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&family=Roboto+Slab:wght@300;400;600&Overpass+Mono:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&family=Roboto+Slab:wght@300;400;600&Overpass+Mono:wght@300;400&display=swap" rel="stylesheet" />
     <link type="text/css" href="css/glide.core.min.css" />
     <link type="text/css" href="css/glide.theme.min.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
+</head>
 
-  <body class="main-bg">
-    <nav class="navbar is-transparent is-fixed-top">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          <span class="logo">Teles<span class="bold">coop</span></span>
+<body class="main-bg">
+<nav class="navbar is-transparent is-fixed-top">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+            <span class="logo">Teles<span class="bold">coop</span></span>
         </a>
-      </div>
-      <div id="main-navigation" class="navbar-menu">
+    </div>
+    <div id="main-navigation" class="navbar-menu">
         <!-- <div class="navbar-start">
-                <a class="navbar-item" href="https://bulma.io/">
-                    Home
+            <a class="navbar-item" href="https://bulma.io/">
+                Home
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
+                    Docs
                 </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
-                        Docs
+                <div class="navbar-dropdown is-boxed">
+                    <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
+                        Overview
                     </a>
-                    <div class="navbar-dropdown is-boxed">
-                        <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-                            Overview
-                        </a>
-                        <a class="navbar-item" href="https://bulma.io/documentation/overview/modifiers/">
-                            Modifiers
-                        </a>
-                        <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
-                            Columns
-                        </a>
-                        <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
-                            Layout
-                        </a>
-                        <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
-                            Form
-                        </a>
-                        <hr class="navbar-divider" />
-                        <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
-                            Elements
-                        </a>
-                        <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
-                            Components
-                        </a>
-                    </div>
+                    <a class="navbar-item" href="https://bulma.io/documentation/overview/modifiers/">
+                        Modifiers
+                    </a>
+                    <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
+                        Columns
+                    </a>
+                    <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
+                        Layout
+                    </a>
+                    <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
+                        Form
+                    </a>
+                    <hr class="navbar-divider" />
+                    <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
+                        Elements
+                    </a>
+                    <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
+                        Components
+                    </a>
                 </div>
-            </div> -->
-        <!-- 
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="field is-grouped">
-                        <p class="control">
-                            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms">
-                                <span class="icon">
-                                    <i class="fab fa-twitter"></i>
-                                </span>
-                                <span>
-                                    Tweet
-                                </span>
-                            </a>
-                        </p>
-                        <p class="control">
-                            <a class="button is-primary" href="https://github.com/jgthms/bulma/releases/download/0.9.0/bulma-0.9.0.zip">
-                                <span class="icon">
-                                    <i class="fas fa-download"></i>
-                                </span>
-                                <span>Download</span>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div> -->
-      </div>
-    </nav>
-    <section class="p-0">
-      <div class="container has-text-left is-fluid p-0">
-        <div class="columns is-vcentered">
-          <div class="column is-half container-content mb-2">
-            <h1 class="title">{{metadata.title}}</h1>
-            <p>{{metadata.subtitle}}</p>
-          </div>
-          <div
-            class="column is-half container-content bg-yellow is-hidden-mobile"
-          >
-            {{ '/img/development.svg' | svgContents("illustration-svg") }}
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="p-0">
-      <div class="container is-fluid p-0">
-        <div class="columns">
-          <div class="column is-half bg-purple is-vcentered">
-            <div class="background-shape fill-green">
-              <svg class="sprite">
-                <use xlink:href="#header-shape-01"></use>
-              </svg>
             </div>
-            {{ '/img/work.svg' | svgContents("illustration-svg") }}
-            <!-- <div class="card">
-                        <div class="card-content">
-                            <p class="">{{metadata.about_us_quote}}</p>
-                            <p class="subtitle">{{metadata.about_us_author_quote}}</p>
-                        </div>
-                    </div> -->
-          </div>
-          <div class="column is-half container-content">
-            <h2 class="title has-text-left">Nos valeurs</h2>
-            <p>{{metadata.about_us_content}}</p>
-            <ul class="list m-1">
-              {% for item in metadata.about_us_list %}
-              <li class="list-item">{{item}}</li>
-              {% endfor %}
-            </ul>
-            <p>{{metadata.about_us_footer_content}}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="p-0">
-      <div class="container has-text-left is-fluid p-0">
-        <div class="columns is-vcentered">
-          <div class="column is-half">
-            <h2 class="title has-text-left">
-              Des applications avec plus d'impact
-            </h2>
-            <p>
-              Nos développeurs sont motivés avant tout par la création
-              d’applications à impact social ou écologique.Nous suivons une
-              méthodologie agile, ce qui nous permet de développer en temps
-              record des applications efficaces et intuitives.
-            </p>
-            <div class="tile is-ancestor mt-1">
-              {% for service in services %}
-              <div class="tile is-parent">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="media">
-                      <div class="media-left">
-                        <figure class="image is-32x32">
-                          {{ service.icon | svgContents("illustration-svg") }}
-                        </figure>
-                      </div>
-                      <div class="media-content">
-                        <p class="title is-4">{{service.title}}</p>
-                      </div>
-                    </div>
-                    <div class="content">
-                      {{service.content}}
-                      <br />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-          </div>
-          <div class="column is-half container-content bg-yellow">
-            {{ '/img/development.svg' | svgContents("illustration-svg") }}
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="p-0">
-      <div class="container has-text-left is-fluid p-0">
-        <div class="columns is-vcentered">
-          <div class="column is-half container-content bg-purple">
-            <h3 class="title">Une équipe expérimentée et engagée</h3>
-            <div class="box">
-              <div class="employeesCarousel">
-                {% for employee in employees %}
-                <div class="card no-box-shadow">
-                  <div class="card-content">
-                    <div class="media">
-                      <div class="media-left">
-                        <figure class="image is-48x48 has-image-centered">
-                          <img
-                            class="is-rounded"
-                            src=" {{employee.img}}"
-                            alt="{{employee.name}}"
-                          />
-                        </figure>
-                      </div>
-                      <div class="media-content">
-                        <p class="title is-4">{{employee.name}}</p>
-                        <p class="subtitle is-6">{{employee.title}}</p>
-                      </div>
-                    </div>
-                    <div class="content">{{employee.description}}</div>
-                  </div>
-                </div>
-                {% endfor %}
-              </div>
-              <div class="buttons-carousel has-text-centered">
-                <button
-                  class="prev-employees button button-carousel is-borderless is-paddingless is-size-2"
-                >
-                  ❮
-                </button>
-                <button
-                  class="next-employees button button-carousel is-borderless is-paddingless is-size-2"
-                >
-                  ❯
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="column is-half container-content">
-            <h2 class="title">{{metadata.join_us_title}}</h2>
-            <p>{{metadata.join_us_subtitle}}</p>
-            <a class="button mt-1 bg-yellow" href="mailto:contact@telescoop.fr"
-              >Nous contacter</a
-            >
-          </div>
-          {{ '/img/all.svg' | svgContents("illustration-svg") }}
-        </div>
-      </div>
-    </section>
-    <section class="p-0">
-      <div class="container has-text-left p-0">
-        <div class="columns is-vcentered">
-          <div class="column is-half container-content">
-            <h2 class="title has-text-left">
-              Nos clients sont plus efficaces dans leur métier
-            </h2>
-            <p>
-              Nos développeurs sont motivés avant tout par la création
-              d’applications à impact social ou écologique.Nous suivons une
-              méthodologie agile, ce qui nous permet de développer en temps
-              record des applications efficaces et intuitives.
-            </p>
-            <a class="button mt-1 bg-purple" href="mailto:contact@telescoop.fr"
-              >Nous contacter</a
-            >
-          </div>
-          <div class="column is-half bg-yellow">
-            <div class="box">
-              <div class="testimonialsCarousel">
-                {% for testimonial in testimonials %}
-                <div class="card no-box-shadow">
-                  <div class="card-content">
-                    <div class="media">
-                      <div class="media-left">
-                        <figure class="image is-48x48 has-image-centered">
-                          <img
-                            src="{{testimonial.logo}}"
-                            alt="{{testimonial.name}}"
-                          />
-                        </figure>
-                      </div>
-                      <div class="media-content">
-                        <p class="title is-4">{{testimonial.name}}</p>
-                      </div>
-                    </div>
-                    <div class="content">{{testimonial.description}}</div>
-                    <div class="content testimonial">
-                      {{testimonial.testimonial}}
-                    </div>
-                  </div>
-                  <footer class="card-footer">
-                    <p>
-                      {{testimonial.reference}}, {{testimonial.reference_poste}}
+        </div> -->
+        <!--
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="field is-grouped">
+                    <p class="control">
+                        <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms">
+                            <span class="icon">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                            <span>
+                                Tweet
+                            </span>
+                        </a>
                     </p>
-                  </footer>
+                    <p class="control">
+                        <a class="button is-primary" href="https://github.com/jgthms/bulma/releases/download/0.9.0/bulma-0.9.0.zip">
+                            <span class="icon">
+                                <i class="fas fa-download"></i>
+                            </span>
+                            <span>Download</span>
+                        </a>
+                    </p>
                 </div>
-                {% endfor %}
-              </div>
-              <div class="buttons-carousel has-text-centered">
-                <button
-                  class="prev-testimonials button-carousel button is-borderless is-paddingless is-size-2"
-                >
-                  ❮
-                </button>
-                <button
-                  class="next-testimonials button-carousel button is-borderless is-paddingless is-size-2"
-                >
-                  ❯
-                </button>
-              </div>
             </div>
-          </div>
+        </div> -->
+    </div>
+</nav>
+<section class="p-0">
+    <div class="container has-text-left is-fluid p-0">
+        <div class="columns is-vcentered">
+            <div class="column is-half service-container--content mb-2">
+                <h1 class="title">{{metadata.title}}</h1>
+                <p>{{metadata.subtitle}}</p>
+            </div>
+            <div class="column is-half service-container--content bg-yellow">
+                {{ '/img/development.svg' | svgContents("workshop-svg") }}
+            </div>
         </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="container">
+    </div>
+</section>
+<section class="p-0">
+    <div class="container is-fluid">
+        <div class="columns ">
+            <div class="column is-half bg-purple is-vcentered">
+                <div class="background-shape fill-green">
+                    <svg class="sprite">
+                        <use xlink:href="#header-shape-01"></use>
+                    </svg>
+                </div>
+                {{ '/img/work.svg' | svgContents("workshop-svg") }}
+                <!-- <div class="card">
+                    <div class="card-content">
+                        <p class="">{{metadata.about_us_quote}}</p>
+                        <p class="subtitle">{{metadata.about_us_author_quote}}</p>
+                    </div>
+                </div> -->
+            </div>
+            <div class="column is-half service-container--content">
+                <h2 class="title has-text-left">Nos valeurs</h2>
+                <p>{{metadata.about_us_content}}</p>
+                <ul class="list m-1">
+                    {% for item in metadata.about_us_list %}
+                    <li class="list-item">{{item}}</li>
+                    {% endfor %}
+                </ul>
+                <p>{{metadata.about_us_footer_content}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="p-0">
+    <div class="container has-text-left is-fluid p-0">
+        <div class="columns is-vcentered">
+            <div class="column is-half service-container--content">
+                <h2 class="title has-text-left">
+                    Des applications avec plus d'impact
+                </h2>
+                <p>
+                    Nos développeurs sont motivés avant tout par la création
+                    d’applications à impact social ou écologique.Nous suivons une
+                    méthodologie agile, ce qui nous permet de développer en temps
+                    record des applications efficaces et intuitives.
+                </p>
+                <div class="tile is-ancestor mt-1">
+                    {% for service in services %}
+                    <div class="tile is-parent">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-32x32">
+                                            {{ service.icon | svgContents("workshop-svg") }}
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">{{service.title}}</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    {{service.content}}
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="column is-half service-container--content bg-yellow">
+                {{ '/img/development.svg' | svgContents("workshop-svg") }}
+            </div>
+        </div>
+    </div>
+</section>
+<section class="p-0">
+    <div class="container has-text-left is-fluid p-0">
+        <div class="columns is-vcentered ">
+            <div class="column is-half service-container--content bg-purple">
+                <h3 class="title">Une équipe expérimentée et engagée</h3>
+                <div class="box">
+                    <div class="employeesCarousel">
+                        {% for employee in employees %}
+                        <div class="card no-box-shadow">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 has-image-centered ">
+                                            <img class="is-rounded" src=" {{employee.img}}" alt="{{employee.name}}" />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">{{employee.name}}</p>
+                                        <p class="subtitle is-6">{{employee.title}}</p>
+                                    </div>
+                                </div>
+                                <div class="content">{{employee.description}}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <button class="prev-employees button rotate-180">❯</button>
+                    <button class="next-employees button">❯</button>
+                </div>
+            </div>
+            <div class="column is-half service-container--content">
+                <h2 class="title">{{metadata.join_us_title}}</h2>
+                <p>{{metadata.join_us_subtitle}}</p>
+                <a class="button mt-1 bg-yellow" href="mailto:contact@telescoop.fr">Nous contacter</a>
+            </div>
+            {{ '/img/all.svg' | svgContents("workshop-svg") }}
+        </div>
+    </div>
+</section>
+<section class="p-0">
+    <div class="container has-text-left p-0">
+        <div class="columns is-vcentered">
+            <div class="column is-half service-container--content">
+                <h2 class="title has-text-left">
+                    Nos clients sont plus efficaces dans leur métier
+                </h2>
+                <p>
+                    Nos développeurs sont motivés avant tout par la création
+                    d’applications à impact social ou écologique.Nous suivons une
+                    méthodologie agile, ce qui nous permet de développer en temps
+                    record des applications efficaces et intuitives.
+                </p>
+                <a class="button mt-1 bg-purple" href="mailto:contact@telescoop.fr">Nous contacter</a>
+            </div>
+            <div class="column is-half bg-yellow">
+                <div class="box">
+                    <div class="testimonialsCarousel">
+                        {% for testimonial in testimonials %}
+                        <div class="card no-box-shadow">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48 has-image-centered">
+                                            <img src="{{testimonial.logo}}" alt="{{testimonial.name}}" />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">{{testimonial.name}}</p>
+                                    </div>
+                                </div>
+                                <div class="content">{{testimonial.description}}</div>
+                                <div class="content testimonial">
+                                    {{testimonial.testimonial}}
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <p>
+                                    {{testimonial.reference}}, {{testimonial.reference_poste}}
+                                </p>
+                            </footer>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <button class="prev-testimonials button-testimonials button rotate-180">
+                        ❯
+                    </button>
+                    <button class="next-testimonials button-testimonials button">
+                        ❯
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
         <div class="content has-text-centered">
-          <p>
-            Editeur : Ce site est produit par Telescop SCOP SARL. Pour toute
-            question concernant l’utilisation du site www.telescoop.fr vous
-            pouvez nous contacter directement en ligne.
-          </p>
+            <p>
+                Editeur : Ce site est produit par Telescop SARL. Pour toute question
+                concernant l’utilisation du site www.telescoop.fr vous pouvez nous
+                contacter directement en ligne.
+            </p>
         </div>
-      </div>
-    </footer>
-    <script type="application/javascript" src="js/telescoop.js"></script>
-    <script src="js/siema.min.js"></script>
-    <script>
-      const carouselConfig = {
-        duration: 500,
-        easing: 'ease-in',
-        perPage: 1,
-        startIndex: 0,
-        draggable: true,
-        multipleDrag: true,
-        threshold: 20,
-        loop: false,
-        rtl: false,
-        onInit: () => {},
-        onChange: () => {},
-      };
-      const employeesCarousel = new Siema({
+    </div>
+</footer>
+<script type="application/javascript" src="js/telescoop.js"></script>
+<script src="js/siema.min.js"></script>
+<script>
+    const carouselConfig = {
+                duration: 500,
+                easing: 'ease-in',
+                perPage: 1,
+                startIndex: 0,
+                draggable: true,
+                multipleDrag: true,
+                threshold: 20,
+                loop: false,
+                rtl: false,
+                onInit: () => {},
+            onChange: () => {},
+    };
+    const employeesCarousel = new Siema({
         ...carouselConfig,
         selector: '.employeesCarousel',
-      });
+    });
 
-      const testimonialsCarousel = new Siema({
+    const testimonialsCarousel = new Siema({
         ...carouselConfig,
         selector: '.testimonialsCarousel',
-      });
+    });
 
-      document
-        .querySelector('.prev-testimonials')
-        .addEventListener('click', (el) => testimonialsCarousel.prev());
-      document
-        .querySelector('.prev-employees')
-        .addEventListener('click', (el) => employeesCarousel.prev());
-      document
-        .querySelector('.next-testimonials')
-        .addEventListener('click', () => testimonialsCarousel.next());
-      document
-        .querySelector('.next-employees')
-        .addEventListener('click', () => employeesCarousel.next());
-    </script>
-  </body>
+    document
+            .querySelector('.prev-testimonials')
+            .addEventListener('click', (el) => testimonialsCarousel.prev());
+    document
+            .querySelector('.prev-employees')
+            .addEventListener('click', (el) => employeesCarousel.prev());
+    document
+            .querySelector('.next-testimonials')
+            .addEventListener('click', () => testimonialsCarousel.next());
+    document
+            .querySelector('.next-employees')
+            .addEventListener('click', () => employeesCarousel.next());
+</script>
+</body>
+
 </html>
