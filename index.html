@@ -36,16 +36,16 @@
             </a>
     
             <div class="navbar-dropdown">
-                <a class="navbar-item" href="#nos-valeurs">
+                <a class="navbar-item" onclick="scrollToTargetAdjusted('nos-valeurs')">
                   Nos valeurs
                 </a>
-                <a class="navbar-item" href="#nos-applications">
+                <a class="navbar-item" onclick="scrollToTargetAdjusted('nos-applications')">
                   Nos applications
                 </a>
-                <a class="navbar-item" href="#notre-équipe">
+                <a class="navbar-item" onclick="scrollToTargetAdjusted('notre-equipe')">
                   Notre équipe
                 </a>
-                <a class="navbar-item" href="#nos-clients">
+                <a class="navbar-item" onclick="scrollToTargetAdjusted('nos-clients')">
                   Nos clients
                 </a>
             </div>
@@ -61,102 +61,114 @@
         </div>
       </div>
     </nav>
+
+    <section class="first-section"></section>
+
     <section class="p-0">
-      <div class="container has-text-left is-fluid p-0">
-        <div class="columns is-vcentered">
-          <div class="column is-half mb-2" style="padding: 0 3rem">
+
+      <div class="columns m-0">
+        <div class="column is-half fullheight-with-navbar">
+          <div>
             <h1 class="title">{{metadata.title}}</h1>
             <p>{{metadata.subtitle}}</p>
             <div class="has-text-centered">
-              <a class="button is-large mt-1 bg-purple" style="margin-top: 5px" href="mailto:contact@telescoop.fr">Nous contacter</a>
+              <a class="button is-large mt-2 bg-purple" style="margin-top: 5px" href="mailto:contact@telescoop.fr">Nous contacter</a>
             </div>
           </div>
-          <div
-            class="column is-half container-content bg-yellow is-hidden-mobile"
-          >
+        </div>
+
+        <div
+          class="column is-half bg-yellow is-hidden-mobile fullheight-with-navbar svg-container"
+        >
+          <div class="w-100">
             {{ '/img/development.svg' | svgContents("illustration-svg") }}
           </div>
         </div>
       </div>
+
     </section>
+
     <section class="p-0" id="nos-valeurs">
-      <div class="container is-fluid p-0">
-        <div class="columns">
-          <div class="column is-half bg-purple is-vcentered">
-            <div class="background-shape fill-green">
-              <svg class="sprite">
-                <use xlink:href="#header-shape-01"></use>
-              </svg>
-            </div>
+
+      <div class="columns m-0">
+        <div class="column is-half bg-purple fullheight-with-navbar svg-container">
+          <div class="w-100">
             {{ '/img/work.svg' | svgContents("illustration-svg") }}
-            <!-- <div class="card">
-                        <div class="card-content">
-                            <p class="">{{metadata.about_us_quote}}</p>
-                            <p class="subtitle">{{metadata.about_us_author_quote}}</p>
-                        </div>
-                    </div> -->
           </div>
-          <div class="column is-half container-content">
+        </div>
+
+        <div class="column is-half fullheight-with-navbar">
+          <div>
             <h2 class="title has-text-left">Nos valeurs</h2>
             <p>{{metadata.about_us_content}}</p>
-            <ul class="list m-1">
+            <ul class="list">
               {% for item in metadata.about_us_list %}
-              <li class="list-item">{{item}}</li>
+                <li class="list-item">{{item}}</li>
               {% endfor %}
             </ul>
             <p>{{metadata.about_us_footer_content}}</p>
           </div>
         </div>
       </div>
+
     </section>
+
     <section class="p-0" id="nos-applications">
-      <div class="container has-text-left is-fluid p-0">
-        <div class="columns is-vcentered">
-          <div class="column is-half px-3">
-            <h2 class="title has-text-left">
-              Des applications avec plus d'impact
-            </h2>
-            <p>
-              Nos développeurs sont motivés avant tout par la création
-              d’applications à impact social ou écologique.Nous suivons une
-              méthodologie agile, ce qui nous permet de développer en temps
-              record des applications efficaces et intuitives.
-            </p>
-            <div class="tile is-ancestor mt-1">
-              {% for service in services %}
-              <div class="tile is-parent">
-                <div class="card">
-                  <div class="card-content">
-                    <div class="media">
-                      <div class="media-left">
-                        <figure class="image is-32x32">
-                          {{ service.icon | svgContents("illustration-svg") }}
-                        </figure>
+  
+      <div class="columns m-0">
+          <div class="column is-half fullheight-with-navbar">
+            <div>
+              <h2 class="title has-text-left">
+                Des applications avec plus d'impact
+              </h2>
+              <p>
+                Nos développeurs sont motivés avant tout par la création
+                d’applications à impact social ou écologique. Nous suivons une
+                méthodologie agile, ce qui nous permet de développer en temps
+                record des applications efficaces et intuitives.
+              </p>
+              <div class="tile is-ancestor mt-1">
+                {% for service in services %}
+                <div class="tile is-parent">
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-left">
+                          <figure class="image is-32x32">
+                            {{ service.icon | svgContents("illustration-svg") }}
+                          </figure>
+                        </div>
+                        <div class="media-content">
+                          <p class="title is-4">{{service.title}}</p>
+                        </div>
                       </div>
-                      <div class="media-content">
-                        <p class="title is-4">{{service.title}}</p>
+                      <div class="content">
+                        {{service.content}}
+                        <br />
                       </div>
-                    </div>
-                    <div class="content">
-                      {{service.content}}
-                      <br />
                     </div>
                   </div>
                 </div>
+                {% endfor %}
               </div>
-              {% endfor %}
             </div>
           </div>
-          <div class="column is-half container-content bg-yellow">
-            {{ '/img/development.svg' | svgContents("illustration-svg") }}
+
+          <div class="column is-half bg-yellow fullheight-with-navbar svg-container">
+            <div class="w-100">
+              {{ '/img/development.svg' | svgContents("illustration-svg") }}
+            </div>
           </div>
+
         </div>
-      </div>
     </section>
-    <section class="p-0" id="notre-équipe">
-      <div class="container has-text-left is-fluid p-0">
-        <div class="columns is-vcentered">
-          <div class="column is-half container-content bg-purple">
+
+  
+    <section class="p-0" id="notre-equipe">
+
+      <div class="columns m-0">
+        <div class="column is-half bg-purple fullheight-with-navbar">
+          <div class="w-100">
             <h3 class="title">Une équipe expérimentée et engagée</h3>
             <div class="box">
               <div class="employeesCarousel">
@@ -197,20 +209,30 @@
               </div>
             </div>
           </div>
-          <div class="column is-half container-content">
-            <h2 class="title">{{metadata.join_us_title}}</h2>
-            <p>{{metadata.join_us_subtitle}}</p>
-            <a class="button is-large mt-1 bg-yellow" href="mailto:contact@telescoop.fr">Nous contacter</a
-            >
-          </div>
-          {{ '/img/all.svg' | svgContents("illustration-svg") }}
+          
         </div>
+
+        <div class="column is-half fullheight-with-navbar">
+          <div>
+              <h2 class="title">{{metadata.join_us_title}}</h2>
+              <p>{{metadata.join_us_subtitle}}</p>
+              <div class="has-text-centered">
+                <a class="button is-large mt-2 bg-yellow" href="mailto:contact@telescoop.fr">Nous contacter</a
+                >
+              </div>
+
+          </div>
+        </div>
+         
       </div>
+      
     </section>
+  
     <section class="p-0" id="nos-clients">
-      <div class="container is-fluid has-text-left p-0">
-        <div class="columns is-vcentered">
-          <div class="column is-half container-content">
+
+      <div class="columns m-0">
+        <div class="column is-half fullheight-with-navbar">
+          <div>
             <h2 class="title has-text-left">
               Nos clients sont plus efficaces dans leur métier
             </h2>
@@ -220,9 +242,14 @@
               méthodologie agile, ce qui nous permet de développer en temps
               record des applications efficaces et intuitives.
             </p>
-            <a class="button is-large mt-1 bg-purple" href="mailto:contact@telescoop.fr">Nous contacter</a>
+            <div class="has-text-centered">
+              <a class="button is-large mt-2 bg-purple" href="mailto:contact@telescoop.fr">Nous contacter</a>
+            </div>
           </div>
-          <div class="column is-half bg-yellow">
+        </div>
+
+        <div class="column is-half bg-yellow fullheight-with-navbar" style="padding-top: 0.75rem; padding-bottom: 0.75rem;">
+          <div class="w-100">
             <div class="box" style="max-width: 600px; margin: auto">
               <div class="testimonialsCarousel">
                 {% for testimonial in testimonials %}
@@ -241,7 +268,7 @@
                         <p class="title is-4">{{testimonial.name}}</p>
                       </div>
                     </div>
-                    <div class="content">{{testimonial.description}}</div>
+                    <div class="content is-small">{{testimonial.description}}</div>
                     <div class="content testimonial">
                       {{testimonial.testimonial}}
                     </div>
@@ -270,7 +297,9 @@
           </div>
         </div>
       </div>
+
     </section>
+
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
@@ -320,6 +349,21 @@
       document
         .querySelector('.next-employees')
         .addEventListener('click', () => employeesCarousel.next());
+    </script>
+    <script>
+      function scrollToTargetAdjusted(id) {
+        const element = document.getElementById(id);
+        const offset = 61;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
     </script>
   </body>
 </html>
