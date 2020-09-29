@@ -6,6 +6,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('js');
     eleventyConfig.addPassthroughCopy('css');
     eleventyConfig.addPassthroughCopy('img');
+    eleventyConfig.addPassthroughCopy({"utils/*": "/" });
     eleventyConfig.addPlugin(svgContents);
 
     eleventyConfig.setBrowserSyncConfig({
