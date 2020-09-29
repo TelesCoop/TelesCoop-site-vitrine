@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" style="overflow: hidden;">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ 404.title }}</title>
+    <meta name="description" content="{{metadata.description}}"» />
+    <link rel="stylesheet" type="text/css" href="css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/telescoop.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&family=Roboto+Slab:wght@300;400;600&Overpass+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#9999cc">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!-- End Favicon -->
+
+    <!-- Open graph protocol (Facebook) -->
+    <meta property="og:title" content="{{metadata.title}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://telescoop.fr/" />
+    <meta property="og:image" content="http://telescoop.fr/img/logo.svg" />
+    <meta property="og:description" content="{{metadata.description}}" />
+    <!-- End Open graph protocol (Facebook) -->
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <!-- End Twitter -->
+
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="{{key.CRISP_WEBSITE_ID}}";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
+  </head>
+  <body class="bg-purple">
+    <section class="hero is-fullheight" style="background-size: cover; background-image: url(/img/galaxy2.jpg);">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title has-text-white">
+            {{ 404.title }}
+          </h1>
+          <h2 class="subtitle has-text-white">
+            Recadrez votre Telescoop, <a href="{{ "/" | url }}">Retourner sur l'accueil</a>
+          </h2>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
