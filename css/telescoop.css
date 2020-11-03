@@ -1,3 +1,26 @@
+nav.navbar {
+    height: 61px !important;
+}
+
+.first-section
+{
+    padding: 0;
+    height: 61px;
+}
+
+.fullheight-with-navbar
+{
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    min-height: calc(100vh - 61px);
+}
+
+.w-100
+{
+    width: 100%;
+}
+
 :root {
     --color1: #05386b;
     --color2: #379683;
@@ -35,8 +58,12 @@ h2 {
 }
 
 /* Spacing */
+.m-0 {
+    margin: 0 !important;
+}
+
 .p-0 {
-    padding: 0.3666em !important;
+    padding: 0 !important;
 }
 
 .pa-1 {
@@ -51,12 +78,21 @@ h2 {
     margin-top: 0.5em !important;
 }
 
+.mt-2 {
+    margin-top: 0.75em !important;
+}
+
 .mb-1 {
     margin-bottom: 0.5em;
 }
 
 .mb-2 {
     margin-bottom: 0.75em;
+}
+
+.px-3 {
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .is-borderless {
@@ -111,6 +147,11 @@ h2 {
 
 .tile.is-parent {
     flex: 1 0 50%;
+}
+
+.list {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 /* List item  */
@@ -228,7 +269,7 @@ div.client-name {
 }
 
 .container-content {
-    padding: 10rem 3rem;
+    padding: 0 3rem;
 }
 
 .title {
@@ -271,5 +312,11 @@ div.client-name {
 
     .container-content {
         padding: 5rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fullheight-with-navbar.svg-container {
+        min-height: 0;
     }
 }
