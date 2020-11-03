@@ -1,8 +1,10 @@
-# telescoop
+# Telescoop website
 
-## How to install the project ?
+## Install the project
 
-The project use **eleventy** as a static files generator built with JavaScript. We use the templating langage Nunjucks as an engine to generate HTML files.
+The project uses **eleventy** as a static files generator built with JavaScript. We use the templating langage Nunjucks
+as an engine to generate HTML files.
+
 In order to setting up the project, you need to install globally the eleventy library:
 
 # with yarn
@@ -15,30 +17,26 @@ In order to setting up the project, you need to install globally the eleventy li
 
 Notes: Eleventy is available on npm and requires version 8 of Node.js or higher.
 
-then, you need to start the server with this command:
+## Run the project locally
 
-`eleventy --serve`
+Start the local server with `make serve`.
 
-If you have some issues with the Javascript and CSS files (missing files or what else), you probably need to copy the content of the Javascript and CSS in the _\_site_ folder.
+If you have some issues with the Javascript and CSS files (missing files or what else), you probably need to copy the
+content of the Javascript and CSS in the _\_site_ folder.
 
-The easy way, is to uncomment the functions called a pass through in _eleventy.js_ file configuration.
+The easy way, is to uncomment the functions called a pass through in `eleventy.js` file configuration.
 Steps:
 
-1. Go to the _.eleventy.js_ file
+1. Go to the `.eleventy.js` file
 2. Uncomment the functions:
    `eleventyConfig.addPassthroughCopy("js");`
    `eleventyConfig.addPassthroughCopy('css')`
 3. Start the server
-   `eleventy --serve`
+   `make serve`
 
-## How to deploy on the production server ?
+## Deploy to the production server
 
-with makefile:
-'''
-make deploy
-'''
+Using make, simply run `make deploy`.
 
-from production server,
-
-- `git pull`
-- `ln -s /root/telescoop/telescoop-nginx.conf /etc/nginx/sites-enabled/`
+_For this command to work, you need to have ssh access to the telescoop website
+production server, and have your ~/.ssh/config configured for_ `telescoop_website`.

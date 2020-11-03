@@ -2,18 +2,44 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{metadata.title}}</title>
-    <link rel="stylesheet" type="text/css" href="css/bulma.css" />
+    <meta name="description" content="{{metadata.description}}"» />
+    <link rel="stylesheet" type="text/css" href="css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" href="css/telescoop.css" />
-    <link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&family=Roboto+Slab:wght@300;400;600&Overpass+Mono:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <link type="text/css" href="css/glide.core.min.css" />
-    <link type="text/css" href="css/glide.theme.min.css" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#9999cc">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!-- End Favicon -->
+
+    <!-- Open graph protocol (Facebook) -->
+    <meta property="og:title" content="{{metadata.title}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://telescoop.fr/" />
+    <meta property="og:image" content="http://telescoop.fr/img/logo.svg" />
+    <meta property="og:description" content="{{metadata.description}}" />
+    <!-- End Open graph protocol (Facebook) -->
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{metadata.title}}" />
+    <meta name="twitter:description" content="{{metadata.description}}" />
+    <meta name="twitter:image" content="http://telescoop.fr/img/logo.svg" />
+    <!-- End Twitter -->
+
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="{{key.CRISP_WEBSITE_ID}}";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
   </head>
 
   <body class="main-bg">
@@ -24,111 +50,94 @@
         </a>
       </div>
       <div id="main-navigation" class="navbar-menu">
-        <!-- <div class="navbar-start">
-                <a class="navbar-item" href="https://bulma.io/">
-                    Home
+        <div class="navbar-end">
+
+          <a class="navbar-item" href="/">
+            Accueil
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+
+            <a class="navbar-link">
+              À propos de nous
+            </a>
+    
+            <div class="navbar-dropdown">
+                <a class="navbar-item" onclick="scrollToTargetAdjusted('nos-valeurs')">
+                  Nos valeurs
                 </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
-                        Docs
-                    </a>
-                    <div class="navbar-dropdown is-boxed">
-                        <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
-                            Overview
-                        </a>
-                        <a class="navbar-item" href="https://bulma.io/documentation/overview/modifiers/">
-                            Modifiers
-                        </a>
-                        <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
-                            Columns
-                        </a>
-                        <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
-                            Layout
-                        </a>
-                        <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
-                            Form
-                        </a>
-                        <hr class="navbar-divider" />
-                        <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
-                            Elements
-                        </a>
-                        <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
-                            Components
-                        </a>
-                    </div>
-                </div>
-            </div> -->
-        <!-- 
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="field is-grouped">
-                        <p class="control">
-                            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms">
-                                <span class="icon">
-                                    <i class="fab fa-twitter"></i>
-                                </span>
-                                <span>
-                                    Tweet
-                                </span>
-                            </a>
-                        </p>
-                        <p class="control">
-                            <a class="button is-primary" href="https://github.com/jgthms/bulma/releases/download/0.9.0/bulma-0.9.0.zip">
-                                <span class="icon">
-                                    <i class="fas fa-download"></i>
-                                </span>
-                                <span>Download</span>
-                            </a>
-                        </p>
-                    </div>
-                </div>
-            </div> -->
+                <a class="navbar-item" onclick="scrollToTargetAdjusted('nos-applications')">
+                  Nos applications
+                </a>
+                <a class="navbar-item" onclick="scrollToTargetAdjusted('notre-equipe')">
+                  Notre équipe
+                </a>
+                <a class="navbar-item" onclick="scrollToTargetAdjusted('nos-clients')">
+                  Nos clients
+                </a>
+            </div>
+
+          </div>
+
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button bg-purple" href="mailto:contact@telescoop.fr">Nous contacter</a>
+            </div>
+          </div>
+
+        </div>
       </div>
     </nav>
+
+    <section class="first-section"></section>
+
     <section class="p-0">
-      <div class="container has-text-left is-fluid p-0">
-        <div class="columns is-vcentered">
-          <div class="column is-half container-content mb-2">
-            <h1 class="title">{{metadata.title}}</h1>
+
+      <div class="columns m-0">
+        <div class="column is-half fullheight-with-navbar">
+          <div>
+            <h1 class="title">{{metadata.page_title}}</h1>
             <p>{{metadata.subtitle}}</p>
+            <div class="has-text-centered">
+              <a class="button is-large mt-2 bg-purple" style="margin-top: 5px" href="mailto:contact@telescoop.fr">Nous contacter</a>
+            </div>
           </div>
-          <div
-            class="column is-half container-content bg-yellow is-hidden-mobile"
-          >
+        </div>
+
+        <div
+          class="column is-half bg-yellow is-hidden-mobile fullheight-with-navbar svg-container"
+        >
+          <div class="w-100">
             {{ '/img/development.svg' | svgContents("illustration-svg") }}
           </div>
         </div>
       </div>
+
     </section>
-    <section class="p-0">
-      <div class="container is-fluid p-0">
-        <div class="columns">
-          <div class="column is-half bg-purple is-vcentered">
-            <div class="background-shape fill-green">
-              <svg class="sprite">
-                <use xlink:href="#header-shape-01"></use>
-              </svg>
-            </div>
+
+    <section class="p-0" id="nos-valeurs">
+
+      <div class="columns m-0">
+        <div class="column is-half bg-purple fullheight-with-navbar svg-container">
+          <div class="w-100">
             {{ '/img/work.svg' | svgContents("illustration-svg") }}
-            <!-- <div class="card">
-                        <div class="card-content">
-                            <p class="">{{metadata.about_us_quote}}</p>
-                            <p class="subtitle">{{metadata.about_us_author_quote}}</p>
-                        </div>
-                    </div> -->
           </div>
-          <div class="column is-half container-content">
+        </div>
+
+        <div class="column is-half fullheight-with-navbar">
+          <div>
             <h2 class="title has-text-left">Nos valeurs</h2>
             <p>{{metadata.about_us_content}}</p>
-            <ul class="list m-1">
+            <ul class="list">
               {% for item in metadata.about_us_list %}
-              <li class="list-item">{{item}}</li>
+                <li class="list-item">{{item}}</li>
               {% endfor %}
             </ul>
             <p>{{metadata.about_us_footer_content}}</p>
           </div>
         </div>
       </div>
+
     </section>
     <section class="p-0">
       <div class="container has-text-left is-fluid p-0">
@@ -154,30 +163,33 @@
                           {{ service.icon | svgContents("illustration-svg") }}
                         </figure>
                       </div>
-                      <div class="media-content">
-                        <p class="title is-4">{{service.title}}</p>
+                      <div class="content">
+                        {{service.content}}
+                        <br />
                       </div>
-                    </div>
-                    <div class="content">
-                      {{service.content}}
-                      <br />
                     </div>
                   </div>
                 </div>
+                {% endfor %}
               </div>
-              {% endfor %}
             </div>
           </div>
-          <div class="column is-half container-content bg-yellow">
-            {{ '/img/development.svg' | svgContents("illustration-svg") }}
+
+          <div class="column is-half bg-yellow fullheight-with-navbar svg-container">
+            <div class="w-100">
+              {{ '/img/development.svg' | svgContents("illustration-svg") }}
+            </div>
           </div>
+
         </div>
-      </div>
     </section>
-    <section class="p-0">
-      <div class="container has-text-left is-fluid p-0">
-        <div class="columns is-vcentered">
-          <div class="column is-half container-content bg-purple">
+
+  
+    <section class="p-0" id="notre-equipe">
+
+      <div class="columns m-0">
+        <div class="column is-half bg-purple fullheight-with-navbar">
+          <div class="w-100">
             <h3 class="title">Une équipe expérimentée et engagée</h3>
             <div class="box">
               <div class="employeesCarousel">
@@ -218,21 +230,30 @@
               </div>
             </div>
           </div>
-          <div class="column is-half container-content">
-            <h2 class="title">{{metadata.join_us_title}}</h2>
-            <p>{{metadata.join_us_subtitle}}</p>
-            <a class="button mt-1 bg-yellow" href="mailto:contact@telescoop.fr"
-              >Nous contacter</a
-            >
-          </div>
-          {{ '/img/all.svg' | svgContents("illustration-svg") }}
+          
         </div>
+
+        <div class="column is-half fullheight-with-navbar">
+          <div>
+              <h2 class="title">{{metadata.join_us_title}}</h2>
+              <p>{{metadata.join_us_subtitle}}</p>
+              <div class="has-text-centered">
+                <a class="button is-large mt-2 bg-yellow" href="mailto:contact@telescoop.fr">Nous contacter</a
+                >
+              </div>
+
+          </div>
+        </div>
+         
       </div>
+      
     </section>
-    <section class="p-0">
-      <div class="container has-text-left p-0">
-        <div class="columns is-vcentered">
-          <div class="column is-half container-content">
+  
+    <section class="p-0" id="nos-clients">
+
+      <div class="columns m-0">
+        <div class="column is-half fullheight-with-navbar">
+          <div>
             <h2 class="title has-text-left">
               Nos clients sont plus efficaces dans leur métier
             </h2>
@@ -242,12 +263,15 @@
               méthodologie agile, ce qui nous permet de développer en temps
               record des applications efficaces et intuitives.
             </p>
-            <a class="button mt-1 bg-purple" href="mailto:contact@telescoop.fr"
-              >Nous contacter</a
-            >
+            <div class="has-text-centered">
+              <a class="button is-large mt-2 bg-purple" href="mailto:contact@telescoop.fr">Nous contacter</a>
+            </div>
           </div>
-          <div class="column is-half bg-yellow">
-            <div class="box">
+        </div>
+
+        <div class="column is-half bg-yellow fullheight-with-navbar" style="padding-top: 0.75rem; padding-bottom: 0.75rem;">
+          <div class="w-100">
+            <div class="box" style="max-width: 600px; margin: auto">
               <div class="testimonialsCarousel">
                 {% for testimonial in testimonials %}
                 <div class="card no-box-shadow">
@@ -265,7 +289,7 @@
                         <p class="title is-4">{{testimonial.name}}</p>
                       </div>
                     </div>
-                    <div class="content">{{testimonial.description}}</div>
+                    <div class="content is-small">{{testimonial.description}}</div>
                     <div class="content testimonial">
                       {{testimonial.testimonial}}
                     </div>
@@ -294,7 +318,9 @@
           </div>
         </div>
       </div>
+
     </section>
+
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
@@ -344,6 +370,21 @@
       document
         .querySelector('.next-employees')
         .addEventListener('click', () => employeesCarousel.next());
+    </script>
+    <script>
+      function scrollToTargetAdjusted(id) {
+        const element = document.getElementById(id);
+        const offset = 61;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
     </script>
   </body>
 </html>
