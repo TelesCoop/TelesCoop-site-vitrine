@@ -139,35 +139,29 @@
       </div>
 
     </section>
-
-    <section class="p-0" id="nos-applications">
-  
-      <div class="columns m-0">
-          <div class="column is-half fullheight-with-navbar">
-            <div>
-              <h2 class="title has-text-left">
-                Des applications avec plus d'impact
-              </h2>
-              <p>
-                Nos développeurs sont motivés avant tout par la création
-                d’applications à impact social ou écologique. Nous suivons une
-                méthodologie agile, ce qui nous permet de développer en temps
-                record des applications efficaces et intuitives.
-              </p>
-              <div class="tile is-ancestor mt-1">
-                {% for service in services %}
-                <div class="tile is-parent">
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="media">
-                        <div class="media-left">
-                          <figure class="image is-32x32">
-                            {{ service.icon | svgContents("illustration-svg") }}
-                          </figure>
-                        </div>
-                        <div class="media-content">
-                          <p class="title is-4">{{service.title}}</p>
-                        </div>
+    <section class="p-0">
+      <div class="container has-text-left is-fluid p-0">
+        <div class="columns is-vcentered">
+          <div class="column is-half">
+            <h2 class="title has-text-left">
+              Des applications avec plus d'impact
+            </h2>
+            <p>
+              Nos développeurs sont motivés avant tout par la création
+              d’applications à impact social ou écologique. Nous suivons une
+              méthodologie agile, ce qui nous permet de développer en temps
+              record des applications efficaces et intuitives.
+            </p>
+            <div class="tile is-ancestor mt-1">
+              {% for service in services %}
+              <div class="tile is-parent">
+                <div class="card">
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-left">
+                        <figure class="image is-32x32">
+                          {{ service.icon | svgContents("illustration-svg") }}
+                        </figure>
                       </div>
                       <div class="content">
                         {{service.content}}
@@ -265,7 +259,7 @@
             </h2>
             <p>
               Nos développeurs sont motivés avant tout par la création
-              d’applications à impact social ou écologique.Nous suivons une
+              d’applications à impact social ou écologique. Nous suivons une
               méthodologie agile, ce qui nous permet de développer en temps
               record des applications efficaces et intuitives.
             </p>
@@ -332,7 +326,7 @@
         <div class="content has-text-centered">
           <p>
             Editeur : Ce site est produit par Telescop SCOP SARL. Pour toute
-            question concernant l’utilisation du site www.telescoop.fr vous
+            question concernant l’utilisation du site <a href="telescoop.fr">telescoop.fr</a> vous
             pouvez nous contacter directement en ligne.
           </p>
         </div>
