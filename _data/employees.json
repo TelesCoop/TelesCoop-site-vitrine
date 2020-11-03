@@ -6,20 +6,20 @@
     },
     {
         "img": "./img/clement.png",
-        "name": "Clément",
+        "name": "Clément Feltin",
         "title": "ingénieur engagé et développeur polyvalent",
         "description": "Ingénieur spécialisé en sciences des données, Clément aussi expert sur les questions énergie / climat. Ses 4 ans d'expérience en dev / data lui permettent de mener des projets de bout en bout, du prototypage R&D à la mise en production, tout en s'assurant qu'ils répondent aux besoins des utilisateurs. Il est engagé au sein de l’association Avenir Climatique et du projet EduClimat."
     },
     {
         "img": "./img/antoine.jpg",
-        "name": "Antoine",
-        "title": "Développeur engagé et polyvalent",
+        "name": "Antoine Bernier",
+        "title": "développeur engagé et polyvalent",
         "description": "Développeur complet, il est autant attentif à l’impact des produits sur lesquels il travaille que la qualité graphique et ergonomique des applications."
     },
     {
         "img": "img/quentin.jpg ",
-        "name": "Quentin",
-        "title": "Développeur éclectique",
+        "name": "Quentin Madura",
+        "title": "développeur éclectique",
         "description": "Développeur éclectique, passionné aussi par les technologies d’informations, de philosophie et de VTT. Il est compétent sur des sujets de développement back-end et/ou front-end."
     }
 ]
