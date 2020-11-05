@@ -258,10 +258,7 @@
               Nos clients sont plus efficaces dans leur métier
             </h2>
             <p>
-              Nos développeurs sont motivés avant tout par la création
-              d’applications à impact social ou écologique. Nous suivons une
-              méthodologie agile, ce qui nous permet de développer en temps
-              record des applications efficaces et intuitives.
+              Nous accompagnons nos clients dans la création d'outils sur mesure, au plus près de leurs besoins métier.
             </p>
             <div class="has-text-centered">
               <a class="button is-large mt-2 bg-purple" href="mailto:contact@telescoop.fr">Nous contacter</a>
@@ -321,6 +318,50 @@
 
     </section>
 
+    <section class="p-0">
+      <div class="container has-text-left is-fluid p-0">
+        <div class="columns is-vcentered">
+          <div class="column is-half">
+            <h2 class="title has-text-left">
+              Ils nous font confiance
+            </h2>
+            <p>
+              De nombreuses entreprises, collectivités, ONG et associations ont choisi de nous faire confiance pour créer les outils qui leur permettent de voir plus loin. Pourquoi pas vous?
+            </p>
+            <div class="has-text-centered">
+              <a class="button is-large mt-2 bg-purple" href="mailto:contact@telescoop.fr">Nous contacter</a>
+            </div>
+          </div>
+
+          <div class="column is-half bg-yellow fullheight-with-navbar svg-container">
+            <div class="tile is-ancestor mt-1">
+              {% for reference in references %}
+              <div class="tile is-parent">
+                <div class="card">
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-left">
+                        <figure class="image is-96x96">
+                          {% if getFileExtension(reference.logo) == "svg" %}
+                            {{ reference.logo | svgContents("illustration-svg") }}
+                          {% else if getFileExtension(reference.logo) == "png" %}
+                            <img
+                            src="{{reference.logo}}"
+                            />
+                          {% endif %}
+                        </figure>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </section>
+
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
@@ -372,6 +413,9 @@
         .addEventListener('click', () => employeesCarousel.next());
     </script>
     <script>
+      var nunjucks  = require('nunjucks');
+      var env = nunjucks.configure();
+
       function scrollToTargetAdjusted(id) {
         const element = document.getElementById(id);
         const offset = 61;
@@ -385,6 +429,13 @@
           behavior: 'smooth'
         });
       }
+      function getFileExtension(filename) {
+        // source : https://www.jstips.co/en/javascript/get-file-extension/
+        console.log(filename.split('.').pop());
+        return filename.split('.').pop();
+      }
+
+      env.addGlobal('getFileExtension', getFileExtension);      
     </script>
   </body>
 </html>

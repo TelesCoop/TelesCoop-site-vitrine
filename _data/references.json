@@ -1,0 +1,31 @@
+[{
+    "customer": "Greenpeace",
+    "website": "https://www.greenpeace.fr/",
+    "logo": "/img/greenpeace-logo-2.svg"
+},
+{
+    "customer": "Back Market",
+    "website": "https://www.backmarket.fr/",
+    "logo": "/img/back-market-logo-vector.svg"
+},
+{
+    "customer": "Oxfam",
+    "website": "https://www.oxfamfrance.org/",
+    "logo": "/img/oxfam-2.svg"
+},
+{
+    "customer": "Excellents Excédents",
+    "website": "https://www.excellents-excedents.fr/",
+    "logo": "/img/excellent-excedent.png"
+},
+{
+    "customer": "Anthakarana",
+    "website": "https://www.anthakarana.fr/",
+    "logo": "/img/anthakarana.png"
+},
+{
+    "customer": "Green Menu",
+    "website": "http://green-menu.fr/FR/",
+    "logo": "/img/GreenMenu.png"
+}
+]

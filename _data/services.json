@@ -1,6 +1,6 @@
 [{
-        "title": "Développement web",
-        "content": "Votre application grand public ou à usage interne, développée sur-mesure.",
+        "title": "Développement web et mobile",
+        "content": "Votre application grand public ou à usage interne, développée sur mesure.",
         "icon": "/icons/development.svg"
     },
     {
@@ -11,6 +11,16 @@
     {
         "title": "E-commerce ",
         "content": "Vendez vos produits en service via une interface intuitive, fiable et sûre",
+        "icon": "/icons/ecommerce.svg"
+    },
+    {
+        "title": "Valorisation de vos données ",
+        "content": "Vendez vos produits en service via une interface intuitive, fiable et sûre",
+        "icon": "/icons/ecommerce.svg"
+    },
+    {
+        "title": "Eco-conception numérique",
+        "content": "Vous êtes attentifs à votre impact écologique et souhaitez mettre en oeuvre la sobriété numérique",
         "icon": "/icons/ecommerce.svg"
     },
     {
