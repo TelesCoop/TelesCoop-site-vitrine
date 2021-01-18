@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon/favicon.ico">
+    <title><%= VUE_APP_TITLE %></title>
+    <!-- Open graph protocol (Facebook) -->
+    <meta property="og:title" content="Telescoop - Agence de développement applicatif durable" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://telescoop.fr/" />
+    <meta property="og:image" content="<%= BASE_URL %>img/logo.svg" />
+    <meta property="og:description" content="Telescoop développe des outils pour répondre aux problématiques sociales et environnementales de notre société." />
+    <!-- End Open graph protocol (Facebook) -->
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Telescoop - Agence de développement applicatif durable" />
+    <meta name="twitter:description" content="Telescoop développe des outils pour répondre aux problématiques sociales et environnementales de notre société." />
+    <meta name="twitter:image" content="<%= BASE_URL %>img/logo.svg" />
+    <!-- End Twitter -->
+
+    <script>
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "<%= VUE_APP_CRISP_WEBSITE_ID %>";
+      (function () {
+        d = document;
+        s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

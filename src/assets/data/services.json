@@ -1,0 +1,25 @@
+[{
+        "title": "Développement web",
+        "content": "Votre application grand public ou à usage interne, développée sur-mesure.",
+        "icon": "/icons/development.svg",
+    "id": "dev-web"
+    },
+    {
+        "title": "Site vitrine ",
+        "content": "Présentez votre entreprise et vos produits au grand public",
+        "icon": "/icons/web.svg",
+        "id": "site-vitrine"
+    },
+    {
+        "title": "E-commerce ",
+        "content": "Vendez vos produits en service via une interface intuitive, fiable et sûre",
+        "icon": "/icons/ecommerce.svg",
+        "id": "ecommerce"
+    },
+    {
+        "title": "Autres ? ",
+        "content": "Vous avez une idée de développement de projet ? Contactez-nous",
+        "icon": "/icons/idea.svg",
+        "id": "others"
+    }
+]

@@ -1,0 +1,324 @@
+@import "~bulma";
+nav.navbar {
+  height: 61px !important;
+}
+
+.first-section
+{
+  padding: 0;
+  height: 61px;
+}
+
+.full-height-with-navbar
+{
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  min-height: calc(100vh - 61px);
+}
+
+.w-100
+{
+  width: 100%;
+}
+
+:root {
+  --color1: #05386b;
+  --color2: #379683;
+  --color3: #5cdb95;
+  --color4: #8ee4af;
+  --color5: #edf6e1;
+  --bgcolor: var(--color5);
+}
+
+/* Typography */
+p {
+  font-family: 'Overpass Mono', monospace;
+  font-size: 18px;
+}
+
+.tagline1 {
+  font-size: 1.4em;
+}
+
+.tagline2 {
+  font-size: 1.3em;
+}
+
+.title.is-2 {
+  color: var(--color1) !important;
+}
+
+h1 {
+  font-family: 'Roboto Slab', monospace;
+}
+
+h2 {
+  font-family: 'Roboto Slab', monospace;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+/* Spacing */
+.m-0 {
+  margin: 0 !important;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.pa-1 {
+  padding: 0.75em;
+}
+
+.m-1 {
+  margin: 0.5em;
+}
+
+.mt-1 {
+  margin-top: 0.5em !important;
+}
+
+.mt-2 {
+  margin-top: 0.75em !important;
+}
+
+.mb-1 {
+  margin-bottom: 0.5em;
+}
+
+.mb-2 {
+  margin-bottom: 0.75em;
+}
+
+.px-3 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.is-borderless {
+  border: none;
+}
+
+.buttons-carousel {
+  margin: -30px;
+}
+
+/* Background */
+.bg-yellow {
+  background-color: #ffd972;
+}
+
+.bg-purple {
+  background-color: #9999cc;
+}
+
+.main-bg {
+  background-color: #f7f7f2;
+}
+
+.has-bg-2 {
+  background-color: #f7f7f7;
+}
+
+/* Spacer */
+.small-spacer {
+  height: 3rem;
+}
+
+.illustration-svg {
+  height: 100%;
+  width: 100%;
+}
+
+/* Tile component */
+.tile.is-child.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-footer {
+  padding: 1.5em;
+}
+
+.tile.is-ancestor {
+  flex-wrap: wrap;
+}
+
+.tile.is-parent {
+  flex: 1 0 50%;
+}
+
+.list {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* List item  */
+.list-item {
+  font-family: 'Roboto Slab', monospace;
+}
+
+/* Box shadow  */
+.no-box-shadow {
+  box-shadow: none !important;
+}
+
+/* Client component */
+.testimonial {
+  font-style: italic;
+}
+
+.button-carousel {
+  margin: 15px;
+}
+
+/* Employee carousel */
+.employee img {
+  width: 200px;
+}
+
+.employee-image {
+  border-radius: 999px;
+}
+
+.employee .emphasis {
+  font-size: 1.4rem;
+  color: var(--color2);
+}
+
+.client-name {
+  width: 100%;
+  padding-right: 45px;
+  font-size: 1.1rem;
+  font-style: normal;
+  color: var(--color2);
+  text-align: right;
+}
+
+.employee .employee-title {
+  font-size: 1.2rem;
+  font-style: oblique;
+}
+
+.employee .fa-chevron-right,
+.employee .fa-chevron-left {
+  top: 68px;
+}
+
+/* Solution component */
+.solution-holder {
+  transition: width 0.3s ease;
+}
+
+.box.solution {
+  transition: box-shadow 0.3s ease;
+}
+
+.details .solution-details {
+  display: block;
+}
+
+.solution-details {
+  display: none;
+}
+
+/* Header  */
+.header--background-shape {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  fill: #150035;
+}
+
+.footer {
+  padding: 3rem 1.5rem 3rem;
+}
+
+.logo {
+  font-size: 32px;
+  font-family: 'Roboto Slab';
+  margin-left: 10px;
+}
+
+.bold {
+  font-family: 'Roboto Slab';
+  font-weight: 600;
+  color: #9999cc;
+}
+
+/* */
+.has-image-centered {
+  display: flex;
+  align-items: center;
+}
+
+.sprite {
+  width: 100%;
+  height: 100%;
+}
+
+/* Media queries */
+@media (max-width: 1100px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+.container-content {
+  padding: 0 3rem;
+}
+
+.title {
+  font-size: 3.75rem;
+}
+
+@media (max-width: 900px) {
+  .tagline1 {
+    font-size: 1.2em !important;
+  }
+
+  .tagline2 {
+    font-size: 1.1em !important;
+  }
+
+  .title.is-2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .tagline1 {
+    font-size: 1em !important;
+  }
+
+  .tagline2 {
+    font-size: 0.9em !important;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 13px;
+  }
+
+  p,
+  .content {
+    font-size: 16px;
+  }
+
+  .container-content {
+    padding: 5rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fullheight-with-navbar.svg-container {
+    min-height: 0;
+  }
+}
