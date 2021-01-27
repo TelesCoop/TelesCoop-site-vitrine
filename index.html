@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{metadata.title}}</title>
-    <meta name="description" content="{{metadata.description}}"» />
+    <meta name="description" content="{{metadata.description}}" » />
     <link rel="stylesheet" type="text/css" href="css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" href="css/telescoop.css" />
     <link
@@ -13,15 +13,36 @@
     />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#9999cc">
-    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ffc40d">
-    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/img/favicon/safari-pinned-tab.svg"
+      color="#9999cc"
+    />
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta
+      name="msapplication-config"
+      content="/img/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
     <!-- End Favicon -->
 
     <!-- Open graph protocol (Facebook) -->
@@ -39,7 +60,17 @@
     <meta name="twitter:image" content="http://telescoop.fr/img/logo.svg" />
     <!-- End Twitter -->
 
-    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="{{key.CRISP_WEBSITE_ID}}";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <script type="text/javascript">
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "{{key.CRISP_WEBSITE_ID}}";
+      (function () {
+        d = document;
+        s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
   </head>
 
   <body class="main-bg">
@@ -51,40 +82,46 @@
       </div>
       <div id="main-navigation" class="navbar-menu">
         <div class="navbar-end">
-
-          <a class="navbar-item" href="/">
-            Accueil
-          </a>
+          <a class="navbar-item" href="/"> Accueil </a>
 
           <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> À propos de nous </a>
 
-            <a class="navbar-link">
-              À propos de nous
-            </a>
-    
             <div class="navbar-dropdown">
-                <a class="navbar-item" onclick="scrollToTargetAdjusted('nos-valeurs')">
-                  Nos valeurs
-                </a>
-                <a class="navbar-item" onclick="scrollToTargetAdjusted('nos-applications')">
-                  Nos applications
-                </a>
-                <a class="navbar-item" onclick="scrollToTargetAdjusted('notre-equipe')">
-                  Notre équipe
-                </a>
-                <a class="navbar-item" onclick="scrollToTargetAdjusted('nos-clients')">
-                  Nos clients
-                </a>
+              <a
+                class="navbar-item"
+                onclick="scrollToTargetAdjusted('nos-valeurs')"
+              >
+                Nos valeurs
+              </a>
+              <a
+                class="navbar-item"
+                onclick="scrollToTargetAdjusted('nos-applications')"
+              >
+                Nos applications
+              </a>
+              <a
+                class="navbar-item"
+                onclick="scrollToTargetAdjusted('notre-equipe')"
+              >
+                Notre équipe
+              </a>
+              <a
+                class="navbar-item"
+                onclick="scrollToTargetAdjusted('nos-clients')"
+              >
+                Nos clients
+              </a>
             </div>
-
           </div>
 
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button bg-purple" href="mailto:contact@telescoop.fr">Nous contacter</a>
+              <a class="button bg-purple" href="mailto:contact@telescoop.fr"
+                >Nous contacter</a
+              >
             </div>
           </div>
-
         </div>
       </div>
     </nav>
@@ -92,14 +129,18 @@
     <section class="first-section"></section>
 
     <section class="p-0">
-
       <div class="columns m-0">
         <div class="column is-half fullheight-with-navbar">
           <div>
             <h1 class="title">{{metadata.page_title}}</h1>
             <p>{{metadata.subtitle}}</p>
             <div class="has-text-centered">
-              <a class="button is-large mt-2 bg-purple" style="margin-top: 5px" href="mailto:contact@telescoop.fr">Nous contacter</a>
+              <a
+                class="button is-large mt-2 bg-purple"
+                style="margin-top: 5px"
+                href="mailto:contact@telescoop.fr"
+                >Nous contacter</a
+              >
             </div>
           </div>
         </div>
@@ -112,13 +153,13 @@
           </div>
         </div>
       </div>
-
     </section>
 
     <section class="p-0" id="nos-valeurs">
-
       <div class="columns m-0">
-        <div class="column is-half bg-purple fullheight-with-navbar svg-container">
+        <div
+          class="column is-half bg-purple fullheight-with-navbar svg-container"
+        >
           <div class="w-100">
             {{ '/img/work.svg' | svgContents("illustration-svg") }}
           </div>
@@ -130,69 +171,66 @@
             <p>{{metadata.about_us_content}}</p>
             <ul class="list">
               {% for item in metadata.about_us_list %}
-                <li class="list-item">{{item}}</li>
+              <li class="list-item">{{item}}</li>
               {% endfor %}
             </ul>
             <p>{{metadata.about_us_footer_content}}</p>
           </div>
         </div>
       </div>
-
     </section>
 
     <section class="p-0" id="nos-applications">
-  
       <div class="columns m-0">
-          <div class="column is-half fullheight-with-navbar">
-            <div>
-              <h2 class="title has-text-left">
-                Des applications avec plus d'impact
-              </h2>
-              <p>
-                Nos développeurs sont motivés avant tout par la création
-                d’applications à impact social ou écologique. Nous suivons une
-                méthodologie agile, ce qui nous permet de développer en temps
-                record des applications efficaces et intuitives.
-              </p>
-              <div class="tile is-ancestor mt-1">
-                {% for service in services %}
-                <div class="tile is-parent">
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="media">
-                        <div class="media-left">
-                          <figure class="image is-32x32">
-                            {{ service.icon | svgContents("illustration-svg") }}
-                          </figure>
-                        </div>
-                        <div class="media-content">
-                          <p class="title is-4">{{service.title}}</p>
-                        </div>
+        <div class="column is-half fullheight-with-navbar">
+          <div>
+            <h2 class="title has-text-left">
+              Des applications avec plus d'impact
+            </h2>
+            <p>
+              Nos développeurs sont motivés avant tout par la création
+              d’applications à impact social ou écologique. Nous suivons une
+              méthodologie agile, ce qui nous permet de développer en temps
+              record des applications efficaces et intuitives.
+            </p>
+            <div class="tile is-ancestor mt-1">
+              {% for service in services %}
+              <div class="tile is-parent">
+                <div class="card">
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-left">
+                        <figure class="image is-32x32">
+                          {{ service.icon | svgContents("illustration-svg") }}
+                        </figure>
                       </div>
-                      <div class="content">
-                        {{service.content}}
-                        <br />
+                      <div class="media-content">
+                        <p class="title is-4">{{service.title}}</p>
                       </div>
+                    </div>
+                    <div class="content">
+                      {{service.content}}
+                      <br />
                     </div>
                   </div>
                 </div>
-                {% endfor %}
               </div>
+              {% endfor %}
             </div>
           </div>
-
-          <div class="column is-half bg-yellow fullheight-with-navbar svg-container">
-            <div class="w-100">
-              {{ '/img/development.svg' | svgContents("illustration-svg") }}
-            </div>
-          </div>
-
         </div>
+
+        <div
+          class="column is-half bg-yellow fullheight-with-navbar svg-container"
+        >
+          <div class="w-100">
+            {{ '/img/development.svg' | svgContents("illustration-svg") }}
+          </div>
+        </div>
+      </div>
     </section>
 
-  
     <section class="p-0" id="notre-equipe">
-
       <div class="columns m-0">
         <div class="column is-half bg-purple fullheight-with-navbar">
           <div class="w-100">
@@ -236,27 +274,25 @@
               </div>
             </div>
           </div>
-          
         </div>
 
         <div class="column is-half fullheight-with-navbar">
           <div>
-              <h2 class="title">{{metadata.join_us_title}}</h2>
-              <p>{{metadata.join_us_subtitle}}</p>
-              <div class="has-text-centered">
-                <a class="button is-large mt-2 bg-yellow" href="mailto:contact@telescoop.fr">Nous contacter</a
-                >
-              </div>
-
+            <h2 class="title">{{metadata.join_us_title}}</h2>
+            <p>{{metadata.join_us_subtitle}}</p>
+            <div class="has-text-centered">
+              <a
+                class="button is-large mt-2 bg-yellow"
+                href="mailto:contact@telescoop.fr"
+                >Nous contacter</a
+              >
+            </div>
           </div>
         </div>
-         
       </div>
-      
     </section>
-  
-    <section class="p-0" id="nos-clients">
 
+    <section class="p-0" id="nos-clients">
       <div class="columns m-0">
         <div class="column is-half fullheight-with-navbar">
           <div>
@@ -270,12 +306,19 @@
               record des applications efficaces et intuitives.
             </p>
             <div class="has-text-centered">
-              <a class="button is-large mt-2 bg-purple" href="mailto:contact@telescoop.fr">Nous contacter</a>
+              <a
+                class="button is-large mt-2 bg-purple"
+                href="mailto:contact@telescoop.fr"
+                >Nous contacter</a
+              >
             </div>
           </div>
         </div>
 
-        <div class="column is-half bg-yellow fullheight-with-navbar" style="padding-top: 0.75rem; padding-bottom: 0.75rem;">
+        <div
+          class="column is-half bg-yellow fullheight-with-navbar"
+          style="padding-top: 0.75rem; padding-bottom: 0.75rem"
+        >
           <div class="w-100">
             <div class="box" style="max-width: 600px; margin: auto">
               <div class="testimonialsCarousel">
@@ -295,7 +338,9 @@
                         <p class="title is-4">{{testimonial.name}}</p>
                       </div>
                     </div>
-                    <div class="content is-small">{{testimonial.description}}</div>
+                    <div class="content is-small">
+                      {{testimonial.description}}
+                    </div>
                     <div class="content testimonial">
                       {{testimonial.testimonial}}
                     </div>
@@ -324,9 +369,43 @@
           </div>
         </div>
       </div>
-
     </section>
-
+    <section class="p-0" id="nos-references">
+      <div class="columns">
+        <div class="column fullheight-with-navbar is-half m-0 bg-purple">
+          <div>
+            <div class="columns is-multiline main-bg">
+              {% for reference in references %}
+              <div class="column is-one-third-desktop is-half-tablet">
+                <img class="image" src="{{reference.path}}" alt="" />
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="column fullheight-with-navbar is-half">
+          <div>
+            <h2 class="title">Quelques références</h2>
+            <p>
+              Pour en savoir plus sur nos projets, vous pouvez aussi consulter
+              notre
+              <a
+                href="https://docs.google.com/presentation/d/e/2PACX-1vSZoSbs6iY0suI2UxRglauTMmnzJwyTp4SMZAasbnloZQhdV-CfBq7flA1RF7fxqf1aXCX-uGqbh1gN/pub?slide=id.p16"
+                target="_blank"
+                >présentation</a
+              >.
+            </p>
+            <div class="has-text-centered">
+              <a
+                class="button bg-purple is-large mt-2"
+                href="mailto:contact@telescoop.fr"
+                >Nous contacter</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
@@ -343,7 +422,7 @@
     <script>
       const carouselConfig = {
         duration: 500,
-        easing: 'ease-in',
+        easing: "ease-in",
         perPage: 1,
         startIndex: 0,
         draggable: true,
@@ -356,26 +435,26 @@
       };
       const employeesCarousel = new Siema({
         ...carouselConfig,
-        selector: '.employeesCarousel',
+        selector: ".employeesCarousel",
       });
 
       const testimonialsCarousel = new Siema({
         ...carouselConfig,
-        selector: '.testimonialsCarousel',
+        selector: ".testimonialsCarousel",
       });
 
       document
-        .querySelector('.prev-testimonials')
-        .addEventListener('click', (el) => testimonialsCarousel.prev());
+        .querySelector(".prev-testimonials")
+        .addEventListener("click", (el) => testimonialsCarousel.prev());
       document
-        .querySelector('.prev-employees')
-        .addEventListener('click', (el) => employeesCarousel.prev());
+        .querySelector(".prev-employees")
+        .addEventListener("click", (el) => employeesCarousel.prev());
       document
-        .querySelector('.next-testimonials')
-        .addEventListener('click', () => testimonialsCarousel.next());
+        .querySelector(".next-testimonials")
+        .addEventListener("click", () => testimonialsCarousel.next());
       document
-        .querySelector('.next-employees')
-        .addEventListener('click', () => employeesCarousel.next());
+        .querySelector(".next-employees")
+        .addEventListener("click", () => employeesCarousel.next());
     </script>
     <script>
       function scrollToTargetAdjusted(id) {
@@ -388,7 +467,7 @@
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     </script>
