@@ -8,10 +8,6 @@
     "path": "./img/references/greenpeace.png"
   },
   {
-    "name": "Sahara Conservation Fund",
-    "path": "./img/references/sahara.png"
-  },
-  {
     "name": "Green-Menu",
     "path": "./img/references/green-menu.png"
   },
@@ -22,5 +18,9 @@
   {
     "name": "Akuo",
     "path": "./img/references/akuo.png"
+  },
+  {
+    "name": "Oxfam",
+    "path": "./img/references/oxfam.png"
   }
 ]
