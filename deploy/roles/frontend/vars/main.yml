@@ -1,0 +1,4 @@
+---
+
+frontend_static_path: /telescoop/{{ project_slug}}/static
+frontend_path: /telescoop/{{ project_slug}}/frontend
