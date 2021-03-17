@@ -16,19 +16,6 @@
         - telescoop-devops
         - ssh-allowed
 
-    - name: Create user ubuntu
-      user:
-        name: ubuntu
-        group: telescoop-devops
-        groups: sudo,ssh-allowed
-        append: true
-
-    - name: "Create user {{ main_user}}"
-      user:
-        name: "{{ main_user}}"
-        groups: sudo,ssh-allowed
-        append: true
-
     - name: Create users
       user:
         name: "{{ item.name }}"
@@ -64,7 +51,7 @@
       lineinfile:
         path: /etc/sudoers
         regexp: '%sudo'
-        line: '%sudo   ALL=(ALL:ALL) NOPASSWD:ALL'
+        line: '%sudo   ALL=(ALL:ALL) ALL'
         validate: 'visudo -cf %s'
         owner: root
         group: root
@@ -92,10 +79,10 @@
         state: present
         password: "{{ users.root.pwd | password_hash('sha512') }}"
 
-#    - name: Generate /etc/ssh/ RSA host key
-#      command: "ssh-keygen -q -t rsa -f {{ identity_file_path }} -C \"\" -N \"\""
-#      args:
-#        creates: "{{ identity_file_path }}"
+    - name: Generate /etc/ssh/ RSA host key
+      command: "ssh-keygen -q -t rsa -f {{ identity_file_path }} -C \"\" -N \"\""
+      args:
+        creates: "{{ identity_file_path }}"
 
     - name: Make ssh key parent folder executable by all
       file:
