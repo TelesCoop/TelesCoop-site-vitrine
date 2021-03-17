@@ -1,13 +1,13 @@
 {{ ansible_managed | comment }}
 
 server {
-
     server_name {{ public_hostname }} {{ other_public_hostname }};
 
-    # include gp-ssl-base.inc;
-    # include snippets/snakeoil.conf;
-    # ssl_certificate    /etc/letsencrypt/live/greengamingtour.greenpeace.fr/fullchain.pem;
-    # ssl_certificate_key    /etc/letsencrypt/live/greengamingtour.greenpeace.fr/privkey.pem;
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/{{ public_hostname }}/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/{{ public_hostname }}/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
     access_log /var/log/nginx/access_{{ public_hostname.replace('.', '_') }}.log;
     error_log /var/log/nginx/error_{{ public_hostname.replace('.', '_') }}.log;
@@ -18,14 +18,24 @@ server {
         return 444;
     }
 
-    # backend static stuff
-    # location /static  {
-    #     autoindex off;
-    #     alias {{ frontend_static_path }};
-    # }
+    error_page 404 /404.html;
+    location = /404.html {
+        root {{ frontend_static_path }};
+    }
 
     location / {
         autoindex off;
-        alias {{ frontend_static_path }};
+        root {{ frontend_static_path }};
     }
+}
+
+server {
+    if ($host = {{ public_hostname }}) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80;
+    server_name {{ public_hostname }} {{ other_public_hostname }};
+    return 404; # managed by Certbot
 }
