@@ -1,9 +1,9 @@
-# Port {{ sshd.port }}
+Port {{ sshd.port }}
 
 Ciphers aes256-gcm@openssh.com,aes256-ctr
 MACs hmac-sha2-512-etm@openssh.com
 
-PermitRootLogin yes
+PermitRootLogin no
 PasswordAuthentication no
 MaxAuthTries 1
 
@@ -25,4 +25,4 @@ AcceptEnv LANG LC_*
 
 Subsystem sftp internal-sftp
 
-AllowGroups admin sudo ssh-allowed root
+AllowGroups admin sudo ssh-allowed
