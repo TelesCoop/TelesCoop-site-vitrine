@@ -1,7 +1,18 @@
 {{ ansible_managed | comment }}
 
 server {
-    server_name {{ public_hostname }} {{ other_public_hostname }};
+    server_name {{ other_public_hostname }};
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/{{ other_public_hostname }}/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/{{ other_public_hostname }}/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+    rewrite ^(.*) https://{{ public_hostname }} permanent;
+}
+
+server {
+    server_name {{ public_hostname }};
 
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/{{ public_hostname }}/fullchain.pem; # managed by Certbot
@@ -32,6 +43,10 @@ server {
 server {
     if ($host = {{ public_hostname }}) {
         return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    if ($host = {{ other_public_hostname }}) {
+         return 301 https://$host$request_uri;
     } # managed by Certbot
 
 
