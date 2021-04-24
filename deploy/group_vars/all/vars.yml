@@ -1,7 +1,7 @@
 ---
 
-public_hostname: telescoop.fr
-other_public_hostname: www.telescoop.fr
+public_hostname: www.telescoop.fr
+other_public_hostname: telescoop.fr
 project_slug: telescoop-site-vitrine
 main_user: telescoop-site-vitrine
 frontend_repo: git@gitlab.com:telescoop/site-vitrine.git
