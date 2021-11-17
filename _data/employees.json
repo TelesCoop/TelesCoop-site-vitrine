@@ -18,9 +18,9 @@
     "description": "Développeur complet, il est autant attentif à l’impact des produits sur lesquels il travaille que la qualité graphique et ergonomique des applications."
   },
   {
-    "img": "./img/quentin.jpg ",
-    "name": "Quentin",
-    "title": "Développeur éclectique",
-    "description": "Développeur éclectique, passionné aussi par les technologies d’informations, de philosophie et de VTT. Il est compétent sur des sujets de développement back-end et/ou front-end."
+    "img": "./img/camille.jpg",
+    "name": "Camille",
+    "title": "Développeuse engagée et polyvalente",
+    "description": "Développeuse full-stack, elle aime toucher à toutes les phases d'un projet de la conception à la maintenance et ainsi garder une vision globale. Les questions sociétales, environnementales ainsi que la protection des animaux sont des sujets qui la touchent particulièrement."
   }
 ]
