@@ -12,7 +12,6 @@
   apt:
     pkg:
       - nodejs
-      - npm
     state: present
 
 - name: get latest frontend code
