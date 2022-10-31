@@ -36,7 +36,4 @@ Steps:
 
 ## Deploy to the production server
 
-Using make, simply run `make deploy`.
-
-_For this command to work, you need to have ssh access to the telescoop website
-production server, and have your ~/.ssh/config configured for_ `telescoop_website`.
+Use `deploy` folder.
