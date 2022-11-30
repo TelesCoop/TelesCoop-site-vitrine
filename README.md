@@ -1,39 +1,31 @@
-# Telescoop website
+# Contexte
 
-## Install the project
+Site vitrine de TelesCoop
 
-The project uses **eleventy** as a static files generator built with JavaScript. We use the templating langage Nunjucks
-as an engine to generate HTML files.
+La technologie utilisée est `Eleventy` basé sur Javascript sans framework.
+Eleventy est un générateur de sites statiques avec un accès à l'écosystème NPM.
 
-In order to setting up the project, you need to install globally the eleventy library:
+Le site statique généré se trouve dans le dossier `output`.
 
-# with yarn
+# Tech
 
-`yarn global add @11ty/eleventy`
+Version de Node utilisée: v16.14.0 (compatible à partir de v12)
 
-# with npm
+Par défaut dans Eleventy, la syntaxe du moteur de templating est "Liquid" sur les fichiers HTML et Markdown.
 
-`npm install -g @11ty/eleventy`
+Installer les dépendances :
+- installer `yarn`
+- `yarn install` installe les autres dépendances
 
-Notes: Eleventy is available on npm and requires version 8 of Node.js or higher.
+## Environnement de Dev
 
-## Run the project locally
+Pour re-compiler le site en permanence à chaque changement de fichier et garder
+la page à jour dans le navigateur (sur http://localhost:8080) : `yarn dev`.
 
-Start the local server with `make serve`.
+Pour compiler le site (générer le dossier `output`) : `yarn build`.
 
-If you have some issues with the Javascript and CSS files (missing files or what else), you probably need to copy the
-content of the Javascript and CSS in the _\_site_ folder.
+Si le ficher de style source (`style.sass`) a été modifié, lancer `yarn build:sass`.
 
-The easy way, is to uncomment the functions called a pass through in `eleventy.js` file configuration.
-Steps:
-
-1. Go to the `.eleventy.js` file
-2. Uncomment the functions:
-   `eleventyConfig.addPassthroughCopy("js");`
-   `eleventyConfig.addPassthroughCopy('css')`
-3. Start the server
-   `make serve`
-
-## Deploy to the production server
+## Environnement de Prod
 
 Use `deploy` folder.

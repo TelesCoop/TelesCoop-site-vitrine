@@ -1,19 +1,12 @@
----
-permalink: 404.html
----
-
 <!doctype html>
-<html lang="fr" style="overflow: hidden;">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{metadata.title}}</title>
   <meta name="description" content="{{metadata.description}}" » />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&family=Roboto+Slab:wght@300;400;600&Overpass+Mono:wght@300;400&display=swap"
-    rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
@@ -46,18 +39,9 @@ permalink: 404.html
 </head>
 
 <body>
-  <section class="hero is-fullheight" style="background-size: cover; background-image: url(/img/galaxy.jpg);">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title has-text-white">
-          {{ 404.title }}
-        </h1>
-        <h2 class="subtitle has-text-white">
-          Recadrez votre Telescoop, <a href="{{ " /" | url }}">Retourner sur l'accueil</a>
-        </h2>
-      </div>
-    </div>
-  </section>
+  {% render "header.html" %}
+  {{ content }}
+  {% render "footer.html", metadata: metadata %}
 </body>
 
 </html>

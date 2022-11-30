@@ -1,5 +1,5 @@
 .idea
-_site
+output
 node_modules
 .vscode
 telescoop

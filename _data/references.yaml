@@ -1,0 +1,13 @@
+
+- name: "Back Market"
+  path: "./img/references/back-market.png"
+- name: "Greenpeace"
+  path: "./img/references/greenpeace.png"
+- name: "Green-Menu"
+  path: "./img/references/green-menu.png"
+- name: "Excellents Excédents"
+  path: "./img/references/excellents-excedent.png"
+- name: "Akuo"
+  path: "./img/references/akuo.png"
+- name: "Oxfam"
+  path: "./img/references/oxfam.png"

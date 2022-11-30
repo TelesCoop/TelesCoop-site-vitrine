@@ -55,7 +55,7 @@
 
 - name: update frontend static folder content
   synchronize:
-    src: "{{ frontend_path }}/_site/"
+    src: "{{ frontend_path }}/output/"
     dest: "{{ frontend_static_path }}"
     rsync_opts:
       - "-og"

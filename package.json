@@ -1,27 +1,31 @@
 {
-  "name": "telescoop",
-  "version": "1.0.0",
-  "description": "## Deploy",
+  "name": "telescoop.fr",
+  "version": "2.0.0",
+  "description": "Site vitrine de la coopérative TelesCoop",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy",
+    "build:sass": "sass --no-source-map css/style.sass:css/style.css; minify css/style.css > css/style.min.css",
+    "dev": "eleventy --serve"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maxbellec/telescoop.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "TelesCoop",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/maxbellec/telescoop/issues"
   },
   "homepage": "https://github.com/maxbellec/telescoop#readme",
-  "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
-  },
   "dependencies": {
+    "@11ty/eleventy": "^1.0.2",
     "eleventy-plugin-svg-contents": "^0.7.0",
-    "siema": "^1.5.1"
+    "bulma": "^0.9.4",
+    "js-yaml": "^4.1.0",
+    "minify": "^9.1.0",
+    "sass": "^1.55.0"
   }
 }

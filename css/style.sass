@@ -1,0 +1,35 @@
+
+:root
+  --color1: #05386b
+  --color2: #8927a1
+  --color3: #1d7724
+  --color4: #880d0d
+  --color5: #af970b
+  --bgcolor: var(--color5)
+
+// Update Bulma's global variables
+$family-primary: "Courier"
+$family-secondary: "Helvetica", sans-serif
+$body-family: $family-secondary
+$title-family: $family-primary
+$body-size: 22px
+$body-weight: 500
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass"
+@import "../node_modules/bulma/sass/base/_all.sass"
+@import "../node_modules/bulma/sass/elements/title.sass"
+@import "../node_modules/bulma/sass/elements/button.sass"
+@import "../node_modules/bulma/sass/helpers/typography.sass"
+@import "../node_modules/bulma/sass/helpers/spacing.sass"
+@import "../node_modules/bulma/sass/helpers/visibility.sass"
+@import "../node_modules/bulma/sass/components/navbar.sass"
+
+.logo
+  .teles
+    font-family: $family-primary
+  .coop
+    font-family: "Brush Script M7"
+    font-style: italic
+    font-weight: bold
+
