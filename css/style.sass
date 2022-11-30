@@ -1,11 +1,26 @@
 
+// Colors
+$blue: #05386b
+$purple: #8927a1
+$green: #1d7724
+$red: #880d0d
+$yellow: #af970b
+
+$colorKey: random(5)
+
+$listColors: $blue, $purple, $green, $red, $yellow
+$nthColor: nth($listColors, $colorKey)
+
 :root
-  --color1: #05386b
-  --color2: #8927a1
-  --color3: #1d7724
-  --color4: #880d0d
-  --color5: #af970b
-  --bgcolor: var(--color5)
+  --color1: #{$blue}
+  --color2: #{$purple}
+  --color3: #{$green}
+  --color4: #{$red}
+  --color5: #{$yellow}
+  --selected-color: var(--color1)
+
+// TODO : define $primary as selected-color or use property selected-color everywhere
+$primary: $nthColor
 
 // Update Bulma's global variables
 $family-primary: "Courier"
@@ -24,12 +39,35 @@ $body-weight: 500
 @import "../node_modules/bulma/sass/helpers/spacing.sass"
 @import "../node_modules/bulma/sass/helpers/visibility.sass"
 @import "../node_modules/bulma/sass/components/navbar.sass"
+@import "../node_modules/bulma/sass/grid/columns.sass"
 
 .logo
+  font-size: 2rem
   .teles
     font-family: $family-primary
   .coop
     font-family: "Brush Script M7"
     font-style: italic
     font-weight: bold
+    // color: $primary
+    color: var(--selected-color)
 
+.square
+  height: 1rem
+  width: 1rem
+
+.is-selected-color
+  color: var(--selected-color)
+
+.is-selected-color-background
+  background-color: var(--selected-color)
+
+// TODO
+// .is-selected-color
+//   --color-active: #{$representation-active}
+//   --color-hover: #{$representation-hover}
+//   --color: #{$representation}
+//   --color-light: #{$representation-light}
+//   --color-light-active: #{$representation-light-active}
+//   --color-light-hover: #{$representation-light-hover}
+//   --color-dark: #{$representation-dark}

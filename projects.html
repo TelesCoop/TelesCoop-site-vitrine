@@ -4,3 +4,10 @@ layout: layout.html
 ---
 
 <p class="title is-3">Ceci est la page de nos réalisations</p>
+<div class="columns is-multiline main-bg">
+  {% for reference in references %}
+  <div class="column is-one-third-desktop is-half-tablet">
+    <img class="image" src="{{reference.path}}" alt="" loading="lazy"/>
+  </div>
+  {% endfor %}
+</div>

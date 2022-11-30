@@ -10,6 +10,13 @@
     </a>
   </div>
   <div id="main-navigation" class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item is-family-primary colors">
+        {% for i in (1..5) %}
+        <div class="square" style="background-color: var(--color{{i}});"></div>
+        {% endfor %}
+      </div>
+    </div>
     <div class="navbar-end">
       <a class="navbar-item is-family-primary" href="/"> Accueil </a>
       <a class="navbar-item is-family-primary" href="/about/"> La coopérative </a>
