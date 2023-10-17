@@ -1,1 +1,31 @@
-$red: "#DEEEEEE"
+// BULMA CONFIG
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap')
+
+@import "../node_modules/bulma/sass/utilities/derived-variables.sass"
+// Set your brand colors
+$red: #EE0000
+$grey-bg: #EAEAEA
+$dark-grey: #343434
+$primary: $red
+$text: $black
+// $colors: ("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert, $primary-light, $primary-dark))
+
+// Update Bulma's global variables
+$family-sans-serif: "Montserrat", sans-serif
+$body-family: $family-sans-serif
+$body-size: 22px
+$body-weight: 500
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass"
+@import "../node_modules/bulma/sass/base/_all.sass"
+@import "../node_modules/bulma/sass/elements/button.sass"
+@import "../node_modules/bulma/sass/elements/title.sass"
+@import "../node_modules/bulma/sass/form/shared.sass"
+@import "../node_modules/bulma/sass/form/tools.sass"
+@import "../node_modules/bulma/sass/form/input-textarea.sass"
+@import "../node_modules/bulma/sass/helpers/typography.sass"
+@import "../node_modules/bulma/sass/helpers/spacing.sass"
+@import "../node_modules/bulma/sass/helpers/color.sass"
+@import "../node_modules/bulma/sass/helpers/visibility.sass"
+@import "../node_modules/bulma/sass/components/modal.sass"
