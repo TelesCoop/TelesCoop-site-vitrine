@@ -8,11 +8,12 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('img');
     eleventyConfig.addPassthroughCopy({"utils/*": "/" });
     eleventyConfig.addPlugin(svgContents);
+    eleventyConfig.addWatchTarget("./css/");
 
     eleventyConfig.setBrowserSyncConfig({
         callbacks: {
           ready: function(err, bs) {
-    
+
             bs.addMiddleware("*", (req, res) => {
               const content_404 = fs.readFileSync('_site/404.html');
               // Provides the 404 content without redirect.

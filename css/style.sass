@@ -1,17 +1,19 @@
 // BULMA CONFIG
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap')
 
 @import "../node_modules/bulma/sass/utilities/derived-variables.sass"
 // Set your brand colors
-$red: #EE0000
-$grey-bg: #EAEAEA
-$dark-grey: #343434
 $primary: $red
 $text: $black
+$beige: #FFF8EA
+$yellow: #FFCD4E
+$green: #60E093
+$orange: #FF5631
+$blue: #005281
 // $colors: ("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert, $primary-light, $primary-dark))
 
 // Update Bulma's global variables
-$family-sans-serif: "Montserrat", sans-serif
+$family-sans-serif: "Segoe UI", sans-serif
+$family-serif: "Courier New", serif
 $body-family: $family-sans-serif
 $body-size: 22px
 $body-weight: 500
@@ -29,3 +31,17 @@ $body-weight: 500
 @import "../node_modules/bulma/sass/helpers/color.sass"
 @import "../node_modules/bulma/sass/helpers/visibility.sass"
 @import "../node_modules/bulma/sass/components/modal.sass"
+
+body
+  background-color: $beige
+  font-size: 1em
+
+h1
+  font-family: $family-serif
+  font-size: 3.125em
+  font-weight: 700
+
+h2
+  font-family: $family-sans-serif
+  font-size: 2em
+  font-weight: 700
