@@ -4,7 +4,10 @@
   "description": "## Deploy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy",
+    "build:sass": "sass --no-source-map css/style.sass:css/style.css; minify css/style.css > css/style.min.css",
+    "dev": "eleventy --serve"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,8 @@
   },
   "dependencies": {
     "eleventy-plugin-svg-contents": "^0.7.0",
+    "minify": "^10.5.2",
+    "sass": "^1.69.3",
     "siema": "^1.5.1"
   }
 }
