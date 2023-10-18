@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "eleventy",
     "build:sass": "sass --no-source-map css/style.sass:css/style.css; minify css/style.css > css/style.min.css",
+    "watch:sass": "sass --watch --no-source-map css/style.sass:css/style.css; minify css/style.css > css/style.min.css",
     "dev": "eleventy --serve --watch"
   },
   "repository": {

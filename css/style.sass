@@ -1,26 +1,33 @@
 // BULMA CONFIG
 
-@import "../node_modules/bulma/sass/utilities/derived-variables.sass"
+@import "../node_modules/bulma/sass/utilities/initial-variables"
 // Set your brand colors
 $primary: $red
 $text: $black
 $beige: #FFF8EA
+$beige-bis: #fdf6e6
+$beige-ter: #fff9e5
 $yellow: #FFCD4E
 $green: #60E093
 $orange: #FF5631
 $blue: #005281
 // $colors: ("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert, $primary-light, $primary-dark))
 $beige-invert: findColorInvert($beige)
-
+$scheme-main: $beige
+$scheme-main-bis: $beige-bis
+$scheme-main-ter: $beige-ter
+@import "../node_modules/bulma/sass/utilities/derived-variables"
 $addColors: ("beige":($beige, $beige-invert))
 $colors: map-merge($colors, $addColors)
+$grey-200: #C8C7C5
 
 // Update Bulma's global variables
-$family-sans-serif: "Segoe UI", sans-serif
-$family-serif: "Courier New", serif
+$family-sans-serif: system-ui, sans-serif
+$family-serif: ui-serif, serif
+$family-monospace: ui-monospace
 $body-family: $family-sans-serif
-$body-size: 22px
-$body-weight: 500
+$body-size: 15px
+$body-weight: 400
 
 $sizes: 8, 16, 24, 32, 40, 48, 56
 
@@ -89,3 +96,5 @@ h2
   &:after
     content: ""
     border-radius: 1px solid $black
+
+@import "./navbar"

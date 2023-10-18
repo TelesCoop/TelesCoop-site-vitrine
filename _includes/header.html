@@ -1,12 +1,14 @@
 <nav class="navbar is-fixed-top">
     {% unless hideLogo %}
+        {% comment %}this div is only here to make sur the brand is center-aligned{% endcomment %}
+        <div style="flex-grow: 1; flex-basis: 0"></div>
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
-                <span class="logo">Teles<span class="bold">Coop</span></span>
+                <img src="/img/logo.svg" alt="TelesCoop - Accueil">
             </a>
         </div>
     {% endunless %}
-    <div id="main-navigation" class="navbar-menu">
+    <div id="main-navigation" class="navbar-menu" style="flex-basis: 0">
         <div class="navbar-end">
             <a class="navbar-item" onclick="scrollToTargetAdjusted('nos-valeurs')">
                 Qui sommes-nous
