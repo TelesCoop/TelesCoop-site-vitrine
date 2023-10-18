@@ -1,11 +1,22 @@
-<nav class="header">
-    <a class="navbar-item" onclick="scrollToTargetAdjusted('nos-valeurs')">
-        Qui sommes-nous
-    </a>
-    <a class="navbar-item" onclick="scrollToTargetAdjusted('nos-applications')">
-        Nos projets
-    </a>
-    <a class="navbar-item" onclick="scrollToTargetAdjusted('notre-equipe')">
-        Nous contacter
-    </a>
+<nav class="navbar is-fixed-top">
+    {% unless hideLogo %}
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <span class="logo">Teles<span class="bold">Coop</span></span>
+            </a>
+        </div>
+    {% endunless %}
+    <div id="main-navigation" class="navbar-menu">
+        <div class="navbar-end">
+            <a class="navbar-item" onclick="scrollToTargetAdjusted('nos-valeurs')">
+                Qui sommes-nous
+            </a>
+            <a class="navbar-item" onclick="scrollToTargetAdjusted('nos-applications')">
+                Nos projets
+            </a>
+            <a class="navbar-item" onclick="scrollToTargetAdjusted('notre-equipe')">
+                Nous contacter
+            </a>
+        </div>
+    </div>
 </nav>
