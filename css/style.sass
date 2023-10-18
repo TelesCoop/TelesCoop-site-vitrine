@@ -22,6 +22,13 @@ $body-family: $family-sans-serif
 $body-size: 22px
 $body-weight: 500
 
+$sizes: 8, 16, 24, 32, 40, 48, 56
+
+@each $size in $sizes
+  .gap-#{$size}
+    gap: $size + px
+
+
 // Import only what you need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass"
 @import "../node_modules/bulma/sass/base/_all.sass"
@@ -50,3 +57,34 @@ h2
   font-family: $family-sans-serif
   font-size: 2em
   font-weight: 700
+
+.min-h-screen
+  min-height: 100vh
+
+.h-screen
+  height: 100vh
+
+.header
+  position: fixed
+  top: 0
+  margin-top: 2em
+  display: flex
+  gap: 1.5em
+  width: 100%
+  justify-content: flex-end
+
+  a
+    color: $black
+    font-weight: 400
+
+.main-button
+  background-color: $black
+  color: $beige
+  padding: 16px 24px
+  border-radius: 4px
+  border: $black
+  font-family: $family-serif
+  font-weight: 700
+  &:after
+    content: ""
+    border-radius: 1px solid $black
