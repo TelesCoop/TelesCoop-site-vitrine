@@ -45,9 +45,8 @@
 </head>
 
 <body class="main-bg">
-{% render "header.html" %}
+{% render "header.html", hideLogo: hideLogo %}
 <div style="margin-top: 77px">
-    <h2>Test</h2>
     {{ content }}
 </div>
 {% render "footer.html" %}
