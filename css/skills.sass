@@ -1,8 +1,15 @@
-.wrapper-skills
+.wrapper-skills, .wrapper-clients
   display: grid
-  grid-template-columns: repeat(3, 1fr)
   gap: 2em
   justify-items: center
+
+.wrapper-skills
+  grid-template-columns: repeat(3, 1fr)
+
+
+.wrapper-clients
+  grid-template-columns: repeat(4, 1fr)
+  border-top: 1px solid $grey
 
 .card-container
   font-family: $family-serif

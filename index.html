@@ -4,10 +4,8 @@ layout: layout.html
 title: Accueil
 ---
 
-
 {% render "home/intro.html" %}
 {% render "home/skills.html" skills: skills %}
 {% render "home/values.html" values: values %}
 {% render "home/extra.html" extra: extra %}
-<h1>Qui sommes-nous</h1>
-<h2>Nos compétences</h2>
+{% render "home/clients.html" clients: clients %}
