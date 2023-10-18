@@ -1,10 +1,20 @@
-<div class="h-screen has-background-white gap-16 is-flex is-flex-direction-column has-text-centered">
-    <h2>
-        Nos compétences
-    </h2>
-    <div>
-        <div class="skill-card">
-        </div>
-
+<section class="section-padding has-background-white gap-4 is-flex is-flex-direction-column has-text-centered">
+    {% render 'title.html' title:"Nos compétences" %}
+    <ul class="wrapper-skills">
+        {% for skill in skills %}
+        <li class="skill-card-container">
+            <div class="skill-card">
+                <img src={{skill.src}} class="p-4" alt="">
+                <h3>{{ skill.name }}</h3>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="is-flex is-flex-direction-column is-align-items-center gap-2">
+    <span>
+        Nous nous adaptons à tous les types de projets et à vos contraintes (...)
+    </span>
+        {% render "main-button.html" linkText:"Contacter nous", link:"mailto:contact@telescoop.fr" %}
     </div>
-</div>
+
+</section>

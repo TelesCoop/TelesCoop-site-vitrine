@@ -1,0 +1,28 @@
+.wrapper-skills
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 2em
+  justify-items: center
+
+.skill-card-container
+  font-family: $family-serif
+  width: 12em
+  height: 12em
+  position: relative
+  .skill-card
+    height: inherit
+    width: inherit
+    position: absolute
+    border: 1px solid
+    border-radius: 6px
+    background-color: white
+    z-index: 10
+  &:after
+    content: ""
+    height: inherit
+    width: inherit
+    position: absolute
+    top: 7px
+    left: 7px
+    border: 1px solid
+    border-radius: 7px

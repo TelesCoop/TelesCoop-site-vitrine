@@ -1,0 +1,29 @@
+.main-button
+
+  width: 200px
+  height: 3em
+  position: relative
+  .text
+    height: inherit
+    width: inherit
+    position: absolute
+    border: 1px solid
+    border-radius: 6px
+    font-family: $family-serif
+    font-weight: 700
+    color: white
+    z-index: 10
+    padding: 12px
+    display: block
+    background-color: black
+  &:hover
+    opacity: 0.8
+  &:after
+    content: ""
+    height: inherit
+    width: inherit
+    position: absolute
+    top: 7px
+    left: 7px
+    border: 1px solid $black
+    border-radius: 7px

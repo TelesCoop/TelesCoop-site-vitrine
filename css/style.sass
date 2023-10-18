@@ -1,6 +1,7 @@
 // BULMA CONFIG
 
 @import "../node_modules/bulma/sass/utilities/initial-variables"
+@import "../node_modules/bulma/sass/utilities/derived-variables.sass"
 // Set your brand colors
 $primary: $red
 $text: $black
@@ -29,11 +30,11 @@ $body-family: $family-sans-serif
 $body-size: 15px
 $body-weight: 400
 
-$sizes: 8, 16, 24, 32, 40, 48, 56
+$sizes: 1, 2, 3, 4, 5, 6, 8, 9, 12, 16, 24, 32, 40, 48, 56
 
 @each $size in $sizes
   .gap-#{$size}
-    gap: $size + px
+    gap: $size + em
 
 
 // Import only what you need from Bulma
@@ -42,6 +43,7 @@ $sizes: 8, 16, 24, 32, 40, 48, 56
 @import "../node_modules/bulma/sass/elements/button.sass"
 @import "../node_modules/bulma/sass/elements/title.sass"
 @import "../node_modules/bulma/sass/form/shared.sass"
+@import "../node_modules/bulma/sass/grid/_all.sass"
 @import "../node_modules/bulma/sass/form/tools.sass"
 @import "../node_modules/bulma/sass/form/input-textarea.sass"
 @import "../node_modules/bulma/sass/helpers/typography.sass"
@@ -52,6 +54,9 @@ $sizes: 8, 16, 24, 32, 40, 48, 56
 @import "../node_modules/bulma/sass/components/modal.sass"
 @import "../node_modules/bulma/sass/components/navbar.sass"
 
+@import "./skills.sass"
+@import "./navbar"
+@import "./buttons.sass"
 body
   background-color: $beige
   font-size: 1em
@@ -85,16 +90,7 @@ h2
     color: $black
     font-weight: 400
 
-.main-button
-  background-color: $black
-  color: $beige
-  padding: 16px 24px
-  border-radius: 4px
-  border: $black
-  font-family: $family-serif
-  font-weight: 700
-  &:after
-    content: ""
-    border-radius: 1px solid $black
 
-@import "./navbar"
+
+.section-padding
+  padding: 90px
