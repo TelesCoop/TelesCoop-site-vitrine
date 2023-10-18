@@ -1,0 +1,27 @@
+[
+  {
+    "description": "Tous les salari\u00e9s de la coop\u00e9rative sont enti\u00e8rement en t\u00e9l\u00e9travail avec la libert\u00e9 de d\u00e9cider de l'endroit il ou elle veut travailler. En plus de cette libert\u00e9, chacun\u00b7e est libre de d\u00e9cider de ses horaires et de son organisation.",
+    "name": "T\u00e9l\u00e9travail",
+    "src": "./img/values/remote.svg"
+  },
+  {
+    "description": "Tous les salari\u00e9s de la coop\u00e9rative sont enti\u00e8rement en t\u00e9l\u00e9travail avec la libert\u00e9 de d\u00e9cider de l'endroit il ou elle veut travailler. En plus de cette libert\u00e9, chacun\u00b7e est libre de d\u00e9cider de ses horaires et de son organisation.",
+    "name": "Auto-gouvernance",
+    "src": "./img/values/gouvernance.svg"
+  },
+  {
+    "description": "Tous les salari\u00e9s de la coop\u00e9rative sont enti\u00e8rement en t\u00e9l\u00e9travail avec la libert\u00e9 de d\u00e9cider de l'endroit il ou elle veut travailler. En plus de cette libert\u00e9, chacun\u00b7e est libre de d\u00e9cider de ses horaires et de son organisation.",
+    "name": "Libert\u00e9 individuelle et autonomie",
+    "src": "./img/values/freedom.svg"
+  },
+  {
+    "description": "Tous les salari\u00e9s de la coop\u00e9rative sont enti\u00e8rement en t\u00e9l\u00e9travail avec la libert\u00e9 de d\u00e9cider de l'endroit il ou elle veut travailler. En plus de cette libert\u00e9, chacun\u00b7e est libre de d\u00e9cider de ses horaires et de son organisation.",
+    "name": "80%",
+    "src": "./img/values/80.svg"
+  },
+  {
+    "description": "Tous les salari\u00e9s de la coop\u00e9rative sont enti\u00e8rement en t\u00e9l\u00e9travail avec la libert\u00e9 de d\u00e9cider de l'endroit il ou elle veut travailler. En plus de cette libert\u00e9, chacun\u00b7e est libre de d\u00e9cider de ses horaires et de son organisation.",
+    "name": "Projets commerciaux et pro-bono%",
+    "src": "./img/values/probono.svg"
+  }
+]
