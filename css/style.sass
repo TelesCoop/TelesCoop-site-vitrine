@@ -27,8 +27,9 @@ $family-sans-serif: system-ui, sans-serif
 $family-serif: ui-serif, serif
 $family-monospace: ui-monospace
 $body-family: $family-sans-serif
-$body-size: 15px
+$body-size: 16px
 $body-weight: 400
+$link: $text
 
 $sizes: 1, 2, 3, 4, 5, 6, 8, 9, 12, 16, 24, 32, 40, 48, 56
 
@@ -53,14 +54,18 @@ $sizes: 1, 2, 3, 4, 5, 6, 8, 9, 12, 16, 24, 32, 40, 48, 56
 @import "../node_modules/bulma/sass/helpers/visibility.sass"
 @import "../node_modules/bulma/sass/components/modal.sass"
 @import "../node_modules/bulma/sass/components/navbar.sass"
+@import "../node_modules/bulma/sass/elements/container"
+@import "../node_modules/bulma/sass/grid/columns"
 
 // index.html
 @import "./skills.sass"
 @import "./values.sass"
 @import "./intro.sass"
 
-@import "./navbar"
 @import "./buttons.sass"
+@import "./header"
+@import "./footer"
+
 body
   background-color: $beige
   font-size: 1em
@@ -105,3 +110,9 @@ h3
 
 .section-padding
   padding: 0px 190px
+
+.has-border-bottom
+  border-bottom: 1px solid $grey-200
+
+a
+  text-decoration: underline

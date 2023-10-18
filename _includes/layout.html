@@ -41,6 +41,7 @@
     <meta name="twitter:image" content="http://telescoop.fr/img/logo.svg" />
     <!-- End Twitter -->
 
+    <script defer data-domain="telescoop.fr" src="/js/telescoop.js"></script>
     <script defer data-domain="telescoop.fr" src="https://plausible.io/js/plausible.js"></script>
 </head>
 
@@ -49,7 +50,7 @@
 <div style="margin-top: 77px">
     {{ content }}
 </div>
-{% render "footer.html" %}
+{% render "footer.html", pageWeight: pageWeight %}
 </body>
 
 </html>

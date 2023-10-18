@@ -1,0 +1,26 @@
+.navbar-end .navbar-item .bottom
+  display: none
+@include desktop
+  .navbar-end .navbar-item
+    text-decoration: none
+    padding-top: 20px
+    padding-bottom: 0
+    position: relative
+    .bottom
+      display: block
+      position: absolute
+      left: 0
+      right: 0
+      bottom: -2.5px
+      height: 5px
+      background: black
+      &.left
+        border-radius: 5px 0 0 5px
+      &.right
+        border-radius: 0 5px 5px 0
+      &.blue
+        background: $blue
+      &.green
+        background: $green
+      &.yellow
+        background: $yellow

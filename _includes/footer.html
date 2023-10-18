@@ -1,11 +1,47 @@
 <footer class="footer">
+    <div style="display: flex; justify-content: end" class="is-hidden-mobile has-border-bottom">
+        <div style="margin-right: 5vw">
+            <img src="/img/bottom.svg" alt="">
+        </div>
+    </div>
+    <div class="has-border-bottom py-6">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-9" style="display: flex; align-items: center">
+                    <img src="/img/logo.svg" alt="">
+                    <p class="ml-5">Coopérative de développement pour des projets engagés</p>
+                </div>
+                <div class="column is-3" style="text-align: right">
+                    <p>
+                        <a href="/mentions-legales">Mentions légales</a>
+                    </p>
+                    <p class="mt-1">
+                        <a href="/plan-du-site">Plan du site</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
-        <div class="content has-text-centered">
-            <p>
-                Editeur : Ce site est produit par Telescop SCOP SARL. Pour toute
-                question concernant l’utilisation du site www.telescoop.fr vous
-                pouvez nous contacter directement en ligne.
-            </p>
+        <div class="columns" style="margin-top: 0">
+            <div class="column is-3 py-6 bottom-left">
+                <p class="is-size-7">
+                    Direction artistique et maquettes par
+                    <a href="https://www.lacooperativedesinternets.fr/">La Coopérative des Internets</a>
+                </p>
+            </div>
+            <div class="column is-9 py-6">
+                <div style="text-align: right">
+                    <p class="has-text-weight-bold is-family-code">
+                        Ce site internet est écoconçu
+                    </p>
+                    <p>
+                        Il vise à réduire son impact environnemental.
+                        {% if pageWeight %}
+                            Poids de la page : ~{{ pageWeight }}ko</p>
+                        {% endif %}
+                </div>
+            </div>
         </div>
     </div>
 </footer>
