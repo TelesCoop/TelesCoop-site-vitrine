@@ -1,0 +1,22 @@
+[
+  {
+    "description": "Tous les salari\u00e9s de la coop\u00e9rative sont enti\u00e8rement en t\u00e9l\u00e9travail avec la libert\u00e9 de d\u00e9cider de l'endroit il ou elle veut travailler. En plus de cette libert\u00e9, chacun\u00b7e est libre de d\u00e9cider de ses horaires et de son organisation.",
+    "name": "Accessibilit\u00e9",
+    "src": "./img/extra/accessibility.svg"
+  },
+  {
+    "description": "Tous les salari\u00e9s de la coop\u00e9rative sont enti\u00e8rement en t\u00e9l\u00e9travail avec la libert\u00e9 de d\u00e9cider de l'endroit il ou elle veut travailler. En plus de cette libert\u00e9, chacun\u00b7e est libre de d\u00e9cider de ses horaires et de son organisation.",
+    "name": "Respect du RGPD",
+    "src": "./img/extra/rgpd.svg"
+  },
+  {
+    "description": "Tous les salari\u00e9s de la coop\u00e9rative sont enti\u00e8rement en t\u00e9l\u00e9travail avec la libert\u00e9 de d\u00e9cider de l'endroit il ou elle veut travailler. En plus de cette libert\u00e9, chacun\u00b7e est libre de d\u00e9cider de ses horaires et de son organisation.",
+    "name": "Gestion de projet",
+    "src": "./img/extra/project-management.svg"
+  },
+  {
+    "description": "Tous les salari\u00e9s de la coop\u00e9rative sont enti\u00e8rement en t\u00e9l\u00e9travail avec la libert\u00e9 de d\u00e9cider de l'endroit il ou elle veut travailler. En plus de cette libert\u00e9, chacun\u00b7e est libre de d\u00e9cider de ses horaires et de son organisation.",
+    "name": "\u00c9co-conception",
+    "src": "./img/extra/eco-conception.svg"
+  }
+]
