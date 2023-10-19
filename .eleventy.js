@@ -1,5 +1,7 @@
 const svgContents = require('eleventy-plugin-svg-contents');
 const fs = require("fs");
+const yaml = require("js-yaml");
+
 
 module.exports = function(eleventyConfig) {
     // Copy the static assets to the output folder
@@ -9,6 +11,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({"utils/*": "/" });
     eleventyConfig.addPlugin(svgContents);
     eleventyConfig.addWatchTarget("./css/*.css");
+
+    // add YAML support
+    eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
 
     eleventyConfig.setBrowserSyncConfig({
         callbacks: {

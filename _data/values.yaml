@@ -1,0 +1,25 @@
+- description: Tous les salariés de la coopérative sont entièrement en télétravail
+      avec la liberté de décider de l'endroit il ou elle veut travailler. En plus de
+      cette liberté, chacun·e est libre de décider de ses horaires et de son organisation.
+  name: Télétravail
+  src: "./img/values/remote.svg"
+- description: Tous les salariés de la coopérative sont entièrement en télétravail
+      avec la liberté de décider de l'endroit il ou elle veut travailler. En plus de
+      cette liberté, chacun·e est libre de décider de ses horaires et de son organisation.
+  name: Auto-gouvernance
+  src: "./img/values/gouvernance.svg"
+- description: Tous les salariés de la coopérative sont entièrement en télétravail
+      avec la liberté de décider de l'endroit il ou elle veut travailler. En plus de
+      cette liberté, chacun·e est libre de décider de ses horaires et de son organisation.
+  name: Liberté individuelle et autonomie
+  src: "./img/values/freedom.svg"
+- description: Tous les salariés de la coopérative sont entièrement en télétravail
+      avec la liberté de décider de l'endroit il ou elle veut travailler. En plus de
+      cette liberté, chacun·e est libre de décider de ses horaires et de son organisation.
+  name: 80%
+  src: "./img/values/80.svg"
+- description: Tous les salariés de la coopérative sont entièrement en télétravail
+      avec la liberté de décider de l'endroit il ou elle veut travailler. En plus de
+      cette liberté, chacun·e est libre de décider de ses horaires et de son organisation.
+  name: Projets commerciaux et pro-bono%
+  src: "./img/values/probono.svg"
