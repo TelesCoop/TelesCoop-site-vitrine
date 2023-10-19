@@ -1,8 +1,6 @@
 ---
 
-public_hostname: www.telescoop.fr
-other_public_hostname: telescoop.fr
-project_slug: telescoop-site-vitrine
+base_project_slug: telescoop-site-vitrine
 main_user: telescoop-site-vitrine
-frontend_repo: git@gitlab.com:telescoop/site-vitrine.git
-identity_file_path: /home/ubuntu/.ssh/id_rsa
+frontend_repo: git@github.com:TelesCoop/TelesCoop-site-vitrine.git
+identity_file_path: /home/{{ main_user }}/.ssh/id_ed25519_frontend

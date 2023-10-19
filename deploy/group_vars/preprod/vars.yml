@@ -1,0 +1,13 @@
+backend_application_port: 8040  # must be unique for each project on the same server
+frontend_application_port: 3040  # must be unique for each project on the same server
+environment_suffix: "_preprod"
+project_slug: "{{ base_project_slug }}{{ environment_suffix }}"
+
+public_hostname: revolution.telescoop.fr
+other_public_hostname: www.revolution.telescoop.fr
+project_dir: "{{project_base_dir}}{{ environment_suffix }}"
+backend_static_path: "{{ project_dir }}/backend_static"
+
+frontend_branch: main
+
+environment_name: production
