@@ -31,9 +31,9 @@ $body-size: 16px
 $body-weight: 400
 $link: $text
 
-$sizes: 1, 2, 3, 4, 5, 6, 8, 9, 12, 16, 24, 32, 40, 48, 56
+$gap-sizes: 1, 2, 3, 4, 5, 6, 8, 9, 12, 16, 24, 32, 40, 48, 56
 
-@each $size in $sizes
+@each $size in $gap-sizes
   .gap-#{$size}
     gap: $size + em
 
