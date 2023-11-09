@@ -57,6 +57,7 @@ $gap-sizes: 1, 2, 3, 4, 5, 6, 8, 9, 12, 16, 24, 32, 40, 48, 56
 @import "./values.sass"
 @import "./intro.sass"
 @import "./extra.sass"
+@import "./nous/index.sass"
 
 // Elements
 @import "./card.sass"
@@ -109,8 +110,29 @@ h3
 .section-layout
   padding: 100px 190px
 
-.has-border-bottom
+.has-border-bottom-grey
   border-bottom: 1px solid $grey-200
+
+.has-border-left-grey
+  border-left: 1px solid $grey-200
+
+.has-border-grey
+  border: 1px solid $grey-200
 
 a
   text-decoration: underline
+
+.is-absolute
+  position: absolute
+
+.is-relative
+  position: relative
+
+.top-0
+  top: 0
+
+.top--50
+  top: -50px
+
+.width-50
+  width: 50%

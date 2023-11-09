@@ -1,4 +1,4 @@
-<nav class="navbar is-fixed-top has-border-bottom">
+<nav class="navbar is-fixed-top has-border-bottom-grey">
     <div class="container">
         {% comment %}this div is only here to make sur the brand is center-aligned{% endcomment %}
         <div {% if hideLogo %}class="is-hidden-desktop"{% endif %} style="flex-grow: 1; flex-basis: 0"></div>
@@ -14,7 +14,7 @@
         </div>
         <div id="main-navigation" class="navbar-menu" style="flex-basis: 0">
             <div class="navbar-end">
-                <a class="navbar-item" onclick="scrollToTargetAdjusted('nos-valeurs')">
+                <a class="navbar-item" href="/nous">
                     Qui sommes-nous
                     <div class="bottom left blue"></div>
                 </a>
