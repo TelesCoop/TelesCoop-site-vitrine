@@ -25,9 +25,13 @@ title: Nos Projets
                 </span>
                 <div class="is-flex gap-2 is-flex-wrap-wrap">
                     {% for filter in filters %}
-                        <a class="main-button btn-rounded"  href={{link}}>
-                            <span class="text">{{filter.name}}</span>
-                        </a>
+                    <div class="is-relative">
+                        <button class="main-button btn-rounded" onclick="addFilters(this)" filter={{filter.slug}} class="filter-active">
+                            <span class="text">
+                            {{filter.name}}
+                            </span>
+                        </button>
+                    </div>
                     {% endfor %}
 
                 </div>
