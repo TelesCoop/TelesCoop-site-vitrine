@@ -5,6 +5,47 @@ pageWeight: 80
 title: Nos Projets
 ---
 
+<div class="layout is-flex is-flex-direction-column gap-5">
 
-<h1>Nos projets</h1>
-<div class="container">test</div>
+        <div class="has-text-centered">
+            <h1 class="">Qui sommes-nous&nbsp;?</h1>
+            <p class="">
+                Phrase de description si besoin, c’est une phrase de description oui oui voilà lorem ipsum et lorem ipsum. Phrase de description si besoin, c’est une phrase de description oui oui voilà lorem ipsum et lorem ipsum.
+            </p>
+        </div>
+        <div class="columns has-border-top-grey has-border-bottom-grey">
+            <div class="column is-3 has-border-right-grey">
+                <span class="is-size-3">
+                    Filtres
+                </span>
+            </div>
+            <div class="column is-9 is-flex is-flex-direction-column gap-2 is-multiline">
+                <span class="is-size-4">
+                    Type de projets
+                </span>
+                <div class="is-flex gap-2 is-flex-wrap-wrap">
+                    {% for filter in filters %}
+                        <a class="main-button btn-rounded"  href={{link}}>
+                            <span class="text">{{filter.name}}</span>
+                        </a>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+
+<ul class="is-flex gap-4">
+    {% for project in projects %}
+    {% assign filtersClass = project.filters | addFiltersClass %}
+    <li filters='{{filtersClass}}' class="project card-container has-text-centered">
+        <div class="card has-background-beige p-4">
+            <h3>{{ project.title }}</h3>
+            <a href=""></a>
+
+        </div>
+
+    </li>
+    {% endfor %}
+</ul>
+
+</div>

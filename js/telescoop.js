@@ -32,4 +32,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
 });
+
+
+const getActiveProjectsFilters = () => {
+    const activeFilters = []
+    document.querySelectorAll('.filter-active').forEach(el => {
+        activeFilters.push(el.getAttribute("filter"))
+    })
+    return activeFilters
+}
+const filtersProjectsList = () => {
+    const activeFilters = getActiveProjectsFilters()
+    document.querySelectorAll('.project').forEach(el => {
+        const projectFilter = el.getAttribute("filters")
+        const isActive = activeFilters.some(a => {
+           return projectFilter.includes(a)
+        })
+        if (isActive) {
+            el.classList.remove("is-hidden")
+
+        }
+        else el.classList.add("is-hidden")
+    })
+}
+
+const addFilters = (newFilter) => {
+    const ACTIVE_CLASS = "filter-active"
+    const filter = newFilter.getAttribute("filter")
+    console.log(newFilter.classList.contains(ACTIVE_CLASS))
+    if (newFilter.classList.contains(ACTIVE_CLASS)) newFilter.classList.remove(ACTIVE_CLASS)
+    else newFilter.classList.add(ACTIVE_CLASS)
+    filtersProjectsList()
+}

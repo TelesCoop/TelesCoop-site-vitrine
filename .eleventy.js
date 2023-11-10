@@ -15,6 +15,13 @@ module.exports = function(eleventyConfig) {
     // add YAML support
     eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
 
+  eleventyConfig.addFilter("filteredPosts", function(values, filters) {
+    return values
+  });
+  eleventyConfig.addFilter("addFiltersClass", function(values) {
+    return values.join( " ")
+  });
+
     eleventyConfig.setBrowserSyncConfig({
         callbacks: {
           ready: function(err, bs) {
@@ -30,6 +37,7 @@ module.exports = function(eleventyConfig) {
           }
         }
       });
+
 
     // You can return your Config object (optional).
     return {

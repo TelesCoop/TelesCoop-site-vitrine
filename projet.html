@@ -1,0 +1,17 @@
+---
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter:
+        - all
+        - post
+        - posts
+        - tagList
+eleventyComputed:
+    title: Tagged “{{ tag }}”
+permalink: /tags/{{ tag | slugify }}/
+---
+<div>
+
+</div>
