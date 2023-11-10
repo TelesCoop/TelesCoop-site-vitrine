@@ -1,0 +1,42 @@
+---
+description: Les projets que nous avons fièrement réalisés.
+layout: layout.html
+pageWeight: 130
+title: Nos Projets
+
+top: Nous nous adaptons aux besoins du client et le conseillons au mieux en respectant nos valeurs. <br> Nos réalisations peuvent aller du petit projet utile et amovible à des structures plus complexes.
+---
+
+
+
+<div class="container">
+    <div class="has-text-centered">
+        <h1 class="is-family-code">{{ title }}</h1>
+        <p class="has-text-centered mt-6" style="max-width: 700px; margin: auto">{{ top }}</p>
+    </div>
+</div>
+<div class="has-border-grey my-3" style="border-right: none; border-left: none">
+    <div class="container is-flex filters">
+        <div class="filter-title">
+            <h2 class="is-family-code is-size-5">Filtres</h2>
+        </div>
+        <div class="filter-tags">
+            <div class="mb-4">
+                <button class="button" style="border: none; text-decoration: underline; padding-left: 0; padding-top: 0">
+                    Masquer les filtres
+                </button>
+            </div>
+            <h3 class="is-family-code mb-2 is-size-7">Types de projet</h3>
+            {% for projectTag in projectTags %}
+                {% render "tag.html" tag: projectTag[1] %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="project-holder">
+        {% for project in projects %}
+            {% render "project.html" project: project projectTags: projectTags %}
+        {% endfor %}
+    </div>
+</div>

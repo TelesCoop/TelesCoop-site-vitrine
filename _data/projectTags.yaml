@@ -1,0 +1,25 @@
+---
+site vitrine:
+  name: site vitrine
+  textWhite: true
+  colorClass: blue
+traitement de données:
+  name: traitement de données
+  textWhite: false
+  colorClass: green
+cartographie:
+  name: cartographie
+  textWhite: false
+  colorClass: orange
+no-code:
+  name: no-code
+  textWhite: false
+  colorClass: orange
+service public:
+  name: service public
+  textWhite: false
+  colorClass: orange
+outil métier:
+  name: outil métier
+  textWhite: false
+  colorClass: orange

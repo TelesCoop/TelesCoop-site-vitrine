@@ -57,13 +57,15 @@ $gap-sizes: 1, 2, 3, 4, 5, 6, 8, 9, 12, 16, 24, 32, 40, 48, 56
 @import "./values.sass"
 @import "./intro.sass"
 @import "./extra.sass"
-@import "./nous/index.sass"
+@import "./page-projets"
+@import "./page-nous"
 
 // Elements
-@import "./card.sass"
 @import "./buttons.sass"
-@import "./header"
+@import "./card.sass"
 @import "./footer"
+@import "./header"
+@import "./tag"
 
 body
   background-color: $beige
@@ -72,7 +74,7 @@ body
 p
   font-family: $family-sans-serif
 h1
-  font-family: $family-serif
+  font-family: $family-code
   font-size: 3.125em
   font-weight: 700
 
@@ -89,8 +91,20 @@ h3
 .min-h-screen
   min-height: 100vh
 
+.has-font-code
+  font-family: $family-code
+
 .h-screen
-  height: 100vh
+  min-height: 100vh
+
+.has-background-yellow
+  background: $yellow
+.has-background-green
+  background: $green
+.has-background-orange
+  background: $orange
+.has-background-blue
+  background: $blue
 
 .header
   position: fixed

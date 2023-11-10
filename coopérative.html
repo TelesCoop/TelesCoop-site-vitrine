@@ -1,20 +1,22 @@
 ---
-description: Les projets que nous avons fièrement réalisés.
+description: La coopérative TelesCoop et ses particularités.
 layout: layout.html
 pageWeight: 80
 title: Nos Projets
+
+top: Phrase de description si besoin, c’est une phrase de description oui oui voilà lorem ipsum et lorem ipsum. Phrase de description si besoin, c’est une phrase de description oui oui voilà lorem ipsum et lorem ipsum.
 ---
 
 
 
-<div class="layout is-flex is-flex-direction-column gap-5">
-    <div class="columns is-align-items-center">
-        <h1 class="column">Qui sommes-nous&nbsp;?</h1>
+<div class="container pt-5">
+    <div class="columns is-align-items-center my-6">
+        <h1 class="column">La coopérative</h1>
         <p class="column has-border-left-grey">
-            Phrase de description si besoin, c’est une phrase de description oui oui voilà lorem ipsum et lorem ipsum. Phrase de description si besoin, c’est une phrase de description oui oui voilà lorem ipsum et lorem ipsum.
+            {{ top }}
         </p>
     </div>
-    <div class="columns is-align-items-center">
+    <div class="columns is-align-items-center" style="margin-top: 100px">
         <div class="column is-7">
             {% render '_includes/title.html' title:"Le bon entourage" %}
             <div class="is-flex is-flex-direction-column gap-2 mt-4">
@@ -31,16 +33,17 @@ title: Nos Projets
             <img src="/img/nous/index.svg" alt="">
         </div>
     </div>
-    <div class="columns is-align-items-center layout has-border-grey is-relative is-justify-content-center">
+    <div class="columns is-align-items-center layout has-border-grey is-relative is-justify-content-center"
+         style="margin-top: 120px">
         <div class="is-absolute top width-50 has-text-centered has-background-beige top--50">
             {% render 'title.html' title:"De chacun selon ses moyens, à chacun selon ses besoins" %}
         </div>
         <ul class="is-flex is-flex-direction-column gap-3">
             <li>
-                <strong>Notre tarif journalier de base </strong>(650€ HT), mais nous l'adaptons en fonction des possibilités du client, notamment pour les ONGs et associations. 
+                <strong>Notre tarif journalier de base </strong> est 650€ HT, mais nous l'adaptons en fonction des possibilités du client, notamment pour les ONGs et associations. 
             </li>
             <li>
-                <strong>Nous avons adapté nos salaires en fonction des besoins de chacun·e :</strong> ils ne dépendent ni de l'expérience ni de la formation ou de la performance comme c'est souvent le cas, mais du coût de la vie (enfants, loyer, prêt) et participe à corriger les inégalités de patrimoine avec un bonus pour ceux qui n'en ont pas.
+                <strong>Nous avons adapté nos salaires en fonction des besoins de chacun·e :</strong> ils ne dépendent ni de l'expérience ni de la formation ou de la performance comme c'est souvent le cas, mais du coût de la vie (enfants, loyer, prêt) et participe à corriger les inégalités de patrimoine avec un bonus par pallier pour ceux qui ont peu de patrimoine.
             </li>
         </ul>
     </div>
