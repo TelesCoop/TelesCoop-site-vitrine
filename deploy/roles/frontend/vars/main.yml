@@ -2,3 +2,4 @@
 
 frontend_static_path: /telescoop/{{ project_slug}}/static
 frontend_path: /telescoop/{{ project_slug}}/frontend
+node_version: 18.18.0
