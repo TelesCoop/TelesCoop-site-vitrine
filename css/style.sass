@@ -17,6 +17,7 @@ $beige-invert: findColorInvert($beige)
 $scheme-main: $beige
 $scheme-main-bis: $beige-bis
 $scheme-main-ter: $beige-ter
+$background: $beige
 @import "../node_modules/bulma/sass/utilities/derived-variables"
 $addColors: ("beige":($beige, $beige-invert))
 $colors: map-merge($colors, $addColors)
@@ -58,6 +59,7 @@ $gap-sizes: 1, 2, 3, 4, 5, 6, 8, 9, 12, 16, 24, 32, 40, 48, 56
 @import "./intro.sass"
 @import "./extra.sass"
 @import "./page-projets"
+@import "./page-projet"
 @import "./page-nous"
 
 // Elements
@@ -65,11 +67,13 @@ $gap-sizes: 1, 2, 3, 4, 5, 6, 8, 9, 12, 16, 24, 32, 40, 48, 56
 @import "./card.sass"
 @import "./footer"
 @import "./header"
-@import "./tag"
+@import "tag-and-category"
 
-body
-  background-color: $beige
-  font-size: 1em
+.after-title
+  position: relative
+  bottom: 0.5rem
+  display: inline-block
+  //margin-bottom: -0.5rem
 
 p
   font-family: $family-sans-serif

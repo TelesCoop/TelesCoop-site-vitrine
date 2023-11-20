@@ -3,7 +3,7 @@
     <div class="bordered has-text-centered p-4">
         <h3 class="is-family-code mb-3">{{ project.name }}</h3>
         {% for tag in project.tags %}
-            {% render "tag.html" tag:projectTags[tag] %}
+            {% render "category.html" category:categories[tag] %}
         {% endfor %}
         <p class="has-text-left">
             {{ project.shortDescription }}

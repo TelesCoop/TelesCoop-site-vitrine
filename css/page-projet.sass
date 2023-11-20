@@ -1,0 +1,23 @@
+.project
+  .image-holder
+    border-radius: 6px
+    // if the image height is too large, clip it and center it
+    max-height: 300px
+    line-height: 0
+    overflow: hidden
+    display: flex
+    align-items: center
+  .nutshell
+    border: 1px solid $grey-200
+    border-radius: 6px
+    .nutshell-title
+      text-align: center
+      position: relative
+      bottom: 1.7rem
+      h2
+        display: inline
+        background: $background
+        padding: 0 1rem
+    .left-column
+      @include tablet
+        border-right: 1px solid $grey-200

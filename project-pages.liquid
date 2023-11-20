@@ -1,0 +1,63 @@
+---
+pagination:
+    data: projects
+    size: 1
+    alias: project
+    filter:
+        - all
+        - post
+        - posts
+        - tagList
+description: Les projets que nous avons fièrement réalisés.
+layout: layout.html
+pageWeight: 130
+eleventyComputed:
+    description: Le projet que nous avons développé pour {{ project.client_name }}
+    title: {{ project.title }}
+permalink: /projet/{{ project.title | slugify }}/
+---
+<div class="container project">
+    <div class="columns">
+        <div class="column">
+            <h1 class="is-family-code">{{ project.title }}</h1>
+            {% for tag in project.categories %}
+                {% comment %}{{ categories | json }} | {{ tag }}{% endcomment %}
+                {% render "category.html" category:categories[tag] %}
+            {% endfor %}
+            <hr>
+            <ul class="tag-holder">
+                {% for tag in project.tags %}
+                    <li>
+                        {{ tag }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="column">
+            <div class="image-holder">
+                {% if project.image %}
+                    {% image "img/projet/ifn.png", "mon image", "width: 100%" %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="has-text-centered">
+        <p class="has-text-centered mt-6" style="max-width: 700px; margin: auto">{{ top }}</p>
+    </div>
+    <div class="nutshell">
+        <div class="nutshell-title">
+            <h2>En résumé</h2>
+            <div>
+                <img class="after-title" src="/img/after-title.svg" alt="">
+            </div>
+            <div class="columns is-8 is-variable my-5">
+                <div class="column left-column">
+                    bla blia bla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla blia
+                </div>
+                <div class="column">
+                    bla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla blia
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

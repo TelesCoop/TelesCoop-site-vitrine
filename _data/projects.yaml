@@ -1,5 +1,7 @@
 ---
 - title: Website
+  categories:
+    - site vitrine
   tags:
     - écologie
     - sensibilisation
@@ -68,6 +70,8 @@
     - "website"
     - "public_service"
 - title: IFN
+  categories:
+    - outil métier
   tags:
     - écologie
     - sensibilisation
@@ -76,6 +80,7 @@
     - imagerie satellitaire
   client_name: "La TeleScop"
   client_description: Cette structure contribue à la connaissance et l'action dans les territoires en facilitant l’accès et l’usage des données issues de l’observation de la Terre par imagerie satellitaire aux acteurs publics et privés dans les domaines de l’environnement et l'aménagement des territoires.
+  image: ifn.png
   project_link: "https://"
   project_git: "https://"
   project_stack:

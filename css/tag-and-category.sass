@@ -1,4 +1,4 @@
-.tag-holder
+.category-holder
   position: relative
   margin-right: 1rem
   margin-bottom: 1rem
@@ -12,3 +12,11 @@
   .button
     background: none
     border-color: black
+ul.tag-holder
+  li
+    list-style: none
+    display: inline
+    &:after
+      content: " \00b7"
+    &:last-child:after
+      content: none
