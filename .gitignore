@@ -5,3 +5,4 @@ node_modules
 telescoop
 vault.key
 gi
+*.css

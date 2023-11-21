@@ -1,0 +1,14 @@
+<a href="/projet/{{ project.title | slugify }}/">
+    <div class="project-card" style="position: relative">
+        <div class="bordered background top"></div>
+        <div class="bordered has-text-centered p-4 project-content">
+            <h3 class="is-family-code mb-3">{{ project.title }}</h3>
+            {% for category in project.categories %}
+                {% render "category.html" category:categories[category] notabindex: true %}
+            {% endfor %}
+            <p class="has-text-left">
+                {{ project.shortDescription }}
+            </p>
+        </div>
+    </div>
+</a>

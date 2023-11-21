@@ -96,7 +96,15 @@
     executable: /bin/bash
   when: clonecode.changed or force_update is defined
 
-- name: Build code
+# build css first as it gets copied to _site during the next step
+- name: Build css
+  command:
+    cmd: "yarn build:sass"
+    chdir: "{{ frontend_path }}"
+  when: clonecode.changed or force_update is defined
+  become_user: "{{ main_user }}"
+
+- name: Build site
   command:
     cmd: "npx @11ty/eleventy"
     chdir: "{{ frontend_path }}"

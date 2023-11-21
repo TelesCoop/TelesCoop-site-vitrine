@@ -1,0 +1,20 @@
+<div class="nutshell">
+    <div class="nutshell-title">
+        <h2>En résumé</h2>
+        <div>
+            <img class="after-title" src="/img/after-title.svg" alt="">
+        </div>
+    </div>
+    <div>
+        <div class="columns is-8 is-variable my-5">
+            <div class="column left-column">
+                bla blia bla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla blia
+            </div>
+            <div class="column">
+                {% if project.project_stack %}
+                    Technologies utilisées : {% render "tags.html" tags: project.project_stack %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

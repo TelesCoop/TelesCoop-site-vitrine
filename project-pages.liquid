@@ -16,7 +16,7 @@ eleventyComputed:
     title: {{ project.title }}
 permalink: /projet/{{ project.title | slugify }}/
 ---
-<div class="container project">
+<div class="container project section">
     <div class="columns">
         <div class="column">
             <h1 class="is-family-code">{{ project.title }}</h1>
@@ -25,13 +25,7 @@ permalink: /projet/{{ project.title | slugify }}/
                 {% render "category.html" category:categories[tag] %}
             {% endfor %}
             <hr>
-            <ul class="tag-holder">
-                {% for tag in project.tags %}
-                    <li>
-                        {{ tag }}
-                    </li>
-                {% endfor %}
-            </ul>
+            {% render "tags.html" tags:project.tags %}
         </div>
         <div class="column">
             <div class="image-holder">
@@ -44,20 +38,5 @@ permalink: /projet/{{ project.title | slugify }}/
     <div class="has-text-centered">
         <p class="has-text-centered mt-6" style="max-width: 700px; margin: auto">{{ top }}</p>
     </div>
-    <div class="nutshell">
-        <div class="nutshell-title">
-            <h2>En résumé</h2>
-            <div>
-                <img class="after-title" src="/img/after-title.svg" alt="">
-            </div>
-            <div class="columns is-8 is-variable my-5">
-                <div class="column left-column">
-                    bla blia bla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla blia
-                </div>
-                <div class="column">
-                    bla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla blia
-                </div>
-            </div>
-        </div>
-    </div>
+    {% render "project-page/nutshell.html" project:project %}
 </div>

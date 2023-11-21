@@ -9,7 +9,7 @@ top: Nous nous adaptons aux besoins du client et le conseillons au mieux en resp
 
 
 
-<div class="container">
+<div class="container section">
     <div class="has-text-centered">
         <h1 class="is-family-code">{{ title }}</h1>
         <p class="has-text-centered mt-6" style="max-width: 700px; margin: auto">{{ top }}</p>
@@ -27,8 +27,8 @@ top: Nous nous adaptons aux besoins du client et le conseillons au mieux en resp
                 </button>
             </div>
             <h3 class="is-family-code mb-2 is-size-7">Types de projet</h3>
-            {% for projectTag in categories %}
-                {% render "category.html" category: projectTag[1] %}
+            {% for category in categories %}
+                {% render "category.html" category: category[1] %}
             {% endfor %}
         </div>
     </div>
@@ -36,7 +36,7 @@ top: Nous nous adaptons aux besoins du client et le conseillons au mieux en resp
 <div class="container">
     <div class="project-holder">
         {% for project in projects %}
-            {% render "project.html" project: project categories: categories %}
+            {% render "project-card.html" project: project categories: categories %}
         {% endfor %}
     </div>
 </div>
