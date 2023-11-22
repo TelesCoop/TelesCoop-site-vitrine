@@ -1,4 +1,8 @@
 .project
+  display: flex
+  gap: 2rem
+  padding: 5em 10em
+  flex-direction: column
   .image-holder
     border-radius: 6px
     // if the image height is too large, clip it and center it
@@ -10,6 +14,7 @@
   .nutshell
     border: 1px solid $grey-200
     border-radius: 6px
+    position: relative
     .nutshell-title
       text-align: center
       position: relative
@@ -21,3 +26,9 @@
     .left-column
       @include tablet
         border-right: 1px solid $grey-200
+
+    .nutshell-cta
+      bottom: 0
+      position: absolute
+      right: 45%
+

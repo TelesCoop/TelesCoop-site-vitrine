@@ -16,9 +16,9 @@ eleventyComputed:
     title: {{ project.title }}
 permalink: /projet/{{ project.title | slugify }}/
 ---
-<div class="container project section">
+<div class="project section">
     <div class="columns">
-        <div class="column">
+        <div class="column is-6">
             <h1 class="is-family-code">{{ project.title }}</h1>
             {% for tag in project.categories %}
                 {% comment %}{{ categories | json }} | {{ tag }}{% endcomment %}
@@ -27,16 +27,13 @@ permalink: /projet/{{ project.title | slugify }}/
             <hr>
             {% render "tags.html" tags:project.tags %}
         </div>
-        <div class="column">
+        <div class="column is-6">
             <div class="image-holder">
-                {% if project.image %}
-                    {% image "img/projet/ifn.png", "mon image", "width: 100%" %}
-                {% endif %}
+                {{project.project_thumbnail}}
             </div>
         </div>
     </div>
-    <div class="has-text-centered">
-        <p class="has-text-centered mt-6" style="max-width: 700px; margin: auto">{{ top }}</p>
-    </div>
     {% render "project-page/nutshell.html" project:project %}
+    {% render "project-page/about.html" project:project %}
+    {% render "project-page/description.html" project:project %}
 </div>

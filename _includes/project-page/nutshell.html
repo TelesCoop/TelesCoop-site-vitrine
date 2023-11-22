@@ -12,9 +12,21 @@
             </div>
             <div class="column">
                 {% if project.project_stack %}
-                    Technologies utilisées : {% render "tags.html" tags: project.project_stack %}
+                    <div>Technologies utilisées : {% render "tags.html" tags: project.project_stack %}</div>
                 {% endif %}
+                {% if project.project_status %}
+                    <div>
+                        Status : <span class="is-bold">{{project.project_status}}</span>
+                    </div>
+                {% endif %}
+                {% if project.project_duration %}
+                <div>
+                    Temps de développement : <span class="is-bold">{{project.project_duration}} jours</span>
+                </div>
+                {% endif %}
+
             </div>
         </div>
     </div>
+    {% render "main-button.html" linkText:"Voir le site", link:"mailto:contact@telescoop.fr" %}
 </div>

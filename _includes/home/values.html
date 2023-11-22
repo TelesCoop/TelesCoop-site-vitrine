@@ -3,17 +3,8 @@
     <div class="is-flex is-flex-direction-column is-align-items-center gap-2">
         <ul class="wrapper-values">
             {% for value in values %}
-            <li class="value-card-container">
-                <div class="value-card">
-                    <img src={{value.src}} class="p-4" alt="">
-                    <div class="has-text-left is-flex is-flex-direction-column is-justify-content-center gap-1">
-                        <h3>{{ value.name }}</h3>
-                        <p>
-                            {{value.description}}
-                        </p>
-                    </div>
-
-                </div>
+            <li>
+                {% render "largeCard.html" src: value.src title: value.name description: value.description %}
             </li>
             {% endfor %}
         </ul>

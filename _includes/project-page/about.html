@@ -1,0 +1,10 @@
+
+<div class="is-flex is-flex-direction-column gap-2 is-align-items-center">
+    <div class="has-text-centered">
+        {% render '_includes/title.html' title:"À propos du client" %}
+    </div>
+    <div class="">
+        {% render "largeCard.html" src: "../../img/extra/round.svg" cardClass:"row-reverse p-8" title: project.client_name description: project.client_description %}
+    </div>
+</div>
+
