@@ -98,18 +98,18 @@
 
 # build css first as it gets copied to _site during the next step
 - name: Build css
-  command:
-    cmd: "yarn build:sass"
+  shell: "source /root/.nvm/nvm.sh && nvm exec {{ node_version.stdout }} yarn build:sass"
+  args:
     chdir: "{{ frontend_path }}"
+    executable: /bin/bash
   when: clonecode.changed or force_update is defined
-  become_user: "{{ main_user }}"
 
 - name: Build site
-  command:
-    cmd: "npx @11ty/eleventy"
+  shell: "source /root/.nvm/nvm.sh && nvm exec {{ node_version.stdout }} yarn build"
+  args:
     chdir: "{{ frontend_path }}"
+    executable: /bin/bash
   when: clonecode.changed or force_update is defined
-  become_user: "{{ main_user }}"
 
 - name: Make sure project files have the right owner after installs
   file:
