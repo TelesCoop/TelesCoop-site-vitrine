@@ -15,10 +15,15 @@
     z-index: 10
     padding: 12px
     display: block
-  .black
     background-color: black
+  .reverse
+    background-color: $beige
+    color: $black
+    &:after
+      border: 1px solid white
+
   &:hover
-    opacity: 0.8
+    opacity: 0.7
   &:after
     content: ""
     height: inherit
@@ -28,6 +33,7 @@
     left: 7px
     border: 1px solid $black
     border-radius: 7px
+
 
 .btn-rounded
   border-radius: 17px

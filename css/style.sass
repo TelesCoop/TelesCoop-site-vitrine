@@ -38,6 +38,8 @@ $gap-sizes: 1, 2, 3, 4, 5, 6, 8, 9, 12, 16, 24, 32, 40, 48, 56
 @each $size in $gap-sizes
   .gap-#{$size}
     gap: $size + em
+  .left-#{$size}
+    left: $size + em
 
 
 // Import only what you need from Bulma
@@ -154,6 +156,9 @@ a
 
 .is-bold
   font-weight: 700
+
+.is-semibold
+  font-weight: 500
 
 .row-reverse
   flex-direction: row-reverse
