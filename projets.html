@@ -22,9 +22,18 @@ top: Nous nous adaptons aux besoins du client et le conseillons au mieux en resp
         </div>
         <div class="filter-tags">
             <h3 class="is-family-code mb-2 is-size-7">Types de projet</h3>
+
             {% for category in categories %}
-                {% render "category.html" category: category[1] %}
+            <div class="category-holder filter-category" style="display: inline-block" filter-category="{{ category[1].name | slugify}}">
+                <div class="has-background-{{ category[1].colorClass }}  background"></div>
+                <button
+                        {% if notabindex%} tabindex="-1" {% endif %}
+                        class="button is-small category-active is-rounded {% if category[1].textWhite %}has-text-white{% endif %}" onclick="filterProjectsByCategory(this)" category="{{ category[1].name | slugify}}">
+                    <span>{{ category[1].name }}</span>
+                </button>
+            </div>
             {% endfor %}
+
         </div>
     </div>
 </div>

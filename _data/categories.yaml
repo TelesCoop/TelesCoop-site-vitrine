@@ -2,24 +2,24 @@
 site vitrine:
   name: site vitrine
   textWhite: true
-  colorClass: blue
+  colorClass: grey
 traitement de données:
   name: traitement de données
   textWhite: false
   colorClass: green
 cartographie:
   name: cartographie
-  textWhite: false
+  textWhite: true
   colorClass: orange
 no-code:
   name: no-code
-  textWhite: false
-  colorClass: orange
+  textWhite: true
+  colorClass: blue
 service public:
   name: service public
   textWhite: false
-  colorClass: orange
+  colorClass: yellow
 outil métier:
   name: outil métier
-  textWhite: false
-  colorClass: orange
+  textWhite: true
+  colorClass: danger

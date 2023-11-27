@@ -46,6 +46,11 @@ module.exports = function(eleventyConfig) {
         return values.join( " ")
     });
 
+    eleventyConfig.addFilter("projectsByCategories", (collections) => {
+        console.log(collections)
+        return collections
+    })
+
     // add custom 404 page
     eleventyConfig.setBrowserSyncConfig({
         callbacks: {

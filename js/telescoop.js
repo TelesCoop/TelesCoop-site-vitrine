@@ -34,35 +34,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+// Function to get active categories
+const getActiveCategories = () => {
+    const activeCategoryElements = document.querySelectorAll(".category-active");
+    return [...activeCategoryElements].map(el => el.getAttribute("category"));
+};
 
+// Function to filter projects list based on active categories
+const filterProjectsList = (activeCategories) => {
+    document.querySelectorAll('.project-card').forEach(projectCard => {
+        const projectCategories = projectCard.getAttribute("card-categories");
+        const isActive = activeCategories.some(category => projectCategories.includes(category));
+        projectCard.classList.toggle("is-hidden", !isActive);
+    });
+};
 
-const getActiveProjectsFilters = () => {
-    const activeFilters = []
-    document.querySelectorAll('.filter-active').forEach(el => {
-        activeFilters.push(el.getAttribute("filter"))
-    })
-    return activeFilters
-}
-const filtersProjectsList = () => {
-    const activeFilters = getActiveProjectsFilters()
-    document.querySelectorAll('.project').forEach(el => {
-        const projectFilter = el.getAttribute("filters")
-        const isActive = activeFilters.some(a => {
-           return projectFilter.includes(a)
-        })
-        if (isActive) {
-            el.classList.remove("is-hidden")
+// Function to toggle active class on an element
+const toggleActiveClass = (element, className) => {
+    element.classList.toggle(className);
+};
 
-        }
-        else el.classList.add("is-hidden")
-    })
-}
+// Function to apply styles based on active categories
+const applyStyle = (activeCategories) => {
+    document.querySelectorAll('.filter-category').forEach(filterCategory => {
+        const cardCategory = filterCategory.getAttribute("filter-category");
+        const isActive = activeCategories.some(category => cardCategory.includes(category));
+        const [background, button] = [...filterCategory.children].filter(el => el.classList.contains("background") || el.classList.contains("button"));
 
-const addFilters = (newFilter) => {
-    const ACTIVE_CLASS = "filter-active"
-    const filter = newFilter.getAttribute("filter")
-    console.log(newFilter.classList.contains(ACTIVE_CLASS))
-    if (newFilter.classList.contains(ACTIVE_CLASS)) newFilter.classList.remove(ACTIVE_CLASS)
-    else newFilter.classList.add(ACTIVE_CLASS)
-    filtersProjectsList()
-}
+        background.classList.toggle("is-hidden", !isActive);
+        button.classList.toggle("has-text-grey-dark", !isActive);
+    });
+};
+
+// Function to filter projects by category
+const filterProjectsByCategory = (element) => {
+    const activeCategory = "category-active";
+    toggleActiveClass(element, activeCategory);
+
+    const activeCategories = getActiveCategories();
+    filterProjectsList(activeCategories);
+    applyStyle(activeCategories);
+};
