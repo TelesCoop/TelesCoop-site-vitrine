@@ -8,7 +8,20 @@
     <div>
         <div class="columns is-8 is-variable my-5">
             <div class="column left-column">
-                bla blia bla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla bliabla blia
+                <h3>{{project.project_resume}}</h3>
+                {% if project.project_end and project.client_name  %}
+                    <p>Un projet créé en {{project.project_end}} pour {{project.client_name}}</p>
+                {% endif %}
+
+                <div class="is-divider"></div>
+                <div class="is-flex is-flex-direction-column gap-2">
+                    <h3>{{project.client_name}}</h3>
+                    <p>
+                        {{project.client_description}}
+                    </p>
+
+                </div>
+
             </div>
             <div class="column">
                 {% if project.project_stack %}
@@ -24,9 +37,11 @@
                     Temps de développement : <span class="is-bold">{{project.project_duration}} jours</span>
                 </div>
                 {% endif %}
-
+                <div class="is-flex is-justify-content-center gap-2">
+                    {% render "main-button.html" linkText:"Voir le site", link: project.project_link %}
+                    {% render "main-button.html" linkText:"Code source", link: project.project_link, btnClass: "reverse" %}
+                </div>
             </div>
         </div>
     </div>
-    {% render "main-button.html" linkText:"Voir le site", link:"mailto:contact@telescoop.fr" %}
 </div>
