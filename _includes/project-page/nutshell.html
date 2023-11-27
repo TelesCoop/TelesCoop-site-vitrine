@@ -8,38 +8,38 @@
     <div>
         <div class="columns is-8 is-variable my-5">
             <div class="column left-column">
-                <h3>{{project.project_resume}}</h3>
-                {% if project.project_end and project.client_name  %}
-                    <p>Un projet créé en {{project.project_end}} pour {{project.client_name}}</p>
+                <h3>{{project.projectResume}}</h3>
+                {% if project.projectEnd and project.clientName  %}
+                    <p>Un projet créé en {{project.projectEnd}} pour {{project.clientName}}</p>
                 {% endif %}
 
                 <div class="is-divider"></div>
                 <div class="is-flex is-flex-direction-column gap-2">
-                    <h3>{{project.client_name}}</h3>
+                    <h3>{{project.clientName}}</h3>
                     <p>
-                        {{project.client_description}}
+                        {{project.clientDescription}}
                     </p>
 
                 </div>
 
             </div>
             <div class="column">
-                {% if project.project_stack %}
-                    <div>Technologies utilisées : {% render "tags.html" tags: project.project_stack %}</div>
+                {% if project.projectStack %}
+                    <div>Technologies utilisées : {% render "tags.html" tags: project.projectStack %}</div>
                 {% endif %}
-                {% if project.project_status %}
+                {% if project.projectStatus %}
                     <div>
-                        Status : <span class="is-bold">{{project.project_status}}</span>
+                        Status : <span class="is-bold">{{project.projectStatus}}</span>
                     </div>
                 {% endif %}
-                {% if project.project_duration %}
+                {% if project.projectDuration %}
                 <div>
-                    Temps de développement : <span class="is-bold">{{project.project_duration}} jours</span>
+                    Temps de développement : <span class="is-bold">{{project.projectDuration}} jours</span>
                 </div>
                 {% endif %}
                 <div class="is-flex is-justify-content-center gap-2">
-                    {% render "main-button.html" linkText:"Voir le site", link: project.project_link %}
-                    {% render "main-button.html" linkText:"Code source", link: project.project_link, btnClass: "reverse" %}
+                    {% render "main-button.html" linkText:"Voir le site", link: project.projectLink %}
+                    {% render "main-button.html" linkText:"Code source", link: project.projectLink, btnClass: "reverse" %}
                 </div>
             </div>
         </div>

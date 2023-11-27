@@ -8,22 +8,22 @@
     - protection du vivant
     - diffusion d’informations
     - imagerie satellitaire
-  client_name: "La TeleScop"
-  client_description: <span class="is-bold">Cette structure contribue à la connaissance et l'action dans les territoires en facilitant l’accès et l’usage des données issues de l’observation de la Terre</span> par imagerie satellitaire aux acteurs publics et privés dans les domaines de l’environnement et l'aménagement des territoires.
-  project_thumbnail: "../../img/projet/ifn.png"
-  project_link: "https://lol.fr"
-  project_git: "https://lol.fr"
-  project_stack:
+  clientName: "La TeleScop"
+  clientDescription: <span class="is-bold">Cette structure contribue à la connaissance et l'action dans les territoires en facilitant l’accès et l’usage des données issues de l’observation de la Terre</span> par imagerie satellitaire aux acteurs publics et privés dans les domaines de l’environnement et l'aménagement des territoires.
+  projectThumbnail: "../../img/projet/ifn.png"
+  projectLink: "https://lol.fr"
+  projectGit: "https://lol.fr"
+  projectStack:
     - Django
     - Wagtail
     - VueJS
     - Bulma
     - Mapbox
-  project_resume: "Cartographie et suivi des Mangroves"
-  project_duration: 6.5
-  project_status: "Terminé"
-  project_end: 2022
-  project_description:
+  projectResume: "Cartographie et suivi des Mangroves"
+  projectDuration: 6.5
+  projectStatus: "Terminé"
+  projectEnd: 2022
+  projectDescription:
     <div><span class="is-bold">Plusieurs scientifiques travaillent à partir d'images satellitaires à optimiser la préservation et la valorisation des mangroves.</span> Dans ce cadre ils produisent de nombreuses données et informations, la problématique était alors de réussir à les diffuser au public de manière simple et accessible.</div>
     <div>Etant également en collaboration avec la Telescop avec qui nous avions développé le site GeoDev, nous avons utilisé ce dernier comme une base technique à adapter pour produire à moindre coût ce portail cartographique de suivi opérationnel des mangroves.</div>
     <div>Les Mangroves étant présentes dans différents pays du monde il y avait la nécessité de pouvoir traduire en Anglais ce site.</div>

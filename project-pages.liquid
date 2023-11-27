@@ -12,7 +12,7 @@ description: Les projets que nous avons fièrement réalisés.
 layout: layout.html
 pageWeight: 130
 eleventyComputed:
-    description: Le projet que nous avons développé pour {{ project.client_name }}
+    description: Le projet que nous avons développé pour {{ project.clientName }}
     title: {{ project.title | slugify }}
 permalink: /projet/{{ project.title | slugify }}/
 ---
@@ -29,7 +29,7 @@ permalink: /projet/{{ project.title | slugify }}/
         </div>
         <div class="column is-6">
             <div class="image-holder">
-                <img src="{{ project.project_thumbnail }}" alt="">a
+                <img src="{{ project.projectThumbnail }}" alt="">a
             </div>
 
         </div>

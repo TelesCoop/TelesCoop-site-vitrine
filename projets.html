@@ -21,11 +21,6 @@ top: Nous nous adaptons aux besoins du client et le conseillons au mieux en resp
             <h2 class="is-family-code is-size-5">Filtres</h2>
         </div>
         <div class="filter-tags">
-            <div class="mb-4">
-                <button class="button" style="border: none; text-decoration: underline; padding-left: 0; padding-top: 0">
-                    Masquer les filtres
-                </button>
-            </div>
             <h3 class="is-family-code mb-2 is-size-7">Types de projet</h3>
             {% for category in categories %}
                 {% render "category.html" category: category[1] %}
@@ -36,7 +31,7 @@ top: Nous nous adaptons aux besoins du client et le conseillons au mieux en resp
 <div class="container">
     <div class="project-holder">
         {% for project in projects %}
-            {% render "project-card.html" project: project categories: categories %}
+            {% render "project-card.html", project: project, categories: categories %}
         {% endfor %}
     </div>
 </div>
