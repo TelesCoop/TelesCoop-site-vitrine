@@ -1,4 +1,4 @@
-<section class="section-layout has-background-white gap-4 is-flex is-flex-direction-column has-text-centered">
+<section class="layout has-background-white gap-4 is-flex is-flex-direction-column has-text-centered">
     {% render 'title.html' title:"Nos petits plus" %}
     <ul class="wrapper-extra">
         {% for el in extra %}
@@ -8,9 +8,9 @@
         {% endfor %}
     </ul>
     <div class="is-flex is-flex-direction-column is-align-items-center gap-2">
-    <span>
+    <!--<span class="is-size-4">
         Nous travaillons en complémentarité avec d’autres coopératives du numérique :
-    </span>
+    </span>-->
         {% render "main-button.html" linkText:"Contactez-nous", link:"mailto:contact@telescoop.fr" %}
     </div>
 

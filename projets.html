@@ -2,18 +2,18 @@
 description: Les projets que nous avons fièrement réalisés.
 layout: layout.html
 pageWeight: 130
-title: Nos Projets
+title: Nos projets
 
 top: Nous nous adaptons aux besoins du client et le conseillons au mieux en respectant nos valeurs. <br> Nos réalisations peuvent aller du petit projet utile et amovible à des structures plus complexes.
 ---
 
 
 
-<div class="container section">
-    <div class="has-text-centered">
-        <h1 class="is-family-code">{{ title }}</h1>
-        <p class="has-text-centered mt-6" style="max-width: 700px; margin: auto">{{ top }}</p>
-    </div>
+
+<div class="has-text-centered is-flex is-flex-direction-column" style="margin-bottom: 2em;">
+    <img src="/img/svg/illustration-projet.svg" class="is-hidden-tablet illustration-projet" alt="" style="height: 120px;">
+    <h1 class="is-family-code">{{ title }}</h1>
+    <p class="has-text-centered mt-6" style="max-width: 700px; margin: auto">{{ top }}</p>
 </div>
 <div class="has-border-grey my-3" style="border-right: none; border-left: none">
     <div class="container is-flex filters">
@@ -38,9 +38,10 @@ top: Nous nous adaptons aux besoins du client et le conseillons au mieux en resp
     </div>
 </div>
 <div class="container">
-    <div class="project-holder">
+    <div class="projects-container">
         {% for project in projects %}
             {% render "project-card.html", project: project, categories: categories %}
         {% endfor %}
     </div>
+
 </div>

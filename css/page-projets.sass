@@ -1,4 +1,9 @@
 .container.filters
+  flex-direction: column
+  @include tablet
+    flex-direction: row
+
+
   .filter-title
     padding-top: 1rem
     @include tablet
@@ -12,6 +17,7 @@
       padding-left: 1rem
 
 .project-card
+
   h3
     text-decoration: none
   .bordered
@@ -26,12 +32,17 @@
   .project-content
     position: relative
     background: $background
-
-.project-holder
+    height: 15em
+    display: flex
+    gap: 2em
+    flex-direction: column
+    text-align: center
+.projects-container
   display: grid
   align-items: start
-  grid-template-columns: repeat(1, 1fr)
-  row-gap: 2rem
+  grid-template-columns: repeat(2, 1fr)
+  row-gap: 5rem
+  column-gap: 1rem
   @include tablet
     row-gap: 3rem
     column-gap: 3rem

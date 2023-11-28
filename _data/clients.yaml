@@ -19,18 +19,13 @@
       La borne carbone a aujourd'hui été utilisée avec succès par des milliers de personnes
       lors de la tournée, ce qui nous a permis de préciser les modes de déplacements
       et les impacts associés de l'ensemble des spectateurs. Merci Telescoop !
-- client: Anne Tison
-  client_poste: co-fondatrice de Excellents Excédents
-  description: Excellents Excédents est une entreprise de l'Economie Sociale et Solidaire
-      qui valorise les excédents de la restauration collective, pour fournir à bas prix
-      des repas de qualité et équilibrés aux acteurs de la solidarité alimentaire (associations,
-      cantines solidaires).
-  logo: "/img/excellent-excedent.png"
-  name: Excellents Excédents
-  testimonial: " La logistique est au cœur de son métier, et nous avons développé
-    pour eux une solution sur-mesure qui leur permet de gérer les collectes, le stock
-    et la planification des distributions. teles.coop a su être à notre écoute pour
-    développer un logiciel sur mesure. Nous avons développé le logiciel brique par
-    brique de manière agile, en même temps que nous formalisions les besoins fonctionnels;
-    cela nous a permis de gagner beaucoup de temps. Le résultat est un excellent rapport
-    qualité / coût."
+- client: Juliette Karpa & Corinne Ngotat
+  logo: "/img/clients/les-etablis.png"
+  borderColor: "#ffcd4e"
+  name: Les Etablis
+  testimonial: "Camille et Alice de TelesCoop (ou TelesCoop si vous ne souhaitez pas être nommées directement) ont (a) accompagné notre projet en créant un logiciel sur mesure et adapté à nos besoins qui étaient précis et, nous en avions conscience, évolutifs. Étant une toute jeune entreprise, notre budget était trop serré pour financer un logiciel en propre, TelesCoop a été la seule structure parmi celles solicités, à nous proposer une solution à partir d'une plateforme collaborative tout en intégrant un développement qui puisse répondre à notre cahier des charges. Un immense MERCI !!"
+- client: Domitille Duverne
+  borderColor: "#005281"
+  logo: "/img/clients/les-etablis.png"
+  name: Médecins sans frontières
+  testimonial: "Collaboration très agréable avec une équipe experte, professionnelle et efficace, dans le respect des délais. Rien à redire !"

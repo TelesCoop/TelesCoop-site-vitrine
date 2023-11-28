@@ -1,11 +1,7 @@
-<div class="client-card-container">
-    <div class="client-card" style="border-top: 5px solid {{ client.borderColor }};">
-        <img src={{client.src}} class="p-4" alt="">
-        <h3>{{ client.name }}, {{client.client}}</h3>
-        <p>{{client.testimonial}}</p>
-        <div class="mt-auto">
-            {% render "main-button.html" linkText:"Voir le projet",  btnClass: "reverse" %}
-        </div>
 
-    </div>
+<img src={{client.src}} class="p-4" alt="">
+<h3>{{ client.name }}, {{client.client}}</h3>
+<p>{{client.testimonial}}</p>
+<div class="is-flex mt-auto">
+    {% render "main-button.html" linkText:"Voir le projet",  btnClass: "reverse" %}
 </div>
