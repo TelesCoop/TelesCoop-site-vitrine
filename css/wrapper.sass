@@ -1,12 +1,14 @@
 .wrapper-skills, .wrapper-clients
   display: grid
-  gap: 5em
+  gap: 3em
   justify-items: center
 
 .wrapper-skills
   grid-template-columns: repeat(2, 1fr)
   @include tablet
     grid-template-columns: repeat(3, 1fr)
+  @include touch
+    gap: 2em
 
 .wrapper-clients
   grid-template-columns: repeat(1, 1fr)

@@ -23,8 +23,8 @@ permalink: /projet/{{ project.title | slugify }}/
             {% for tag in project.categories %}
                 {% render "category.html", category:categories[tag] %}
             {% endfor %}
-            <div class="is-divider"></div>
-            {% render "tags.html", tags:project.tags %}
+{% comment %}            <div class="is-divider"></div>
+            {% render "tags.html", tags:project.tags %}{% endcomment %}
         </div>
         <div class="column is-6">
             <div class="image-holder">
@@ -34,8 +34,11 @@ permalink: /projet/{{ project.title | slugify }}/
         </div>
     </div>
     {% render "project-page/nutshell.html", project:project %}
-{% comment %}    {% render "project-page/about.html", project:project %}
-{% endcomment %}    {% render "project-page/description.html", project:project %}
-    {% render "project-page/discover.html", project:project %}
-    {% render "project-page/testimony.html", project:project %}
+    {% render "project-page/description.html", project:project %}
+    {% if project.projectGit or project.projectLink %}
+        {% render "project-page/discover.html", project:project %}
+    {% endif %}
+    {% if project.testimony %}
+        {% render "project-page/testimony.html", project:project %}
+    {% endif %}
 </div>

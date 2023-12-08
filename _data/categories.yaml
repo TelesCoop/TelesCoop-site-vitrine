@@ -23,3 +23,7 @@ outil métier:
   name: outil métier
   textWhite: true
   colorClass: danger
+gestion de contenu:
+  name: gestion de contenu
+  textWhite: true
+  colorClass: info

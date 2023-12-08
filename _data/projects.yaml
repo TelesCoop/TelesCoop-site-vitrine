@@ -1,3 +1,4 @@
+# Mang Map
 - title: MangMap
   categories:
     - outil métier
@@ -35,7 +36,7 @@
     lors de la tournée, ce qui nous a permis de préciser les modes de déplacements
     et les impacts associés de l'ensemble des spectateurs. Merci Telescoop !
 
-
+# Aides jeunes
 - title: MesAidesJeunes
   categories:
     - outil métier
@@ -78,3 +79,158 @@
     lors de la tournée, ce qui nous a permis de préciser les modes de déplacements
     et les impacts associés de l'ensemble des spectateurs. Merci Telescoop !
 
+
+# MSF
+- title: MSF - Campagne de dons
+  categories:
+    - site vitrine
+  tags:
+    - dons
+    - ong
+    - humaniste
+  clientName: "Médecins sans frontières"
+  clientDescription: Médecins Sans Frontière est une association médicale humanitaire internationale créée en 1971 en France. Dans plus de 70 pays, ils portent assistance à des populations dont la vie ou la santé est menacée notamment lors de conflits, d'épidémies et de catastrophes naturelles."
+  projectThumbnail: "../../img/projet/aides-jeunes.png"
+  projectLink: "https://agissons.msf.fr/"
+  projectStack:
+    - 11ty
+    - iRaiser
+  projectResume: "Trouver en 5 minutes les aides auxquelles les jeunes ont le droit"
+  projectDuration: 12
+  projectStatus: "Terminé"
+  projectEnd: fin d'année 2022
+  projectDescription:
+    Nous avons réalisé le portail de dons pour leur campagne de fin d'année 2022. À partir de maquettes pour bureau, nous avons conçu une version mobile et intégré le tout. Le site statique est connecté à iRaiser pour les paiements effectifs et la connexion avec leur base de donateurs. Les variables de suivi de provenance des utilisateurs sont bien transmises.
+  testimony: ""
+
+# Les Établis - Outil de Gestion des Réparations
+- title: Les Établis
+  categories:
+    - outil métier
+  tags:
+    - gestion de commandes
+    - no-code
+    - interopérabilité
+    - économie circulaire
+    - petit budget
+    - outil métier
+  clientName: "Les Établis"
+  clientDescription: "Les Établis (les-etablis.com) est une boutique de réparation et un concept store situé au cœur de Paris. Ils agissent en tant qu'intermédiaire entre les particuliers et les entreprises ayant des objets à réparer, et les réparateurs et artisans capables d'effectuer ce travail."
+  # projectLink: "Non spécifié"
+  # projectGit: "Non applicable"
+  projectStack:
+    - Airtable
+    - Stripe
+  projectResume: "Outil de gestion des réparations des objets"
+  projectDuration: 10
+  projectStatus: "Terminé"
+  projectEnd: "07/2022"
+  projectDescription: "Nous avons réalisé pour eux un outil de suivi des réparations. Il permet d'assigner la réparation à l'artisan pertinent, de garder trace du motif de la réparation, des commandes de pièces détachées, des paiements du client et aux artisans. Réalisé pour un tout petit budget, nous nous sommes appuyés des outils de no-code existants pour apporter un outil adapté à moindre coût."
+  # testimony: "Non applicable"
+
+# Refonte du site du Labo de Société Numérique
+- title:  Société Numérique
+  categories:
+    - site vitrine
+  tags:
+    - développement web
+    - refonte
+    - social
+    - inclusion numérique
+    - sobriété
+    - design system de l'État
+    - multilingue
+  clientName: "ANCT"
+  clientDescription: "L'Agence Nationale de la Cohésion des Territoires (ANCT) est un établissement public, né de la fusion du Commissariat général à l'égalité des territoires, de l'Epareca et de l'Agence du numérique. L'ANCT assure d'abord un rôle de « fabrique à projets » pour permettre aux collectivités de mener à bien leurs projets. Elle facilite l'accès des collectivités locales aux ressources nécessaires pour concrétiser leurs projets : ingénierie technique et financière, partenariats, subventions..."
+  projectLink: "https://labo.societenumerique.gouv.fr/fr/"
+  projectGit: "https://github.com/SocieteNumerique/Labo-Backend"
+  projectStack:
+    - Django
+    - Wagtail
+    - Alpine.js
+    - Design System de l'État
+  projectResume: "Refonte du site vitrine du Labo de Société Numérique"
+  projectDuration: 40
+  projectStatus: "Terminé"
+  projectEnd: "09/2022"
+  projectDescription: " Le numérique bouleverse nos façons d’échanger, d’apprendre, de produire, de consommer. Il est à la fois vecteur d’épanouissement, de coopération mais aussi catalyseur de nouvelles fractures, inégalités et inquiétudes. Le Labo vous propose un regard critique sur les défis éthiques et sociaux du numérique, les enjeux juridiques des communs numériques et de l’innovation publique, le développement des territoires et l'inclusion numérique. Il part de la conviction que les politiques publiques se construisent dans le dialogue avec les sciences humaines et sociales et requièrent des espaces de réflexivité. Le Labo Société Numérique est une plateforme de contenus autour du numérique et de sa place dans la société. Nous avons développé une remise à neuf de ce site, pour une interface plus fluide et de nouvelles fonctionnalités. Bilingue, le site offre la possibilité de traduire automatiquement les articles du français vers l'anglais. Le système de filtres et de formats d'articles permet aussi une recherche fluide et efficace dans les contenus publiés. Présenté à la NEC 2022."
+  # testimony: "Non applicable"
+  isOpenSource: true
+
+
+# La Base
+- title: La Base
+  categories:
+    - outil métier
+    - gestion de contenu
+  tags:
+    - développement web
+    - intégration web
+    - gestion de contenu
+  clientName: "ANCT"
+  clientDescription: "L'Agence Nationale de la Cohésion des Territoires (ANCT) est un établissement public, né de la fusion du Commissariat général à l'égalité des territoires, de l'Epareca et de l'Agence du numérique. L'ANCT assure d'abord un rôle de « fabrique à projets » pour permettre aux collectivités de mener à bien leurs projets. Elle facilite l'accès des collectivités locales aux ressources nécessaires pour concrétiser leurs projets : ingénierie technique et financière, partenariats, subventions..."
+  projectLink: "https://labase.anct.gouv.fr"
+  projectGit:
+    - "https://github.com/SocieteNumerique/La-Base-frontend"
+    - "https://github.com/SocieteNumerique/La-Base-backend"
+  projectStack:
+    - Django
+    - DRF (Django Rest Framework)
+    - Nuxt.js
+  projectResume: "Partage des ressources de travail pour les acteurs de la médiation numérique"
+  projectDuration: 150
+  projectStatus: "Terminé, toujours en cours d'amélioration"
+  projectEnd: "2022"
+  projectDescription: L'ANCT a demandé la création de La Base, un outil visant à permettre à tous les acteurs de la médiation numérique de partager leurs ressources de travail. La plateforme est ouverte aux contributions d'associations, d'individus et de structures institutionnelles. Avec 6358 membres, dont 2611 membres inscrits, le site est destiné à être utilisé par une grande base d'utilisateurs, notamment par les 1800 Conseillers Numérique France Service. L'application a été présentée à la NEC 2022. La Base est un outil développé pour l'ANCT, permettant aux acteurs de la médiation numérique de partager leurs ressources de travail. Ouvert aux contributions, le site compte 6358 membres, dont 2611 membres inscrits. Il sert d'outil de travail à 1800 Conseillers Numérique France Service L'application a été présentée à la NEC 2022.
+  isOpenSource: true
+
+
+# DémoMètre
+- title: DémoMètre
+  categories:
+    - outil métier
+    - gestion de contenu
+  tags:
+    - intégration
+    - CMS
+    - développement web
+    - intégration web
+  clientName: "Démocratie Ouverte"
+  clientDescription: "Démocratie Ouverte est une association défendant une transformation démocratique des institutions et des organisations afin de relever les défis structurants du 21ème siècle."
+  projectLink: ""
+  projectStack:
+    - Django
+    - Wagtail
+    - VueJS
+    - Bulma
+  projectResume: "Plateforme collaborative pour évaluer et améliorer la démocratie locale"
+  projectDuration: 120
+  projectStatus: "En cours"
+  projectEnd: "2022"
+  projectDescription: "Dans un contexte de crise démocratique, le collectif Démocratie Ouverte a souhaité créer une plateforme ouverte, gratuite, interactive et collaborative pour évaluer, améliorer et partager la démocratie locale. En collaboration avec la coopérative de designer Praticable, ainsi que le collectif Démocratie Ouverte, nous avons conçu et développé la plateforme DémoMètre. Cette application permet à des habitants, élus, agents et associations de créer une évaluation pour une commune ou intercommunalité, d'y participer et d'en observer les résultats en autonomie ou en atelier afin de créer du débat et faire vivre la démocratie locale. Développée sur un semestre, la plateforme permet aujourd'hui d'animer des ateliers sur l'indice de qualité démocratique, créant ainsi des débats entre les participants et faisant vivre la démocratie locale. Elle permet également à toute personne de répondre ou créer une évaluation pour sa commune ou intercommunalité en toute autonomie."
+  # testimony: "Non applicable"
+  isOpenSource: false
+
+
+# GreenMenu
+- title: GreenMenu
+  categories:
+    - outil métier
+  tags:
+    - intégration web
+  clientName: "Green-Menu"
+  clientDescription: "Cet outil accessible en ligne via un simple navigateur internet propose une segmentation des informations par composante de repas et par zones, pour une analyse en détail des causes de gaspillage et l’identification des solutions. Une des grandes forces de green-menu.fr se situe au niveau de sa modularité. Il peut être utilisé à son niveau le plus simple et assisté ou bien aller beaucoup plus loin dans le niveau de détail."
+  # projectLink: "Non spécifié"
+  # projectGit: "Non applicable"
+  projectStack:
+    - HTML & CSS
+    - Django
+    - Vue
+    - Bulma
+    - Ansible
+  projectResume: "Outil pour lutter contre le gaspillage alimentaire dans la restauration collective"
+  projectDuration: "2020 - 2021"
+  projectStatus: "En cours"
+  projectEnd: "2021"
+  projectDescription: "GreenMenu a été conçu pour lutter contre le gaspillage alimentaire dans la restauration collective, en collaboration avec des professionnels de la restauration. Cet outil bénéficie d’une conception cohérente avec la gestion d’un restaurant collectif. Il permet d'évaluer et calculer le gaspillage alimentaire, définir des plans de menu, comparer les campagnes de pesées et extraire des graphiques clairs utilisables pour les supports de communication."
+  # testimony: "Non applicable"

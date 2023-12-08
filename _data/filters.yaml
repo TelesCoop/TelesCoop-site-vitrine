@@ -7,6 +7,9 @@
 - name: Outil métier
   slug: "outil_metier"
   color: "#C8C7C5"
+- name: Gestion de contenu
+  slug: "content_management"
+  color: "#FFAB00"
 - name: Service public
   slug: "public_service"
   color: "#FFCD4E"

@@ -13,6 +13,7 @@ $yellow: #FFCD4E
 $green: #60E093
 $orange: #FF5631
 $blue: #005281
+$grey: #C8C7C5
 // $colors: ("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert, $primary-light, $primary-dark))
 $beige-invert: findColorInvert($beige)
 $scheme-main: $beige
@@ -77,7 +78,8 @@ $gap-sizes: 1, 2, 3, 4, 5, 6, 8, 9, 12, 16, 24, 32, 40, 48, 56
   bottom: 0.5rem
   display: inline-block
   //margin-bottom: -0.5rem
-
+body
+  font-size: 18px
 p
   font-family: $family-sans-serif
 h1
@@ -128,7 +130,7 @@ h3
 
 .layout
   padding: 8em 10em
-  @include mobile
+  @include until-widescreen
     padding: 4em 2em
 
 
