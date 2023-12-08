@@ -3,12 +3,12 @@
       avec la liberté de décider de l'endroit il ou elle veut travailler. En plus de
       cette liberté, chacun·e est libre de décider de ses horaires et de son organisation.
   name: Accessibilité
-  src: "./img/extra/accessibility.svg"
+  src: "./img/svg/accessibility.svg"
 - description: Tous les salariés de la coopérative sont entièrement en télétravail
       avec la liberté de décider de l'endroit il ou elle veut travailler. En plus de
       cette liberté, chacun·e est libre de décider de ses horaires et de son organisation.
   name: Respect du RGPD
-  src: "./img/extra/rgpd.svg"
+  src: "./img/svg/rgpd.svg"
 - description: Tous les salariés de la coopérative sont entièrement en télétravail
       avec la liberté de décider de l'endroit il ou elle veut travailler. En plus de
       cette liberté, chacun·e est libre de décider de ses horaires et de son organisation.
@@ -18,4 +18,4 @@
       avec la liberté de décider de l'endroit il ou elle veut travailler. En plus de
       cette liberté, chacun·e est libre de décider de ses horaires et de son organisation.
   name: Éco-conception
-  src: "./img/extra/eco-conception.svg"
+  src: "./img/svg/eco-conception.svg"
