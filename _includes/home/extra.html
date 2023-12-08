@@ -1,12 +1,10 @@
-<section class="layout has-background-white gap-4 is-flex is-flex-direction-column has-text-centered">
+<section class="has-background-white layout-component gap-4 is-flex is-flex-direction-column has-text-centered">
     {% render 'title.html' title:"Nos petits plus" %}
-    <ul class="wrapper-extra">
+    <div class="wrapper-extra">
         {% for el in extra %}
-        <li>
             {% render "card.html" element: el %}
-        </li>
         {% endfor %}
-    </ul>
+    </div>
     <div class="is-flex is-flex-direction-column is-align-items-center gap-2">
     <!--<span class="is-size-4">
         Nous travaillons en complémentarité avec d’autres coopératives du numérique :

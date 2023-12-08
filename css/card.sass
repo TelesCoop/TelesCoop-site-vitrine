@@ -69,12 +69,21 @@
   justify-content: center
   margin-top: 8em
   display: flex
+  @include touch
+    padding: 2rem 2rem
+
   .large-card-title
     position: absolute
     background-color: $beige
     width: 50%
     text-align: center
     top: -4em
+    @include touch
+      width: 100%
+      top: -7em
+    @include mobile-xs
+      top: -11em
+
   @include tablet
     width: 100%
 

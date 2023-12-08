@@ -42,6 +42,22 @@ $gap-sizes: 1, 2, 3, 4, 5, 6, 8, 9, 12, 16, 24, 32, 40, 48, 56
   .left-#{$size}
     left: $size + em
 
+$mobile-xs: 420px !default
+$mobile-md: 480px !default
+$mobile-lg: 600px !default
+
+
+@mixin mobile-xs
+  @media screen and (max-width: $mobile-md - 1), print
+    @content
+
+@mixin mobile-md
+  @media screen and (min-width: $mobile-md) and (max-width: $mobile-lg), print
+    @content
+
+@mixin mobile-lg
+  @media screen and (min-width: $mobile-lg), print
+    @content
 
 // Import only what you need from Bulma
 @import "../node_modules/bulma/sass/utilities/_all.sass"
@@ -86,6 +102,8 @@ h1
   font-family: $family-code
   font-size: 3.125em
   font-weight: 700
+  @include mobile-md
+    font-size: 2.5em
 
 h2
   font-family: $family-sans-serif
@@ -132,8 +150,10 @@ h3
   padding: 8em 10em
   @include until-widescreen
     padding: 4em 2em
-
-
+.layout-component
+  padding: 8em 10em
+  @include mobile-lg
+    padding: 4em 2em
 .has-border-bottom-grey
   border-bottom: 1px solid $grey-200
 
@@ -184,6 +204,5 @@ a
   height: 0.1rem
   margin: 2rem 0
   text-align: center
-
   .mt-auto
-    margin-top: auto 0
+    margin-top: auto

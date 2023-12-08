@@ -1,18 +1,20 @@
 .project
   display: flex
-  gap: 2rem
+  gap: 6rem
   padding: 5em 2em
+  @include mobile-xs
+    padding: 0
   @include tablet
-    padding: 5em 10em
+    padding: 5em 2em
   flex-direction: column
   .image-holder
     border-radius: 6px
     // if the image height is too large, clip it and center it
     max-height: 300px
     line-height: 0
-    overflow: hidden
     display: flex
     align-items: center
+    max-width: 600px
   .nutshell
     border: 1px solid $grey-200
     border-radius: 6px

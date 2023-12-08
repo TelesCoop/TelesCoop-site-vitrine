@@ -1,14 +1,18 @@
-.wrapper-skills, .wrapper-clients
+.wrapper-skills, .wrapper-clients, .wrapper-extra
   display: grid
-  gap: 3em
+  gap: 2em
   justify-items: center
 
-.wrapper-skills
+.wrapper-skills, .wrapper-extra
   grid-template-columns: repeat(2, 1fr)
-  @include tablet
+  @include mobile-xs
+    grid-template-columns: repeat(1, 1fr)
+  @include desktop
     grid-template-columns: repeat(3, 1fr)
-  @include touch
-    gap: 2em
+
+.wrapper-extra
+  @include tablet
+    grid-template-columns: repeat(4, 1fr)
 
 .wrapper-clients
   grid-template-columns: repeat(1, 1fr)
@@ -21,12 +25,11 @@
   display: flex
   flex-direction: column
   gap: 1.5em
-
+  @include mobile-md
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
 
 .wrapper-extra
-  display: grid
-  grid-template-columns: repeat(2, 1fr)
-  @include tablet
-    grid-template-columns: repeat(3, 1fr)
-  gap: 2em
-  justify-items: center
+  gap: 1em
+  @include mobile-md
+    grid-template-columns: repeat(2, 1fr)
