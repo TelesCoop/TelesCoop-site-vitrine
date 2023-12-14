@@ -43,8 +43,8 @@
     - service public
   tags:
     - diffusion d’informations
-  clientName: "ANCT"
-  clientDescription: "Aides jeunes est une startup d'état faisant partie du groupe Beta Gouv. Beta.gouv est un programme d’incubation qui aide les administrations publiques à construire des services numériques utiles, simples, faciles à utiliser et qui répondent vraiment aux besoins des gens. ation ne relève pas uniquement de TelesCoop."
+  clientName: "Beta.gouv"
+  clientDescription: "Aides jeunes est une startup d'état faisant partie du groupe Beta Gouv. Beta.gouv est un programme d’incubation qui aide les administrations publiques à construire des services numériques utiles, simples, faciles à utiliser et qui répondent vraiment aux besoins des gens. "
   projectThumbnail: "../../img/projet/aides-jeunes.png"
   projectLink: "https://www.1jeune1solution.gouv.fr/mes-aides"
   projectGit: "https://github.com/betagouv/aides-jeunes"
