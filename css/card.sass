@@ -29,12 +29,18 @@
 
 .value-card-container
   font-family: $family-serif
-  width: 42em
-  height: 15em
+  width: 15em
+  height: 30em
   position: relative
-  @include touch
-    width: 22em
-    height: 24em
+  @include mobile-md
+    width: 20em
+    height: 25em
+  @include tablet
+    width: 30em
+    height: 20em
+  @include desktop
+    width: 42em
+    height: 15em
   img
     width: 96px
     height: 96px

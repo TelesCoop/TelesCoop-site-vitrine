@@ -11,9 +11,9 @@
     - imagerie satellitaire
   clientName: "La TeleScop"
   clientDescription: <span class="is-bold">Cette structure contribue à la connaissance et l'action dans les territoires en facilitant l’accès et l’usage des données issues de l’observation de la Terre</span> par imagerie satellitaire aux acteurs publics et privés dans les domaines de l’environnement et l'aménagement des territoires.
-  projectThumbnail: "../../img/projet/ifn.png"
-  projectLink: "https://lol.fr"
-  projectGit: "https://lol.fr"
+  # projectThumbnail: "../../img/projet/ifn.png"
+  # projectLink: "https://lol.fr"
+  # projectGit: "https://lol.fr"
   projectStack:
     - Django
     - Wagtail
@@ -46,8 +46,8 @@
   clientName: "ANCT"
   clientDescription: "Aides jeunes est une startup d'état faisant partie du groupe Beta Gouv. Beta.gouv est un programme d’incubation qui aide les administrations publiques à construire des services numériques utiles, simples, faciles à utiliser et qui répondent vraiment aux besoins des gens. ation ne relève pas uniquement de TelesCoop."
   projectThumbnail: "../../img/projet/aides-jeunes.png"
-  projectLink: "https://lol.fr"
-  projectGit: "https://lol.fr"
+  projectLink: "https://www.1jeune1solution.gouv.fr/mes-aides"
+  projectGit: "https://github.com/betagouv/aides-jeunes"
   projectStack:
     - Vuejs
     - serveur expressJS avec mongoose
@@ -90,12 +90,12 @@
     - humaniste
   clientName: "Médecins sans frontières"
   clientDescription: Médecins Sans Frontière est une association médicale humanitaire internationale créée en 1971 en France. Dans plus de 70 pays, ils portent assistance à des populations dont la vie ou la santé est menacée notamment lors de conflits, d'épidémies et de catastrophes naturelles."
-  projectThumbnail: "../../img/projet/aides-jeunes.png"
+  projectThumbnail: "../../img/projet/msf-agissons.png"
   projectLink: "https://agissons.msf.fr/"
   projectStack:
     - 11ty
     - iRaiser
-  projectResume: "Trouver en 5 minutes les aides auxquelles les jeunes ont le droit"
+  projectResume: "Site pour la campagne de dons annuelle"
   projectDuration: 12
   projectStatus: "Terminé"
   projectEnd: fin d'année 2022
@@ -210,6 +210,7 @@
   projectDescription: "Dans un contexte de crise démocratique, le collectif Démocratie Ouverte a souhaité créer une plateforme ouverte, gratuite, interactive et collaborative pour évaluer, améliorer et partager la démocratie locale. En collaboration avec la coopérative de designer Praticable, ainsi que le collectif Démocratie Ouverte, nous avons conçu et développé la plateforme DémoMètre. Cette application permet à des habitants, élus, agents et associations de créer une évaluation pour une commune ou intercommunalité, d'y participer et d'en observer les résultats en autonomie ou en atelier afin de créer du débat et faire vivre la démocratie locale. Développée sur un semestre, la plateforme permet aujourd'hui d'animer des ateliers sur l'indice de qualité démocratique, créant ainsi des débats entre les participants et faisant vivre la démocratie locale. Elle permet également à toute personne de répondre ou créer une évaluation pour sa commune ou intercommunalité en toute autonomie."
   # testimony: "Non applicable"
   isOpenSource: false
+  projectThumbnail: "../../img/projet/demomètre.png"
 
 
 # GreenMenu
@@ -219,7 +220,7 @@
   tags:
     - intégration web
   clientName: "Green-Menu"
-  clientDescription: "Cet outil accessible en ligne via un simple navigateur internet propose une segmentation des informations par composante de repas et par zones, pour une analyse en détail des causes de gaspillage et l’identification des solutions. Une des grandes forces de green-menu.fr se situe au niveau de sa modularité. Il peut être utilisé à son niveau le plus simple et assisté ou bien aller beaucoup plus loin dans le niveau de détail."
+  clientDescription: "Green-menu est un outil développé par Anne TISON et Pierre RAVENEL qui travaillent ensemble depuis près de 10 ans sur l’alimentation durable et la lutte contre le gaspillage alimentaire. Ils ont accompagné de nombreuses structures publiques et privées dans des projets de réduction du gaspillage alimentaire."
   # projectLink: "Non spécifié"
   # projectGit: "Non applicable"
   projectStack:
@@ -229,8 +230,8 @@
     - Bulma
     - Ansible
   projectResume: "Outil pour lutter contre le gaspillage alimentaire dans la restauration collective"
-  projectDuration: "2020 - 2021"
+  projectDuration: "70"
   projectStatus: "En cours"
-  projectEnd: "2021"
-  projectDescription: "GreenMenu a été conçu pour lutter contre le gaspillage alimentaire dans la restauration collective, en collaboration avec des professionnels de la restauration. Cet outil bénéficie d’une conception cohérente avec la gestion d’un restaurant collectif. Il permet d'évaluer et calculer le gaspillage alimentaire, définir des plans de menu, comparer les campagnes de pesées et extraire des graphiques clairs utilisables pour les supports de communication."
+  # projectEnd: ""
+  projectDescription: " GreenMenu a été conçu pour lutter contre le gaspillage alimentaire dans la restauration collective, en collaboration avec des professionnels de la restauration. Cet outil bénéficie d’une conception cohérente avec la gestion d’un restaurant collectif. Il permet d'évaluer et calculer le gaspillage alimentaire, définir des plans de menu, comparer les campagnes de pesées et extraire des graphiques clairs utilisables pour les supports de communication. Cet outil accessible en ligne via un simple navigateur internet propose une segmentation des informations par composante de repas et par zones, pour une analyse en détail des causes de gaspillage et l’identification des solutions. Une des grandes forces de green-menu.fr se situe au niveau de sa modularité. Il peut être utilisé à son niveau le plus simple et assisté ou bien aller beaucoup plus loin dans le niveau de détail."
   # testimony: "Non applicable"

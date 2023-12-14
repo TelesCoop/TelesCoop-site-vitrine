@@ -1,4 +1,4 @@
-<section class="layout-component gap-4 is-flex is-flex-direction-column has-text-centered">
+<section class="layout gap-4 is-flex is-flex-direction-column has-text-centered">
     {% render 'title.html' title:"Notre fonctionnement" %}
     <div class="is-flex is-flex-direction-column is-align-items-center gap-2">
         <div class="wrapper-values">
@@ -6,7 +6,7 @@
                 {% render "largeCard.html" src: value.src title: value.name description: value.description %}
             {% endfor %}
         </div>
-        {% render "main-button.html" linkText:"Qui sommes-nous&nbsp;?", link:"mailto:contact@telescoop.fr" %}
+        {% render "main-button.html" linkText:"Qui sommes-nous&nbsp;?", link:"/coopérative" %}
     </div>
 
 </section>

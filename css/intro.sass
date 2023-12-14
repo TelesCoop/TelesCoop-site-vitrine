@@ -11,6 +11,14 @@
   position: absolute
 
 .home-illustration-top-right
+  display: none
   position: absolute
-  top: 20%
-  right: 0
+  top: 40%
+  right: -20%
+  @include until(tablet)
+      display: flex
+  @include desktop
+    top: 12%
+    right: -15%
+  @include fullhd
+    right: -12%
