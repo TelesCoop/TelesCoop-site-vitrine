@@ -58,6 +58,11 @@
     align-items: center
     @include touch
       flex-direction: column
+    .value-card-content
+      overflow-y: scroll
+      max-height: 10em
+
+
   &:after
     content: ""
     height: inherit

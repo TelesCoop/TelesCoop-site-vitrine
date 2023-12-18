@@ -26,7 +26,7 @@ permalink: /projet/{{ project.title | slugify }}/
 {% comment %}            <div class="is-divider"></div>
             {% render "tags.html", tags:project.tags %}{% endcomment %}
         </div>
-        <div class="column is-6-desktop is-12">
+        <div class="is-flex-desktop is-hidden  column is-6-desktop is-12">
             <img class="" src="{{ project.projectThumbnail }}" alt="">
         </div>
     </div>
