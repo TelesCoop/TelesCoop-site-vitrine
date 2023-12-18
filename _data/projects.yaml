@@ -59,8 +59,8 @@
   projectStatus: "Terminé"
   projectEnd: 2022
   projectDescription:
-    "Les moins de 25 ans, qu’ils soient étudiant(e)s, demandeurs d’emploi ou en décrochage scolaire, sont parmi les premières victimes de la crise économique. Si des aides existent - au niveau national ou local -, elles peuvent s’apparenter à un maquis difficile à naviguer pour le public. Conséquence : le non-recours aux aides de la part des jeunes, par méconnaissance des dispositifs ou découragement.
-      Le simulateur de Mes Aides Jeunes permet en répondant à des questions pendant 5 minutes, de trouver instantanément toutes les aides auxquelles ils/elles ont le droit. s le cadre du « plan 1 jeune, 1 solution ».
+    "Les moins de 25 ans, qu’ils soient étudiant(e)s, demandeurs d’emploi ou en décrochage scolaire, sont parmi les premières victimes de la crise économique. Si des aides existent - au niveau national ou local -, elles peuvent s’apparenter à un maquis difficile à naviguer pour le public. Conséquence : <span class='is-bold'>le non-recours aux aides de la part des jeunes, par méconnaissance des dispositifs ou découragement.</span>
+      <br/> Le simulateur de Mes Aides Jeunes permet en répondant à des questions pendant 5 minutes, de trouver instantanément toutes les aides auxquelles ils/elles ont le droit. s le cadre du « plan 1 jeune, 1 solution ».
     Concrètement, vous les personnes répondent à différentes questions posées dans le formulaire notamment sur :
       la date de naissance ;
       la nationalité ;
@@ -71,13 +71,7 @@
       le permis de conduire (si vous prévoyez de le passer) ;
       et si vous êtes en situation de handicap.
       En fonction de vos réponses, une liste d'aides s'affiche, chacune renvoie vers un service en ligne dédié. Un récapitulatif peut vous êtes envoyé par messagerie."
-  testimony: Nous avions besoin d'une solution efficace avec un budget maîtrisé.
-    L'interface utilisateur étant importante pour ce projet, nous avons choisi de
-    faire un développement sur-mesure. Teles.coop a pu développer en quelques jours
-    le projet, et nous sommes très heureux du résultat, notamment de l'ergonomie.
-    La borne carbone a aujourd'hui été utilisée avec succès par des milliers de personnes
-    lors de la tournée, ce qui nous a permis de préciser les modes de déplacements
-    et les impacts associés de l'ensemble des spectateurs. Merci Telescoop !
+  testimony: ""
 
 
 # MSF
@@ -177,7 +171,7 @@
     - Django
     - DRF (Django Rest Framework)
     - Nuxt.js
-  projectResume: "Partage des ressources de travail pour les acteurs de la médiation numérique"
+  projectResume: "Ressources de travail pour les acteurs de la médiation numérique"
   projectDuration: 150
   projectStatus: "Terminé, toujours en cours d'amélioration"
   projectEnd: "2022"
@@ -203,7 +197,7 @@
     - Wagtail
     - VueJS
     - Bulma
-  projectResume: "Plateforme collaborative pour évaluer et améliorer la démocratie locale"
+  projectResume: "Plateforme collaborative pour évaluer la démocratie locale"
   projectDuration: 120
   projectStatus: "En cours"
   projectEnd: "2022"

@@ -17,8 +17,8 @@ eleventyComputed:
 permalink: /projet/{{ project.title | slugify }}/
 ---
 <div class="project section layout">
-    <div class="columns  is-multiline">
-        <div class="column is-6-desktop is-12">
+    <div class="columns is-multiline">
+        <div class="column flex is-flex-direction-column is-5-desktop is-12 gap-2">
             <h1 class="is-family-code">{{ project.title }}</h1>
             {% for tag in project.categories %}
                 {% render "category.html", category:categories[tag] %}

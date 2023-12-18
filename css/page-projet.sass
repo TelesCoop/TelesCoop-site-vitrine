@@ -1,6 +1,6 @@
 .project
   display: flex
-  gap: 6rem
+  gap: 4rem
   padding: 5em 2em
   @include mobile-xs
     padding: 0
@@ -18,11 +18,9 @@
   .nutshell
     border: 1px solid $grey-200
     border-radius: 6px
-    position: relative
     padding: 3em
     .nutshell-title
       text-align: center
-      position: relative
       bottom: 1.7rem
       h2
         display: inline
@@ -31,6 +29,13 @@
     .left-column
       @include tablet
         border-right: 1px solid $grey-200
+    .nutshell-buttons
+      margin-top: auto
+      display: flex
+      gap: 1.5rem
+      flex-direction: column
+      @include tablet
+        flex-direction: row
 
     .nutshell-cta
       bottom: 0

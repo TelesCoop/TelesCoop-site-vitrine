@@ -6,8 +6,8 @@
         </div>
     </div>
     <div>
-        <div class="columns is-8 is-variable my-5">
-            <div class="column left-column">
+        <div class="columns is-multiline my-5">
+            <div class="column is-12 is-6-desktop left-column">
                 <h3>{{project.projectResume}}</h3>
                 {% if project.projectEnd and project.clientName  %}
                     <p>Un projet créé en {{project.projectEnd}} pour {{project.clientName}}</p>
@@ -21,7 +21,7 @@
                     </p>
                 </div>
             </div>
-            <div class="column is-flex is-flex-direction-column gap-1">
+            <div class="column is-flex is-6-desktop is-flex-direction-column gap-1">
                 {% if project.projectStack %}
                     <div>
                         <span class="is-bold">Technologies utilisées :</span> {% render "tags.html" tags: project.projectStack %}</div>
@@ -36,7 +36,7 @@
                     Temps de développement : <span class="is-bold">{{project.projectDuration}} jours</span>
                 </div>
                 {% endif %}
-                <div class="is-flex gap-1 mt-auto">
+                <div class="nutshell-buttons">
                     {% if project.projectLink %}
                     {% render "main-button.html" linkText:"Voir le site", link: project.projectLink %}
                     {% endif %}

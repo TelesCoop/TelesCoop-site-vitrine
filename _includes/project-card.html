@@ -1,5 +1,5 @@
-<a href="/projet/{{ project.title | slugify }}/" class="project-card" card-categories="{% for category in project.categories %} {{category | slugify}} {% endfor %}">
-    <div  style="position: relative" >
+<a href="/projet/{{ project.title | slugify }}/" class="project-card is-relative" card-categories="{% for category in project.categories %} {{category | slugify}} {% endfor %}">
+
         <div class="bordered background top"></div>
         <div class="bordered has-text-centered p-4 project-content">
             <h3 class="is-family-code mb-3">{{ project.title }}</h3>
@@ -12,5 +12,5 @@
                 {{ project.projectResume }}
             </p>
         </div>
-    </div>
+
 </a>
