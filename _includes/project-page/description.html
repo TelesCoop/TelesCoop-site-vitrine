@@ -1,10 +1,12 @@
 <div>
     {% render '_includes/title.html' title:"Le projet" %}
-    <div class="columns mt-2 is-flex gap-4">
-        <div class="column is-12 is-7-widescreen is-flex is-flex-direction-column gap-2">
+    <div class="columns mt-2 is-flex">
+        <div class="column is-12 is-8-widescreen is-flex is-flex-direction-column gap-2">
             <p>{{project.projectDescription}}</p>
         </div>
-        <img class="column is-5-tablet is-hidden-touch is-hidden-desktop-only " src="../../img/svg/development-tool.svg" alt="">
+        <div class="column is-4-widescreen is-hidden-touch is-hidden-desktop-only">
+            <img class="w-100" src="../../img/svg/development-tool.svg" alt="">
+        </div>
     </div>
 
 </div>
