@@ -25,9 +25,9 @@
   projectStatus: "Terminé"
   projectEnd: 2022
   projectDescription:
-    <div><span class="is-bold">Plusieurs scientifiques travaillent à partir d'images satellitaires à optimiser la préservation et la valorisation des mangroves.</span> Dans ce cadre ils produisent de nombreuses données et informations, la problématique était alors de réussir à les diffuser au public de manière simple et accessible.</div>
-    <div>Etant également en collaboration avec la Telescop avec qui nous avions développé le site GeoDev, nous avons utilisé ce dernier comme une base technique à adapter pour produire à moindre coût ce portail cartographique de suivi opérationnel des mangroves.</div>
-    <div>Les Mangroves étant présentes dans différents pays du monde il y avait la nécessité de pouvoir traduire en Anglais ce site.</div>
+    <p><span class="is-bold">Plusieurs scientifiques travaillent à partir d'images satellitaires à optimiser la préservation et la valorisation des mangroves.</span> Dans ce cadre ils produisent de nombreuses données et informations, la problématique était alors de réussir à les diffuser au public de manière simple et accessible.</p>
+    <p>Etant également en collaboration avec la Telescop avec qui nous avions développé le site GeoDev, nous avons utilisé ce dernier comme une base technique à adapter pour produire à moindre coût ce portail cartographique de suivi opérationnel des mangroves.</p>
+    <p>Les Mangroves étant présentes dans différents pays du monde il y avait la nécessité de pouvoir traduire en Anglais ce site.</p>
   testimony: Nous avions besoin d'une solution efficace avec un budget maîtrisé.
     L'interface utilisateur étant importante pour ce projet, nous avons choisi de
     faire un développement sur-mesure. Teles.coop a pu développer en quelques jours
@@ -59,8 +59,10 @@
   projectStatus: "Terminé"
   projectEnd: 2022
   projectDescription:
-    "Les moins de 25 ans, qu’ils soient étudiant(e)s, demandeurs d’emploi ou en décrochage scolaire, sont parmi les premières victimes de la crise économique. Si des aides existent - au niveau national ou local -, elles peuvent s’apparenter à un maquis difficile à naviguer pour le public. Conséquence : <span class='is-bold'>le non-recours aux aides de la part des jeunes, par méconnaissance des dispositifs ou découragement.</span>
-      <br/> Le simulateur de Mes Aides Jeunes permet en répondant à des questions pendant 5 minutes, de trouver instantanément toutes les aides auxquelles ils/elles ont le droit. s le cadre du « plan 1 jeune, 1 solution ».
+    "
+    <p>Les moins de 25 ans, qu’ils soient étudiant(e)s, demandeurs d’emploi ou en décrochage scolaire, sont parmi les premières victimes de la crise économique. Si des aides existent - au niveau national ou local -, elles peuvent s’apparenter à un maquis difficile à naviguer pour le public.  </p>
+    <p class='is-bold'>Conséquence : le non-recours aux aides de la part des jeunes, par méconnaissance des dispositifs ou découragement.</p>
+    <p>Le simulateur de Mes Aides Jeunes permet en répondant à des questions pendant 5 minutes, de trouver instantanément toutes les aides auxquelles ils/elles ont le droit. s le cadre du « plan 1 jeune, 1 solution ».
     Concrètement, vous les personnes répondent à différentes questions posées dans le formulaire notamment sur :
       la date de naissance ;
       la nationalité ;
@@ -70,7 +72,7 @@
       les différentes ressources (revenus, allocations, pensions, indemnités...) ;
       le permis de conduire (si vous prévoyez de le passer) ;
       et si vous êtes en situation de handicap.
-      En fonction de vos réponses, une liste d'aides s'affiche, chacune renvoie vers un service en ligne dédié. Un récapitulatif peut vous êtes envoyé par messagerie."
+      En fonction de vos réponses, une liste d'aides s'affiche, chacune renvoie vers un service en ligne dédié. Un récapitulatif peut vous êtes envoyé par messagerie.</p>"
   testimony: ""
 
 
@@ -94,7 +96,7 @@
   projectStatus: "Terminé"
   projectEnd: fin d'année 2022
   projectDescription:
-    Nous avons réalisé le portail de dons pour leur campagne de fin d'année 2022. À partir de maquettes pour bureau, nous avons conçu une version mobile et intégré le tout. Le site statique est connecté à iRaiser pour les paiements effectifs et la connexion avec leur base de donateurs. Les variables de suivi de provenance des utilisateurs sont bien transmises.
+    <p>Nous avons réalisé le portail de dons pour leur campagne de fin d'année 2022. À partir de maquettes pour bureau, nous avons conçu une version mobile et intégré le tout. Le site statique est connecté à iRaiser pour les paiements effectifs et la connexion avec leur base de donateurs. Les variables de suivi de provenance des utilisateurs sont bien transmises.</p>
   testimony: ""
 
 # Les Établis - Outil de Gestion des Réparations
@@ -119,7 +121,7 @@
   projectDuration: 10
   projectStatus: "Terminé"
   projectEnd: "07/2022"
-  projectDescription: "Nous avons réalisé pour eux un outil de suivi des réparations. Il permet d'assigner la réparation à l'artisan pertinent, de garder trace du motif de la réparation, des commandes de pièces détachées, des paiements du client et aux artisans. Réalisé pour un tout petit budget, nous nous sommes appuyés des outils de no-code existants pour apporter un outil adapté à moindre coût."
+  projectDescription: "<p>Nous avons réalisé pour eux un outil de suivi des réparations. Il permet d'assigner la réparation à l'artisan pertinent, de garder trace du motif de la réparation, des commandes de pièces détachées, des paiements du client et aux artisans. Réalisé pour un tout petit budget, nous nous sommes appuyés des outils de no-code existants pour apporter un outil adapté à moindre coût.</p>"
   # testimony: "Non applicable"
 
 # Refonte du site du Labo de Société Numérique
@@ -135,7 +137,7 @@
     - design system de l'État
     - multilingue
   clientName: "ANCT"
-  clientDescription: "L'Agence Nationale de la Cohésion des Territoires (ANCT) est un établissement public, né de la fusion du Commissariat général à l'égalité des territoires, de l'Epareca et de l'Agence du numérique. L'ANCT assure d'abord un rôle de « fabrique à projets » pour permettre aux collectivités de mener à bien leurs projets. Elle facilite l'accès des collectivités locales aux ressources nécessaires pour concrétiser leurs projets : ingénierie technique et financière, partenariats, subventions..."
+  clientDescription: "<p>L'Agence Nationale de la Cohésion des Territoires (ANCT) est un établissement public, né de la fusion du Commissariat général à l'égalité des territoires, de l'Epareca et de l'Agence du numérique. L'ANCT assure d'abord un rôle de « fabrique à projets » pour permettre aux collectivités de mener à bien leurs projets. Elle facilite l'accès des collectivités locales aux ressources nécessaires pour concrétiser leurs projets : ingénierie technique et financière, partenariats, subventions...</p>"
   projectLink: "https://labo.societenumerique.gouv.fr/fr/"
   projectGit: "https://github.com/SocieteNumerique/Labo-Backend"
   projectStack:
@@ -147,7 +149,7 @@
   projectDuration: 40
   projectStatus: "Terminé"
   projectEnd: "09/2022"
-  projectDescription: " Le numérique bouleverse nos façons d’échanger, d’apprendre, de produire, de consommer. Il est à la fois vecteur d’épanouissement, de coopération mais aussi catalyseur de nouvelles fractures, inégalités et inquiétudes. Le Labo vous propose un regard critique sur les défis éthiques et sociaux du numérique, les enjeux juridiques des communs numériques et de l’innovation publique, le développement des territoires et l'inclusion numérique. Il part de la conviction que les politiques publiques se construisent dans le dialogue avec les sciences humaines et sociales et requièrent des espaces de réflexivité. Le Labo Société Numérique est une plateforme de contenus autour du numérique et de sa place dans la société. Nous avons développé une remise à neuf de ce site, pour une interface plus fluide et de nouvelles fonctionnalités. Bilingue, le site offre la possibilité de traduire automatiquement les articles du français vers l'anglais. Le système de filtres et de formats d'articles permet aussi une recherche fluide et efficace dans les contenus publiés. Présenté à la NEC 2022."
+  projectDescription: "<p>Le numérique bouleverse nos façons d’échanger, d’apprendre, de produire, de consommer. Il est à la fois vecteur d’épanouissement, de coopération mais aussi catalyseur de nouvelles fractures, inégalités et inquiétudes. Le Labo vous propose un regard critique sur les défis éthiques et sociaux du numérique, les enjeux juridiques des communs numériques et de l’innovation publique, le développement des territoires et l'inclusion numérique. Il part de la conviction que les politiques publiques se construisent dans le dialogue avec les sciences humaines et sociales et requièrent des espaces de réflexivité. Le Labo Société Numérique est une plateforme de contenus autour du numérique et de sa place dans la société. Nous avons développé une remise à neuf de ce site, pour une interface plus fluide et de nouvelles fonctionnalités. Bilingue, le site offre la possibilité de traduire automatiquement les articles du français vers l'anglais. Le système de filtres et de formats d'articles permet aussi une recherche fluide et efficace dans les contenus publiés. Présenté à la NEC 2022.</p>"
   # testimony: "Non applicable"
   isOpenSource: true
 
@@ -175,10 +177,8 @@
   projectDuration: 150
   projectStatus: "Terminé, toujours en cours d'amélioration"
   projectEnd: "2022"
-  projectDescription: L'ANCT a demandé la création de La Base, un outil visant à permettre à tous les acteurs de la médiation numérique de partager leurs ressources de travail. La plateforme est ouverte aux contributions d'associations, d'individus et de structures institutionnelles. Avec 6358 membres, dont 2611 membres inscrits, le site est destiné à être utilisé par une grande base d'utilisateurs, notamment par les 1800 Conseillers Numérique France Service. L'application a été présentée à la NEC 2022. La Base est un outil développé pour l'ANCT, permettant aux acteurs de la médiation numérique de partager leurs ressources de travail. Ouvert aux contributions, le site compte 6358 membres, dont 2611 membres inscrits. Il sert d'outil de travail à 1800 Conseillers Numérique France Service L'application a été présentée à la NEC 2022.
+  projectDescription: <p>L'ANCT a demandé la création de La Base, un outil visant à permettre à tous les acteurs de la médiation numérique de partager leurs ressources de travail. La plateforme est ouverte aux contributions d'associations, d'individus et de structures institutionnelles. Avec 6358 membres, dont 2611 membres inscrits, le site est destiné à être utilisé par une grande base d'utilisateurs, notamment par les 1800 Conseillers Numérique France Service. L'application a été présentée à la NEC 2022. La Base est un outil développé pour l'ANCT, permettant aux acteurs de la médiation numérique de partager leurs ressources de travail. Ouvert aux contributions, le site compte 6358 membres, dont 2611 membres inscrits. Il sert d'outil de travail à 1800 Conseillers Numérique France Service L'application a été présentée à la NEC 2022.</p>
   isOpenSource: true
-
-
 # DémoMètre
 - title: DémoMètre
   categories:
@@ -201,7 +201,7 @@
   projectDuration: 120
   projectStatus: "En cours"
   projectEnd: "2022"
-  projectDescription: "Dans un contexte de crise démocratique, le collectif Démocratie Ouverte a souhaité créer une plateforme ouverte, gratuite, interactive et collaborative pour évaluer, améliorer et partager la démocratie locale. En collaboration avec la coopérative de designer Praticable, ainsi que le collectif Démocratie Ouverte, nous avons conçu et développé la plateforme DémoMètre. Cette application permet à des habitants, élus, agents et associations de créer une évaluation pour une commune ou intercommunalité, d'y participer et d'en observer les résultats en autonomie ou en atelier afin de créer du débat et faire vivre la démocratie locale. Développée sur un semestre, la plateforme permet aujourd'hui d'animer des ateliers sur l'indice de qualité démocratique, créant ainsi des débats entre les participants et faisant vivre la démocratie locale. Elle permet également à toute personne de répondre ou créer une évaluation pour sa commune ou intercommunalité en toute autonomie."
+  projectDescription: "<p>Dans un contexte de crise démocratique, le collectif Démocratie Ouverte a souhaité créer une plateforme ouverte, gratuite, interactive et collaborative pour évaluer, améliorer et partager la démocratie locale. En collaboration avec la coopérative de designer Praticable, ainsi que le collectif Démocratie Ouverte, nous avons conçu et développé la plateforme DémoMètre. Cette application permet à des habitants, élus, agents et associations de créer une évaluation pour une commune ou intercommunalité, d'y participer et d'en observer les résultats en autonomie ou en atelier afin de créer du débat et faire vivre la démocratie locale. Développée sur un semestre, la plateforme permet aujourd'hui d'animer des ateliers sur l'indice de qualité démocratique, créant ainsi des débats entre les participants et faisant vivre la démocratie locale. Elle permet également à toute personne de répondre ou créer une évaluation pour sa commune ou intercommunalité en toute autonomie.</p>"
   # testimony: "Non applicable"
   isOpenSource: false
   projectThumbnail: "../../img/projet/demomètre.png"
@@ -227,5 +227,5 @@
   projectDuration: "70"
   projectStatus: "En cours"
   # projectEnd: ""
-  projectDescription: " GreenMenu a été conçu pour lutter contre le gaspillage alimentaire dans la restauration collective, en collaboration avec des professionnels de la restauration. Cet outil bénéficie d’une conception cohérente avec la gestion d’un restaurant collectif. Il permet d'évaluer et calculer le gaspillage alimentaire, définir des plans de menu, comparer les campagnes de pesées et extraire des graphiques clairs utilisables pour les supports de communication. Cet outil accessible en ligne via un simple navigateur internet propose une segmentation des informations par composante de repas et par zones, pour une analyse en détail des causes de gaspillage et l’identification des solutions. Une des grandes forces de green-menu.fr se situe au niveau de sa modularité. Il peut être utilisé à son niveau le plus simple et assisté ou bien aller beaucoup plus loin dans le niveau de détail."
+  projectDescription: "<p>GreenMenu a été conçu pour lutter contre le gaspillage alimentaire dans la restauration collective, en collaboration avec des professionnels de la restauration. Cet outil bénéficie d’une conception cohérente avec la gestion d’un restaurant collectif. Il permet d'évaluer et calculer le gaspillage alimentaire, définir des plans de menu, comparer les campagnes de pesées et extraire des graphiques clairs utilisables pour les supports de communication. Cet outil accessible en ligne via un simple navigateur internet propose une segmentation des informations par composante de repas et par zones, pour une analyse en détail des causes de gaspillage et l’identification des solutions. Une des grandes forces de green-menu.fr se situe au niveau de sa modularité. Il peut être utilisé à son niveau le plus simple et assisté ou bien aller beaucoup plus loin dans le niveau de détail.</p>"
   # testimony: "Non applicable"
