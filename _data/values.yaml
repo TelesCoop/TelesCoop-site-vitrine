@@ -1,7 +1,3 @@
-- description: Tous les salariés de la coopérative sont entièrement en télétravail
-      avec la liberté de décider de l'endroit il ou elle veut travailler.
-  name: Télétravail
-  src: "./img/values/remote.svg"
 - description: "Nous avons adopté un système de gouvernance partagée qui permet de décentraliser le pouvoir de décision et de le répartir entre tous ses membres, appelée l'Holacratie.
   Cette méthode de gouvernance partagée repose sur une organisation en cercles et sur la définition de rôles clairs pour chaque membre de l'organisation :
   chaque cercle est autonome et responsable de la prise de décisions liées à son domaine de compétence et les rôles sont définis de manière précise. Les membres de l'organisation ont la liberté de s'auto-organiser pour atteindre les objectifs fixés par leur cercle."
@@ -10,6 +6,10 @@
 - description: Chacun·e est libre de décider de ses horaires et de son organisation.
   name: Liberté individuelle et autonomie
   src: "./img/values/freedom.svg"
+- description: Tous les salariés de la coopérative sont entièrement en télétravail
+      avec la liberté de décider de l'endroit où il ou elle veut travailler.
+  name: Télétravail
+  src: "./img/values/remote.svg"
 - description: L'ensemble des salariés de la coopérative attachent une grande importance au fait de travailler moins mais mieux, permettant à chacun·e de s'épanouir professionnellement mais aussi personnellement et dans son quotidien. Ainsi, chaque salarié·e dispose d'une journée par semaine dédiée à prendre du temps à lire un livre, contribuer à une association, à un projet open-source, se promener, cuisiner, écouter de la musique, ou tout simplement se détendre et se reposer.
   name: 80%
   src: "./img/values/80.svg"
