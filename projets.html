@@ -21,18 +21,19 @@ top: Nous nous adaptons aux besoins du client et le conseillons au mieux en resp
             </div>
             <div class="filter-tags">
                 <h3 class="is-family-code mb-2 is-size-7">Types de projet</h3>
-
-                {% for category in categories %}
-                <div class="category-holder filter-category" style="display: inline-block" filter-category="{{ category[1].name | slugify}}">
-                    <div class="has-background-{{ category[1].colorClass }}  background"></div>
-                    <button
+                <div>
+                    {% for category in categories %}
+                    <div class="category-holder filter-category" style="display: inline-block" filter-category="{{ category[1].name | slugify}}">
+                        <div class="has-background-{{ category[1].colorClass }}  background"></div>
+                        <button
                             {% if notabindex%} tabindex="-1" {% endif %}
                             class="button is-small category-active is-rounded {% if category[1].textWhite %}has-text-white{% endif %}" onclick="filterProjectsByCategory(this)" category="{{ category[1].name | slugify}}">
-                        <span>{{ category[1].name }}</span>
-                    </button>
+                            <span>{{ category[1].name }}</span>
+                        </button>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
-
+                <button class="button is-small has-background-black has-text-white is-align-self-flex-start" onclick="resetProjectCategories()">Réinitialiser</button>
             </div>
         </div>
     </div>
@@ -42,7 +43,5 @@ top: Nous nous adaptons aux besoins du client et le conseillons au mieux en resp
             {% render "project-card.html", project: project, categories: categories %}
             {% endfor %}
         </div>
-
     </div>
-
 </div>
