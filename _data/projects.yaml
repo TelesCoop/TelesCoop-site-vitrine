@@ -191,7 +191,7 @@
     - intégration web
   clientName: "Démocratie Ouverte"
   clientDescription: "Démocratie Ouverte est une association défendant une transformation démocratique des institutions et des organisations afin de relever les défis structurants du 21ème siècle."
-  projectLink: ""
+  projectLink: "https://demometre.org/"
   projectStack:
     - Django
     - Wagtail
