@@ -1,13 +1,14 @@
-<section class="layout gap-4 is-flex is-flex-direction-column">
+<section class="layout gap-2 is-flex is-flex-direction-column">
+    {% render "tag.html" text: "Notre offre" %}
+
     <div class="wrapper-skills">
         {% for skill in skills %}
       <div class="is-flex is-flex-direction-column">
-
         <img src={{skill.src}} alt="" style="width: 250px;">
         <span class="is-size-2 has-text-weight-bold has-text-orange">
           {{forloop.index}}
         </span>
-        <h3 class="is-size-4 is-uppercase has-text-weight-medium">
+        <h3 class="is-size-6 is-uppercase has-text-weight-bold">
         {{skill.name}}
         </h3>
         <p>

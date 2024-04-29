@@ -45,3 +45,12 @@
   description:
     Nous vous accompagnons dans la mise en place de votre projet data, de la collecte des données à la mise en production de vos modèles de machine learning.
     Nous croyons en la démocratisation de la data science et en la possibilité pour chacun·e de tirer parti de ses données pour améliorer ses processus métiers.
+- name: Service public
+  src: "./img/svg/service-public.svg"
+  items:
+    - Accompagnement à la transformation numérique
+    - Développement de services numériques
+    - Accessibilité numérique
+    - Outils métiers
+  description:
+    Nous accompagnons les acteurs publics dans leur transformation numérique et dans le développement de services numériques accessibles à toutes et tous.
