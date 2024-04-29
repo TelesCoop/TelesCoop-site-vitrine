@@ -2,7 +2,15 @@
     {% render 'title.html' title:"Nos petits plus" %}
     <div class="wrapper-extra">
         {% for el in extra %}
-            {% render "card.html" element: el %}
+        <div class="card-container">
+          <div class="card">
+            <img src={{el.src}} class="p-4" alt="">
+            <h3>{{ el.name }}</h3>
+            <p>
+              {{ el.description}}
+            </p>
+          </div>
+        </div>
         {% endfor %}
     </div>
     <div class="is-flex is-flex-direction-column is-align-items-center gap-2">

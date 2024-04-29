@@ -1,12 +1,12 @@
 .wrapper-skills, .wrapper-clients, .wrapper-extra
   display: grid
   gap: 2em
-  justify-items: center
-
 .wrapper-skills, .wrapper-extra
-  grid-template-columns: repeat(2, 1fr)
+
   @include mobile-xs
     grid-template-columns: repeat(1, 1fr)
+  @include tablet
+    grid-template-columns: repeat(3, 1fr)
   @include desktop
     grid-template-columns: repeat(3, 1fr)
 

@@ -1,13 +1,47 @@
 ---
-- name: Sites web de services publics
+- name: Conseil
   src: "./img/svg/service-public.svg"
-- name: Outils métiers
+  items:
+    - Audit technique / sécurité / performance
+    - Accompagnement du CTO
+  description:
+    Nous vous accompagnons dans la définition de votre stratégie technologique et dans la mise en place de vos projets digitaux.
+    Nous croyons en la co-construction et en la collaboration pour créer des produits qui répondent à vos besoins et à ceux de vos utilisateur·s et utilisatrices.
+
+- name: Développement de solutions
   src: "./img/svg/development-tool.svg"
-- name: Sites vitrines
+  items:
+    - Nouveau produit
+    - Outil métier sur-mesure
+    - Digital Factory
+    - E-commerce
+    - Site vitrine
+  description:
+    Nous développons des solutions sur-mesure pour répondre à vos besoins spécifiques. Nous croyons en la co-construction et en la collaboration pour créer des produits qui répondent à vos besoins et à ceux de vos utilisateur·s et utilisatrices.
+    Nous aimons travailler sur des projets qui ont du sens et qui ont un impact positif sur la société.
+- name: Maintenance et hébergement
   src: "./img/svg/website.svg"
-- name: Cartographie
-  src: "./img/svg/cartographie.svg"
+  items:
+    - Hébergement
+    - Maintenance
+    - DevOps
+  description:
+    Une fois votre projet développé, nous continuons à vous accompagner et à faire vivre votre produit grâce à nos offres d’hébergement et de maintenance.
+    Dans une logique de respect de la planète et des humains nous aimons concevoir des solutions évolutives et maintenables.
 - name: No code
   src: "./img/svg/no-code.svg"
-- name: Traitement de données
+  items:
+    - Création d'applications web et mobile
+  description:
+    Nous croyons en la démocratisation de la technologie et en la possibilité pour chacun·e de créer des applications web et mobile sans compétences techniques.
+    Nous vous accompagnons dans la création de votre application sans code, de la conception à la mise en production.
+- name: Data science
   src: "./img/svg/data.svg"
+  items:
+    - Diagnostic Projet Data
+    - Data engineering
+    - Data analyse
+    - Machine-Learning
+  description:
+    Nous vous accompagnons dans la mise en place de votre projet data, de la collecte des données à la mise en production de vos modèles de machine learning.
+    Nous croyons en la démocratisation de la data science et en la possibilité pour chacun·e de tirer parti de ses données pour améliorer ses processus métiers.

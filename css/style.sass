@@ -1,8 +1,8 @@
-// BULMA CONFIG
-// BULMA CONFIG
-
 @import "../node_modules/bulma/sass/utilities/initial-variables"
 @import "../node_modules/bulma/sass/utilities/derived-variables.sass"
+
+$roboto: 'Roboto', serif
+
 // Set your brand colors
 $primary: $red
 $text: $black
@@ -12,6 +12,7 @@ $beige-ter: #fff9e5
 $yellow: #FFCD4E
 $green: #60E093
 $orange: #FF5631
+$orange-light: rgba(255, 86, 49, 0.1)
 $blue: #005281
 $grey: #C8C7C5
 // $colors: ("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert, $primary-light, $primary-dark))
@@ -21,13 +22,13 @@ $scheme-main-bis: $beige-bis
 $scheme-main-ter: $beige-ter
 $background: $beige
 @import "../node_modules/bulma/sass/utilities/derived-variables"
-$addColors: ("beige":($beige, $beige-invert))
+$addColors: ("beige":($beige, $beige-invert), "orange": ($orange, $orange-invert), "green": ($green, $green-invert), "yellow": ($yellow, $yellow-invert), "blue": ($blue, $blue-invert))
 $colors: map-merge($colors, $addColors)
 $grey-200: #C8C7C5
 
 // Update Bulma's global variables
-$family-sans-serif: system-ui, sans-serif
-$family-serif: ui-serif, serif
+$family-sans-serif: $roboto
+$family-serif: $roboto
 $family-monospace: ui-monospace
 $body-family: $family-sans-serif
 $body-size: 16px
@@ -144,16 +145,17 @@ h3
 .has-background-blue
   background: $blue
 
+.has-background-orange-light
+  background: rgba(255, 86, 49, 0.4)
+
 .navbar
   z-index: 9999!important
 .navbar-item
   font-weight: 700
 .layout
   padding: 2em 1em
-  @include tablet
+  @include desktop
     padding: 4em 2em
-  @include widescreen
-    padding: 8em 8em
 
 .has-border-bottom-grey
   border-bottom: 1px solid $grey-200
@@ -207,3 +209,9 @@ a
   text-align: center
   .mt-auto
     margin-top: auto
+
+.tag
+  border: 1px
+  border-radius: 99px
+  text-align: center
+  white-space: nowrap

@@ -1,43 +1,28 @@
 .card-container
   font-family: $family-serif
   width: 16.25em
-  height: 16.25em
+  height: auto
   position: relative
+  background-color: $beige
   @include until-widescreen
     width: 14.25em
-    height: 14.25em
   @include touch
     width: 10.25em
   .card
-    height: inherit
-    width: inherit
-    position: absolute
-    border: 1px solid
-    border-radius: 6px
-    background-color: white
+    border: 2px solid $beige
+    border-radius: 99px
     z-index: 10
     padding: 1em
-  &:after
-    content: ""
-    height: inherit
-    width: inherit
-    position: absolute
-    top: 7px
-    left: 7px
-    border: 1px solid
-    border-radius: 7px
 
 .value-card-container
   font-family: $family-serif
-  width: 15em
-  @include mobile-md
-    width: 20em
+  width: 90vw
 
   @include tablet
-    width: 30em
+    width: 75vw
 
-  @include desktop
-    width: 42em
+  @include fullhd
+    width: 80vw
 
   img
     width: 96px
