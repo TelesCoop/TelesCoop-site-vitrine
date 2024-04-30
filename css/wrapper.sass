@@ -2,7 +2,6 @@
   display: grid
   gap: 2em
 .wrapper-skills, .wrapper-extra
-
   @include mobile-xs
     grid-template-columns: repeat(1, 1fr)
   @include tablet
@@ -10,10 +9,24 @@
   @include desktop
     grid-template-columns: repeat(3, 1fr)
 
+.wrapper-container-extra
+  display: flex
+  @extend .layout
+  @extend .gap-2
+
 .wrapper-extra
   gap: 1em
+  width: 50%
+  @include mobile-xs
+    grid-template-columns: repeat(1, 1fr)
+  @include desktop
   grid-template-columns: repeat(2, 1fr)
 
+.wrapper-extra-text
+  display: flex
+  flex-direction: column
+  gap: 1em
+  width: 50%
 .wrapper-clients
   grid-template-columns: repeat(1, 1fr)
   @include tablet
@@ -23,7 +36,6 @@
     display: flex
     flex-direction: column
     gap: 3em
-    align-items: center
 
 
 
