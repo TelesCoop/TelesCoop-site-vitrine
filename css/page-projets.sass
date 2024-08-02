@@ -31,7 +31,6 @@
   .project-content
     position: relative
     background: $background
-    height: 18em
     display: flex
     gap: 1em
     flex-direction: column
@@ -42,6 +41,12 @@
       transition: 300ms ease
     @include mobile-md
       gap: 1em
+
+    height: 14em
+    @include desktop
+      height: 18em
+    @include widescreen
+      height: 14em
 
 .projects-container
   display: grid
