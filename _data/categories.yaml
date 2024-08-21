@@ -3,18 +3,18 @@ site vitrine:
   name: site vitrine
   textWhite: true
   colorClass: grey
-traitement de données:
-  name: traitement de données
-  textWhite: false
-  colorClass: green
+# traitement de données:
+#   name: traitement de données
+#   textWhite: false
+#   colorClass: green
 cartographie:
   name: cartographie
   textWhite: true
   colorClass: orange
-no-code:
-  name: no-code
-  textWhite: true
-  colorClass: blue
+# no-code:
+#   name: no-code
+#   textWhite: true
+#   colorClass: blue
 service public:
   name: service public
   textWhite: false
