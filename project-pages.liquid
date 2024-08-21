@@ -31,7 +31,9 @@ permalink: /projet/{{ project.title | slugify }}/
         </div>
     </div>
     {% render "project-page/nutshell.html", project:project %}
-    {% render "project-page/description.html", project:project %}
+    {% if project.description %}
+        {% render "project-page/description.html", project:project %}
+    {% endif %}
     {% if project.projectGit or project.projectLink %}
         {% render "project-page/discover.html", project:project %}
     {% endif %}
