@@ -1,15 +1,19 @@
 ---
+- borderColor: "#ff8714"
+  client: Alex
+  client_poste: Référent technique
+  logo: "/img/anthakarana.png"
+  name: Open Food Facts
+  testimonial: La relation avec TelesCoop a été immédiate, peut être grâce à l'alignement sur les valeurs et la mission. Nous avons très rapidement été dans un climat de confiance, nous avons pu exprimer notre problématique et TelesCoop nous a présenté des profils et leur disponibilité. Nous avons pu nous mettre rapidement au travail, avec des développeurs d'un très bon niveau technique, à l'écoute de nos exigences et une montée en compétence rapide dans la compréhension du besoin.
+- borderColor: "#C00D0D"
+  client: Clara Cohen
+  client_poste: Chargée de collecte
+  logo: "/img/anthakarana.png"
+  name: Terre de Liens
+  testimonial: Nous avons sollicité Telescoop pour développer une landing page pour une des campagnes de collecte de notre association. Ils ont tout de suite répondu présents en pro bono et ont monté cette page en deux temps trois mouvements en comprenant très bien où on voulait aller et dans un timing serré. Incroyable de voir ce type de mobilisation ! Et ca a été un vrai plaisir de travailler ensemble !
 - borderColor: "#60E093"
   client: Olivier Malignaud
   client_poste: Directeur général d'Anthakarana Group
-  description: Anthakarana est une agence de production artistique et musicale créée
-      par la chanteuse ZAZ. Anthakarana est une entreprise qui met l’humain au cœur
-      de ses préoccupations et intègre dans chacune de ses missions une démarche RSE.
-      Dans le cadre de la démarche de bilan carbone de ses tournées artistiques, Anthakarana
-      souhaitait disposer d 'une solution pour sensibiliser le public à l' impact environnemental
-      de ses déplacements.Nous avons développé une borne carbone qui permet en quelques
-      clics sur un écran tactile d 'estimer les émissions de Gaz à Effet de Serre du
-      déplacement pour aller au concert.
   logo: "/img/anthakarana.png"
   name: Anthakarana
   testimonial: Nous avions besoin d'une solution efficace avec un budget maîtrisé.
