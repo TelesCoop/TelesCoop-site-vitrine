@@ -16,17 +16,31 @@
 
 .wrapper-extra
   gap: 1em
-  width: 50%
+  width: 100%
   @include mobile-xs
     grid-template-columns: repeat(1, 1fr)
   @include desktop
-  grid-template-columns: repeat(2, 1fr)
+    width: 50%
+    grid-template-columns: repeat(2, 1fr)
+
+.extra-container
+    display: flex
+    flex-direction: column
+    gap: 1em
+    width: 100%
+    @include desktop
+      flex-direction: row
+      gap: 2em
 
 .wrapper-extra-text
   display: flex
   flex-direction: column
   gap: 1em
-  width: 50%
+  width: 100%
+  @include desktop
+    width: 50%
+
+
 .wrapper-clients
   grid-template-columns: repeat(1, 1fr)
   @include tablet
