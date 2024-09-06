@@ -1,0 +1,15 @@
+<section class="default-wrapper gap-2 is-flex-direction-column">
+  {% render "tag.html" text: "Nos mesures d'impact" %}
+  <div class="wrapper-measures">
+    {% for measure in measures %}
+    <div class="is-flex is-flex-direction-column p-4">
+      <span class="is-size-1 has-text-weight-bold has-text-orange">
+          {{measure.value}}
+        </span>
+      <span class="is-size-4">
+        {{measure.description}}
+      </span>
+    </div>
+    {% endfor %}
+  </div>
+</section>

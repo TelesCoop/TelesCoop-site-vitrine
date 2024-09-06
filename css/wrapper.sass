@@ -1,7 +1,8 @@
-.wrapper-skills, .wrapper-clients, .wrapper-extra
+.wrapper-skills, .wrapper-clients, .wrapper-extra, .wrapper-measures
   display: grid
   gap: 2em
-.wrapper-skills, .wrapper-extra
+
+.wrapper-skills, .wrapper-extra, .wrapper-measures
   @include mobile-xs
     grid-template-columns: repeat(1, 1fr)
   @include tablet
@@ -11,7 +12,7 @@
 
 .default-wrapper
   display: flex
-  padding: 4em 2em
+  padding: 3em 2em
   @extend .gap-2
 
 .wrapper-extra
@@ -40,7 +41,6 @@
   @include desktop
     width: 50%
 
-
 .wrapper-clients
   grid-template-columns: repeat(1, 1fr)
   @include tablet
@@ -50,6 +50,3 @@
     display: flex
     flex-direction: column
     gap: 3em
-
-
-
