@@ -272,3 +272,52 @@
   # projectEnd: ""
   projectDescription: "<p>GreenMenu a été conçu pour lutter contre le gaspillage alimentaire dans la restauration collective, en collaboration avec des professionnels de la restauration. Cet outil bénéficie d’une conception cohérente avec la gestion d’un restaurant collectif. Il permet d'évaluer et calculer le gaspillage alimentaire, définir des plans de menu, comparer les campagnes de pesées et extraire des graphiques clairs utilisables pour les supports de communication. Cet outil accessible en ligne via un simple navigateur internet propose une segmentation des informations par composante de repas et par zones, pour une analyse en détail des causes de gaspillage et l’identification des solutions. Une des grandes forces de green-menu.fr se situe au niveau de sa modularité. Il peut être utilisé à son niveau le plus simple et assisté ou bien aller beaucoup plus loin dans le niveau de détail.</p>"
   # testimony: "Non applicable"
+
+# Evidence orthophonie
+- title: Evidence orthophonie
+  categories:
+    - outil métier
+  tags:
+    - intégration web
+    - développement web
+  clientName: "Happy Neuron"
+  clientDescription: "
+  Depuis plus de 20 ans, Happyneuron développe des outils d'évaluation et de rééducation orthophonique. Leur mission est d'accompagner les orthophonistes dans l'évolution de leur pratique clinique quotidienne, en leur fournissant des ressources actualisées et pertinente.
+  "
+  # projectLink: "Non spécifié"
+  # projectGit: "Non applicable"
+  projectStack:
+    - HTML & CSS
+    - React
+    - NestJS
+    - Ansible
+  projectResume: "Outil pour les orthophonistes"
+  projectDuration: "25"
+  projectStatus: "En cours"
+  # projectEnd: ""
+  projectDescription: "Evidence Orthophonie est une plateforme web qui propose un bilan de langage écrit rapide et précis, réalisé à partir d'un questionnaire qui est disponible aux orthophonistes. Leur outil génère un Compte Rendu de Bilan Orthophonique (CRBO) détaillé, incluant des hypothèses explicatives et des pistes d’interventions adaptées."
+  # testimony: "Non applicable"
+
+
+# Biophonia
+- title: Dataphonia
+  categories:
+    - outil métier
+  tags:
+    - intégration web
+    - développement web
+  clientName: "Biophonia"
+  clientDescription: Pionniers de la bioacoustique  et de l’écoacoustique en milieu terrestre, BioPhonia est une entreprise innovante qui écoute la nature pour fournir aux gestionnaires des données de haute qualité pour comprendre et surveiller la biodiversité. Les méthodologies issues de la recherche fondamentale sont adaptées par BioPhonia et appliquées à des problématiques environnementales concrètes, au service du bien commun."
+  # projectLink: "Non spécifié"
+  # projectGit: "Non applicable"
+  projectStack:
+    - HTML & CSS
+    - React
+    - NestJS
+    - Ansible
+  projectResume: "Plateforme de gestion et d'analyse des données sonores"
+  projectDuration: "~80"
+  projectStatus: "En cours"
+  # projectEnd: ""
+  projectDescription: "Dataphonia est une plateforme de gestion et d'analyse des données sonores. Elle permet que des chercheurs et des gestionnaires puissent ajouter et analyser des enregistrements sonores d'espèces animales."
+  # testimony: "Non applicable"

@@ -22,6 +22,14 @@
                 </div>
             </div>
             <div class="column is-flex is-6-desktop p-5 is-flex-direction-column gap-1">
+                {% if project.projectDescription %}
+                    <div>
+                        <span class="is-bold">Le projet</span>
+                        <div class="project-description">
+                            {{project.projectDescription}}
+                        </div>
+                    </div>
+                {% endif %}
                 {% if project.projectStack %}
                     <div>
                         <span class="is-bold">Technologies utilisées :</span> {% render "tags.html" tags: project.projectStack %}</div>
