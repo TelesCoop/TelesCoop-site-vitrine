@@ -2,25 +2,32 @@
   <div class="wrapper-extra-text">
     {% render "tag.html" text: "Notre méthode" %}
     <p class="is-size-5">
-      En adoptant une approche agile, nous nous engageons à rester flexibles et réactifs tout au long du processus de développement, en mettant l'utilisateur·rice final·e au centre de notre réflexion. Nous nous efforçons également de concevoir des solutions accessibles à tous·tes, en intégrant dès le début des normes d'accessibilité pour garantir une expérience utilisateur optimale pour chacun. La co-création avec nos clients nous permet de comprendre en profondeur les besoins et les objectifs afin de concevoir des solutions parfaitement adaptées. Enfin, notre engagement envers l'éco-conception se traduit par une attention particulière portée à la réduction de notre empreinte environnementale tout au long du cycle de vie de nos produits.
+      En adoptant une approche agile, nous nous engageons à rester flexibles et
+      réactifs tout au long du processus de développement, en mettant
+      l'utilisateur·rice final·e au centre de notre réflexion. Nous nous
+      efforçons également de concevoir des solutions accessibles à tous·tes, en
+      intégrant dès le début des normes d'accessibilité pour garantir une
+      expérience utilisateur optimale pour chacun. La co-création avec nos
+      clients nous permet de comprendre en profondeur les besoins et les
+      objectifs afin de concevoir des solutions parfaitement adaptées. Enfin,
+      notre engagement envers l'éco-conception se traduit par une attention
+      particulière portée à la réduction de notre empreinte environnementale
+      tout au long du cycle de vie de nos produits.
     </p>
     <div class="is-flex is-justify-content-center mt-2">
-      {% render "main-button.html" linkText:"Contactez-nous", link:"mailto:contact@telescoop.fr" %}
+      {% render "main-button.html" linkText:"Contactez-nous",
+      link:"mailto:contact@telescoop.fr" %}
     </div>
   </div>
   <div class="wrapper-extra">
-        {% for el in extra %}
-        <div class="card-container">
-          <div class="card">
-            <img src={{el.src}} class="p-4" alt="">
-            <h3>{{ el.name }}</h3>
-            <p>
-              {{ el.description}}
-            </p>
-          </div>
-        </div>
-        {% endfor %}
+    {% for el in extra %}
+    <div class="card-container">
+      <div class="card has-text-centered">
+        <img src="{{el.src}}" class="p-4 mx-auto" alt="" />
+        <h3>{{ el.name }}</h3>
+        <p>{{ el.description}}</p>
+      </div>
     </div>
+    {% endfor %}
+  </div>
 </section>
-
-

@@ -11,10 +11,6 @@ cartographie:
   name: cartographie
   textWhite: true
   colorClass: orange
-# no-code:
-#   name: no-code
-#   textWhite: true
-#   colorClass: blue
 service public:
   name: service public
   textWhite: false
@@ -27,3 +23,11 @@ gestion de contenu:
   name: gestion de contenu
   textWhite: true
   colorClass: info
+e-commerce:
+  name: e-commerce
+  textWhite: true
+  colorClass: success
+open-source:
+  name: Open Source
+  textWhite: true
+  colorClass: blue
