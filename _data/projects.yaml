@@ -456,8 +456,8 @@
   projectStatus: "Terminé"
   projectThumbnail: "../../img/projet/akuo.png"
 
-# Backmarket - Comparaison des téléphones
-- title: "Backmarket - Comparaison des téléphones"
+# Backmarket - Comparateur
+- title: "Backmarket - Comparateur"
   clientName: Backmarket
   projectResume: Backmarket est une plateforme de vente de produits électroniques d'occasion.
   clientDescription: Backmarket est une plateforme de vente de produits électroniques d'occasion.
