@@ -20,12 +20,10 @@ permalink: /projet/{{ project.title | slugify }}/
     <div class="columns is-multiline">
         <div class="column flex is-flex-direction-column is-6-desktop is-12 gap-2">
             <h1 class="is-family-code">{{ project.title }}</h1>
-            <div class="is-flex">
-                <div class="category-holder-wrapper">
-                    {% for tag in project.categories %}
-                        {% render "category.html", category:categories[tag] %}
-                    {% endfor %}
-                </div>
+            <div class="category-holder-wrapper">
+                {% for tag in project.categories %}
+                    {% render "category.html", category:categories[tag] %}
+                {% endfor %}
             </div>
 {% comment %}            <div class="is-divider"></div>
             {% render "tags.html", tags:project.tags %}{% endcomment %}
