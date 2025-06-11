@@ -253,6 +253,7 @@
   projectStack:
     - Vuejs
   projectStatus: "En cours"
+  projectDuration: "+ de 80"
 
 # MSF
 - title: MSF - Campagne de dons
