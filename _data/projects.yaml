@@ -3,6 +3,7 @@
   categories:
     - outil métier
     - service public
+    - open-source
   tags:
     - intégration web
     - développement web
@@ -77,7 +78,7 @@
   categories:
     - outil métier
     - gestion de contenu
-  isOpenSource: true
+    - open-source
   testimony:
     La relation avec TelesCoop a été immédiate, peut être grâce à l'alignement sur les valeurs et la mission. Nous avons très rapidement été dans un climat de confiance, nous avons pu exprimer notre problématique et TelesCoop nous a présenté des profils et leur disponibilité. Nous avons pu nous mettre rapidement au travail, avec des développeurs d'un très bon niveau technique, à l'écoute de nos exigences et une montée en compétence rapide dans la compréhension du besoin.
     La flexibilité, la relation simple et efficace, la qualité technique et la connaissance de l'open source et de ses codes, particulièrement important pour un projet Open Source / Open Data comme le nôtre, qui a une communauté active de bénévoles.
@@ -105,10 +106,10 @@
   categories:
     - outil métier
     - gestion de contenu
+    - open-source
   tags:
     - social
     - sensibilisation
-  isOpenSource: true
 
 # IFN
 - title: Indice de fragilité numérique
@@ -238,6 +239,7 @@
   categories:
     - outil métier
     - gestion de contenu
+    - open-source
   tags:
     - association
     - social
@@ -247,7 +249,6 @@
   clientDescription: "Outil pour les associations de communication pour les mouvements sociaux."
   projectResume: "Outil de création de visuel."
   projectDescription: "Aktivisda permet à n’importe quel militant·e de créer en quelques minutes un visuel qui respecte la charte graphique de son organisation. Aucune erreur possible, interface simple et limitée."
-  isOpenSource: true
   projectLink: https://aktivisda.earth/
   projectGit: https://framagit.org/aktivisda/aktivisda
   projectStack:
@@ -305,6 +306,7 @@
 - title: Société Numérique
   categories:
     - site vitrine
+    - open-source
   tags:
     - développement web
     - refonte
@@ -327,14 +329,13 @@
   projectStatus: "Terminé"
   projectEnd: "09/2022"
   projectDescription: "<p>Le numérique bouleverse nos façons d’échanger, d’apprendre, de produire, de consommer. Il est à la fois vecteur d’épanouissement, de coopération mais aussi catalyseur de nouvelles fractures, inégalités et inquiétudes. Le Labo vous propose un regard critique sur les défis éthiques et sociaux du numérique, les enjeux juridiques des communs numériques et de l’innovation publique, le développement des territoires et l'inclusion numérique. Il part de la conviction que les politiques publiques se construisent dans le dialogue avec les sciences humaines et sociales et requièrent des espaces de réflexivité. Le Labo Société Numérique est une plateforme de contenus autour du numérique et de sa place dans la société. Nous avons développé une remise à neuf de ce site, pour une interface plus fluide et de nouvelles fonctionnalités. Bilingue, le site offre la possibilité de traduire automatiquement les articles du français vers l'anglais. Le système de filtres et de formats d'articles permet aussi une recherche fluide et efficace dans les contenus publiés. Présenté à la NEC 2022.</p>"
-  # testimony: "Non applicable"
-  isOpenSource: true
 
 # La Base
 - title: La Base
   categories:
     - outil métier
     - gestion de contenu
+    - open-source
   tags:
     - développement web
     - intégration web
@@ -354,7 +355,7 @@
   projectStatus: "Terminé, toujours en cours d'amélioration"
   projectEnd: "2022"
   projectDescription: <p>L'ANCT a demandé la création de La Base, un outil visant à permettre à tous les acteurs de la médiation numérique de partager leurs ressources de travail. La plateforme est ouverte aux contributions d'associations, d'individus et de structures institutionnelles. Avec 6358 membres, dont 2611 membres inscrits, le site est destiné à être utilisé par une grande base d'utilisateurs, notamment par les 1800 Conseillers Numérique France Service. L'application a été présentée à la NEC 2022. La Base est un outil développé pour l'ANCT, permettant aux acteurs de la médiation numérique de partager leurs ressources de travail. Ouvert aux contributions, le site compte 6358 membres, dont 2611 membres inscrits. Il sert d'outil de travail à 1800 Conseillers Numérique France Service L'application a été présentée à la NEC 2022.</p>
-  isOpenSource: true
+
 # DémoMètre
 - title: DémoMètre
   categories:
@@ -379,8 +380,8 @@
   projectEnd: "2022"
   projectDescription: "<p>Dans un contexte de crise démocratique, le collectif Démocratie Ouverte a souhaité créer une plateforme ouverte, gratuite, interactive et collaborative pour évaluer, améliorer et partager la démocratie locale. En collaboration avec la coopérative de designer Praticable, ainsi que le collectif Démocratie Ouverte, nous avons conçu et développé la plateforme DémoMètre. Cette application permet à des habitants, élus, agents et associations de créer une évaluation pour une commune ou intercommunalité, d'y participer et d'en observer les résultats en autonomie ou en atelier afin de créer du débat et faire vivre la démocratie locale. Développée sur un semestre, la plateforme permet aujourd'hui d'animer des ateliers sur l'indice de qualité démocratique, créant ainsi des débats entre les participants et faisant vivre la démocratie locale. Elle permet également à toute personne de répondre ou créer une évaluation pour sa commune ou intercommunalité en toute autonomie.</p>"
   # testimony: "Non applicable"
-  isOpenSource: false
   # projectThumbnail: "../../img/projet/demomètre.png"
+
 # GreenMenu
 - title: GreenMenu
   categories:

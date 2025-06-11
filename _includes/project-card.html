@@ -1,14 +1,15 @@
-<a href="/projet/{{ project.title | slugify }}/" class="project-card is-relative" card-categories="{% for category in project.categories %} {{category | slugify}} {% endfor %}">
-    <div class="bordered background top"></div>
-    <div class="bordered has-text-centered p-4 project-content">
-        <h3 class="is-family-code mb-3">{{ project.title }}</h3>
-        <div>
-            {% for category in project.categories %}
-                {% render "category.html" category:categories[category] notabindex: true %}
-            {% endfor %}
-        </div>
-        <p class="mt-auto">
-            {{ project.projectResume }}
-        </p>
+<a
+  href="/projet/{{ project.title | slugify }}/"
+  class="project-card is-relative"
+  card-categories="{% for category in project.categories %} {{category | slugify}} {% endfor %}"
+>
+  <div class="bordered background top"></div>
+  <div class="bordered has-text-centered p-4 project-content">
+    <h3 class="is-family-code mb-3">{{ project.title }}</h3>
+    <div class="category-holder-wrapper">
+      {% for category in project.categories %} {% render "category.html"
+      category:categories[category] notabindex: true %} {% endfor %}
     </div>
+    <p class="mt-auto">{{ project.projectResume }}</p>
+  </div>
 </a>
