@@ -17,6 +17,9 @@
       padding-left: 1rem
 
 .project-card
+  height: 100%
+  min-height: 17rem
+
   h3
     text-decoration: none
   .bordered
@@ -29,6 +32,8 @@
     bottom: -0.4rem
     left: 0.4rem
   .project-content
+    height: 100%
+
     position: relative
     background: $background
     display: flex
@@ -39,7 +44,6 @@
     &:hover
       transform: scale(1.05)
       transition: 300ms ease
-    height: 17rem
 
 .projects-container
   display: grid
@@ -59,3 +63,6 @@
   @include fullhd
     row-gap: 4rem
     column-gap: 7rem
+  
+  p
+    line-height: 1.3em

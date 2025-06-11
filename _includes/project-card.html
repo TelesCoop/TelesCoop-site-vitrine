@@ -6,7 +6,7 @@
   <div class="bordered background top"></div>
   <div class="bordered has-text-centered p-4 project-content">
     <h3 class="is-family-code mb-3">{{ project.title }}</h3>
-    <div class="category-holder-wrapper">
+    <div class="category-holder-wrapper is-justify-content-center">
       {% for category in project.categories %} {% render "category.html"
       category:categories[category] notabindex: true %} {% endfor %}
     </div>
