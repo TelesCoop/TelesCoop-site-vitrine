@@ -27,3 +27,7 @@ gestion de contenu:
   name: gestion de contenu
   textWhite: true
   colorClass: info
+e-commerce:
+  name: e-commerce
+  textWhite: true
+  colorClass: success

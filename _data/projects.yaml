@@ -4,15 +4,15 @@
     - outil métier
     - service public
   tags:
-   - intégration web
-   - développement web
-   - design
-   - gestion de projet
-   - écologie
-   - cartographie
+    - intégration web
+    - développement web
+    - design
+    - gestion de projet
+    - écologie
+    - cartographie
   clientName: "Iarbre"
-  clientDescription: " Le projet IA·rbre est une initiative collaborative dédiée à la transition écologique menée par un consortium comprenant la SCOP TelesCoop comme chef de file, la Métropole de Lyon et l’université Lyon 2 avec le laboratoire LIRIS." 
-  projectStack: 
+  clientDescription: " Le projet IA·rbre est une initiative collaborative dédiée à la transition écologique menée par un consortium comprenant la SCOP TelesCoop comme chef de file, la Métropole de Lyon et l’université Lyon 2 avec le laboratoire LIRIS."
+  projectStack:
     - HTML & CSS
     - Typescript
     - Vuejs
@@ -22,7 +22,8 @@
     - Ansible
     - Jupyter
   projectResume: "IA·rbre est une plateforme dédiée à l'aide de la gestion des arbres dans les espaces publics."
-  projectDescription: En s’appuyant sur des compétences variées, ce projet vise à co-développer des outils innovants de gestion et de visualisation de données territoriales pour favoriser la résilience urbaine et l’élaboration de politiques publiques locales telles que le PCAET. S’étalant sur trois ans, IA.rbre bénéficie d’un financement de la Caisse des Dépôts, garantissant les ressources pour atteindre ses ambitions.
+  projectDescription:
+    En s’appuyant sur des compétences variées, ce projet vise à co-développer des outils innovants de gestion et de visualisation de données territoriales pour favoriser la résilience urbaine et l’élaboration de politiques publiques locales telles que le PCAET. S’étalant sur trois ans, IA.rbre bénéficie d’un financement de la Caisse des Dépôts, garantissant les ressources pour atteindre ses ambitions.
     Le projet se distingue par son approche d’intelligence artificielle frugale et responsable, favorisant des analyses multicritères grâce à des calques thématiques (végétation, plantabilité,désimperméabilisation, vulnérabilités etc.) et une plateforme de visualisation interservices. Les outils développés permettent une meilleure allocation des ressources publiques et un suivi précis de l’impact des actions urbaines, soutenant les objectifs de durabilité du territoire.
   projectDuration: 3
   projectDurationUnit: ans
@@ -31,7 +32,6 @@
   projectStatus: En cours
   projectThumbnail: "../../img/projet/iarbre.jpg"
   projectThumbnailAlt: "Capture d'écran du site IA.rbre"
-
 
 # Biophonia
 - title: Dataphonia
@@ -61,15 +61,16 @@
   projectLink: "https://world.openfoodfacts.org/"
   projectGit: "https://github.com/openfoodfacts/search-a-licious"
   projectStack:
-  - Typescript
-  - HTML & CSS
-  - Lit.dev
+    - Typescript
+    - HTML & CSS
+    - Lit.dev
   projectDuration: "11"
   projectStatus: "Terminé"
   projectResume: "Une suite de webcomponents pour utiliser le moteur de recherche d'Openfoodfacts"
   projectEnd: "2024"
-  projectDescription: "Searchalicious est un moteur de recherche pour Openfoodfacts. Il permet de rechercher des produits alimentaires en fonction de leurs ingrédients, de leurs additifs, de leurs allergènes
-   et de leurs nutriments."
+  projectDescription:
+    "Searchalicious est un moteur de recherche pour Openfoodfacts. Il permet de rechercher des produits alimentaires en fonction de leurs ingrédients, de leurs additifs, de leurs allergènes
+    et de leurs nutriments."
   tags:
     - social
     - sensibilisation
@@ -77,7 +78,8 @@
     - outil métier
     - gestion de contenu
   isOpenSource: true
-  testimony: La relation avec TelesCoop a été immédiate, peut être grâce à l'alignement sur les valeurs et la mission. Nous avons très rapidement été dans un climat de confiance, nous avons pu exprimer notre problématique et TelesCoop nous a présenté des profils et leur disponibilité. Nous avons pu nous mettre rapidement au travail, avec des développeurs d'un très bon niveau technique, à l'écoute de nos exigences et une montée en compétence rapide dans la compréhension du besoin.
+  testimony:
+    La relation avec TelesCoop a été immédiate, peut être grâce à l'alignement sur les valeurs et la mission. Nous avons très rapidement été dans un climat de confiance, nous avons pu exprimer notre problématique et TelesCoop nous a présenté des profils et leur disponibilité. Nous avons pu nous mettre rapidement au travail, avec des développeurs d'un très bon niveau technique, à l'écoute de nos exigences et une montée en compétence rapide dans la compréhension du besoin.
     La flexibilité, la relation simple et efficace, la qualité technique et la connaissance de l'open source et de ses codes, particulièrement important pour un projet Open Source / Open Data comme le nôtre, qui a une communauté active de bénévoles.
     J'ai aussi apprécié la capacité de remise en question des développeur et leur apport à la construction du projet dans ses aspects fonctionnels ou sur les choix techniques.
     Nous recommandons TelesCoop qui a été très réactif et a bien compris nos besoins dès le départ et a su très bien y répondre.
@@ -86,7 +88,7 @@
     Open Food Facts
 
 # Openfoodfacts Webcomponents
-- title: "Openfoodfacts Webcomponents" 
+- title: "Openfoodfacts Webcomponents"
   projectLink: "https://world.openfoodfacts.org/"
   projectGit: "https://github.com/openfoodfacts/openfoodfacts-webcomponents"
   projectStack:
@@ -130,8 +132,7 @@
   projectDuration: 60
   projectStatus: "Terminé"
   projectEnd: 2022
-  projectDescription:
-    Quels territoires français présentent une fragilité numérique ? Pour y répondre, TelesCoop a collaboré avec La MedNum pour concevoir un outil cartographique permettant de visualiser un indice de fragilité numérique. Destiné aux acteurs publics, collectivités, opérateurs de services publics et services de l’État, ce kit vise à fournir un outil d’aide à la décision et de mobilisation des acteurs de l’inclusion numérique sur leur territoire. Le cadre de travail a été structuré selon la méthodologie agile, avec des cycles d’itérations courts et rapides, favorisant une amélioration continue du produit en fonction des besoins identifiés par le client. Cette approche agile, combinée à une collecte de retours utilisateurs, a permis d’obtenir un résultat proche des besoins des utilisateurs finaux.
+  projectDescription: Quels territoires français présentent une fragilité numérique ? Pour y répondre, TelesCoop a collaboré avec La MedNum pour concevoir un outil cartographique permettant de visualiser un indice de fragilité numérique. Destiné aux acteurs publics, collectivités, opérateurs de services publics et services de l’État, ce kit vise à fournir un outil d’aide à la décision et de mobilisation des acteurs de l’inclusion numérique sur leur territoire. Le cadre de travail a été structuré selon la méthodologie agile, avec des cycles d’itérations courts et rapides, favorisant une amélioration continue du produit en fonction des besoins identifiés par le client. Cette approche agile, combinée à une collecte de retours utilisateurs, a permis d’obtenir un résultat proche des besoins des utilisateurs finaux.
 
 # MangMap
 - title: MangMap
@@ -192,21 +193,20 @@
   projectDuration: 200
   projectStatus: "Terminé"
   projectEnd: 2022
-  projectDescription:
-    "
+  projectDescription: "
     <p>Les moins de 25 ans, qu’ils soient étudiant(e)s, demandeurs d’emploi ou en décrochage scolaire, sont parmi les premières victimes de la crise économique. Si des aides existent - au niveau national ou local -, elles peuvent s’apparenter à un maquis difficile à naviguer pour le public.  </p>
     <p class='is-bold'>Conséquence : le non-recours aux aides de la part des jeunes, par méconnaissance des dispositifs ou découragement.</p>
     <p>Le simulateur de Mes Aides Jeunes permet en répondant à des questions pendant 5 minutes, de trouver instantanément toutes les aides auxquelles ils/elles ont le droit. s le cadre du « plan 1 jeune, 1 solution ».
     Concrètement, vous les personnes répondent à différentes questions posées dans le formulaire notamment sur :
-      la date de naissance ;
-      la nationalité ;
-      le statut (étudiant, demandeur d'emploi, en activité...) ;
-      le nombre d'enfants à charge (si vous en avez) ;
-      le logement (achat, location, etc.), le montant et sa localisation ;
-      les différentes ressources (revenus, allocations, pensions, indemnités...) ;
-      le permis de conduire (si vous prévoyez de le passer) ;
-      et si vous êtes en situation de handicap.
-      En fonction de vos réponses, une liste d'aides s'affiche, chacune renvoie vers un service en ligne dédié. Un récapitulatif peut vous êtes envoyé par messagerie.</p>"
+    la date de naissance ;
+    la nationalité ;
+    le statut (étudiant, demandeur d'emploi, en activité...) ;
+    le nombre d'enfants à charge (si vous en avez) ;
+    le logement (achat, location, etc.), le montant et sa localisation ;
+    les différentes ressources (revenus, allocations, pensions, indemnités...) ;
+    le permis de conduire (si vous prévoyez de le passer) ;
+    et si vous êtes en situation de handicap.
+    En fonction de vos réponses, une liste d'aides s'affiche, chacune renvoie vers un service en ligne dédié. Un récapitulatif peut vous êtes envoyé par messagerie.</p>"
   testimony: ""
 
 - title: Excellent Excédents
@@ -228,9 +228,31 @@
   projectResume: "Outil pour lutter contre le gaspillage alimentaire dans la restauration collective"
   projectDuration: "70"
   projectStatus: "En cours"
-  # projectEnd: ""
   projectDescription: "<p>GreenMenu a été conçu pour lutter contre le gaspillage alimentaire dans la restauration collective, en collaboration avec des professionnels de la restauration. Cet outil bénéficie d’une conception cohérente avec la gestion d’un restaurant collectif. Il permet d'évaluer et calculer le gaspillage alimentaire, définir des plans de menu, comparer les campagnes de pesées et extraire des graphiques clairs utilisables pour les supports de communication. Cet outil accessible en ligne via un simple navigateur internet propose une segmentation des informations par composante de repas et par zones, pour une analyse en détail des causes de gaspillage et l’identification des solutions. Une des grandes forces de green-menu.fr se situe au niveau de sa modularité. Il peut être utilisé à son niveau le plus simple et assisté ou bien aller beaucoup plus loin dans le niveau de détail.</p>"
+  projectThumbnail: "../../img/projet/excellents-excedents.png"
+  projectThumbnailAlt: "Capture d'écran du site Excellents Excédents"
   # testimony: "Non applicable"
+
+# Aktivisda
+- title: Aktivisda
+  categories:
+    - outil métier
+    - gestion de contenu
+  tags:
+    - association
+    - social
+    - écologie
+    - communication
+  clientName: "Aktivisda"
+  clientDescription: "Outil pour les associations de communication pour les mouvements sociaux."
+  projectResume: "Outil de création de visuel."
+  projectDescription: "Aktivisda permet à n’importe quel militant·e de créer en quelques minutes un visuel qui respecte la charte graphique de son organisation. Aucune erreur possible, interface simple et limitée."
+  isOpenSource: true
+  projectLink: https://aktivisda.earth/
+  projectGit: https://framagit.org/aktivisda/aktivisda
+  projectStack:
+    - Vuejs
+  projectStatus: "En cours"
 
 # MSF
 - title: MSF - Campagne de dons
@@ -251,9 +273,7 @@
   projectDuration: 12
   projectStatus: "Terminé"
   projectEnd: fin d'année 2022
-  projectDescription:
-    <p>Nous avons réalisé le portail de dons pour leur campagne de fin d'année 2022. À partir de maquettes pour bureau, nous avons conçu une version mobile et intégré le tout. Le site statique est connecté à iRaiser pour les paiements effectifs et la connexion avec leur base de donateurs. Les variables de suivi de provenance des utilisateurs sont bien transmises.</p>
-  testimony: ""
+  projectDescription: <p>Nous avons réalisé le portail de dons pour leur campagne de fin d'année 2022. À partir de maquettes pour bureau, nous avons conçu une version mobile et intégré le tout. Le site statique est connecté à iRaiser pour les paiements effectifs et la connexion avec leur base de donateurs. Les variables de suivi de provenance des utilisateurs sont bien transmises.</p>
 
 # Les Établis - Outil de Gestion des Réparations
 - title: Les Établis
@@ -281,7 +301,7 @@
   # testimony: "Non applicable"
 
 # Refonte du site du Labo de Société Numérique
-- title:  Société Numérique
+- title: Société Numérique
   categories:
     - site vitrine
   tags:
@@ -308,7 +328,6 @@
   projectDescription: "<p>Le numérique bouleverse nos façons d’échanger, d’apprendre, de produire, de consommer. Il est à la fois vecteur d’épanouissement, de coopération mais aussi catalyseur de nouvelles fractures, inégalités et inquiétudes. Le Labo vous propose un regard critique sur les défis éthiques et sociaux du numérique, les enjeux juridiques des communs numériques et de l’innovation publique, le développement des territoires et l'inclusion numérique. Il part de la conviction que les politiques publiques se construisent dans le dialogue avec les sciences humaines et sociales et requièrent des espaces de réflexivité. Le Labo Société Numérique est une plateforme de contenus autour du numérique et de sa place dans la société. Nous avons développé une remise à neuf de ce site, pour une interface plus fluide et de nouvelles fonctionnalités. Bilingue, le site offre la possibilité de traduire automatiquement les articles du français vers l'anglais. Le système de filtres et de formats d'articles permet aussi une recherche fluide et efficace dans les contenus publiés. Présenté à la NEC 2022.</p>"
   # testimony: "Non applicable"
   isOpenSource: true
-
 
 # La Base
 - title: La Base
@@ -392,9 +411,10 @@
     - intégration web
     - développement web
   clientName: "Happy Neuron"
-  clientDescription: "
-  Depuis plus de 20 ans, Happyneuron développe des outils d'évaluation et de rééducation orthophonique. Leur mission est d'accompagner les orthophonistes dans l'évolution de leur pratique clinique quotidienne, en leur fournissant des ressources actualisées et pertinente.
-  "
+  clientDescription:
+    Depuis plus de 20 ans, Happyneuron développe des outils d'évaluation et de rééducation orthophonique.
+    Leur mission est d'accompagner les orthophonistes dans l'évolution de leur pratique clinique quotidienne, en leur fournissant des ressources actualisées et pertinente.
+
   # projectLink: "Non spécifié"
   # projectGit: "Non applicable"
   projectStack:
@@ -409,3 +429,69 @@
   projectDescription: "Evidence Orthophonie est une plateforme web qui propose un bilan de langage écrit rapide et précis, réalisé à partir d'un questionnaire qui est disponible aux orthophonistes. Leur outil génère un Compte Rendu de Bilan Orthophonique (CRBO) détaillé, incluant des hypothèses explicatives et des pistes d’interventions adaptées."
   # testimony: "Non applicable"
 
+- title: "Akuo"
+  categories:
+    - outil métier
+  tags:
+    - énergie
+    - développement web
+    - écologie
+  projectEnd: "2021"
+  clientDescription: "Producteur indépendant français d'énergie renouvelable et distribuée."
+  projectResume: "création d'un outil métier de simulation de parc d’énergies renouvelables."
+  projectDescription:
+    Akuo est un outil métier de simulation de parc d’énergies renouvelables.
+    Cet outil que nous avons développé, accessible en intranet, est le fruit de la collaboration avec les équipes du bureau d’étude d’Akuo.
+    Il permet de simuler différentes configurations de parc d’énergie renouvelable à partir de données existantes, pour vérifier si le dimensionnement
+    du parc répond bien à la demande en énergie de la population, ainsi que l’économie en énergie fossile que les énergies renouvelables réalisent.
+  projectStack:
+    - Django
+    - PostgreSQL
+    - Angular
+  projectDuration: "~40"
+  projectStatus: "Terminé"
+  projectThumbnail: "../../img/projet/akuo.png"
+
+# Backmarket - Comparaison des téléphones
+- title: "Backmarket - Comparaison des téléphones"
+  clientName: Backmarket
+  projectResume: Backmarket est une plateforme de vente de produits électroniques d'occasion.
+  clientDescription: Backmarket est une plateforme de vente de produits électroniques d'occasion.
+  projectDescription: Le projet consiste à créer une application web permettant de comparer les caractéristiques de produits électroniques.
+  projectStack:
+    - HTML & CSS
+    - Vuejs
+    - Django
+  projectDuration: "~15"
+  projectStatus: "Terminé"
+  projectThumbnail: "../../img/projet/backmarket.png"
+  projectLink: https://www.backmarket.fr/fr-fr
+  categories:
+    - outil métier
+    - e-commerce
+  tags:
+    - développement web
+    - écologie
+  projectEnd: "2021"
+
+# Terre de Liens - Campagne de donation 2024
+- title: Terre de Liens - Campagne de donation 2024
+  projectResume: "Site vitrine pour la campagne de donation de Terre de Liens 2024"
+  projectLink: https://soutien.terredeliens.org/
+  categories:
+    - site vitrine
+  tags:
+    - développement web
+    - design
+    - intégration web
+  clientDescription: "Terre de Liens est une association qui achète des terres agricoles pour les protéger de la spéculation et les louer à des paysans engagés dans une agriculture durable. Elle agit pour faciliter l'accès à la terre et promouvoir des pratiques agricoles respectueuses de l'environnement."
+  clientName: Terre de Liens
+  projectDescription:
+    Le site vitrine de Terre de Liens a été conçu pour promouvoir la campagne de donation de l'association.
+    Il met en avant les actions de l'association et le témoignage d'agriculteurs.
+  projectStack:
+    - Astro
+    - Tailwind
+    - Javascript
+  projectEnd: 2024
+  projectStatus: "Terminé"
