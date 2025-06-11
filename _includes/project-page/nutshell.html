@@ -52,7 +52,7 @@
           linkText:"Voir le site", link: project.projectLink newTab=true %} {%
           endif %} {% if project.projectGit %} {% render "main-button.html"
           linkText:"Code source", link: project.projectGit, btnClass: "reverse"
-          %} {% endif %}
+          newTab=true %} {% endif %}
         </div>
       </div>
     </div>
