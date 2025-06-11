@@ -1,58 +1,59 @@
 <div class="nutshell">
-    <div class="nutshell-title">
-        <h2>En résumé</h2>
-        <div>
-            <img class="after-title" src="/img/svg/after-title.svg" alt="">
-        </div>
-    </div>
+  <div class="nutshell-title">
+    <h2>En résumé</h2>
     <div>
-        <div class="columns is-multiline my-5">
-            <div class="column is-12 is-6-desktop p-5 left-column">
-                <h3>{{project.projectResume}}</h3>
-                {% if project.projectEnd and project.clientName  %}
-                    <p>Un projet créé en {{project.projectEnd}} pour {{project.clientName}}</p>
-                {% endif %}
-
-                <div class="is-divider"></div>
-                <div class="is-flex is-flex-direction-column gap-2">
-                    <h3>{{project.clientName}}</h3>
-                    <p>
-                        {{project.clientDescription}}
-                    </p>
-                </div>
-            </div>
-            <div class="column is-flex is-6-desktop p-5 is-flex-direction-column gap-1">
-                {% if project.projectDescription %}
-                    <div>
-                        <span class="is-bold">Le projet</span>
-                        <div class="project-description">
-                            {{project.projectDescription}}
-                        </div>
-                    </div>
-                {% endif %}
-                {% if project.projectStack %}
-                    <div>
-                        <span class="is-bold">Technologies utilisées :</span> {% render "tags.html" tags: project.projectStack %}</div>
-                {% endif %}
-                {% if project.projectStatus %}
-                    <div>
-                        Status : <span class="is-bold">{{project.projectStatus}}</span>
-                    </div>
-                {% endif %}
-                {% if project.projectDuration %}
-                <div>
-                    Temps de développement : <span class="is-bold">{{project.projectDuration}} jours</span>
-                </div>
-                {% endif %}
-                <div class="nutshell-buttons">
-                    {% if project.projectLink %}
-                    {% render "main-button.html" linkText:"Voir le site", link: project.projectLink %}
-                    {% endif %}
-                    {% if project.projectGit %}
-                    {% render "main-button.html" linkText:"Code source", link: project.projectGit, btnClass: "reverse" %}
-                    {% endif %}
-                </div>
-            </div>
-        </div>
+      <img class="after-title" src="/img/svg/after-title.svg" alt="" />
     </div>
+  </div>
+  <div>
+    <div class="columns is-multiline my-5">
+      <div class="column is-12 is-6-desktop p-5 left-column">
+        <h3>{{project.projectResume}}</h3>
+        {% if project.projectEnd and project.clientName %}
+        <p>
+          Un projet créé en {{project.projectEnd}} pour {{project.clientName}}
+        </p>
+        {% endif %}
+
+        <div class="is-divider"></div>
+        <div class="is-flex is-flex-direction-column gap-2">
+          <h3>{{project.clientName}}</h3>
+          <p>{{project.clientDescription}}</p>
+        </div>
+      </div>
+      <div
+        class="column is-flex is-6-desktop p-5 is-flex-direction-column gap-1"
+      >
+        {% if project.projectDescription %}
+        <div>
+          <span class="is-bold">Le projet</span>
+          <div class="project-description">{{project.projectDescription}}</div>
+        </div>
+        {% endif %} {% if project.projectStack %}
+        <div>
+          <span class="is-bold">Technologies utilisées :</span> {% render
+          "tags.html" tags: project.projectStack %}
+        </div>
+        {% endif %} {% if project.projectStatus %}
+        <div>
+          Status : <span class="is-bold">{{project.projectStatus}}</span>
+        </div>
+        {% endif %} {% if project.projectDuration %}
+        <div>
+          Temps de développement :
+          <span class="is-bold"
+            >{{project.projectDuration}} {% if project.projectDurationUnit
+            %}{{project.projectDurationUnit}}{% else %}jours{% endif %}</span
+          >
+        </div>
+        {% endif %}
+        <div class="nutshell-buttons">
+          {% if project.projectLink %} {% render "main-button.html"
+          linkText:"Voir le site", link: project.projectLink %} {% endif %} {%
+          if project.projectGit %} {% render "main-button.html" linkText:"Code
+          source", link: project.projectGit, btnClass: "reverse" %} {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

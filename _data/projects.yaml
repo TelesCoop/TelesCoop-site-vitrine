@@ -1,4 +1,114 @@
-# Mang Map
+# Iarbre
+- title: Iarbre
+  categories:
+    - outil métier
+    - service public
+  tags:
+   - intégration web
+   - développement web
+   - design
+   - gestion de projet
+   - écologie
+   - cartographie
+  clientName: "Iarbre"
+  clientDescription: " Le projet IA·rbre est une initiative collaborative dédiée à la transition écologique menée par un consortium comprenant la SCOP TelesCoop comme chef de file, la Métropole de Lyon et l’université Lyon 2 avec le laboratoire LIRIS." 
+  projectStack: 
+    - HTML & CSS
+    - Typescript
+    - Vuejs
+    - Maplibre
+    - Django & Django Rest Framework
+    - Postgis
+    - Ansible
+    - Jupyter
+  projectResume: "IA·rbre est une plateforme dédiée à l'aide de la gestion des arbres dans les espaces publics."
+  projectDescription: En s’appuyant sur des compétences variées, ce projet vise à co-développer des outils innovants de gestion et de visualisation de données territoriales pour favoriser la résilience urbaine et l’élaboration de politiques publiques locales telles que le PCAET. S’étalant sur trois ans, IA.rbre bénéficie d’un financement de la Caisse des Dépôts, garantissant les ressources pour atteindre ses ambitions.
+    Le projet se distingue par son approche d’intelligence artificielle frugale et responsable, favorisant des analyses multicritères grâce à des calques thématiques (végétation, plantabilité,désimperméabilisation, vulnérabilités etc.) et une plateforme de visualisation interservices. Les outils développés permettent une meilleure allocation des ressources publiques et un suivi précis de l’impact des actions urbaines, soutenant les objectifs de durabilité du territoire.
+  projectDuration: 3
+  projectDurationUnit: ans
+  projectLink: https://www.iarbre.fr/
+  projectGit: https://github.com/TelesCoop/iarbre
+  projectStatus: En cours
+  projectThumbnail: "../../img/projet/iarbre.jpg"
+  projectThumbnailAlt: "Capture d'écran du site IA.rbre"
+
+
+# Biophonia
+- title: Dataphonia
+  categories:
+    - outil métier
+  tags:
+    - intégration web
+    - développement web
+  clientName: "Biophonia"
+  clientDescription: Pionniers de la bioacoustique  et de l’écoacoustique en milieu terrestre, BioPhonia est une entreprise innovante qui écoute la nature pour fournir aux gestionnaires des données de haute qualité pour comprendre et surveiller la biodiversité. Les méthodologies issues de la recherche fondamentale sont adaptées par BioPhonia et appliquées à des problématiques environnementales concrètes, au service du bien commun."
+  # projectLink: "Non spécifié"
+  # projectGit: "Non applicable"
+  projectStack:
+    - HTML & CSS
+    - React
+    - NestJS
+    - Ansible
+  projectResume: "Plateforme de gestion et d'analyse des données sonores"
+  projectDuration: "~80"
+  projectStatus: "En cours"
+  # projectEnd: ""
+  projectDescription: "Dataphonia est une plateforme de gestion et d'analyse des données sonores. Elle permet que des chercheurs et des gestionnaires puissent ajouter et analyser des enregistrements sonores d'espèces animales."
+  # testimony: "Non applicable"
+
+# Openfoodfacts Searchalicious
+- title: "Openfoodfacts Searchalicious"
+  projectLink: "https://world.openfoodfacts.org/"
+  projectGit: "https://github.com/openfoodfacts/search-a-licious"
+  projectStack:
+  - Typescript
+  - HTML & CSS
+  - Lit.dev
+  projectDuration: "11"
+  projectStatus: "Terminé"
+  projectResume: "Une suite de webcomponents pour utiliser le moteur de recherche d'Openfoodfacts"
+  projectEnd: "2024"
+  projectDescription: "Searchalicious est un moteur de recherche pour Openfoodfacts. Il permet de rechercher des produits alimentaires en fonction de leurs ingrédients, de leurs additifs, de leurs allergènes
+   et de leurs nutriments."
+  tags:
+    - social
+    - sensibilisation
+  categories:
+    - outil métier
+    - gestion de contenu
+  isOpenSource: true
+  testimony: La relation avec TelesCoop a été immédiate, peut être grâce à l'alignement sur les valeurs et la mission. Nous avons très rapidement été dans un climat de confiance, nous avons pu exprimer notre problématique et TelesCoop nous a présenté des profils et leur disponibilité. Nous avons pu nous mettre rapidement au travail, avec des développeurs d'un très bon niveau technique, à l'écoute de nos exigences et une montée en compétence rapide dans la compréhension du besoin.
+    La flexibilité, la relation simple et efficace, la qualité technique et la connaissance de l'open source et de ses codes, particulièrement important pour un projet Open Source / Open Data comme le nôtre, qui a une communauté active de bénévoles.
+    J'ai aussi apprécié la capacité de remise en question des développeur et leur apport à la construction du projet dans ses aspects fonctionnels ou sur les choix techniques.
+    Nous recommandons TelesCoop qui a été très réactif et a bien compris nos besoins dès le départ et a su très bien y répondre.
+    Alexandre GAREL
+    Développeur et animateur de la communauté tech
+    Open Food Facts
+
+# Openfoodfacts Webcomponents
+- title: "Openfoodfacts Webcomponents" 
+  projectLink: "https://world.openfoodfacts.org/"
+  projectGit: "https://github.com/openfoodfacts/openfoodfacts-webcomponents"
+  projectStack:
+    - Typescript
+    - HTML & CSS
+    - Lit.dev
+    - Python
+    - Fast API
+  projectDuration: "47"
+  projectStatus: "Terminé"
+  projectResume: "Une suite de webcomponents pour intégrer les éléments d'Openfoodfacts dans vos sites."
+  projectEnd: "2025"
+  projectDescription: "Openfoodfacts Webcomponents est une suite de webcomponents pour intégrer les éléments d'Openfoodfacts dans vos sites. Il permet d'afficher visuellement des retours d'outils de Machine learning pour améliorer la qualité des donnés, de composants utiles sur plusieurs sites, tel que le scanner de code barre."
+  categories:
+    - outil métier
+    - gestion de contenu
+  tags:
+    - social
+    - sensibilisation
+  isOpenSource: true
+
+# IFN
 - title: Indice de fragilité numérique
   categories:
     - outil métier
@@ -8,9 +118,9 @@
     - sensibilisation
   clientName: "La Mednum"
   clientDescription: La Mednum est une société coopérative d’intérêt collectif qui crée et accélère des solutions pour favoriser l’inclusion et la médiation numériques sur tout le territoire. Elle agit directement auprès des publics en situation de fragilité numérique et accompagne les organisations publiques et privées qui les accueillent, les orientent et les forment. Son objectif est de faire des technologies numériques un facteur de progrès, d’efficacité, d’inclusion et d’encapacitation pour tous et toutes, sur tous les territoires.
-  # projectThumbnail: "../../img/projet/ifn.png"
+  projectThumbnail: "../../img/projet/ifn.png"
+  projectThumbnailAlt: "Capture d'écran du site de l'indice de fragilité numérique"
   projectLink: "https://fragilite-numerique.fr/"
-  # projectGit: "https://lol.fr"
   projectStack:
     - Django
     - VueJS
@@ -22,6 +132,8 @@
   projectEnd: 2022
   projectDescription:
     Quels territoires français présentent une fragilité numérique ? Pour y répondre, TelesCoop a collaboré avec La MedNum pour concevoir un outil cartographique permettant de visualiser un indice de fragilité numérique. Destiné aux acteurs publics, collectivités, opérateurs de services publics et services de l’État, ce kit vise à fournir un outil d’aide à la décision et de mobilisation des acteurs de l’inclusion numérique sur leur territoire. Le cadre de travail a été structuré selon la méthodologie agile, avec des cycles d’itérations courts et rapides, favorisant une amélioration continue du produit en fonction des besoins identifiés par le client. Cette approche agile, combinée à une collecte de retours utilisateurs, a permis d’obtenir un résultat proche des besoins des utilisateurs finaux.
+
+# MangMap
 - title: MangMap
   categories:
     - outil métier
@@ -34,9 +146,8 @@
     - imagerie satellitaire
   clientName: "La TeleScop"
   clientDescription: Cette structure contribue à la connaissance et l'action dans les territoires en facilitant l’accès et l’usage des données issues de l’observation de la Terre</span> par imagerie satellitaire aux acteurs publics et privés dans les domaines de l’environnement et l'aménagement des territoires.
-  # projectThumbnail: "../../img/projet/ifn.png"
-  # projectLink: "https://lol.fr"
-  # projectGit: "https://lol.fr"
+  projectThumbnail: "../../img/projet/mangmap.png"
+  projectThumbnailAlt: "Capture d'écran de l'outil MangMap"
   projectStack:
     - Django
     - Wagtail
@@ -131,7 +242,7 @@
     - humaniste
   clientName: "Médecins sans frontières"
   clientDescription: Médecins Sans Frontière est une association médicale humanitaire internationale créée en 1971 en France. Dans plus de 70 pays, ils portent assistance à des populations dont la vie ou la santé est menacée notamment lors de conflits, d'épidémies et de catastrophes naturelles."
-  projectThumbnail: "../../img/projet/msf-agissons.png"
+  # projectThumbnail: "../../img/projet/msf-agissons.png"
   projectLink: "https://agissons.msf.fr/"
   projectStack:
     - 11ty
@@ -249,7 +360,7 @@
   projectDescription: "<p>Dans un contexte de crise démocratique, le collectif Démocratie Ouverte a souhaité créer une plateforme ouverte, gratuite, interactive et collaborative pour évaluer, améliorer et partager la démocratie locale. En collaboration avec la coopérative de designer Praticable, ainsi que le collectif Démocratie Ouverte, nous avons conçu et développé la plateforme DémoMètre. Cette application permet à des habitants, élus, agents et associations de créer une évaluation pour une commune ou intercommunalité, d'y participer et d'en observer les résultats en autonomie ou en atelier afin de créer du débat et faire vivre la démocratie locale. Développée sur un semestre, la plateforme permet aujourd'hui d'animer des ateliers sur l'indice de qualité démocratique, créant ainsi des débats entre les participants et faisant vivre la démocratie locale. Elle permet également à toute personne de répondre ou créer une évaluation pour sa commune ou intercommunalité en toute autonomie.</p>"
   # testimony: "Non applicable"
   isOpenSource: false
-  projectThumbnail: "../../img/projet/demomètre.png"
+  # projectThumbnail: "../../img/projet/demomètre.png"
 # GreenMenu
 - title: GreenMenu
   categories:
@@ -298,26 +409,3 @@
   projectDescription: "Evidence Orthophonie est une plateforme web qui propose un bilan de langage écrit rapide et précis, réalisé à partir d'un questionnaire qui est disponible aux orthophonistes. Leur outil génère un Compte Rendu de Bilan Orthophonique (CRBO) détaillé, incluant des hypothèses explicatives et des pistes d’interventions adaptées."
   # testimony: "Non applicable"
 
-
-# Biophonia
-- title: Dataphonia
-  categories:
-    - outil métier
-  tags:
-    - intégration web
-    - développement web
-  clientName: "Biophonia"
-  clientDescription: Pionniers de la bioacoustique  et de l’écoacoustique en milieu terrestre, BioPhonia est une entreprise innovante qui écoute la nature pour fournir aux gestionnaires des données de haute qualité pour comprendre et surveiller la biodiversité. Les méthodologies issues de la recherche fondamentale sont adaptées par BioPhonia et appliquées à des problématiques environnementales concrètes, au service du bien commun."
-  # projectLink: "Non spécifié"
-  # projectGit: "Non applicable"
-  projectStack:
-    - HTML & CSS
-    - React
-    - NestJS
-    - Ansible
-  projectResume: "Plateforme de gestion et d'analyse des données sonores"
-  projectDuration: "~80"
-  projectStatus: "En cours"
-  # projectEnd: ""
-  projectDescription: "Dataphonia est une plateforme de gestion et d'analyse des données sonores. Elle permet que des chercheurs et des gestionnaires puissent ajouter et analyser des enregistrements sonores d'espèces animales."
-  # testimony: "Non applicable"

@@ -26,9 +26,11 @@ permalink: /projet/{{ project.title | slugify }}/
 {% comment %}            <div class="is-divider"></div>
             {% render "tags.html", tags:project.tags %}{% endcomment %}
         </div>
-        <div class="is-flex-desktop is-hidden  column is-6-desktop is-12">
-            <img class="" src="{{ project.projectThumbnail }}" alt="">
+        {% if project.projectThumbnail %}
+        <div class="is-flex-desktop column is-6-desktop is-12">
+            <img alt="{{project.projectThumbnailAlt}}" src="{{ project.projectThumbnail }}" alt="" style="border-radius: 50px;">
         </div>
+        {% endif %}
     </div>
     {% render "project-page/nutshell.html", project:project %}
     {% if project.description %}
