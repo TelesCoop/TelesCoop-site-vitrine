@@ -49,9 +49,10 @@
         {% endif %}
         <div class="nutshell-buttons">
           {% if project.projectLink %} {% render "main-button.html"
-          linkText:"Voir le site", link: project.projectLink %} {% endif %} {%
-          if project.projectGit %} {% render "main-button.html" linkText:"Code
-          source", link: project.projectGit, btnClass: "reverse" %} {% endif %}
+          linkText:"Voir le site", link: project.projectLink newTab=true %} {%
+          endif %} {% if project.projectGit %} {% render "main-button.html"
+          linkText:"Code source", link: project.projectGit, btnClass: "reverse"
+          %} {% endif %}
         </div>
       </div>
     </div>

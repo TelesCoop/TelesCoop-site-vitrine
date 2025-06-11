@@ -1,3 +1,14 @@
-<a class="main-button {{btnClass}}"  href="{{ link | url }}">
-    <span class="{{btnClass}} text">{{ linkText }}</span>
+<a
+  class="main-button {{btnClass}}"
+  href="{{ link | url }}"
+  {%
+  if
+  newTab
+  %}target="_blank"
+  rel="noopener noreferrer"
+  {%
+  endif
+  %}
+>
+  <span class="{{btnClass}} text">{{ linkText }}</span>
 </a>
