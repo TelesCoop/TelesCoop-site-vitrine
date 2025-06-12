@@ -1,32 +1,51 @@
 <nav class="navbar is-fixed-top">
-    <div class="container">
-        {% comment %}this div is only here to make sur the brand is center-aligned{% endcomment %}
-        <div {% if hideLogo %}class="is-hidden-desktop"{% endif %} style="flex-grow: 1; flex-basis: 0"></div>
-        <div class="navbar-brand{% if hideLogo %} is-hidden-desktop{% endif %} py-4 px-4">
-            <a class="navbar-item" href="/">
-                <img src="/img/svg/logo.svg" alt="TelesCoop - Accueil">
-            </a>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navigation">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-        <div id="main-navigation" class="navbar-menu" style="flex-basis: 0">
-            <div class="navbar-end">
-                <a class="navbar-item" href="/coopérative">
-                    La coopérative
-                    <div class="bottom left blue"></div>
-                </a>
-                <a class="navbar-item" href="/projets">
-                    Nos projets
-                    <div class="bottom green"></div>
-                </a>
-                <a class="navbar-item" href="mailto:contact@telescoop.fr">
-                    Nous contacter
-                    <div class="bottom right yellow"></div>
-                </a>
-            </div>
-        </div>
+  <div class="container">
+    {% comment %}this div is only here to make sur the brand is center-aligned{%
+    endcomment %}
+    <div
+      {%
+      if
+      hideLogo
+      %}class="is-hidden-desktop"
+      {%
+      endif
+      %}
+      style="flex-grow: 1; flex-basis: 0"
+    ></div>
+    <div
+      class="navbar-brand{% if hideLogo %} is-hidden-desktop{% endif %} py-4 px-4"
+    >
+      <a class="navbar-item" href="/">
+        <img src="/img/svg/logo.svg" alt="TelesCoop - Accueil" />
+      </a>
+      <a
+        role="button"
+        class="navbar-burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="main-navigation"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
+    <div id="main-navigation" class="navbar-menu" style="flex-basis: 0">
+      <div class="navbar-end">
+        <a class="navbar-item is-hidden-desktop" href="/"> Accueil </a>
+        <a class="navbar-item" href="/coopérative">
+          La coopérative
+          <div class="bottom left blue"></div>
+        </a>
+        <a class="navbar-item" href="/projets">
+          Nos projets
+          <div class="bottom green"></div>
+        </a>
+        <a class="navbar-item" href="mailto:contact@telescoop.fr">
+          Nous contacter
+          <div class="bottom right yellow"></div>
+        </a>
+      </div>
+    </div>
+  </div>
 </nav>
