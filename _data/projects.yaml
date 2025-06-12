@@ -58,6 +58,7 @@
   projectStatus: "En cours"
   # projectEnd: ""
   projectDescription: "Dataphonia est une plateforme de gestion et d'analyse des données sonores. Elle permet que des chercheurs et des gestionnaires puissent ajouter et analyser des enregistrements sonores d'espèces animales."
+  projectThumbnail: "../../img/projet/dataphonia.png"
   # testimony: "Non applicable"
 
 # Openfoodfacts Searchalicious
