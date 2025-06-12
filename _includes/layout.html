@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
     />
     <title>
-        {% if title %}
-            TelesCoop - {{ title }}
-        {% else %}
-            {{metadata.title}}
-        {% endif %}
+      {% if title %} TelesCoop - {{ title }} {% else %} {{metadata.title}} {%
+      endif %}
     </title>
-    <meta name="description" content="{% if description %}{{ description }}{% else %}{{ metadata.description }}{% endif %}"/>
+    <meta
+      name="description"
+      content="{% if description %}{{ description }}{% else %}{{ metadata.description }}{% endif %}"
+    />
     <link rel="stylesheet" type="text/css" href="/css/style.min.css" />
 
     <!-- Favicon -->
-    {% comment %}<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />{% endcomment %}
-    <link rel="icon" type="image/png" sizes="64x64" href="/img/logo_square.png" />
-    {% comment %}<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />{% endcomment %}
+    {% comment %}
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon/apple-touch-icon.png"
+    />
+    {% endcomment %}
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="/img/logo_square.png"
+    />
+    {% comment %}
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    {% endcomment %}
     <link rel="manifest" href="/img/favicon/site.webmanifest" />
-    {% comment %}<link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#9999cc" />{% endcomment %}
-    {% comment %}<link rel="shortcut icon" href="/img/favicon/favicon.ico" />{% endcomment %}
+    {% comment %}
+    <link
+      rel="mask-icon"
+      href="/img/favicon/safari-pinned-tab.svg"
+      color="#9999cc"
+    />
+    {% endcomment %} {% comment %}
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico" />
+    {% endcomment %}
     <meta name="msapplication-TileColor" content="#ffc40d" />
-    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml" />
+    <meta
+      name="msapplication-config"
+      content="/img/favicon/browserconfig.xml"
+    />
     <meta name="theme-color" content="#ffffff" />
     <!-- End Favicon -->
 
@@ -45,15 +72,16 @@
     <meta name="twitter:image" content="http://telescoop.fr/img/logo.svg" />
     <!-- End Twitter -->
     <script data-domain="telescoop.fr" src="/js/telescoop.js"></script>
-    <script defer data-domain="telescoop.fr" src="https://plausible.io/js/plausible.js"></script>
-</head>
+    <script
+      defer
+      data-domain="telescoop.fr"
+      src="https://plausible.io/js/plausible.js"
+    ></script>
+  </head>
 
-<body>
-{% render "header.html", hideLogo: hideLogo %}
-<div>
-    {{ content }}
-</div>
-{% render "footer.html", pageWeight: pageWeight %}
-</body>
-
+  <body>
+    {% render "header.html", hideLogo: hideLogo %}
+    <div>{{ content }}</div>
+    {% render "footer.html", pageWeight: pageWeight %}
+  </body>
 </html>
