@@ -31,3 +31,11 @@ open-source:
   name: Open Source
   textWhite: true
   colorClass: blue
+Entreprise:
+  name: Entreprise
+  textWhite: true
+  colorClass: danger
+Organisation:
+  name: Organisation
+  textWhite: false
+  colorClass: yellow
