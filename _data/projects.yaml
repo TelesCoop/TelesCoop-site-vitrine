@@ -249,16 +249,44 @@
     - social
     - écologie
     - communication
-  clientName: "Aktivisda"
-  clientDescription: "Outil pour les associations de communication pour les mouvements sociaux."
-  projectResume: "Outil de création de visuel."
-  projectDescription: "Aktivisda permet à n’importe quel militant·e de créer en quelques minutes un visuel qui respecte la charte graphique de son organisation. Aucune erreur possible, interface simple et limitée."
+  clientName: "Pour toutes les structures décentralisées"
+  clientDescription: "Projet adapté à toute structure décentralisée avec une identité graphique forte."
+  projectResume: "Le logiciel de création graphique associatif"
+  projectDescription: "Aktivisda permet à n’importe quel·le activiste de créer des visuels aux couleurs de son organisation, aucune compétence nécessaire. Libre et décentralisé. Développé depuis 2020, l'outil est utilisé à travers le monde par plusieurs organisations"
   projectLink: https://aktivisda.earth/
   projectGit: https://framagit.org/aktivisda/aktivisda
   projectStack:
     - Vuejs
   projectStatus: "En cours"
-  projectDuration: "+ de 80"
+  projectDuration: "+ de 100"
+  testimony: "La mise à disposition d'Aktivisda à la communauté d'animateur·ices de la Fresque du Climat nous a permis de faciliter la création de visuels personnalisés. Cela donne un degré de liberté dans la conception de matériel de communication tout en permettant un alignement autour de notre univers graphique. Nous avons pu l'intégrer avec notre outil de traduction collaboratif, ce qui permet de faire bénéficier l'outil à l'ensemble des fresqueurs et fresqueuses à travers le monde ! (La Fresque du Climat)"
+  projectThumbnail: "../../img/projet/aktivisda.png"
+  projectThumbnailAlt: "Image d'illustration de Aktivisda"
+
+# Aktivisda
+- title: Le Mémo des Fresques
+  categories:
+    - outil métier
+    - gestion de contenu
+    - open-source
+  tags:
+    - association
+    - social
+    - écologie
+    - communication
+  clientName: "Associations promouvant des ateliers de sensilisations"
+  clientDescription: "Toute structure formelle ou informelle qui propose un jeu similaire à la « Fresque du Climat » peut être intéressée par le Mémo."
+  projectResume: "Le site internet pour aider les animateur·ices des Fresques"
+  projectDescription: "Initialement mis en place pour la Fresque du Climat, l'outil aide quotidiennement les animateur·ices de nombreuses Fresques (Textile, Déchets, Numérique, Frontières Planétaires, Climat, Océane, etc.), le Mémo aide des milliers d'animateur·ices à prendre en main le jeu."
+  projectLink: https://memo.fresque.earth/
+  projectGit: https://memo.fresque.earth/
+  projectStack:
+    - Vuejs
+  projectStatus: "En cours"
+  projectDuration: "+ de 50"
+  projectThumbnail: "../../img/projet/memo.png"
+  projectThumbnailAlt: "Image d'illustration du Mémo de la Fresque du Numérique"
+  testimony: "Nous connaissions le mémo grâce à la Fresque du Climat et nous avons demandé à Marc-Antoine la possibilité d’en disposer pour la Fresque des frontières planétaires. L’adaptation s’est très bien passée et nous avons pû facilement intégrer les informations co-construitent avec notre communauté d’animateur⋅rice. Nous avons également réussi à traduire le mêmo dans plusieurs langues (anglais, allemand, espagnol, chinois) toujours aidée de notre communauté. L’outil est très apprécié comme correction de la fresque par les participant⋅es dans le mail post-atelier, il est également utilisé comme pense-bête par certains animateur⋅rices car les liens entres les cartes sont nombreux. Nous sommes en train de réfléchir à un nouvel agencement des cartes et le memo va nous aider à visualiser cet agencement et mettre à disposition les deux versions sur le mémo. (Fresque des Frontières Planétaires)"
 
 # MSF
 - title: MSF - Campagne de dons
@@ -365,6 +393,7 @@
   categories:
     - outil métier
     - gestion de contenu
+    - open-source
   tags:
     - intégration
     - CMS
@@ -384,7 +413,8 @@
   projectEnd: "2022"
   projectDescription: "<p>Dans un contexte de crise démocratique, le collectif Démocratie Ouverte a souhaité créer une plateforme ouverte, gratuite, interactive et collaborative pour évaluer, améliorer et partager la démocratie locale. En collaboration avec la coopérative de designer Praticable, ainsi que le collectif Démocratie Ouverte, nous avons conçu et développé la plateforme DémoMètre. Cette application permet à des habitants, élus, agents et associations de créer une évaluation pour une commune ou intercommunalité, d'y participer et d'en observer les résultats en autonomie ou en atelier afin de créer du débat et faire vivre la démocratie locale. Développée sur un semestre, la plateforme permet aujourd'hui d'animer des ateliers sur l'indice de qualité démocratique, créant ainsi des débats entre les participants et faisant vivre la démocratie locale. Elle permet également à toute personne de répondre ou créer une évaluation pour sa commune ou intercommunalité en toute autonomie.</p>"
   # testimony: "Non applicable"
-  # projectThumbnail: "../../img/projet/demomètre.png"
+  projectThumbnail: "../../img/projet/demometre.png"
+  projectThumbnailAlt: "Capture d'écran du site Démomètre, vue sur une question"
 
 # GreenMenu
 - title: GreenMenu
