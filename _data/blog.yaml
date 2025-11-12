@@ -11,11 +11,11 @@
     <p>Dès 2020, les 4 co-fondateurs de TelesCoop étaient répartis en France et ce n'était pas une option pour eux de déménager pour se réunir dans un lieu. Cela nous a permis aussi par la suite de recruter des personnes partout en France, et même Maxime à Berlin. Le fait que rejoindre TelesCoop permettait de conserver son mode de vie a été un élément qui explique pourquoi les coopérateur·ices actuels sont venu·es. Nous ne serions que 2/10 à avoir rejoint TelesCoop si le présentiel était obligatoire et que les bureaux avaient été à une distance raisonnable de chez soi. Pour aller plus loin, l'arrêt du télétravail est pour nous tous un des éléments qui nous ferait quitter TelesCoop.</p>
 
     <p>Parmi les avantages que nous y trouvons reviennent souvent :</p>
-    <ul>
-      <li>Moins de transports domicile-travail : gain de temps, moins de fatigue, économies financières</li>
-      <li>La concentration : il est très facile de joindre un collègue, de s'interpeller mais on peut répondre à son rythme et à l'écrit aux sollicitations</li>
-      <li>Organisation du temps de travail plus libre et flexibilité</li>
-      <li>Facilité des repas et plus généralement de pouvoir faire une pause ressourçante (sieste, recharger sa batterie sociale en s'isolant par exemple) dans son univers</li>
+    <ul style="list-style: disc; padding-left: 2rem; margin-left: 1rem;">
+      <li style="display: list-item;">Moins de transports domicile-travail : gain de temps, moins de fatigue, économies financières</li>
+      <li style="display: list-item;">La concentration : il est très facile de joindre un collègue, de s'interpeller mais on peut répondre à son rythme et à l'écrit aux sollicitations</li>
+      <li style="display: list-item;">Organisation du temps de travail plus libre et flexibilité</li>
+      <li style="display: list-item;">Facilité des repas et plus généralement de pouvoir faire une pause ressourçante (sieste, recharger sa batterie sociale en s'isolant par exemple) dans son univers</li>
     </ul>
 
     <h2>Bureau à la maison</h2>

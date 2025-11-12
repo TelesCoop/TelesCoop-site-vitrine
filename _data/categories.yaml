@@ -3,6 +3,7 @@ site vitrine:
   name: site vitrine
   textWhite: true
   colorClass: grey
+  type: project
 # traitement de données:
 #   name: traitement de données
 #   textWhite: false
@@ -11,31 +12,39 @@ cartographie:
   name: cartographie
   textWhite: true
   colorClass: orange
+  type: project
 service public:
   name: service public
   textWhite: false
   colorClass: yellow
+  type: project
 outil métier:
   name: outil métier
   textWhite: true
   colorClass: danger
+  type: project
 gestion de contenu:
   name: gestion de contenu
   textWhite: true
   colorClass: info
+  type: project
 e-commerce:
   name: e-commerce
   textWhite: true
   colorClass: success
+  type: project
 open-source:
   name: Open Source
   textWhite: true
   colorClass: blue
+  type: project
 Entreprise:
   name: Entreprise
   textWhite: true
   colorClass: danger
+  type: blog
 Organisation:
   name: Organisation
   textWhite: false
   colorClass: yellow
+  type: blog
