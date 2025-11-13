@@ -1,0 +1,39 @@
+---
+pagination:
+    data: blog
+    size: 1
+    alias: article
+description: Les articles du blog TelesCoop
+layout: layout.html
+pageWeight: 120
+eleventyComputed:
+    description: "{{ article.excerpt }}"
+    title: "{{ article.title }}"
+permalink: /blog/{{ article.title | slugify }}/
+---
+<div class="blog-article layout">
+    <div class="columns is-multiline is-centered">
+        <div class="column flex is-flex-direction-column is-6-desktop is-12 gap-2 has-text-centered">
+            <h1 class="is-family-code">{{ article.title }}</h1>
+            <div class="blog-meta mb-4">
+                <p>
+                    <span class="is-bold">Publié le</span> {{ article.date | date: "%d/%m/%Y" }} ·
+                    <span class="is-bold">{{ article.readTime }} min de lecture</span>
+                </p>
+            </div>
+            {% if article.categories %}
+            <div class="category-holder-wrapper is-justify-content-center">
+                {% for category in article.categories %}
+                    {% render "category.html", category:categories[category] %}
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% render "blog-page/content.html", article:article %}
+    <div class="mt-6 has-text-centered">
+        <a href="/blog" class="button is-rounded has-background-orange has-text-white px-6 py-3">
+            ← Retour aux articles
+        </a>
+    </div>
+</div>

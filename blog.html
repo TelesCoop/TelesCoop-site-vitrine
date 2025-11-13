@@ -1,0 +1,33 @@
+---
+description: Les articles du blog TelesCoop sur le développement web, l'open source et l'écologie numérique.
+layout: layout.html
+pageWeight: 115
+title: Notre blog
+
+top: Apprenez-en plus sur TelesCoop et nos valeurs grâce à ces quelques articles rédigés par nous (garantie sans IA 🤖 ).
+---
+
+<div class="layout">
+  <div
+    class="has-text-centered is-flex is-flex-direction-column"
+    style="margin-bottom: 2em"
+  >
+    <img
+      src="/img/svg/illustration-projet.svg"
+      class="is-hidden-tablet illustration-blog"
+      alt=""
+      style="height: 120px"
+    />
+    <h1 class="is-family-code">{{ title }}</h1>
+    <p class="has-text-centered mt-6" style="max-width: 700px; margin: auto">
+      {{ top }}
+    </p>
+  </div>
+  <div class="container mt-6">
+    <div class="projects-container">
+      {% for article in blog %}
+        {% render "blog-card.html", article: article, categories: categories %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

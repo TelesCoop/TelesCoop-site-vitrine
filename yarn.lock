@@ -790,6 +790,10 @@ eleventy-plugin-svg-contents@^0.7.0:
   dependencies:
     cheerio "^1.0.0-rc.3"
 
+eleventy@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/eleventy/-/eleventy-1.0.7.tgz#c7dd32ede02b4dce9b1f8ed19e821e55c44408a5"
+  integrity sha512-yVxIVr8YDcf+bz3EHghKQo6sAC5NExaAkL2DST1tqRmImYgmcmE1F4BRZvNZpn6eKu2Pz8j2mfoKbCd1SuTikg==
 encodeurl@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"

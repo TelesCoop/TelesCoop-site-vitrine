@@ -35,6 +35,7 @@ top: Nous nous adaptons aux besoins du client et le conseillons au mieux en resp
         <h3 class="is-family-code mb-2 is-size-7">Types de projet</h3>
         <div class="category-holder-wrapper">
           {% for category in categories %}
+          {% if category[1].type == "project" %}
           <div
             class="category-holder filter-category"
             style="display: inline-block"
@@ -58,6 +59,7 @@ top: Nous nous adaptons aux besoins du client et le conseillons au mieux en resp
               <span>{{ category[1].name }}</span>
             </button>
           </div>
+          {% endif %}
           {% endfor %}
         </div>
         <button
