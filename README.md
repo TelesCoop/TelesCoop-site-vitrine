@@ -1,10 +1,18 @@
 # Telescoop website
 
-## dev
+## Développer
 
-develop locally : `yarn dev`
+* Lancer 11ty
+```
+yarn dev
+```
 
-for production : `yarn build`
+* Compiler le `sass`
+```
+yarn watch:sass
+```
+
+
 
 ## Infos
 
