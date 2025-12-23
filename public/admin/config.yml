@@ -2,7 +2,7 @@ local_backend: true
 backend:
   name: github
   repo: TelesCoop/TelesCoop-site-vitrine
-  branch: main
+  branch: dev
   squash_merges: true
   base_url: https://gateway.telescoop.fr
   auth_endpoint: /github/auth
