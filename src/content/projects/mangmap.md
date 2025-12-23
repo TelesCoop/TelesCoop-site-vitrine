@@ -18,7 +18,7 @@ projectStack:
   - Bulma
   - Mapbox
 projectResume: Cartographie et suivi des Mangroves
-projectDuration: 6.5
+projectDuration: '6.5'
 projectDurationUnit: ''
 projectLink: ''
 projectGit: ''

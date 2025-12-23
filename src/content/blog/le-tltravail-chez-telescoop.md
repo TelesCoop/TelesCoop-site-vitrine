@@ -1,6 +1,6 @@
 ---
 title: Le télétravail chez Telescoop
-date: '2025-11-13'
+date: 2025-11-13
 excerpt: 'TelesCoop fait partie de ces entreprises en « full télétravail » : nous n''avons pas de locaux et nous vivons tous·tes à travers toute la France (et pendant un temps, jusqu''à Berlin). Nous avons adapté notre organisation à ce format télétravail et profitons de cet article pour le partager.'
 categories:
   - Entreprise

@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import About from '../components/home/About.astro';
 import Skills from '../components/home/Skills.astro';
 import Extra from '../components/home/Extra.astro';
+import Engagements from '../components/home/Engagements.astro';
 import Measures from '../components/home/Measures.astro';
 import Clients from '../components/home/Clients.astro';
 import { getEntry } from 'astro:content';
@@ -77,6 +78,9 @@ const clientsData = clients?.data || [];
 
   <!-- Extra Section -->
   <Extra extra={extraData} />
+
+  <!-- Engagements Section -->
+  <Engagements />
 
   <!-- Measures Section -->
   <Measures measures={measuresData} />

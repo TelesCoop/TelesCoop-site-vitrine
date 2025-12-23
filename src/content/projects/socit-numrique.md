@@ -19,7 +19,7 @@ projectStack:
   - Alpine.js
   - Design System de l'État
 projectResume: Refonte du site vitrine du Labo de Société Numérique
-projectDuration: 40
+projectDuration: '40'
 projectDurationUnit: ''
 projectLink: https://labo.societenumerique.gouv.fr/fr/
 projectGit: https://github.com/SocieteNumerique/Labo-Backend

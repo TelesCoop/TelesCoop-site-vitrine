@@ -1,0 +1,91 @@
+---
+import { getEntry } from 'astro:content';
+
+const engagements = await getEntry('data', 'engagements');
+const engagementsData = engagements?.data || {};
+---
+
+<section class="py-16 px-4 bg-beige">
+  <div class="container mx-auto max-w-6xl">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-light mb-4">Nos engagements</h2>
+      <p class="text-lg text-gray-600">
+        Ce que nous mettons en œuvre au quotidien pour construire un numérique plus responsable*
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Engagements techniques */}
+      {engagementsData.technical && (
+        <div class="bg-white rounded-lg p-8 shadow-sm">
+          <div class="mb-6">
+            <div class="w-12 h-12 bg-accent-blue rounded-full flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">{engagementsData.technical.title}</h3>
+          </div>
+          <ul class="space-y-3">
+            {engagementsData.technical.items.map((item: string) => (
+              <li class="flex items-start">
+                <span class="text-accent-blue mr-2 mt-1">•</span>
+                <span class="text-gray-700 text-sm leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Engagements sociaux */}
+      {engagementsData.social && (
+        <div class="bg-white rounded-lg p-8 shadow-sm">
+          <div class="mb-6">
+            <div class="w-12 h-12 bg-accent-orange rounded-full flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">{engagementsData.social.title}</h3>
+          </div>
+          <ul class="space-y-3">
+            {engagementsData.social.items.map((item: string) => (
+              <li class="flex items-start">
+                <span class="text-accent-orange mr-2 mt-1">•</span>
+                <span class="text-gray-700 text-sm leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Engagements environnementaux */}
+      {engagementsData.environmental && (
+        <div class="bg-white rounded-lg p-8 shadow-sm">
+          <div class="mb-6">
+            <div class="w-12 h-12 bg-accent-green rounded-full flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">{engagementsData.environmental.title}</h3>
+          </div>
+          <ul class="space-y-3">
+            {engagementsData.environmental.items.map((item: string) => (
+              <li class="flex items-start">
+                <span class="text-accent-green mr-2 mt-1">•</span>
+                <span class="text-gray-700 text-sm leading-relaxed">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="text-sm text-gray-500 italic">
+        * Nous restons des humains imparfaits, en apprentissage permanent
+      </p>
+    </div>
+  </div>
+</section>

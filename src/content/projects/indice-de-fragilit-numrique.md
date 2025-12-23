@@ -14,7 +14,7 @@ projectStack:
   - Tailwind
   - Mapbox
 projectResume: Cartographie de l'indice de fragilité numérique
-projectDuration: 60
+projectDuration: '60'
 projectDurationUnit: ''
 projectLink: https://fragilite-numerique.fr/
 projectGit: ''

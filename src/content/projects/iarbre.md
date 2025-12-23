@@ -26,7 +26,7 @@ projectStack:
   - Ansible
   - Jupyter
 projectResume: IA·rbre est une plateforme dédiée à l'aide de la gestion des arbres dans les espaces publics.
-projectDuration: 3
+projectDuration: '3'
 projectDurationUnit: ans
 projectLink: https://www.iarbre.fr/
 projectGit: https://github.com/TelesCoop/iarbre

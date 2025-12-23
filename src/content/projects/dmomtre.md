@@ -17,8 +17,8 @@ projectStack:
   - VueJS
   - Bulma
 projectResume: Plateforme collaborative pour évaluer la démocratie locale
-projectDuration: 120
-projectDurationUnit: ''
+projectDuration: '120'
+projectDurationUnit: 'jours'
 projectLink: https://demometre.org/
 projectGit: ''
 projectStatus: En cours

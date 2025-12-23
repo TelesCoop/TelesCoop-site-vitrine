@@ -15,7 +15,7 @@ projectStack:
   - DRF (Django Rest Framework)
   - Nuxt.js
 projectResume: Ressources de travail pour les acteurs de la médiation numérique
-projectDuration: 150
+projectDuration: '150'
 projectDurationUnit: ''
 projectLink: https://labase.anct.gouv.fr
 projectGit:

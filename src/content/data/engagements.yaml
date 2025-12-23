@@ -1,0 +1,36 @@
+---
+technical:
+  title: Engagements techniques
+  items:
+    - Technologies open-source privilégiées (Django, Vue.js, PostgreSQL, etc.)
+    - Solutions alternatives aux GAFAM quand c'est possible
+    - Hébergement responsable et souverain (serveurs en France)
+    - Éco-conception et performance (Green IT, optimisation des ressources)
+    - Accessibilité numérique (conformité WCAG/RGAA)
+    - Sécurité et protection des données (RGPD, chiffrement)
+    - Code de qualité, testé et documenté
+    - Contribution à des projets open-source
+
+social:
+  title: Engagements sociaux
+  items:
+    - Gouvernance démocratique (SCOP, 1 personne = 1 voix)
+    - Autonomie et télétravail pour tou·te·s
+    - Répartition équitable des bénéfices
+    - Tarifs solidaires adaptés aux associations et TPE
+    - Transparence sur nos pratiques et nos choix
+    - Bienveillance et partage de connaissances
+    - Formation continue et montée en compétences
+    - Soutien aux projets à impact positif
+
+environmental:
+  title: Engagements environnementaux
+  items:
+    - Sobriété numérique et éco-conception web
+    - Hébergement vert et serveurs basse consommation
+    - Optimisation du poids des pages et des ressources
+    - Limitation des données collectées et stockées
+    - Sensibilisation de nos client·e·s à l'impact environnemental
+    - Travail à distance pour réduire les déplacements
+    - Accompagnement vers des pratiques durables
+    - Mesure et réduction de notre empreinte carbone

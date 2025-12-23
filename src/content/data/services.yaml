@@ -1,13 +1,13 @@
 ---
-- title: Développement web
-  content: Votre application grand public ou à usage interne, développée sur-mesure.
-  icon: "/icons/development.svg"
-- title: 'Site vitrine '
-  content: Présentez votre entreprise et vos produits au grand public
-  icon: "/icons/web.svg"
-- title: 'E-commerce '
-  content: Vendez vos produits en service via une interface intuitive, fiable et sûre
-  icon: "/icons/ecommerce.svg"
-- title: 'Autres ? '
-  content: Vous avez une idée de développement de projet ? Contactez-nous
+- title: Conception & Conseil
+  content: Nous vous accompagnons dans la définition de vos besoins et la conception de solutions adaptées à vos enjeux. Analyse, cadrage, architecture technique et conseil stratégique.
   icon: "/icons/idea.svg"
+- title: Design
+  content: Création d'interfaces utilisateur intuitives et accessibles. UX/UI design, maquettage, identité visuelle et design system pour des expériences numériques de qualité.
+  icon: "/icons/web.svg"
+- title: Développement
+  content: Développement sur-mesure d'applications web, sites vitrines, plateformes métier et outils numériques. Technologies modernes, code de qualité et solutions évolutives.
+  icon: "/icons/development.svg"
+- title: Maintenance & Hébergement
+  content: Suivi technique, évolutions fonctionnelles, corrections et hébergement éco-responsable. Nous assurons la pérennité et la performance de vos projets dans le temps.
+  icon: "/icons/ecommerce.svg"

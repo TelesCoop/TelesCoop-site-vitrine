@@ -15,7 +15,7 @@ projectStack:
   - Airtable
   - Stripe
 projectResume: Outil de gestion des réparations des objets
-projectDuration: 10
+projectDuration: '10'
 projectDurationUnit: ''
 projectLink: ''
 projectGit: ''

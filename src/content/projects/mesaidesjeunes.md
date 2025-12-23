@@ -14,7 +14,7 @@ projectStack:
   - NetlifyCMS
   - NextJS pour la partie statistique
 projectResume: Trouver en 5 minutes les aides auxquelles les jeunes ont le droit
-projectDuration: 200
+projectDuration: '200'
 projectDurationUnit: ''
 projectLink: https://www.1jeune1solution.gouv.fr/mes-aides
 projectGit: https://github.com/betagouv/aides-jeunes

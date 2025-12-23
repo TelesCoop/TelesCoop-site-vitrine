@@ -12,7 +12,7 @@ projectStack:
   - 11ty
   - iRaiser
 projectResume: Site pour la campagne de dons annuelle
-projectDuration: 12
+projectDuration: '12'
 projectDurationUnit: ''
 projectLink: https://agissons.msf.fr/
 projectGit: ''
