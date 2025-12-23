@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { getCollection, getEntry } from 'astro:content';
+
+const projectsCollection = await getCollection('projects', ({ data }) => !data.draft);
+const categories = await getEntry('data', 'categories');
+
+const projectsData = projectsCollection.map(p => ({ ...p.data, slug: p.slug, content: p.body }));
+const categoriesData = categories?.data || {};
+
+const title = 'Nos projets';
+const description = 'Les projets que nous avons fièrement réalisés.';
+const top = 'Nous nous adaptons aux besoins du client et le conseillons au mieux en respectant nos valeurs. Nos réalisations peuvent aller du petit projet utile et amovible à des structures plus complexes.';
+
+const projectCategories = Object.entries(categoriesData)
+  .filter(([_, cat]: [string, any]) => cat.type === 'project')
+  .map(([key, cat]: [string, any]) => ({ key, ...cat }));
+
+function getCategoryColor(colorClass: string) {
+  const colorMap: Record<string, string> = {
+    'grey': 'bg-gray-600',
+    'orange': 'bg-accent-orange',
+    'yellow': 'bg-accent-yellow',
+    'danger': 'bg-red-600',
+    'info': 'bg-blue-600',
+    'success': 'bg-green-600',
+    'blue': 'bg-accent-blue',
+  };
+  return colorMap[colorClass] || 'bg-gray-600';
+}
+
+function slugify(text: string) {
+  return text.toString().toLowerCase().trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-');
+}
+---
+
+<Layout title={title} description={description}>
+  <Header slot="header" />
+
+  <div class="container mx-auto px-4 py-16 mt-16">
+    <div class="text-center mb-12">
+      <img
+        src="/img/svg/illustration-projet.svg"
+        class="md:hidden mx-auto mb-6"
+        alt=""
+        style="height: 120px"
+      />
+      <h1 class="font-code text-4xl md:text-5xl mb-6">{title}</h1>
+      <p class="text-center text-lg text-gray-700 max-w-3xl mx-auto">
+        {top}
+      </p>
+    </div>
+
+    <!-- Filters -->
+    <div class="border-t border-b border-gray-200 py-6 my-8">
+      <div class="flex flex-col md:flex-row gap-6">
+        <div class="md:w-1/4">
+          <h2 class="font-code text-xl font-semibold">Filtres</h2>
+        </div>
+        <div class="md:w-3/4">
+          <h3 class="font-code text-sm mb-3 text-gray-600">Types de projet</h3>
+          <div class="flex flex-wrap gap-2 mb-4">
+            {projectCategories.map((category: any) => (
+              <button
+                class={`px-4 py-2 rounded-full text-sm font-medium transition-all filter-btn ${getCategoryColor(category.colorClass)} ${category.textWhite ? 'text-white' : 'text-black'} opacity-50 hover:opacity-100`}
+                data-category={slugify(category.name)}
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
+          <button
+            id="reset-filters"
+            class="px-4 py-2 bg-black text-white rounded-lg text-sm hover:bg-gray-800 transition-colors"
+          >
+            Réinitialiser
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12" id="projects-container">
+      {projectsData.map((project: any) => (
+        <ProjectCard project={project} categories={categoriesData} />
+      ))}
+    </div>
+
+    <p class="text-center mt-12 italic text-gray-600">
+      Et bien d'autres projets...
+    </p>
+  </div>
+
+  <Footer slot="footer" pageWeight={130} />
+</Layout>
+
+<script>
+  let activeFilters = new Set<string>();
+
+  function updateProjects() {
+    const cards = document.querySelectorAll('.project-card');
+
+    cards.forEach((card) => {
+      const cardCategories = (card.getAttribute('data-categories') || '').split(' ').filter(Boolean);
+
+      if (activeFilters.size === 0) {
+        (card as HTMLElement).style.display = 'block';
+      } else {
+        const hasActiveCategory = cardCategories.some(cat => activeFilters.has(cat));
+        (card as HTMLElement).style.display = hasActiveCategory ? 'block' : 'none';
+      }
+    });
+  }
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      const category = target.getAttribute('data-category');
+
+      if (category) {
+        if (activeFilters.has(category)) {
+          activeFilters.delete(category);
+          target.classList.add('opacity-50');
+          target.classList.remove('opacity-100');
+        } else {
+          activeFilters.add(category);
+          target.classList.remove('opacity-50');
+          target.classList.add('opacity-100');
+        }
+
+        updateProjects();
+      }
+    });
+  });
+
+  document.getElementById('reset-filters')?.addEventListener('click', () => {
+    activeFilters.clear();
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.classList.add('opacity-50');
+      btn.classList.remove('opacity-100');
+    });
+    updateProjects();
+  });
+</script>

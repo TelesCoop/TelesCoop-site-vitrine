@@ -1,0 +1,74 @@
+---
+interface Props {
+  article: {
+    title: string;
+    date: string;
+    readTime: number;
+    excerpt: string;
+    categories?: string[];
+  };
+  categories?: Record<string, any>;
+}
+
+const { article, categories } = Astro.props;
+
+function slugify(text: string) {
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-');
+}
+
+function getCategoryColor(categoryName: string) {
+  const category = categories?.[categoryName];
+  const colorMap: Record<string, string> = {
+    'grey': 'bg-gray-600',
+    'orange': 'bg-accent-orange',
+    'yellow': 'bg-accent-yellow',
+    'danger': 'bg-red-600',
+    'info': 'bg-blue-600',
+    'success': 'bg-green-600',
+    'blue': 'bg-accent-blue',
+  };
+  return colorMap[category?.colorClass] || 'bg-gray-600';
+}
+
+function getCategoryTextColor(categoryName: string) {
+  const category = categories?.[categoryName];
+  return category?.textWhite ? 'text-white' : 'text-black';
+}
+
+const formattedDate = new Date(article.date).toLocaleDateString('fr-FR');
+---
+
+<a
+  href={`/blog/${slugify(article.title)}/`}
+  class="block group relative bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-gray-400 transition-all hover:shadow-lg"
+>
+  <div class="flex flex-col h-full text-center">
+    <h3 class="font-code text-xl mb-3 group-hover:text-accent-blue transition-colors">
+      {article.title}
+    </h3>
+
+    <div class="text-sm text-gray-600 mb-3">
+      <p>{formattedDate} · {article.readTime} min</p>
+    </div>
+
+    {article.categories && article.categories.length > 0 && (
+      <div class="flex flex-wrap gap-2 justify-center mb-4">
+        {article.categories.map((cat) => (
+          <span
+            class={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(cat)} ${getCategoryTextColor(cat)}`}
+          >
+            {categories?.[cat]?.name || cat}
+          </span>
+        ))}
+      </div>
+    )}
+
+    <p class="mt-auto text-gray-700">{article.excerpt}</p>
+  </div>
+</a>

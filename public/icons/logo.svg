@@ -1,0 +1,30 @@
+<svg width="100%" viewBox="0 0 260 48" xmlns="http://www.w3.org/2000/svg" fill="none">
+
+    <!-- Symbole coopératif -->
+    <defs>
+        <mask id="coop-mask">
+            <circle cx="24" cy="24" r="22" fill="white"/>
+        </mask>
+    </defs>
+
+    <g mask="url(#coop-mask)">
+        <!-- lignes collectives / flux -->
+        <path d="M-4 14 C10 6, 22 6, 52 22" stroke="currentColor" stroke-width="3"/>
+        <path d="M-4 24 C14 18, 30 20, 52 30" stroke="currentColor" stroke-width="3"/>
+        <path d="M-4 34 C12 40, 28 40, 52 26" stroke="currentColor" stroke-width="3"/>
+    </g>
+
+    <!-- contour cercle -->
+    <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2" fill="none"/>
+
+    <!-- Logotype -->
+    <text x="64" y="31"
+          fill="currentColor"
+          font-size="22"
+          font-family="Inter, Helvetica, Arial, sans-serif"
+          font-weight="400"
+          letter-spacing="0.2">
+        <tspan font-weight="400">T</tspan>eles<tspan font-weight="600">C</tspan>oop
+    </text>
+
+</svg>

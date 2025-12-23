@@ -1,0 +1,67 @@
+---
+interface Props {
+  pageWeight?: number;
+}
+
+const { pageWeight } = Astro.props;
+---
+
+<footer class="bg-white border-t border-gray-200">
+  <!-- Decorative top section (desktop only) -->
+  <div class="hidden md:flex justify-end border-b border-gray-200">
+    <div class="mr-20">
+      <img src="/img/svg/bottom.svg" alt="" />
+    </div>
+  </div>
+
+  <!-- Main footer content -->
+  <div class="border-b border-gray-200 py-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <!-- Logo and tagline -->
+        <div class="md:col-span-9">
+          <div class="flex flex-col items-center gap-4 px-3">
+            <img src="/img/svg/logo.svg" alt="TelesCoop" class="h-12" />
+            <p class="text-center text-gray-700">Coopérative de développement pour des projets engagés</p>
+          </div>
+        </div>
+
+        <!-- Legal links -->
+        <div class="md:col-span-3 text-center md:text-right">
+          <p class="px-3">
+            <a href="/mentions-legales" class="hover:text-accent-blue transition-colors">Mentions légales</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom section -->
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 py-6">
+      <!-- Credits -->
+      <div class="md:col-span-3">
+        <p class="text-xs px-3 text-gray-600">
+          Direction artistique et maquettes par
+          <a
+            href="https://www.lacooperativedesinternets.fr/"
+            class="hover:text-accent-blue transition-colors"
+          >
+            La Coopérative des Internets
+          </a>
+        </p>
+      </div>
+
+      <!-- Eco-conception info -->
+      <div class="md:col-span-9 text-center md:text-right">
+        <div class="px-3">
+          <p class="font-bold font-code">Ce site internet est écoconçu</p>
+          <p class="text-sm text-gray-600">
+            Il vise à réduire son impact environnemental.
+            {pageWeight && <span>Poids de la page : ~{pageWeight}ko</span>}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

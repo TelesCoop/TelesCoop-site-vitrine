@@ -1,0 +1,154 @@
+local_backend: true
+backend:
+  name: github
+  repo: TelesCoop/TelesCoop-site-vitrine
+  branch: main
+  squash_merges: true
+  base_url: https://gateway.telescoop.fr
+  auth_endpoint: /github/auth
+
+media_folder: 'public/img/media'
+public_folder: '/img/media'
+
+slug:
+  encoding: 'ascii'
+  clean_accents: true
+  sanitize_replacement: '-'
+
+collections:
+  # Collection Blog - Fichiers Markdown
+  - name: 'blog'
+    label: 'Articles de blog'
+    folder: 'src/content/blog'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Titre', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime', format: 'YYYY-MM-DD' }
+      - { label: 'Extrait', name: 'excerpt', widget: 'text' }
+      - {
+          label: 'Catégories',
+          name: 'categories',
+          widget: 'list',
+          required: false,
+          field: { label: 'Catégorie', name: 'category', widget: 'string' }
+        }
+      - { label: 'Temps de lecture (min)', name: 'readTime', widget: 'number', value_type: 'int', min: 1 }
+      - { label: 'Brouillon', name: 'draft', widget: 'boolean', default: false, required: false }
+      - { label: 'Contenu', name: 'body', widget: 'markdown' }
+
+  # Collection Projets - Fichiers Markdown
+  - name: 'projects'
+    label: 'Projets'
+    folder: 'src/content/projects'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Titre', name: 'title', widget: 'string' }
+      - {
+          label: 'Catégories',
+          name: 'categories',
+          widget: 'select',
+          multiple: true,
+          required: false,
+          options: [
+            'outil métier',
+            'service public',
+            'cartographie',
+            'open-source',
+            'gestion de contenu',
+            'site vitrine',
+            'e-commerce'
+          ]
+        }
+      - {
+          label: 'Tags',
+          name: 'tags',
+          widget: 'select',
+          multiple: true,
+          required: false,
+          options: [
+            'intégration web',
+            'développement web',
+            'design',
+            'gestion de projet',
+            'écologie',
+            'social',
+            'sensibilisation',
+            'cartographie',
+            'SIG',
+            'Géomatique',
+            'association',
+            'communication'
+          ]
+        }
+      - { label: 'Nom du client', name: 'clientName', widget: 'string', required: false }
+      - { label: 'Description du client', name: 'clientDescription', widget: 'text', required: false }
+      - {
+          label: 'Stack technique',
+          name: 'projectStack',
+          widget: 'list',
+          required: false,
+          field: { label: 'Technologie', name: 'tech', widget: 'string' }
+        }
+      - { label: 'Résumé du projet', name: 'projectResume', widget: 'text' }
+      - { label: 'Durée du projet', name: 'projectDuration', widget: 'string', required: false }
+      - { label: 'Unité de durée', name: 'projectDurationUnit', widget: 'string', required: false, hint: 'Ex: jours, mois, ans' }
+      - { label: 'Lien du projet', name: 'projectLink', widget: 'string', required: false }
+      - { label: 'Lien Git', name: 'projectGit', widget: 'string', required: false }
+      - {
+          label: 'Statut',
+          name: 'projectStatus',
+          widget: 'select',
+          options: ['En cours', 'Terminé'],
+          default: 'En cours'
+        }
+      - { label: 'Date de fin', name: 'projectEnd', widget: 'string', required: false }
+      - { label: 'Image du projet', name: 'projectThumbnail', widget: 'image', required: false }
+      - { label: "Alt de l'image", name: 'projectThumbnailAlt', widget: 'string', required: false }
+      - { label: 'Témoignage', name: 'testimony', widget: 'text', required: false }
+      - { label: 'Brouillon', name: 'draft', widget: 'boolean', default: false, required: false }
+      - { label: 'Description détaillée', name: 'body', widget: 'markdown' }
+
+  # Collection Équipe - Fichiers Markdown
+  - name: 'team'
+    label: 'Équipe'
+    folder: 'src/content/team'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Nom', name: 'name', widget: 'string' }
+      - { label: 'Titre/Poste', name: 'title', widget: 'string' }
+      - { label: 'Photo', name: 'photo', widget: 'image', required: false }
+      - { label: "Ordre d'affichage", name: 'order', widget: 'number', value_type: 'int', default: 0, min: 0 }
+      - { label: 'Brouillon', name: 'draft', widget: 'boolean', default: false, required: false }
+      - { label: 'Bio', name: 'body', widget: 'markdown' }
+
+  # Collections YAML (configuration)
+  - name: 'clients'
+    label: 'Témoignages Clients'
+    files:
+      - label: 'Témoignages Clients'
+        name: 'clients'
+        file: 'src/content/data/clients.yaml'
+        fields:
+          - label: 'Témoignages'
+            name: 'clients'
+            widget: 'list'
+            fields:
+              - { label: 'Nom du client/organisation', name: 'name', widget: 'string' }
+              - { label: 'Nom de la personne', name: 'client', widget: 'string' }
+              - { label: 'Poste', name: 'client_poste', widget: 'string', required: false }
+              - { label: 'Logo', name: 'logo', widget: 'image', required: false }
+              - { label: 'Témoignage', name: 'testimonial', widget: 'text' }
+              - { label: 'Couleur de bordure', name: 'borderColor', widget: 'string', default: '#ff8714' }
+
+  - name: 'home'
+    label: "Page d'accueil"
+    files:
+      - label: "Page d'accueil"
+        name: 'home'
+        file: 'src/content/data/home.yaml'
+        fields:
+          - { label: 'Tagline', name: 'tagline', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'text' }

@@ -1,0 +1,54 @@
+---
+import { getEntry } from 'astro:content';
+
+const data404 = await getEntry('data', '404');
+const metadata = await getEntry('data', 'metadata');
+
+const title = data404?.data?.title || 'Page introuvable';
+const metadataData = metadata?.data || {};
+---
+
+<!DOCTYPE html>
+<html lang="fr" class="overflow-hidden">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={metadataData.description} />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="/img/logo_square.png"
+    />
+
+    <!-- Open graph protocol -->
+    <meta property="og:title" content={metadataData.title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://telescoop.fr/" />
+    <meta property="og:image" content="http://telescoop.fr/img/logo.svg" />
+    <meta property="og:description" content={metadataData.description} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+  </head>
+
+  <body>
+    <section
+      class="min-h-screen flex items-center justify-center bg-cover bg-center"
+      style="background-image: url(/img/galaxy.jpg);"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-5xl md:text-6xl font-light text-white mb-6">
+          {title}
+        </h1>
+        <h2 class="text-xl md:text-2xl text-white">
+          Recadrez votre Telescoop,{' '}
+          <a href="/" class="underline hover:text-accent-blue transition-colors">
+            Retourner sur l'accueil
+          </a>
+        </h2>
+      </div>
+    </section>
+  </body>
+</html>

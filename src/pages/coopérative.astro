@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ValueCard from '../components/ValueCard.astro';
+import { getEntry } from 'astro:content';
+
+const values = await getEntry('data', 'values');
+const valuesData = values?.data || [];
+
+const title = 'La coopérative';
+const description = 'La coopérative TelesCoop et ses particularités.';
+---
+
+<Layout title={title} description={description}>
+  <Header slot="header" />
+
+  <div class="container mx-auto px-4 py-16 mt-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
+      <h1 class="lg:col-span-4 text-4xl md:text-5xl font-light text-accent-orange">
+        La coopérative
+      </h1>
+      <div class="lg:col-span-8 border-l-4 border-gray-200 pl-6">
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Nous nous sommes donné une mission d'utilité publique et aspirons à
+          travailler sur des projets à impacts positifs. Convaincu·e·s que les
+          projets numériques développés de manière agile par des experts doivent
+          être accessibles à tous, nous collaborons avec une grande diversité
+          d'acteurs pour les aider à accroître leur impact dans leur domaine
+          d'activité respectif. Cette diversité inclut des associations, des
+          entreprises (des TPE aux grands groupes) ainsi que des collectivités
+          locales et des institutions publiques.
+        </p>
+      </div>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-3xl font-light mb-8">Notre fonctionnement</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {valuesData.map((value: any) => (
+          <ValueCard
+            title={value.name}
+            description={value.description}
+            src={value.src}
+          />
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <Footer slot="footer" pageWeight={80} />
+</Layout>

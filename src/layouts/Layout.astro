@@ -1,0 +1,73 @@
+---
+import { getEntry } from 'astro:content';
+
+interface Props {
+  title?: string;
+  description?: string;
+  hideLogo?: boolean;
+}
+
+const { title, description, hideLogo = false } = Astro.props;
+const metadata = await getEntry('data', 'metadata');
+const metadataData = metadata?.data || {};
+
+const pageTitle = title ? `TelesCoop - ${title}` : metadataData.title;
+const pageDescription = description || metadataData.description;
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="/img/logo_square.png"
+    />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta
+      name="msapplication-config"
+      content="/img/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Open graph protocol (Facebook) -->
+    <meta property="og:title" content={metadataData.title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://telescoop.fr/" />
+    <meta property="og:image" content="http://telescoop.fr/img/logo.svg" />
+    <meta property="og:description" content={metadataData.description} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={metadataData.title} />
+    <meta name="twitter:description" content={metadataData.description} />
+    <meta name="twitter:image" content="http://telescoop.fr/img/logo.svg" />
+
+    <script data-domain="telescoop.fr" src="/js/telescoop.js"></script>
+    <script
+      defer
+      data-domain="telescoop.fr"
+      src="https://plausible.io/js/plausible.js"
+    ></script>
+  </head>
+
+  <body>
+    <slot name="header" />
+    <div>
+      <slot />
+    </div>
+    <slot name="footer" />
+  </body>
+</html>

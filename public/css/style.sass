@@ -1,0 +1,222 @@
+@import "../node_modules/bulma/sass/utilities/initial-variables"
+@import "../node_modules/bulma/sass/utilities/derived-variables.sass"
+
+$roboto: 'Roboto', serif
+
+// Set your brand colors
+$primary: $red
+$text: $black
+$beige: #FBF8EE
+$beige-bis: #fdf6e6
+$beige-ter: #fff9e5
+$yellow: #FFCD4E
+$green: #60E093
+$orange: #FF5631
+$orange-light: rgba(255, 86, 49, 0.1)
+$blue: #005281
+$grey: #C8C7C5
+// $colors: ("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert, $primary-light, $primary-dark))
+$beige-invert: findColorInvert($beige)
+$scheme-main: $beige
+$scheme-main-bis: $beige-bis
+$scheme-main-ter: $beige-ter
+$background: $beige
+@import "../node_modules/bulma/sass/utilities/derived-variables"
+$addColors: ("beige":($beige, $beige-invert), "orange": ($orange, $orange-invert), "green": ($green, $green-invert), "yellow": ($yellow, $yellow-invert), "blue": ($blue, $blue-invert))
+$colors: map-merge($colors, $addColors)
+$grey-200: #C8C7C5
+
+// Update Bulma's global variables
+$family-sans-serif: $roboto
+$family-serif: $roboto
+$family-monospace: ui-monospace
+$body-family: $family-sans-serif
+$body-size: 16px
+$body-weight: 400
+$link: $text
+
+$gap-sizes: 1, 2, 3, 4, 5, 6, 8, 9, 12, 16, 24, 32, 40, 48, 56
+
+@each $size in $gap-sizes
+  .gap-#{$size}
+    gap: $size + em
+  .left-#{$size}
+    left: $size + em
+
+$mobile-xs: 420px !default
+$mobile-md: 480px !default
+$mobile-lg: 600px !default
+
+
+@mixin mobile-xs
+  @media screen and (max-width: $mobile-md - 1), print
+    @content
+
+@mixin mobile-md
+  @media screen and (min-width: $mobile-md) and (max-width: $mobile-lg), print
+    @content
+
+@mixin mobile-lg
+  @media screen and (min-width: $mobile-lg), print
+    @content
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass"
+@import "../node_modules/bulma/sass/base/_all.sass"
+@import "../node_modules/bulma/sass/elements/button.sass"
+@import "../node_modules/bulma/sass/elements/title.sass"
+@import "../node_modules/bulma/sass/grid/columns"
+@import "../node_modules/bulma/sass/layout/section"
+@import "../node_modules/bulma/sass/helpers/typography.sass"
+@import "../node_modules/bulma/sass/helpers/flexbox.sass"
+@import "../node_modules/bulma/sass/helpers/spacing.sass"
+@import "../node_modules/bulma/sass/helpers/color.sass"
+@import "../node_modules/bulma/sass/helpers/visibility.sass"
+@import "../node_modules/bulma/sass/helpers/visibility.sass"
+@import "../node_modules/bulma/sass/components/navbar.sass"
+@import "../node_modules/bulma/sass/elements/container"
+
+// index.html
+@import "./wrapper.sass"
+@import "./intro.sass"
+@import "./cooperative.sass"
+@import "./page-projets"
+@import "./page-projet"
+@import "./blog"
+
+// Elements
+@import "./buttons.sass"
+@import "./card.sass"
+@import "./footer"
+@import "./header"
+@import "tag-and-category"
+
+.after-title
+  position: relative
+  bottom: 0.5rem
+  display: inline-block
+  //margin-bottom: -0.5rem
+body
+  font-size: 18px
+p
+  font-family: $family-sans-serif
+  line-height: 2rem
+h1
+  font-family: $family-code
+  font-size: 2rem
+  font-weight: 700
+  @include mobile-md
+    font-size: 3.125rem
+
+h2
+  font-family: $family-sans-serif
+  font-size: 2em
+  font-weight: 700
+
+h3
+  font-family: $family-serif
+  font-size: 1.25em
+  font-weight: 700
+  line-height: 1.5em
+.overflow-y-scroll
+  overflow-y: scroll
+.w-100
+  width: 100%
+.min-h-screen
+  min-height: 100vh
+
+.intro-heading
+  max-width: 960px
+  margin: 0 auto
+  position: relative
+  z-index: 99
+
+.has-font-code
+  font-family: $family-code
+
+.h-screen
+  min-height: 100vh
+
+.has-background-yellow
+  background: $yellow
+.has-background-green
+  background: $green
+.has-background-orange
+  background: $orange
+.has-background-blue
+  background: $blue
+
+.has-background-orange-light
+  background: rgba(255, 86, 49, 0.4)
+
+.navbar
+  z-index: 9999!important
+.navbar-item
+  font-weight: 700
+
+.layout
+  padding: 6rem 2rem
+  @include desktop
+    padding: 8rem 2rem
+
+.has-border-bottom-grey
+  border-bottom: 1px solid $grey-200
+
+.has-border-top-grey
+  border-top: 1px solid $grey-200
+
+.has-border-left-grey
+  border-left: 1px solid $grey-200
+
+.has-border-right-grey
+  border-right: 1px solid $grey-200
+
+.has-border-grey
+  border: 1px solid $grey-200
+
+a
+  text-decoration: underline
+
+.is-absolute
+  position: absolute
+
+.is-bold
+  font-weight: 700
+
+.is-semibold
+  font-weight: 500
+
+.row-reverse
+  flex-direction: row-reverse
+.is-relative
+  position: relative
+
+.top-0
+  top: 0
+
+.top--50
+  top: -50px
+
+.width-50
+  width: 50%
+
+.width-75
+  width: 75%
+.is-divider
+  display: block
+  position: relative
+  border-top: 0.1rem solid #dbdbdb
+  height: 0.1rem
+  margin: 2rem 0
+  text-align: center
+  .mt-auto
+    margin-top: auto
+
+.tag
+  border: 1px
+  border-radius: 99px
+  text-align: center
+  white-space: nowrap
+
+.z-index-1
+  z-index: 1

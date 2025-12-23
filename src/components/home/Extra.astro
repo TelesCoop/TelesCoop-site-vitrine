@@ -1,0 +1,64 @@
+---
+interface ExtraItem {
+  name: string;
+  src: string;
+  description: string;
+}
+
+interface Props {
+  extra: ExtraItem[];
+}
+
+const { extra } = Astro.props;
+---
+
+<section class="py-16 px-4 bg-gray-50">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Text content -->
+      <div class="space-y-6">
+        <div>
+          <span class="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+            Notre méthode
+          </span>
+        </div>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          En adoptant une approche agile, nous nous engageons à rester flexibles et
+          réactifs tout au long du processus de développement, en mettant
+          l'utilisateur·rice final·e au centre de notre réflexion. Nous nous
+          efforçons également de concevoir des solutions accessibles à tous·tes, en
+          intégrant dès le début des normes d'accessibilité pour garantir une
+          expérience utilisateur optimale pour chacun. La co-création avec nos
+          clients nous permet de comprendre en profondeur les besoins et les
+          objectifs afin de concevoir des solutions parfaitement adaptées. Enfin,
+          notre engagement envers l'éco-conception se traduit par une attention
+          particulière portée à la réduction de notre empreinte environnementale
+          tout au long du cycle de vie de nos produits.
+        </p>
+        <div class="flex justify-center lg:justify-start mt-6">
+          <a
+            href="mailto:contact@telescoop.fr"
+            class="inline-block bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors font-medium"
+          >
+            Contactez-nous
+          </a>
+        </div>
+      </div>
+
+      <!-- Cards grid -->
+      <div class="grid grid-cols-2 gap-4">
+        {extra.map((item) => (
+          <div class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+            <img
+              src={item.src}
+              alt={item.name}
+              class="w-24 h-24 mx-auto mb-4 object-contain"
+            />
+            <h3 class="font-semibold mb-2">{item.name}</h3>
+            <p class="text-sm text-gray-600">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

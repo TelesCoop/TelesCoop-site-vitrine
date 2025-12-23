@@ -1,0 +1,66 @@
+---
+interface Client {
+  name: string;
+  client: string;
+  client_poste?: string;
+  logo?: string;
+  testimonial: string;
+  borderColor: string;
+}
+
+interface Props {
+  clients: Client[];
+}
+
+const { clients } = Astro.props;
+---
+
+<section class="py-16 px-4">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-light mb-12">
+      Ce que nos clients disent de nous
+    </h2>
+
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      {clients.map((client) => (
+        <li
+          class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+          style={`border-top: 5px solid ${client.borderColor};`}
+        >
+          <div class="p-6 text-left flex flex-col gap-4">
+            {client.logo && (
+              <img
+                src={client.logo}
+                alt={client.name}
+                class="h-12 object-contain self-start"
+              />
+            )}
+            <p class="text-gray-700 italic leading-relaxed">
+              "{client.testimonial}"
+            </p>
+            <div class="mt-auto">
+              <p class="font-semibold text-black">{client.client}</p>
+              {client.client_poste && (
+                <p class="text-sm text-gray-600">{client.client_poste}</p>
+              )}
+              <p class="text-sm text-gray-500 mt-1">{client.name}</p>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ul>
+
+    <div class="flex flex-col items-center gap-4 mt-12">
+      <p class="text-lg">
+        Votre projet vous paraît cohérent avec nos valeurs ?
+        <span class="font-bold">Écrivez-nous !</span>
+      </p>
+      <a
+        href="mailto:contact@telescoop.fr"
+        class="inline-block bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors font-medium"
+      >
+        Contactez-nous
+      </a>
+    </div>
+  </div>
+</section>
