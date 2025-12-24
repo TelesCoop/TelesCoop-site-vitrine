@@ -20,7 +20,7 @@ projectDurationUnit: ''
 projectLink: ''
 projectGit: ''
 projectStatus: Terminé
-projectEnd: 07/2022
+projectEnd: '07/2022'
 projectThumbnail: ''
 projectThumbnailAlt: ''
 testimony: ''

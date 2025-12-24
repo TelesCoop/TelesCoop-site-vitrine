@@ -19,7 +19,7 @@ projectDurationUnit: ''
 projectLink: https://fragilite-numerique.fr/
 projectGit: ''
 projectStatus: Terminé
-projectEnd: 2022
+projectEnd: '2022'
 projectThumbnail: ../../img/projet/ifn.png
 projectThumbnailAlt: Capture d'écran du site de l'indice de fragilité numérique
 testimony: ''

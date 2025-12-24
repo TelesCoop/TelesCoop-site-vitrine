@@ -19,23 +19,9 @@ const { Content } = await article.render();
 const categories = await getEntry('data', 'categories');
 const categoriesData = categories?.data || {};
 
-function getCategoryColor(categoryName: string) {
+function getCategoryColorClass(categoryName: string) {
   const category = categoriesData[categoryName];
-  const colorMap: Record<string, string> = {
-    'grey': 'bg-gray-600',
-    'orange': 'bg-accent-orange',
-    'yellow': 'bg-accent-yellow',
-    'danger': 'bg-red-600',
-    'info': 'bg-blue-600',
-    'success': 'bg-green-600',
-    'blue': 'bg-accent-blue',
-  };
-  return colorMap[category?.colorClass] || 'bg-gray-600';
-}
-
-function getCategoryTextColor(categoryName: string) {
-  const category = categoriesData[categoryName];
-  return category?.textWhite ? 'text-white' : 'text-black';
+  return category?.colorClass || 'beige';
 }
 
 const formattedDate = new Date(data.date).toLocaleDateString('fr-FR', {
@@ -48,12 +34,12 @@ const formattedDate = new Date(data.date).toLocaleDateString('fr-FR', {
 <Layout title={data.title} description={data.excerpt}>
   <Header slot="header" />
 
-  <article class="container mx-auto px-4 py-16 mt-16 max-w-4xl">
+  <article class="container mx-auto px-4 py-16 mt-16 max-w-3xl">
     <!-- Header -->
     <header class="mb-12">
-      <h1 class="text-4xl md:text-5xl font-light mb-6">{data.title}</h1>
+      <h1 class="text-4xl md:text-5xl font-display mb-6">{data.title}</h1>
 
-      <div class="flex items-center gap-4 text-gray-600 mb-6">
+      <div class="flex items-center gap-4 text-black text-lg mb-6">
         <time datetime={data.date.toISOString()}>{formattedDate}</time>
         <span>•</span>
         <span>{data.readTime} min de lecture</span>
@@ -62,9 +48,7 @@ const formattedDate = new Date(data.date).toLocaleDateString('fr-FR', {
       {data.categories && data.categories.length > 0 && (
         <div class="flex flex-wrap gap-2 mb-6">
           {data.categories.map((cat: string) => (
-            <span
-              class={`px-3 py-1 rounded-full text-sm font-medium ${getCategoryColor(cat)} ${getCategoryTextColor(cat)}`}
-            >
+            <span class="badge" data-color={getCategoryColorClass(cat)}>
               {categoriesData[cat]?.name || cat}
             </span>
           ))}
@@ -74,8 +58,8 @@ const formattedDate = new Date(data.date).toLocaleDateString('fr-FR', {
 
     <!-- Excerpt -->
     {data.excerpt && (
-      <div class="bg-gray-50 border-l-4 border-accent-blue p-6 mb-8">
-        <p class="text-lg text-gray-700 italic">{data.excerpt}</p>
+      <div class="border-l-4 border-red pl-6 mb-12">
+        <p class="text-xl text-black leading-loose italic">{data.excerpt}</p>
       </div>
     )}
 
@@ -85,8 +69,8 @@ const formattedDate = new Date(data.date).toLocaleDateString('fr-FR', {
     </div>
 
     <!-- Back link -->
-    <div class="mt-12 pt-8 border-t border-gray-200">
-      <a href="/blog" class="text-accent-blue hover:underline">
+    <div class="mt-12 pt-8 border-t-2 border-black/10">
+      <a href="/blog" class="btn inline-block py-3">
         ← Retour au blog
       </a>
     </div>
@@ -106,7 +90,7 @@ const formattedDate = new Date(data.date).toLocaleDateString('fr-FR', {
   }
 
   .prose :global(p) {
-    @apply mb-4 leading-relaxed text-gray-700;
+    @apply mb-4 leading-relaxed text-black;
   }
 
   .prose :global(ul), .prose :global(ol) {
@@ -130,7 +114,7 @@ const formattedDate = new Date(data.date).toLocaleDateString('fr-FR', {
   }
 
   .prose :global(blockquote) {
-    @apply border-l-4 border-gray-300 pl-4 italic text-gray-700 my-6;
+    @apply border-l-4 border-gray-300 pl-4 italic text-black my-6;
   }
 
   .prose :global(code) {

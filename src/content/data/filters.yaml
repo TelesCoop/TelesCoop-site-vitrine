@@ -15,7 +15,7 @@
   color: "#FFCD4E"
 - name: Site vitrine
   slug: "website"
-  color: "#005281"
+  color: "#60E093"
 - name: Traitement de données
   slug: "data"
-  color: "#60E093"
+  color: "#A8CFEE"

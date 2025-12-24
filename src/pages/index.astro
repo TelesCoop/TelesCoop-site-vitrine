@@ -5,7 +5,6 @@ import Footer from '../components/Footer.astro';
 import About from '../components/home/About.astro';
 import Skills from '../components/home/Skills.astro';
 import Extra from '../components/home/Extra.astro';
-import Engagements from '../components/home/Engagements.astro';
 import Measures from '../components/home/Measures.astro';
 import Clients from '../components/home/Clients.astro';
 import { getEntry } from 'astro:content';
@@ -32,21 +31,20 @@ const clientsData = clients?.data || [];
       <img src="/icons/logo.svg" alt="TelesCoop - Accueil" class="max-w-xs mx-auto" />
     </a>
 
-    <h1 class="text-3xl md:text-5xl lg:text-6xl font-light leading-tight z-10 max-w-4xl">
+    <h1 class="text-3xl md:text-5xl lg:text-7xl font-light leading-tight z-10 max-w-6xl">
       Coopérative de développement pour des
       <span class="inline-block bg-black text-beige px-3 py-1 mt-2">
         projets engagés
       </span>
     </h1>
 
-    <span class="text-xl md:text-2xl text-gray-700 z-10 max-w-2xl">
+    <span class="text-2xl md:text-2xl text-black z-10 max-w-2xl">
       {homeData.tagline}
     </span>
-
     <div class="z-10 mt-4">
       <a
         href="mailto:contact@telescoop.fr"
-        class="inline-block bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors font-medium"
+        class="btn inline-block py-3 text-lg"
       >
         Contactez-nous
       </a>
@@ -71,22 +69,29 @@ const clientsData = clients?.data || [];
   </div>
 
   <!-- About Section -->
-  <About />
+  <div class="bg-yellow py-16">
+    <About />
+  </div>
 
   <!-- Skills Section -->
-  <Skills skills={skillsData} />
+  <div class="py-16">
+    <Skills skills={skillsData} />
+  </div>
 
   <!-- Extra Section -->
-  <Extra extra={extraData} />
-
-  <!-- Engagements Section -->
-  <Engagements />
+  <div class="bg-green py-16">
+    <Extra extra={extraData} />
+  </div>
 
   <!-- Measures Section -->
-  <Measures measures={measuresData} />
+  <div class="bg-yellow py-16">
+    <Measures measures={measuresData} />
+  </div>
 
   <!-- Clients Section -->
-  <Clients clients={clientsData} />
+  <div class="py-16">
+    <Clients clients={clientsData} />
+  </div>
 
   <Footer slot="footer" />
 </Layout>

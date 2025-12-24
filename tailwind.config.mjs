@@ -13,11 +13,14 @@ export default {
         },
         accent: {
           blue: '#0070F3',
-          green: '#00B37E',
+          green: '#A8CFEE',
           orange: '#F59E0B',
           yellow: '#FFC40D',
         },
-        beige: '#FAFAFA',
+        beige: '#ece6d3',
+        yellow: '#FBD26B',
+        green: '#A8CFEE',
+        red: '#E8381C',
         gray: {
           50: '#FAFAFA',
           100: '#F5F5F5',
@@ -32,8 +35,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
-        code: ['monospace'],
+        sans: ['Barlow Condensed', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Anton', 'Impact', 'sans-serif'],
       },
       spacing: {
         '128': '32rem',

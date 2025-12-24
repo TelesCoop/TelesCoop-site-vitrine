@@ -13,17 +13,17 @@ interface Props {
 const { skills } = Astro.props;
 ---
 
-<section class="py-16 px-4 bg-gray-50">
+<section class="px-4">
   <div class="container mx-auto">
     <div class="mb-12">
-      <span class="inline-block bg-white px-4 py-2 rounded-full text-sm font-medium">
+      <span class="tag">
         Notre offre
       </span>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {skills.map((skill, index) => (
-        <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg">
+        <div class="card flex-col items-center text-center p-6">
           <img
             src={skill.src}
             alt={skill.name}
@@ -32,10 +32,10 @@ const { skills } = Astro.props;
           <span class="text-5xl font-bold text-accent-orange mb-2">
             {index + 1}
           </span>
-          <h3 class="text-sm uppercase font-bold mb-3">
+          <h3 class="text-2xl uppercase font-normal mb-3">
             {skill.name}
           </h3>
-          <p class="text-gray-700">{skill.description}</p>
+          <p class="text-black">{skill.description}</p>
         </div>
       ))}
     </div>

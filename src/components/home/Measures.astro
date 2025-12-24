@@ -11,21 +11,21 @@ interface Props {
 const { measures } = Astro.props;
 ---
 
-<section class="py-16 px-4">
+<section class="px-4">
   <div class="container mx-auto">
     <div class="mb-12">
-      <span class="inline-block bg-gray-100 px-4 py-2 rounded-full text-sm font-medium">
+      <span class="tag">
         Nos mesures d'impact
       </span>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {measures.map((measure) => (
-        <div class="flex flex-col p-6 text-center">
-          <span class="text-5xl md:text-6xl font-bold text-accent-orange mb-4">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+      {measures.map((measure, index) => (
+        <div class={`card flex-col p-6 text-center ${index % 2 === 0 ? 'rotate-left' : 'rotate-right'}`}>
+          <span class="w-full text-center text-5xl text-red mb-4 font-display">
             {measure.value}
           </span>
-          <span class="text-lg text-gray-700">
+          <span class="text-2xl font-semibold">
             {measure.description}
           </span>
         </div>

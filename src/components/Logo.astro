@@ -1,0 +1,34 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<a href="/" class={`logo ${className}`}>
+  TelesCoop
+</a>
+
+<style>
+  .logo {
+    font-family: "Anton", Impact, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: #000000;
+    margin: 0;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.2s;
+    -webkit-text-fill-color: unset;
+    padding: 5px 15px;
+    transform: rotate(-1deg);
+    @apply tracking-wider;
+  }
+
+  .logo:hover {
+    opacity: 0.8;
+  }
+</style>

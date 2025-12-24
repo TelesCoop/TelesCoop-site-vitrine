@@ -19,23 +19,9 @@ const { Content } = await project.render();
 const categories = await getEntry('data', 'categories');
 const categoriesData = categories?.data || {};
 
-function getCategoryColor(categoryName: string) {
+function getCategoryColorClass(categoryName: string) {
   const category = categoriesData[categoryName];
-  const colorMap: Record<string, string> = {
-    'grey': 'bg-gray-600',
-    'orange': 'bg-accent-orange',
-    'yellow': 'bg-accent-yellow',
-    'danger': 'bg-red-600',
-    'info': 'bg-blue-600',
-    'success': 'bg-green-600',
-    'blue': 'bg-accent-blue',
-  };
-  return colorMap[category?.colorClass] || 'bg-gray-600';
-}
-
-function getCategoryTextColor(categoryName: string) {
-  const category = categoriesData[categoryName];
-  return category?.textWhite ? 'text-white' : 'text-black';
+  return category?.colorClass || 'beige';
 }
 ---
 
@@ -50,9 +36,7 @@ function getCategoryTextColor(categoryName: string) {
       {data.categories && data.categories.length > 0 && (
         <div class="flex flex-wrap gap-2 mb-6">
           {data.categories.map((cat: string) => (
-            <span
-              class={`px-3 py-1 rounded-full text-sm font-medium ${getCategoryColor(cat)} ${getCategoryTextColor(cat)}`}
-            >
+            <span class="badge" data-color={getCategoryColorClass(cat)}>
               {categoriesData[cat]?.name || cat}
             </span>
           ))}
@@ -70,15 +54,15 @@ function getCategoryTextColor(categoryName: string) {
 
     <!-- Project Info -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-      <div class="md:col-span-2 space-y-6">
+      <div class="md:col-span-2 space-y-8">
         <div>
-          <h2 class="text-2xl font-semibold mb-4">Résumé</h2>
-          <p class="text-lg text-gray-700">{data.projectResume}</p>
+          <h2 class="text-2xl mb-4">Résumé</h2>
+          <p class="text-xl text-black">{data.projectResume}</p>
         </div>
 
         {body && (
           <div>
-            <h2 class="text-2xl font-semibold mb-4">Description</h2>
+            <h2 class="text-2xl mb-4">Description</h2>
             <div class="prose prose-lg max-w-none">
               <Content />
             </div>
@@ -86,9 +70,9 @@ function getCategoryTextColor(categoryName: string) {
         )}
 
         {data.testimony && (
-          <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-accent-blue">
-            <h3 class="font-semibold mb-2">Témoignage</h3>
-            <p class="italic text-gray-700">"{data.testimony}"</p>
+          <div class="card p-6 flex-col rotate-left">
+            <h3 class="text-xl font-semibold mb-2">Témoignage</h3>
+            <p class="text-xl text-black">"{data.testimony}"</p>
           </div>
         )}
       </div>
@@ -97,25 +81,25 @@ function getCategoryTextColor(categoryName: string) {
       <div class="space-y-6">
         {data.clientName && (
           <div>
-            <h3 class="font-semibold mb-2">Client</h3>
-            <p class="text-gray-700">{data.clientName}</p>
+            <h3 class="text-xl font-semibold mb-2">Client</h3>
+            <p class="text-black text-lg">{data.clientName}</p>
             {data.clientDescription && (
-              <p class="text-sm text-gray-600 mt-2">{data.clientDescription}</p>
+              <p class="text-base text-black mt-2">{data.clientDescription}</p>
             )}
           </div>
         )}
 
         {data.projectStatus && (
           <div>
-            <h3 class="font-semibold mb-2">Statut</h3>
-            <p class="text-gray-700">{data.projectStatus}</p>
+            <h3 class="text-xl font-semibold mb-2">Statut</h3>
+            <p class="text-black text-lg">{data.projectStatus}</p>
           </div>
         )}
 
         {data.projectDuration && (
           <div>
-            <h3 class="font-semibold mb-2">Durée</h3>
-            <p class="text-gray-700">
+            <h3 class="text-xl font-semibold mb-2">Durée</h3>
+            <p class="text-black text-lg">
               {data.projectDuration} {data.projectDurationUnit || ''}
             </p>
           </div>
@@ -123,10 +107,10 @@ function getCategoryTextColor(categoryName: string) {
 
         {data.projectStack && data.projectStack.length > 0 && (
           <div>
-            <h3 class="font-semibold mb-2">Technologies</h3>
+            <h3 class="text-xl font-semibold mb-2">Technologies</h3>
             <div class="flex flex-wrap gap-2">
               {data.projectStack.map((tech: string) => (
-                <span class="bg-gray-100 px-2 py-1 rounded text-sm">
+                <span class="badge">
                   {tech}
                 </span>
               ))}
@@ -136,16 +120,16 @@ function getCategoryTextColor(categoryName: string) {
 
         {(data.projectLink || data.projectGit) && (
           <div>
-            <h3 class="font-semibold mb-2">Liens</h3>
+            <h3 class="text-xl font-semibold mb-2">Liens</h3>
             <div class="space-y-2">
               {data.projectLink && (
                 <a
                   href={data.projectLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="block text-accent-blue hover:underline"
+                  class="btn block text-center py-2"
                 >
-                  Voir le projet →
+                  Voir le projet
                 </a>
               )}
               {data.projectGit && (
@@ -153,9 +137,9 @@ function getCategoryTextColor(categoryName: string) {
                   href={data.projectGit}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="block text-accent-blue hover:underline"
+                  class="btn block text-center py-2"
                 >
-                  Code source →
+                  Code source
                 </a>
               )}
             </div>
@@ -165,8 +149,8 @@ function getCategoryTextColor(categoryName: string) {
     </div>
 
     <!-- Back link -->
-    <div class="mt-12 pt-8 border-t border-gray-200">
-      <a href="/projets" class="text-accent-blue hover:underline">
+    <div class="mt-12 pt-8 ">
+      <a href="/projets" class="btn inline-block py-3">
         ← Retour aux projets
       </a>
     </div>

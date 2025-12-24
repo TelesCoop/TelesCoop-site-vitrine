@@ -18,10 +18,8 @@ projectResume: Ressources de travail pour les acteurs de la médiation numériqu
 projectDuration: '150'
 projectDurationUnit: ''
 projectLink: https://labase.anct.gouv.fr
-projectGit:
-  - https://github.com/SocieteNumerique/La-Base-frontend
-  - https://github.com/SocieteNumerique/La-Base-backend
-projectStatus: Terminé, toujours en cours d'amélioration
+projectGit: https://github.com/SocieteNumerique/La-Base-frontend
+projectStatus: En cours
 projectEnd: '2022'
 projectThumbnail: ''
 projectThumbnailAlt: ''
