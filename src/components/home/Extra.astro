@@ -18,7 +18,7 @@ const { extra } = Astro.props;
       <!-- Text content -->
       <div class="space-y-6">
         <div>
-          <span class="tag mb-6">
+          <span class="tag tag-yellow tag-xl mb-6">
             Notre méthode
           </span>
         </div>
@@ -38,7 +38,7 @@ const { extra } = Astro.props;
         <div class="flex justify-center lg:justify-start mt-6">
           <a
             href="mailto:contact@telescoop.fr"
-            class="btn inline-block py-3 text-lg"
+            class="btn btn-lg"
           >
             Contactez-nous
           </a>
@@ -55,7 +55,7 @@ const { extra } = Astro.props;
               class="w-24 h-24 mb-4 object-contain"
             />
             <h3 class="font-semibold mb-2">{item.name}</h3>
-            <p class="text-sm">{item.description}</p>
+            <p class="text-lg">{item.description}</p>
           </div>
         ))}
       </div>

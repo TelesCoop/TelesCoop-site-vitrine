@@ -11,16 +11,42 @@ export default {
         secondary: {
           DEFAULT: '#FFFFFF',
         },
-        accent: {
-          blue: '#0070F3',
-          green: '#A8CFEE',
-          orange: '#F59E0B',
-          yellow: '#FFC40D',
+        beige: {
+          DEFAULT: '#FFF9F0',
+          dark: '#C4B89E',
         },
-        beige: '#ece6d3',
-        yellow: '#FBD26B',
-        green: '#A8CFEE',
-        red: '#E8381C',
+        yellow: {
+          DEFAULT: '#FBD26B',
+          dark: '#B8922C',
+        },
+        orange: {
+          DEFAULT: '#F1722A',
+          dark: '#B82810',
+        },
+        green: {
+          DEFAULT: '#82E1A0',
+          dark: '#4CAF70',
+        },
+        blue: {
+          DEFAULT: '#A8CFEE',
+          dark: '#6B9DC8',
+        },
+        purple: {
+          DEFAULT: '#B4A7D6',
+          dark: '#8B7AB8',
+        },
+        pink: {
+          DEFAULT: '#FFB6C1',
+          dark: '#E08994',
+        },
+        coral: {
+          DEFAULT: '#FF9B85',
+          dark: '#E67A63',
+        },
+        peach: {
+          DEFAULT: '#FFBD9B',
+          dark: '#E69E7A',
+        },
         gray: {
           50: '#FAFAFA',
           100: '#F5F5F5',

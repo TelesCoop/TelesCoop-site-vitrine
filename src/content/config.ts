@@ -54,9 +54,24 @@ const teamCollection = defineCollection({
   }),
 });
 
+// Collection pour les témoignages en Markdown
+const testimonialsCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    name: z.string(),
+    client: z.string(),
+    client_poste: z.string().optional(),
+    logo: z.string().optional(),
+    borderColor: z.string().default('#ff8714'),
+    order: z.number().default(0),
+    draft: z.boolean().default(false),
+  }),
+});
+
 export const collections = {
   data: dataCollection,
   projects: projectsCollection,
   blog: blogCollection,
   team: teamCollection,
+  testimonials: testimonialsCollection,
 };

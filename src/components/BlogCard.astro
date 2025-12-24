@@ -22,23 +22,9 @@ function slugify(text: string) {
     .replace(/\-\-+/g, '-');
 }
 
-function getCategoryColor(categoryName: string) {
+function getCategoryColorClass(categoryName: string) {
   const category = categories?.[categoryName];
-  const colorMap: Record<string, string> = {
-    'grey': 'bg-gray-600',
-    'orange': 'bg-accent-orange',
-    'yellow': 'bg-accent-yellow',
-    'danger': 'bg-red-600',
-    'info': 'bg-blue-600',
-    'success': 'bg-green-600',
-    'blue': 'bg-accent-blue',
-  };
-  return colorMap[category?.colorClass] || 'bg-gray-600';
-}
-
-function getCategoryTextColor(categoryName: string) {
-  const category = categories?.[categoryName];
-  return category?.textWhite ? 'text-white' : 'text-black';
+  return category?.colorClass || 'beige';
 }
 
 const formattedDate = new Date(article.date).toLocaleDateString('fr-FR');
@@ -59,7 +45,7 @@ const formattedDate = new Date(article.date).toLocaleDateString('fr-FR');
   {article.categories && article.categories.length > 0 && (
     <div class="flex flex-wrap gap-2 mb-4">
       {article.categories.map((cat) => (
-        <span class="badge">
+        <span class="badge" data-color={getCategoryColorClass(cat)}>
           {categories?.[cat]?.name || cat}
         </span>
       ))}

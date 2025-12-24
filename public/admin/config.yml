@@ -124,24 +124,21 @@ collections:
       - { label: 'Brouillon', name: 'draft', widget: 'boolean', default: false, required: false }
       - { label: 'Bio', name: 'body', widget: 'markdown' }
 
-  # Collections YAML (configuration)
-  - name: 'clients'
+  # Collection Témoignages - Fichiers Markdown
+  - name: 'testimonials'
     label: 'Témoignages Clients'
-    files:
-      - label: 'Témoignages Clients'
-        name: 'clients'
-        file: 'src/content/data/clients.yaml'
-        fields:
-          - label: 'Témoignages'
-            name: 'clients'
-            widget: 'list'
-            fields:
-              - { label: 'Nom du client/organisation', name: 'name', widget: 'string' }
-              - { label: 'Nom de la personne', name: 'client', widget: 'string' }
-              - { label: 'Poste', name: 'client_poste', widget: 'string', required: false }
-              - { label: 'Logo', name: 'logo', widget: 'image', required: false }
-              - { label: 'Témoignage', name: 'testimonial', widget: 'text' }
-              - { label: 'Couleur de bordure', name: 'borderColor', widget: 'string', default: '#ff8714' }
+    folder: 'src/content/testimonials'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Nom du client/organisation', name: 'name', widget: 'string' }
+      - { label: 'Nom de la personne', name: 'client', widget: 'string' }
+      - { label: 'Poste', name: 'client_poste', widget: 'string', required: false }
+      - { label: 'Logo', name: 'logo', widget: 'image', required: false }
+      - { label: 'Couleur de bordure', name: 'borderColor', widget: 'string', default: '#ff8714' }
+      - { label: "Ordre d'affichage", name: 'order', widget: 'number', value_type: 'int', default: 0, min: 0 }
+      - { label: 'Brouillon', name: 'draft', widget: 'boolean', default: false, required: false }
+      - { label: 'Témoignage', name: 'body', widget: 'markdown' }
 
   - name: 'home'
     label: "Page d'accueil"

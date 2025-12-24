@@ -18,7 +18,7 @@ const { clients } = Astro.props;
 <section class="px-4">
   <div class="container mx-auto">
     <div class="text-center mb-12">
-      <span class="tag mb-6">Ce que nos clients disent de nous</span>
+      <span class="tag tag-purple tag-xl mb-6">Ce que nos clients disent de nous</span>
     </div>
 
     <div class="testimonials-wrapper">
@@ -34,6 +34,7 @@ const { clients } = Astro.props;
                   src={client.logo}
                   alt={client.name}
                   class="h-12 object-contain self-start"
+                  onerror="this.style.display='none'"
                 />
               )}
               <p class="font-medium text-2xl leading-relaxed">
@@ -41,7 +42,7 @@ const { clients } = Astro.props;
               </p>
               <div class="mt-auto">
                 <div class="flex items-center gap-4 mb-2">
-                  <p class="font-semibold text-black text-2xl">{client.client}, {client.client_poste}</p>
+                  <p class="font-semibold text-black text-2xl">{client.client}{client.client_poste && `, ${client.client_poste}`}</p>
 
                 </div>
 
@@ -68,7 +69,7 @@ const { clients } = Astro.props;
       </p>
       <a
         href="mailto:contact@telescoop.fr"
-        class="btn inline-block py-3 text-lg"
+        class="btn btn-lg"
       >
         Contactez-nous
       </a>

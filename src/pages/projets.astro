@@ -44,28 +44,43 @@ function slugify(text: string) {
       </p>
     </div>
 
-    <!-- Filters -->
+    <!-- Search and Filters -->
     <div class="border-t border-b border-gray-200 py-6 my-8">
       <div class="flex flex-col md:flex-row gap-6">
         <div class="md:w-1/4">
-          <h2 class="font-code text-xl font-semibold">Filtres</h2>
+          <h2 class="font-code text-xl font-semibold">Recherche & Filtres</h2>
         </div>
-        <div class="md:w-3/4">
-          <h3 class="font-code text-sm mb-3 text-black">Types de projet</h3>
-          <div class="flex flex-wrap gap-2 mb-4">
-            {projectCategories.map((category: any) => (
-              <button
-                class="filter-btn"
-                data-category={slugify(category.name)}
-                data-color={category.colorClass}
-              >
-                {category.name}
-              </button>
-            ))}
+        <div class="md:w-3/4 space-y-4">
+          <!-- Search -->
+          <div>
+            <label for="search-input" class="font-code text-sm mb-2 text-black block">Rechercher un projet</label>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Nom du projet, description..."
+              class="w-full px-4 py-2 border-2 border-black rounded-[10px] focus:outline-none focus:ring-2 focus:ring-orange"
+            />
           </div>
+
+          <!-- Category filters -->
+          <div>
+            <h3 class="font-code text-sm mb-3 text-black">Types de projet</h3>
+            <div class="flex flex-wrap gap-2 mb-4">
+              {projectCategories.map((category: any) => (
+                <button
+                  class="filter-btn"
+                  data-category={slugify(category.name)}
+                  data-color={category.colorClass}
+                >
+                  {category.name}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <button
             id="reset-filters"
-            class="btn py-2 text-md"
+            class="btn"
           >
             Réinitialiser
           </button>
@@ -85,27 +100,36 @@ function slugify(text: string) {
     </p>
   </div>
 
-  <Footer slot="footer" pageWeight={130} />
+  <Footer slot="footer" />
 </Layout>
 
 <script>
   let activeFilters = new Set<string>();
+  let searchQuery = '';
 
   function updateProjects() {
     const cards = document.querySelectorAll('.project-card');
 
     cards.forEach((card) => {
+      const cardElement = card as HTMLElement;
       const cardCategories = (card.getAttribute('data-categories') || '').split(' ').filter(Boolean);
+      const cardTitle = (card.getAttribute('data-title') || '').toLowerCase();
+      const cardDescription = (card.getAttribute('data-description') || '').toLowerCase();
 
-      if (activeFilters.size === 0) {
-        (card as HTMLElement).style.display = 'block';
-      } else {
-        const hasActiveCategory = cardCategories.some(cat => activeFilters.has(cat));
-        (card as HTMLElement).style.display = hasActiveCategory ? 'block' : 'none';
-      }
+      // Check category filter
+      const matchesCategory = activeFilters.size === 0 || cardCategories.some(cat => activeFilters.has(cat));
+
+      // Check search query
+      const matchesSearch = searchQuery === '' ||
+        cardTitle.includes(searchQuery.toLowerCase()) ||
+        cardDescription.includes(searchQuery.toLowerCase());
+
+      // Show only if matches both filters
+      cardElement.style.display = matchesCategory && matchesSearch ? 'block' : 'none';
     });
   }
 
+  // Category filters
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const target = e.target as HTMLElement;
@@ -125,8 +149,18 @@ function slugify(text: string) {
     });
   });
 
+  // Search input
+  const searchInput = document.getElementById('search-input') as HTMLInputElement;
+  searchInput?.addEventListener('input', (e) => {
+    searchQuery = (e.target as HTMLInputElement).value;
+    updateProjects();
+  });
+
+  // Reset filters
   document.getElementById('reset-filters')?.addEventListener('click', () => {
     activeFilters.clear();
+    searchQuery = '';
+    searchInput.value = '';
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.classList.remove('active');
     });

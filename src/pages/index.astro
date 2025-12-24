@@ -7,90 +7,83 @@ import Skills from '../components/home/Skills.astro';
 import Extra from '../components/home/Extra.astro';
 import Measures from '../components/home/Measures.astro';
 import Clients from '../components/home/Clients.astro';
-import { getEntry } from 'astro:content';
+import { getEntry, getCollection } from 'astro:content';
 
 const home = await getEntry('data', 'home');
 const skills = await getEntry('data', 'skills');
 const extra = await getEntry('data', 'extra');
 const measures = await getEntry('data', 'measures');
-const clients = await getEntry('data', 'clients');
+
+const testimonialsCollection = await getCollection('testimonials', ({ data }) => !data.draft);
+const testimonialsData = testimonialsCollection
+  .sort((a, b) => a.data.order - b.data.order)
+  .map(t => ({
+    name: t.data.name,
+    client: t.data.client,
+    client_poste: t.data.client_poste,
+    logo: t.data.logo,
+    borderColor: t.data.borderColor,
+    testimonial: t.body,
+  }));
 
 const homeData = home?.data || {};
 const skillsData = skills?.data || [];
 const extraData = extra?.data || [];
 const measuresData = measures?.data || [];
-const clientsData = clients?.data || [];
 ---
 
 <Layout title="Accueil">
-  <Header slot="header" hideLogo={true} />
+  <Header slot="header" />
 
-  <!-- Hero Section -->
-  <div class="min-h-screen flex flex-col items-center justify-center text-center relative px-4 gap-6">
-    <a href="/" class="z-10">
-      <img src="/icons/logo.svg" alt="TelesCoop - Accueil" class="max-w-xs mx-auto" />
-    </a>
+  <div>
+    <!-- Hero Section -->
+    <div class="min-h-[calc(100vh-80px)] flex flex-col items-center justify-center text-center relative px-4 gap-6">
 
-    <h1 class="text-3xl md:text-5xl lg:text-7xl font-light leading-tight z-10 max-w-6xl">
-      Coopérative de développement pour des
-      <span class="inline-block bg-black text-beige px-3 py-1 mt-2">
-        projets engagés
+      <h1 class="text-3xl md:text-5xl lg:text-7xl font-light leading-tight z-10 max-w-6xl">
+        Coopérative de développement pour des
+        <span class="inline-block bg-black text-beige px-3 py-1 mt-2">
+          projets engagés
+        </span>
+      </h1>
+
+      <span class="text-2xl md:text-2xl text-black z-10 max-w-2xl">
+        {homeData.tagline}
       </span>
-    </h1>
-
-    <span class="text-2xl md:text-2xl text-black z-10 max-w-2xl">
-      {homeData.tagline}
-    </span>
-    <div class="z-10 mt-4">
-      <a
-        href="mailto:contact@telescoop.fr"
-        class="btn inline-block py-3 text-lg"
-      >
-        Contactez-nous
-      </a>
+      <div class="z-10 mt-4">
+        <a
+          href="mailto:contact@telescoop.fr"
+          class="btn btn-lg"
+        >
+          Contactez-nous
+        </a>
+      </div>
     </div>
 
-    <!-- Decorative illustrations -->
-    <img
-      src="/img/svg/illustration-top-right.svg"
-      class="absolute top-20 right-0 w-32 md:w-48 opacity-80 pointer-events-none"
-      alt=""
-    />
-    <img
-      src="/img/svg/illustration-left.svg"
-      class="absolute bottom-20 left-0 w-32 md:w-48 opacity-80 pointer-events-none"
-      alt=""
-    />
-    <img
-      src="/img/svg/illustration-right.svg"
-      class="absolute bottom-20 right-0 w-32 md:w-48 opacity-80 pointer-events-none"
-      alt=""
-    />
-  </div>
+    <!-- About Section -->
+    <div class="bg-yellow py-16">
+      <About />
+    </div>
 
-  <!-- About Section -->
-  <div class="bg-yellow py-16">
-    <About />
-  </div>
+    <!-- Skills Section -->
+    <div class="py-16">
+      <Skills skills={skillsData} />
+    </div>
 
-  <!-- Skills Section -->
-  <div class="py-16">
-    <Skills skills={skillsData} />
-  </div>
+    <!-- Extra Section -->
+    <div class="bg-green py-16">
+      <Extra extra={extraData} />
+    </div>
 
-  <!-- Extra Section -->
-  <div class="bg-green py-16">
-    <Extra extra={extraData} />
-  </div>
 
-  <!-- Measures Section -->
-  <div class="bg-yellow py-16">
-    <Measures measures={measuresData} />
-  </div>
 
-  <!-- Clients Section -->
-  <div class="py-16">
-    <Clients clients={clientsData} />
+    <!-- Clients Section -->
+    <div class="py-16">
+      <Clients clients={testimonialsData} />
+    </div>
+    <!-- Measures Section -->
+    <div class="bg-yellow py-16">
+      <Measures measures={measuresData} />
+    </div>
   </div>
 
   <Footer slot="footer" />

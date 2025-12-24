@@ -14,22 +14,26 @@ const { measures } = Astro.props;
 <section class="px-4">
   <div class="container mx-auto">
     <div class="mb-12">
-      <span class="tag">
+      <span class="tag tag-purple tag-xl">
         Nos mesures d'impact
       </span>
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-      {measures.map((measure, index) => (
-        <div class={`card flex-col p-6 text-center ${index % 2 === 0 ? 'rotate-left' : 'rotate-right'}`}>
-          <span class="w-full text-center text-5xl text-red mb-4 font-display">
-            {measure.value}
-          </span>
-          <span class="text-2xl font-semibold">
-            {measure.description}
-          </span>
-        </div>
-      ))}
+      {measures.map((measure, index) => {
+        const colors = ['text-orange', 'text-blue', 'text-purple', 'text-green', 'text-yellow'];
+        const colorClass = colors[index % colors.length];
+        return (
+          <div class={`card flex-col p-6 text-center ${index % 2 === 0 ? 'rotate-left' : 'rotate-right'}`}>
+            <span class={`w-full text-center text-5xl ${colorClass} mb-4 font-display`}>
+              {measure.value}
+            </span>
+            <span class="text-2xl font-semibold">
+              {measure.description}
+            </span>
+          </div>
+        );
+      })}
     </div>
   </div>
 </section>

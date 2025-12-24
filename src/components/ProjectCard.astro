@@ -34,6 +34,8 @@ const rotateClass = index % 2 === 0 ? 'rotate-left' : 'rotate-right';
   href={`/projet/${slugify(project.title)}/`}
   class={`card project-card flex-col p-6 ${rotateClass}`}
   data-categories={cardCategories}
+  data-title={project.title}
+  data-description={project.projectResume}
 >
   <h3 class="text-2xl uppercase mb-4 font-sans font-bold">
     {project.title}

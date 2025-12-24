@@ -59,7 +59,7 @@ const formattedDate = new Date(data.date).toLocaleDateString('fr-FR', {
     <!-- Excerpt -->
     {data.excerpt && (
       <div class="border-l-4 border-red pl-6 mb-12">
-        <p class="text-xl text-black leading-loose italic">{data.excerpt}</p>
+        <p class="text-xl text-black leading-loose font-semibold">{data.excerpt}</p>
       </div>
     )}
 
@@ -90,7 +90,7 @@ const formattedDate = new Date(data.date).toLocaleDateString('fr-FR', {
   }
 
   .prose :global(p) {
-    @apply mb-4 leading-relaxed text-black;
+    @apply mb-4 leading-relaxed text-black text-2xl;
   }
 
   .prose :global(ul), .prose :global(ol) {
@@ -98,11 +98,11 @@ const formattedDate = new Date(data.date).toLocaleDateString('fr-FR', {
   }
 
   .prose :global(li) {
-    @apply mb-2;
+    @apply mb-2 text-2xl;
   }
 
   .prose :global(a) {
-    @apply text-accent-blue hover:underline;
+    @apply text-blue hover:underline;
   }
 
   .prose :global(strong) {
@@ -110,7 +110,7 @@ const formattedDate = new Date(data.date).toLocaleDateString('fr-FR', {
   }
 
   .prose :global(em) {
-    @apply italic;
+    @apply font-bold;
   }
 
   .prose :global(blockquote) {

@@ -1,8 +1,8 @@
 ---
 site vitrine:
   name: site vitrine
-  textWhite: true
-  colorClass: grey
+  textWhite: false
+  colorClass: coral
   type: project
 # traitement de données:
 #   name: traitement de données
@@ -10,8 +10,8 @@ site vitrine:
 #   colorClass: green
 cartographie:
   name: cartographie
-  textWhite: true
-  colorClass: orange
+  textWhite: false
+  colorClass: peach
   type: project
 service public:
   name: service public
@@ -21,27 +21,27 @@ service public:
 outil métier:
   name: outil métier
   textWhite: true
-  colorClass: danger
+  colorClass: purple
   type: project
 gestion de contenu:
   name: gestion de contenu
-  textWhite: true
-  colorClass: info
+  textWhite: false
+  colorClass: blue
   type: project
 e-commerce:
   name: e-commerce
-  textWhite: true
-  colorClass: success
+  textWhite: false
+  colorClass: green
   type: project
 open-source:
   name: Open Source
-  textWhite: true
-  colorClass: blue
+  textWhite: false
+  colorClass: pink
   type: project
 Entreprise:
   name: Entreprise
   textWhite: true
-  colorClass: danger
+  colorClass: orange
   type: blog
 Organisation:
   name: Organisation

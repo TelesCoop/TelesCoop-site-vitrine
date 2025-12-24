@@ -19,176 +19,159 @@ const description = 'La coopérative TelesCoop et ses particularités.';
   <Header slot="header" />
 
   <!-- Hero Section -->
-  <div class="container mx-auto px-4 py-20 mt-16 max-w-3xl">
+  <div class="container mx-auto px-4 py-20 mt-16 max-w-5xl">
     <h1 class="text-5xl md:text-6xl mb-12 font-display">La coopérative</h1>
-    <p class="text-xl text-black leading-loose mb-6">
-      <strong class="font-semibold">TelesCoop est une SCOP</strong> (Société Coopérative et Participative)
+    <p class="text-2xl text-black leading-loose mb-6">
+      <strong class="font-semibold">TelesCoop est une SCOP accréditée ESUS</strong> (Société Coopérative et Participative)
       fondée avec la conviction que le numérique peut être un levier de transformation positive pour la société.
     </p>
-    <p class="text-xl text-black leading-loose">
-      Cette page présente de manière transparente notre fonctionnement, nos engagements et nos avancées sociales.
-      Nous restons des humains imparfaits, en apprentissage permanent.
+    <p class="text-2xl text-black leading-loose">
+      Nous nous sommes donné une mission d'utilité publique et aspirons à travailler sur des projets à impacts positifs. Convaincu·e·s que les projets numériques développés de manière agile par des experts doivent être accessibles à tous, nous collaborons avec une grande diversité d'acteurs pour les aider à accroître leur impact dans leur domaine d'activité respectif. Cette diversité inclut des associations, des entreprises (des TPE aux grands groupes) ainsi que des collectivités locales et des institutions publiques.
+    </p>
+    <p class="text-2xl text-black leading-loose mb-8">
+      TelesCoop accompagne principalement des structures de l'<strong>Économie Sociale et Solidaire</strong> (ESS) :
+      associations, coopératives, collectivités et acteurs publics engagés dans la transition écologique et sociale.
+    </p>
+
+    <p class="text-2xl text-black leading-loose">
+      Nous privilégions les partenariats de long terme avec nos client·es, dans une logique de co-construction
+      et d'accompagnement durable de leurs projets numériques.
     </p>
   </div>
 
-  <!-- Nos client·es -->
-  <section class="py-20 border-t-2 border-black/10">
-    <div class="container mx-auto px-4 max-w-3xl">
-      <h2 class="text-4xl font-display mb-10">Nos client·es</h2>
-
-      <p class="text-xl text-black leading-loose mb-8">
-        TelesCoop accompagne principalement des structures de l'<strong>Économie Sociale et Solidaire</strong> (ESS) :
-        associations, coopératives, collectivités et acteurs publics engagés dans la transition écologique et sociale.
-      </p>
-
-      <p class="text-xl text-black leading-loose mb-8">
-        <strong>Notre chiffre d'affaires provient à plus de 90%</strong> de structures de l'ESS et du secteur public
-        portant des projets à impact positif.
-      </p>
-
-      <p class="text-xl text-black leading-loose">
-        Nous privilégions les partenariats de long terme avec nos client·es, dans une logique de co-construction
-        et d'accompagnement durable de leurs projets numériques.
-      </p>
-    </div>
-  </section>
-
   <!-- Le modèle coopératif -->
   <section class="bg-yellow py-20">
-    <div class="container mx-auto px-4 max-w-3xl">
-      <h2 class="text-4xl font-display mb-10">Le modèle coopératif</h2>
-
-      <div class="space-y-12">
-        <div>
-          <h3 class="text-2xl font-semibold mb-4">Une gouvernance démocratique</h3>
-          <p class="text-xl text-black leading-loose">
-            En tant que SCOP, chaque salarié·e est associé·e et dispose d'une voix lors des assemblées générales.
-            Les décisions stratégiques sont prises collectivement selon le principe <strong>une personne = une voix</strong>,
-            indépendamment du capital détenu. Cette structure garantit que chaque membre a un pouvoir égal dans les
-            orientations de la coopérative.
-          </p>
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col gap-10 md:grid grid-cols-12">
+        <!-- Sidebar -->
+        <div class="col-span-12 lg:col-span-4">
+          <div class="sticky top-32 flex flex-col gap-6 pt-6">
+            <h2 class="text-4xl lg:text-5xl font-display">Nos 3 piliers</h2>
+            <p class="text-2xl text-black leading-loose">
+              Ce à quoi nous croyons, ce à quoi nous ne renoncerons jamais, ce que nous aurons toujours le courage de défendre.
+            </p>
+          </div>
         </div>
 
-        <div>
-          <h3 class="text-2xl font-semibold mb-4">Répartition équitable des bénéfices</h3>
-          <p class="text-xl text-black leading-loose">
-            Les bénéfices sont redistribués de manière équitable entre les coopérateurs·ices selon leur temps de travail.
-            Une partie est donnée à des associations et médias engagés, le reste alimente les réserves de la coopérative
-            pour assurer sa pérennité et son développement.
-          </p>
+        <!-- Cards Grid -->
+        <div class="col-span-12 lg:col-span-8 lg:col-start-5 xl:col-span-7 xl:col-start-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="card p-8 flex-col rotate-left">
+              <span class="text-5xl font-display text-orange mb-4">01</span>
+              <h3 class="text-2xl font-semibold mb-4">Gouvernance démocratique</h3>
+              <p class="text-lg text-black leading-loose">
+                En tant que SCOP, chaque salarié·e est associé·e et dispose d'une voix lors des assemblées générales.
+                Les décisions stratégiques sont prises collectivement selon le principe <strong>une personne = une voix</strong>.
+              </p>
+            </div>
+
+            <div class="card p-8 flex-col rotate-right md:translate-y-12">
+              <span class="text-5xl font-display text-pink mb-4">02</span>
+              <h3 class="text-2xl font-semibold mb-4">Répartition équitable</h3>
+              <p class="text-lg text-black leading-loose">
+                Les bénéfices sont redistribués de manière équitable entre les coopérateurs·ices selon leur temps de travail.
+                Une partie est donnée à des associations et médias engagés.
+              </p>
+            </div>
+
+            <div class="card p-8 flex-col rotate-left">
+              <span class="text-5xl font-display text-purple mb-4">03</span>
+              <h3 class="text-2xl font-semibold mb-4">Capital partagé</h3>
+              <p class="text-lg text-black leading-loose">
+                Les salarié·es détiennent la majorité du capital de l'entreprise. Cette propriété collective garantit
+                l'indépendance de la coopérative et l'alignement des décisions avec nos valeurs.
+              </p>
+            </div>
+          </div>
         </div>
-
-        <div>
-          <h3 class="text-2xl font-semibold mb-4">Capital partagé</h3>
-          <p class="text-xl text-black leading-loose">
-            Les salarié·es détiennent la majorité du capital de l'entreprise. Cette propriété collective garantit
-            l'indépendance de la coopérative et l'alignement des décisions avec les valeurs portées par l'équipe.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Un écosystème cohérent -->
-  <section class="bg-green py-20">
-    <div class="container mx-auto px-4 max-w-3xl">
-      <h2 class="text-4xl font-display mb-10">Un écosystème cohérent</h2>
-
-      <p class="text-xl text-black leading-loose mb-10">
-        TelesCoop s'inscrit dans un écosystème d'organisations partageant nos valeurs. Nous travaillons
-        avec des partenaires engagés pour garantir la cohérence de nos choix, de notre hébergement à nos
-        investissements financiers.
-      </p>
-
-      <div>
-        <h3 class="text-2xl font-semibold mb-5">Nos partenaires</h3>
-        <ul class="space-y-4 pl-6">
-          <li class="text-xl text-black leading-loose list-disc">
-            <strong>Hébergement</strong> : Serveurs hébergés en France avec des fournisseurs respectueux de l'environnement
-          </li>
-          <li class="text-xl text-black leading-loose list-disc">
-            <strong>Banque</strong> : Crédit Coopératif, banque coopérative engagée dans l'ESS
-          </li>
-          <li class="text-xl text-black leading-loose list-disc">
-            <strong>Assurances</strong> : MAIF, mutuelle d'assurance militante
-          </li>
-          <li class="text-xl text-black leading-loose list-disc">
-            <strong>Outils</strong> : Logiciels libres et open-source privilégiés (Django, Vue.js, PostgreSQL, etc.)
-          </li>
-        </ul>
       </div>
     </div>
   </section>
 
   <!-- Les avancées salariales -->
   <section class="py-20 border-t-2 border-black/10">
-    <div class="container mx-auto px-4 max-w-3xl">
-      <h2 class="text-4xl font-display mb-10">Les avancées salariales</h2>
-
-      <p class="text-xl text-black leading-loose mb-12">
-        TelesCoop s'est donné pour mission d'offrir un cadre de travail confortable à toutes les personnes salariées.
-        Voici les principales avancées mises en place depuis la création de la coopérative.
-      </p>
-
-      <div class="space-y-16">
-        <div>
-          <div class="flex items-baseline gap-4 mb-8">
-            <h3 class="text-3xl font-display text-red">2024</h3>
-            <div class="flex-1 border-t-2 border-red"></div>
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col gap-12 lg:grid grid-cols-12 lg:gap-20">
+        <!-- Sidebar -->
+        <div class="col-span-12 lg:col-span-5 pr-0 lg:pr-8">
+          <div class="sticky top-32 flex flex-col gap-5">
+            <h2 class="text-4xl lg:text-5xl font-display">Les avancées salariales</h2>
+            <p class="text-2xl text-black leading-loose">
+              TelesCoop s'est donné pour mission d'offrir un cadre de travail confortable à toutes les personnes salariées.
+              Voici les principales avancées mises en place depuis la création de la coopérative.
+            </p>
           </div>
-          <ul class="space-y-6 pl-6">
-            <li class="text-xl text-black leading-loose list-disc">
+        </div>
+
+        <!-- List -->
+        <ul class="col-span-12 lg:col-span-7 flex list-none flex-col gap-8 px-0">
+          <li class="flex items-start gap-4 pb-8 border-b border-black/20Mai">
+            <svg class="w-7 h-7 shrink-0 fill-purple mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+            </svg>
+            <p class="text-2xl text-black leading-loose">
+              <strong>Télétravail intégral</strong> : 100% de l'équipe en télétravail avec liberté géographique totale. Chacun·e est libre de choisir son lieu de travail et ses horaires.
+            </p>
+          </li>
+          <li class="flex items-start gap-4 border-b border-black/20 pb-8">
+            <svg class="w-7 h-7 shrink-0 fill-orange mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+            </svg>
+            <p class="text-2xl text-black leading-loose">
               <strong>Semaine de 4 jours</strong> : Afin d'établir un meilleur équilibre entre vie professionnelle et vie personnelle,
               nous sommes passé·es à la semaine de 4 jours. Chaque membre de l'équipe dispose d'une journée par semaine
               dédiée à son épanouissement personnel.
-            </li>
-          </ul>
-        </div>
+            </p>
+          </li>
 
-        <div>
-          <div class="flex items-baseline gap-4 mb-8">
-            <h3 class="text-3xl font-display text-red">2023</h3>
-            <div class="flex-1 border-t-2 border-red"></div>
-          </div>
-          <ul class="space-y-6 pl-6">
-            <li class="text-xl text-black leading-loose list-disc">
+          <li class="flex items-start gap-4 border-b border-black/20 pb-8">
+            <svg class="w-7 h-7 shrink-0 fill-pink mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+            </svg>
+            <p class="text-2xl text-black leading-loose">
               <strong>Formation continue</strong> : Budget formation et temps dédié à la montée en compétences de chaque coopérateur·ice.
-            </li>
-          </ul>
-        </div>
+            </p>
+          </li>
 
-        <div>
-          <div class="flex items-baseline gap-4 mb-8">
-            <h3 class="text-3xl font-display text-red">Depuis la création</h3>
-            <div class="flex-1 border-t-2 border-red"></div>
-          </div>
-          <ul class="space-y-6 pl-6">
-            <li class="text-xl text-black leading-loose list-disc">
+          <li class="flex items-start gap-4 border-b border-black/20 pb-8">
+            <svg class="w-7 h-7 shrink-0 fill-blue mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+            </svg>
+            <p class="text-2xl text-black leading-loose">
               <strong>Gouvernance démocratique</strong> : SCOP où 1 personne = 1 voix, garantissant un pouvoir décisionnel égal pour tous·tes.
-            </li>
-            <li class="text-xl text-black leading-loose list-disc">
+            </p>
+          </li>
+
+          <li class="flex items-start gap-4 border-b border-black/20 pb-8">
+            <svg class="w-7 h-7 shrink-0 fill-purple mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+            </svg>
+            <p class="text-2xl text-black leading-loose">
               <strong>Gouvernance holacratique</strong> : Organisation horizontale favorisant l'autonomie et la responsabilisation de chacun·e.
-            </li>
-            <li class="text-xl text-black leading-loose list-disc">
-              <strong>Participation</strong> : Chaque coopérateur·ice participe activement aux décisions stratégiques et à la vie de l'entreprise.
-            </li>
-            <li class="text-xl text-black leading-loose list-disc">
+            </p>
+          </li>
+
+          <li class="flex items-start gap-4 border-b border-black/20 pb-8">
+            <svg class="w-7 h-7 shrink-0 fill-orange mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+            </svg>
+            <p class="text-2xl text-black leading-loose">
               <strong>Répartition équitable des bénéfices</strong> : Redistribution selon le temps de travail, avec une partie reversée à des associations engagées.
-            </li>
-            <li class="text-xl text-black leading-loose list-disc">
+            </p>
+          </li>
+
+          <li class="flex items-start gap-4 border-b border-black/20 pb-8">
+            <svg class="w-7 h-7 shrink-0 fill-pink mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+            </svg>
+            <p class="text-2xl text-black leading-loose">
               <strong>Tarifs solidaires</strong> : Tarifs adaptés aux capacités financières des associations et TPE pour favoriser l'accès au numérique responsable.
-            </li>
-            <li class="text-xl text-black leading-loose list-disc">
-              <strong>Hébergement responsable et souverain</strong> : Serveurs hébergés en France avec des fournisseurs respectueux de l'environnement.
-            </li>
-            <li class="text-xl text-black leading-loose list-disc">
-              <strong>Télétravail intégral</strong> : 100% de l'équipe en télétravail avec liberté géographique totale. Chacun·e est libre de choisir son lieu de travail et ses horaires.
-            </li>
-          </ul>
-        </div>
+            </p>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <Footer slot="footer" pageWeight={80} />
+  <Footer slot="footer" />
 </Layout>

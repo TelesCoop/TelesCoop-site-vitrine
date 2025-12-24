@@ -1,21 +1,25 @@
 ---
 import Logo from "./Logo.astro";
-interface Props {
-  pageWeight?: number;
-}
-
-const { pageWeight } = Astro.props;
 ---
 
-<footer class="bg-black text-white py-12 mt-24">
+<footer class="bg-black text-white py-12">
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
       <!-- Logo et description -->
       <div>
-        <Logo class="!text-beige" />
+        <Logo class="text-white" />
         <p class="text-white/80 text-lg">
           Coopérative de développement pour des projets engagés
         </p>
+        <!-- Logos partenaires -->
+        <div class="pt-4 mb-6">
+          Partenaires :
+          <div class="flex justify-center items-center gap-8">
+            <a href="https://www.urscop.fr/" target="_blank" rel="noopener noreferrer" class="opacity-80 hover:opacity-100 transition-opacity">
+              <img src="/img/urscop-logo.png" alt="Logo URSCOP" class="h-12" />
+            </a>
+          </div>
+        </div>
       </div>
 
       <!-- Navigation -->
@@ -38,6 +42,10 @@ const { pageWeight } = Astro.props;
               contact@telescoop.fr
             </a>
           </li>
+          <li>
+            10 rue de Penthièvre<br/>
+            75010 Paris
+          </li>
           <li class="mt-4">
             <a href="/mentions-legales" class="hover:text-red transition-colors">
               Mentions légales
@@ -53,8 +61,54 @@ const { pageWeight } = Astro.props;
         © {new Date().getFullYear()} TelesCoop - SCOP
       </p>
       <p class="text-white/60 text-sm text-center">
-        Site écoconçu · {pageWeight && <span>Poids de la page : ~{pageWeight}ko</span>}
+        Site écoconçu · <span id="page-weight">Calcul en cours...</span>
       </p>
     </div>
   </div>
 </footer>
+
+<script>
+  // Calculate page weight dynamically
+  async function calculatePageWeight() {
+    try {
+      let totalSize = 0;
+
+      // Calculate HTML size
+      const htmlSize = new Blob([document.documentElement.outerHTML]).size;
+      totalSize += htmlSize;
+
+      // Get all resources loaded by the page
+      const resources = performance.getEntriesByType('resource');
+
+      for (const resource of resources) {
+        if ('transferSize' in resource) {
+          totalSize += (resource as PerformanceResourceTiming).transferSize;
+        }
+      }
+
+      // Convert to KB
+      const sizeInKB = Math.round(totalSize / 1024);
+
+      // Update the display
+      const weightElement = document.getElementById('page-weight');
+      if (weightElement) {
+        weightElement.textContent = `Poids de la page : ~${sizeInKB}ko`;
+      }
+    } catch (error) {
+      console.error('Error calculating page weight:', error);
+      const weightElement = document.getElementById('page-weight');
+      if (weightElement) {
+        weightElement.textContent = 'Poids de la page : calcul impossible';
+      }
+    }
+  }
+
+  // Wait for page to be fully loaded, then add a small delay to ensure all resources are accounted for
+  if (document.readyState === 'complete') {
+    setTimeout(calculatePageWeight, 1000);
+  } else {
+    window.addEventListener('load', () => {
+      setTimeout(calculatePageWeight, 1000);
+    });
+  }
+</script>

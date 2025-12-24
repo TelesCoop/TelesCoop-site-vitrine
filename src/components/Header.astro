@@ -8,7 +8,6 @@ interface Props {
 const { hideLogo = false } = Astro.props;
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-beige shadow-sm">
   <div class="container mx-auto px-4">
     <div class="flex justify-between">
       <!-- Logo / Brand -->
@@ -32,16 +31,16 @@ const { hideLogo = false } = Astro.props;
 
       <!-- Desktop Navigation -->
       <nav class="hidden lg:flex flex-1 justify-end items-center gap-6">
-        <a href="/coopérative" class="py-2 font-semibold uppercase hover:text-red transition-colors">
+        <a href="/coopérative" class="py-2 font-semibold uppercase hover:text-red transition-colors text-xl">
           La coopérative
         </a>
-        <a href="/projets" class="py-2 font-semibold uppercase hover:text-red transition-colors">
+        <a href="/projets" class="py-2 font-semibold uppercase hover:text-red transition-colors text-xl">
           Nos projets
         </a>
-        <a href="/blog" class="py-2 font-semibold uppercase hover:text-red transition-colors">
+        <a href="/blog" class="py-2 font-semibold uppercase hover:text-red transition-colors text-xl">
           Blog
         </a>
-        <a href="mailto:contact@telescoop.fr" class="tag-yellow py-2 px-4">
+        <a href="mailto:contact@telescoop.fr" class="tag tag-yellow">
           Nous contacter
         </a>
       </nav>
@@ -54,7 +53,7 @@ const { hideLogo = false } = Astro.props;
         <a href="/coopérative" class="py-2 text-center font-semibold uppercase">La coopérative</a>
         <a href="/projets" class="py-2 text-center font-semibold uppercase">Nos projets</a>
         <a href="/blog" class="py-2 text-center font-semibold uppercase">Blog</a>
-        <a href="mailto:contact@telescoop.fr" class="tag-yellow py-2 text-center">Nous contacter</a>
+        <a href="mailto:contact@telescoop.fr" class="tag tag-yellow text-center">Nous contacter</a>
       </div>
     </nav>
   </div>
