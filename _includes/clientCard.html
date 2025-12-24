@@ -1,9 +1,0 @@
-
-<img src={{client.src}} class="p-4" alt="">
-<h3>{{ client.name }}, {{client.client}}</h3>
-<p>{{client.testimonial}}</p>
-{% if client.link %}
-<div class="is-flex mt-auto">
-    {% render "main-button.html" linkText:"Voir le projet",  btnClass: "reverse" %}
-</div>
-{%endif %}

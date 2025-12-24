@@ -1,9 +1,0 @@
-<section class="gap-2 is-flex is-flex-direction-column">
-
-    <h2>Notre fonctionnement</h2>
-    <div class="wrapper-values">
-        {% for value in values %}
-            {% render "largeCard.html" src: value.src title: value.name description: value.description %}
-        {% endfor %}
-    </div>
-</section>
