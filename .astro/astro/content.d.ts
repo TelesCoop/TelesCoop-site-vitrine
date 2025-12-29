@@ -146,7 +146,37 @@ declare module 'astro:content' {
   slug: "le-tltravail-chez-telescoop";
   body: string;
   collection: "blog";
-  data: any
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+};
+"palettes": {
+"colorblind.md": {
+	id: "colorblind.md";
+  slug: "colorblind";
+  body: string;
+  collection: "palettes";
+  data: InferEntrySchema<"palettes">
+} & { render(): Render[".md"] };
+"monochrome.md": {
+	id: "monochrome.md";
+  slug: "monochrome";
+  body: string;
+  collection: "palettes";
+  data: InferEntrySchema<"palettes">
+} & { render(): Render[".md"] };
+"pale.md": {
+	id: "pale.md";
+  slug: "pale";
+  body: string;
+  collection: "palettes";
+  data: InferEntrySchema<"palettes">
+} & { render(): Render[".md"] };
+"peps.md": {
+	id: "peps.md";
+  slug: "peps";
+  body: string;
+  collection: "palettes";
+  data: InferEntrySchema<"palettes">
 } & { render(): Render[".md"] };
 };
 "projects": {
@@ -155,140 +185,140 @@ declare module 'astro:content' {
   slug: "aktivisda";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "akuo.md": {
 	id: "akuo.md";
   slug: "akuo";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "backmarket-comparateur.md": {
 	id: "backmarket-comparateur.md";
   slug: "backmarket-comparateur";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "dataphonia.md": {
 	id: "dataphonia.md";
   slug: "dataphonia";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "dmomtre.md": {
 	id: "dmomtre.md";
   slug: "dmomtre";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "evidence-orthophonie.md": {
 	id: "evidence-orthophonie.md";
   slug: "evidence-orthophonie";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "excellent-excdents.md": {
 	id: "excellent-excdents.md";
   slug: "excellent-excdents";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "greenmenu.md": {
 	id: "greenmenu.md";
   slug: "greenmenu";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "iarbre.md": {
 	id: "iarbre.md";
   slug: "iarbre";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "indice-de-fragilit-numrique.md": {
 	id: "indice-de-fragilit-numrique.md";
   slug: "indice-de-fragilit-numrique";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "la-base.md": {
 	id: "la-base.md";
   slug: "la-base";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "le-mmo-des-fresques.md": {
 	id: "le-mmo-des-fresques.md";
   slug: "le-mmo-des-fresques";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "les-tablis.md": {
 	id: "les-tablis.md";
   slug: "les-tablis";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "mangmap.md": {
 	id: "mangmap.md";
   slug: "mangmap";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "mesaidesjeunes.md": {
 	id: "mesaidesjeunes.md";
   slug: "mesaidesjeunes";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "msf-campagne-de-dons.md": {
 	id: "msf-campagne-de-dons.md";
   slug: "msf-campagne-de-dons";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "openfoodfacts-searchalicious.md": {
 	id: "openfoodfacts-searchalicious.md";
   slug: "openfoodfacts-searchalicious";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "openfoodfacts-webcomponents.md": {
 	id: "openfoodfacts-webcomponents.md";
   slug: "openfoodfacts-webcomponents";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "socit-numrique.md": {
 	id: "socit-numrique.md";
   slug: "socit-numrique";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 "terre-de-liens-campagne-de-donation-2024.md": {
 	id: "terre-de-liens-campagne-de-donation-2024.md";
   slug: "terre-de-liens-campagne-de-donation-2024";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 };
 "team": {
@@ -297,28 +327,28 @@ declare module 'astro:content' {
   slug: "antoine";
   body: string;
   collection: "team";
-  data: any
+  data: InferEntrySchema<"team">
 } & { render(): Render[".md"] };
 "camille.md": {
 	id: "camille.md";
   slug: "camille";
   body: string;
   collection: "team";
-  data: any
+  data: InferEntrySchema<"team">
 } & { render(): Render[".md"] };
 "clment.md": {
 	id: "clment.md";
   slug: "clment";
   body: string;
   collection: "team";
-  data: any
+  data: InferEntrySchema<"team">
 } & { render(): Render[".md"] };
 "maxime-bellec.md": {
 	id: "maxime-bellec.md";
   slug: "maxime-bellec";
   body: string;
   collection: "team";
-  data: any
+  data: InferEntrySchema<"team">
 } & { render(): Render[".md"] };
 };
 "testimonials": {
@@ -327,35 +357,35 @@ declare module 'astro:content' {
   slug: "anthakarana";
   body: string;
   collection: "testimonials";
-  data: any
+  data: InferEntrySchema<"testimonials">
 } & { render(): Render[".md"] };
 "les-etablis.md": {
 	id: "les-etablis.md";
   slug: "les-etablis";
   body: string;
   collection: "testimonials";
-  data: any
+  data: InferEntrySchema<"testimonials">
 } & { render(): Render[".md"] };
 "medecins-sans-frontieres.md": {
 	id: "medecins-sans-frontieres.md";
   slug: "medecins-sans-frontieres";
   body: string;
   collection: "testimonials";
-  data: any
+  data: InferEntrySchema<"testimonials">
 } & { render(): Render[".md"] };
 "open-food-facts.md": {
 	id: "open-food-facts.md";
   slug: "open-food-facts";
   body: string;
   collection: "testimonials";
-  data: any
+  data: InferEntrySchema<"testimonials">
 } & { render(): Render[".md"] };
 "terre-de-liens.md": {
 	id: "terre-de-liens.md";
   slug: "terre-de-liens";
   body: string;
   collection: "testimonials";
-  data: any
+  data: InferEntrySchema<"testimonials">
 } & { render(): Render[".md"] };
 };
 
@@ -375,11 +405,6 @@ declare module 'astro:content' {
 };
 "categories": {
 	id: "categories";
-  collection: "data";
-  data: any
-};
-"clients": {
-	id: "clients";
   collection: "data";
   data: any
 };
@@ -454,5 +479,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("../../src/content/config.js");
 }

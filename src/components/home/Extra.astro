@@ -1,4 +1,6 @@
 ---
+import InlineSvg from '../InlineSvg.astro';
+
 interface ExtraItem {
   name: string;
   src: string;
@@ -10,6 +12,22 @@ interface Props {
 }
 
 const { extra } = Astro.props;
+
+// Color mapping for SVG adaptation
+const colorMapping = {
+  '#FFCD4E': '--color-yellow',
+  '#ffcd4e': '--color-yellow',
+  '#FF5631': '--color-coral',
+  '#ff5631': '--color-coral',
+  '#60E093': '--color-green',
+  '#60e093': '--color-green',
+  '#A8CFEE': '--color-blue',
+  '#a8cfee': '--color-blue',
+  '#1E1C1C': '--color-border',
+  '#1e1c1c': '--color-border',
+  '#000000': '--color-border',
+  '#000': '--color-border',
+};
 ---
 
 <section class="px-4">
@@ -49,11 +67,14 @@ const { extra } = Astro.props;
       <div class="grid grid-cols-2 gap-4">
         {extra.map((item) => (
           <div class="card flex-col p-6 text-center items-center">
-            <img
-              src={item.src}
-              alt={item.name}
-              class="w-24 h-24 mb-4 object-contain"
-            />
+            <div class="w-24 h-24 mb-4">
+              <InlineSvg
+                src={item.src}
+                alt={item.name}
+                colors={colorMapping}
+                class="w-full h-full object-contain"
+              />
+            </div>
             <h3 class="font-semibold mb-2">{item.name}</h3>
             <p class="text-lg">{item.description}</p>
           </div>

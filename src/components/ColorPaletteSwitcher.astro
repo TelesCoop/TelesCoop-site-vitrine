@@ -1,0 +1,140 @@
+---
+import { getCollection } from 'astro:content';
+
+const palettes = await getCollection('palettes');
+const palettesData = palettes.map(p => ({
+  id: p.data.id,
+  name: p.data.name,
+  icon: p.data.icon,
+  colors: p.data.colors,
+  textColors: p.data.textColors || {
+    yellow: '#000000',
+    orange: '#FFFFFF',
+    green: '#FFFFFF',
+    blue: '#FFFFFF',
+    purple: '#FFFFFF',
+    pink: '#FFFFFF',
+    coral: '#FFFFFF',
+    peach: '#000000',
+    beige: '#000000',
+  },
+}));
+---
+
+<div class="fixed bottom-4 right-4 z-50">
+  <button
+    id="palette-toggle"
+    class="btn btn-orange rounded-full w-14 h-14 flex items-center justify-center text-2xl"
+    aria-label="Changer la palette de couleurs"
+    title="Changer la palette de couleurs"
+  >
+    🎨
+  </button>
+
+  <div
+    id="palette-menu"
+    class="hidden absolute bottom-16 right-0 bg-beige border-2 border-black rounded-[10px] p-4 min-w-[250px]"
+    style="filter: drop-shadow(8px 8px 0 var(--color-border));"
+  >
+    <h3 class="text-lg font-display uppercase mb-4">Palettes de couleurs</h3>
+    <div class="space-y-2">
+      {palettesData.map((palette) => (
+        <button
+          class="palette-option w-full text-left p-3 border-2 border-black rounded-[10px] hover:bg-yellow flex items-center gap-3"
+          data-palette-id={palette.id}
+          data-palette-colors={JSON.stringify(palette.colors)}
+          data-palette-text-colors={JSON.stringify(palette.textColors)}
+        >
+          <span class="text-2xl">{palette.icon}</span>
+          <span class="font-semibold">{palette.name}</span>
+        </button>
+      ))}
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ palettesData }}>
+  const PALETTE_KEY = 'telescoop-color-palette';
+
+  // Toggle menu
+  const toggleButton = document.getElementById('palette-toggle');
+  const menu = document.getElementById('palette-menu');
+
+  toggleButton?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!toggleButton?.contains(e.target) && !menu?.contains(e.target)) {
+      menu?.classList.add('hidden');
+    }
+  });
+
+  // Apply palette
+  function applyPalette(colors, textColors, paletteId) {
+    const root = document.documentElement;
+    Object.entries(colors).forEach(([key, value]) => {
+      root.style.setProperty(`--color-${key}`, value);
+    });
+
+    // Apply text colors if provided
+    if (textColors) {
+      Object.entries(textColors).forEach(([key, value]) => {
+        root.style.setProperty(`--text-on-${key}`, value);
+      });
+    }
+
+    // Apply grayscale filter for monochrome palette
+    if (paletteId === 'monochrome') {
+      document.body.classList.add('monochrome-mode');
+    } else {
+      document.body.classList.remove('monochrome-mode');
+    }
+  }
+
+  // Load saved palette on page load
+  function loadSavedPalette() {
+    const saved = localStorage.getItem(PALETTE_KEY);
+    if (saved) {
+      try {
+        const palette = palettesData.find(p => p.id === saved);
+        if (palette) {
+          applyPalette(palette.colors, palette.textColors, palette.id);
+        }
+      } catch (error) {
+        console.error('Error loading palette:', error);
+      }
+    }
+  }
+
+  // Palette option click handlers
+  document.querySelectorAll('.palette-option').forEach(button => {
+    button.addEventListener('click', () => {
+      const paletteId = button.getAttribute('data-palette-id');
+      const colors = JSON.parse(button.getAttribute('data-palette-colors') || '{}');
+      const textColors = JSON.parse(button.getAttribute('data-palette-text-colors') || '{}');
+
+      applyPalette(colors, textColors, paletteId);
+      localStorage.setItem(PALETTE_KEY, paletteId);
+      menu?.classList.add('hidden');
+
+      // Visual feedback
+      document.querySelectorAll('.palette-option').forEach(btn => {
+        btn.classList.remove('bg-green');
+      });
+      button.classList.add('bg-green');
+    });
+  });
+
+  // Load palette on page load
+  loadSavedPalette();
+
+  // Mark active palette
+  const savedPalette = localStorage.getItem(PALETTE_KEY) || 'peps';
+  document.querySelectorAll('.palette-option').forEach(btn => {
+    if (btn.getAttribute('data-palette-id') === savedPalette) {
+      btn.classList.add('bg-green');
+    }
+  });
+</script>

@@ -34,6 +34,8 @@ const { clients } = Astro.props;
                   src={client.logo}
                   alt={client.name}
                   class="h-12 object-contain self-start"
+                  loading="lazy"
+                  decoding="async"
                   onerror="this.style.display='none'"
                 />
               )}

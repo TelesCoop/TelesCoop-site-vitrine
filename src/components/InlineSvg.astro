@@ -1,0 +1,45 @@
+---
+import { readFileSync } from 'fs';
+import { join } from 'path';
+
+interface Props {
+  src: string;
+  class?: string;
+  alt?: string;
+  colors?: Record<string, string>;
+}
+
+const { src, class: className = '', alt = '', colors } = Astro.props;
+
+// Remove leading ./ or / from src
+const cleanSrc = src.replace(/^\.?\//, '');
+const svgPath = join(process.cwd(), 'public', cleanSrc);
+
+let svgContent = '';
+try {
+  svgContent = readFileSync(svgPath, 'utf-8');
+
+  // Replace hardcoded colors with CSS variables if colors mapping is provided
+  if (colors) {
+    Object.entries(colors).forEach(([hexColor, cssVar]) => {
+      const regex = new RegExp(hexColor, 'gi');
+      svgContent = svgContent.replace(regex, `var(${cssVar})`);
+    });
+  }
+
+  // Add class to SVG tag if provided
+  if (className) {
+    svgContent = svgContent.replace(/<svg/, `<svg class="${className}"`);
+  }
+
+  // Add aria-label for accessibility
+  if (alt) {
+    svgContent = svgContent.replace(/<svg/, `<svg aria-label="${alt}"`);
+  }
+} catch (error) {
+  console.error(`Error loading SVG: ${svgPath}`, error);
+  svgContent = `<!-- SVG not found: ${src} -->`;
+}
+---
+
+<Fragment set:html={svgContent} />

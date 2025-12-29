@@ -1,5 +1,6 @@
 ---
 import { getEntry } from 'astro:content';
+import ColorPaletteSwitcher from '../components/ColorPaletteSwitcher.astro';
 
 interface Props {
   title?: string;
@@ -70,5 +71,6 @@ const pageDescription = description || metadataData.description;
       <slot />
     </div>
     <slot name="footer" />
+    <ColorPaletteSwitcher />
   </body>
 </html>

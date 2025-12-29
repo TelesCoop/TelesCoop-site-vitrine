@@ -74,47 +74,47 @@ const { skills } = Astro.props;
 
 <style>
   .skill-nav-btn {
-    background: #FFF9F0;
+    @apply bg-beige;
   }
 
   .skill-nav-btn.active {
-    filter: drop-shadow(4px 4px 0 #000);
+    filter: drop-shadow(4px 4px 0 var(--color-border));
     transform: translate3d(2px, 2px, 0);
   }
 
   .skill-nav-btn:hover:not(.active) {
-    filter: drop-shadow(2px 2px 0 #000);
+    filter: drop-shadow(2px 2px 0 var(--color-border));
     transform: translate3d(1px, 1px, 0);
   }
 
   .skill-nav-btn.active[data-color="bg-orange"] {
-    background: #F1722A;
-    color: white;
+    @apply bg-orange;
+    color: var(--text-on-orange);
   }
 
   .skill-nav-btn.active[data-color="bg-blue"] {
-    background: #A8CFEE;
-    color: black;
+    @apply bg-blue;
+    color: var(--text-on-blue);
   }
 
   .skill-nav-btn.active[data-color="bg-pink"] {
-    background: #FFB6C1;
-    color: black;
+    @apply bg-pink;
+    color: var(--text-on-pink);
   }
 
   .skill-nav-btn.active[data-color="bg-purple"] {
-    background: #B4A7D6;
-    color: black;
+    @apply bg-purple;
+    color: var(--text-on-purple);
   }
 
   .skill-nav-btn.active[data-color="bg-green"] {
-    background: #82E1A0;
-    color: black;
+    @apply bg-green;
+    color: var(--text-on-green);
   }
 
   .skill-nav-btn.active[data-color="bg-yellow"] {
-    background: #FBD26B;
-    color: black;
+    @apply bg-yellow;
+    color: var(--text-on-yellow);
   }
 </style>
 

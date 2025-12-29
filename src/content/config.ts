@@ -68,10 +68,46 @@ const testimonialsCollection = defineCollection({
   }),
 });
 
+// Collection pour les palettes de couleurs
+const palettesCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    name: z.string(),
+    id: z.string(),
+    description: z.string().optional(),
+    icon: z.string().default('🎨'),
+    colors: z.object({
+      beige: z.string(),
+      yellow: z.string(),
+      orange: z.string(),
+      green: z.string(),
+      blue: z.string(),
+      purple: z.string(),
+      pink: z.string(),
+      coral: z.string(),
+      peach: z.string(),
+      border: z.string(),
+      text: z.string(),
+    }),
+    textColors: z.object({
+      yellow: z.string().default('#000000'),
+      orange: z.string().default('#FFFFFF'),
+      green: z.string().default('#FFFFFF'),
+      blue: z.string().default('#FFFFFF'),
+      purple: z.string().default('#FFFFFF'),
+      pink: z.string().default('#FFFFFF'),
+      coral: z.string().default('#FFFFFF'),
+      peach: z.string().default('#000000'),
+      beige: z.string().default('#000000'),
+    }).optional(),
+  }),
+});
+
 export const collections = {
   data: dataCollection,
   projects: projectsCollection,
   blog: blogCollection,
   team: teamCollection,
   testimonials: testimonialsCollection,
+  palettes: palettesCollection,
 };

@@ -140,6 +140,47 @@ collections:
       - { label: 'Brouillon', name: 'draft', widget: 'boolean', default: false, required: false }
       - { label: 'Témoignage', name: 'body', widget: 'markdown' }
 
+  - name: 'colorPalettes'
+    label: 'Palettes de couleurs'
+    folder: 'src/content/palettes'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Nom de la palette', name: 'name', widget: 'string' }
+      - { label: 'Identifiant', name: 'id', widget: 'string', hint: 'Identifiant unique (ex: default, monochrome, colorblind)' }
+      - { label: 'Description', name: 'description', widget: 'text', required: false }
+      - { label: 'Icône', name: 'icon', widget: 'string', default: '🎨', hint: 'Emoji ou caractère pour représenter la palette' }
+      - label: 'Couleurs'
+        name: 'colors'
+        widget: 'object'
+        fields:
+          - { label: 'Beige', name: 'beige', widget: 'string', default: '#FFF9F0' }
+          - { label: 'Jaune', name: 'yellow', widget: 'string', default: '#FFB948' }
+          - { label: 'Orange', name: 'orange', widget: 'string', default: '#FF8F14' }
+          - { label: 'Vert', name: 'green', widget: 'string', default: '#00C763' }
+          - { label: 'Bleu', name: 'blue', widget: 'string', default: '#5C2EE0' }
+          - { label: 'Violet', name: 'purple', widget: 'string', default: '#7C3FE0' }
+          - { label: 'Rose', name: 'pink', widget: 'string', default: '#FF6BA3' }
+          - { label: 'Corail', name: 'coral', widget: 'string', default: '#FF6B4A' }
+          - { label: 'Pêche', name: 'peach', widget: 'string', default: '#FFAD7A' }
+          - { label: 'Bordure', name: 'border', widget: 'string', default: '#000000' }
+          - { label: 'Texte', name: 'text', widget: 'string', default: '#000000' }
+      - label: 'Couleurs de texte sur fond'
+        name: 'textColors'
+        widget: 'object'
+        required: false
+        hint: 'Couleur du texte à utiliser sur chaque couleur de fond'
+        fields:
+          - { label: 'Texte sur Jaune', name: 'yellow', widget: 'string', default: '#000000' }
+          - { label: 'Texte sur Orange', name: 'orange', widget: 'string', default: '#FFFFFF' }
+          - { label: 'Texte sur Vert', name: 'green', widget: 'string', default: '#FFFFFF' }
+          - { label: 'Texte sur Bleu', name: 'blue', widget: 'string', default: '#FFFFFF' }
+          - { label: 'Texte sur Violet', name: 'purple', widget: 'string', default: '#FFFFFF' }
+          - { label: 'Texte sur Rose', name: 'pink', widget: 'string', default: '#FFFFFF' }
+          - { label: 'Texte sur Corail', name: 'coral', widget: 'string', default: '#FFFFFF' }
+          - { label: 'Texte sur Pêche', name: 'peach', widget: 'string', default: '#000000' }
+          - { label: 'Texte sur Beige', name: 'beige', widget: 'string', default: '#000000' }
+
   - name: 'home'
     label: "Page d'accueil"
     files:

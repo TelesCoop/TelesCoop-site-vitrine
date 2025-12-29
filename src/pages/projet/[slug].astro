@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import { Image } from 'astro:assets';
 import { getCollection, getEntry } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -28,133 +29,199 @@ function getCategoryColorClass(categoryName: string) {
 <Layout title={data.title} description={data.projectResume}>
   <Header slot="header" />
 
-  <article class="container mx-auto px-4 py-16 mt-16 max-w-4xl">
-    <!-- Header -->
-    <header class="mb-12">
-      <h1 class="text-4xl md:text-5xl font-light mb-6">{data.title}</h1>
+  <article class="mt-16">
+    <!-- Hero Section -->
+    <div class="container mx-auto px-4 py-12">
+      <div class="max-w-5xl mx-auto">
+        <!-- Back link -->
+        <a href="/projets" class="inline-flex items-center gap-2 mb-8 text-xl hover:text-orange">
+          <span>←</span>
+          <span>Retour aux projets</span>
+        </a>
 
-      {data.categories && data.categories.length > 0 && (
-        <div class="flex flex-wrap gap-2 mb-6">
-          {data.categories.map((cat: string) => (
-            <span class="badge" data-color={getCategoryColorClass(cat)}>
-              {categoriesData[cat]?.name || cat}
-            </span>
-          ))}
-        </div>
-      )}
+        <!-- Title & Categories -->
+        <div class="mb-8">
+          <h1 class="text-5xl md:text-6xl mb-6 font-display uppercase">{data.title}</h1>
 
-      {data.projectThumbnail && (
-        <img
-          src={data.projectThumbnail}
-          alt={data.projectThumbnailAlt || data.title}
-          class="w-full rounded-lg shadow-lg mb-8"
-        />
-      )}
-    </header>
-
-    <!-- Project Info -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-      <div class="md:col-span-2 space-y-8">
-        <div>
-          <h2 class="text-2xl mb-4">Résumé</h2>
-          <p class="text-xl text-black">{data.projectResume}</p>
-        </div>
-
-        {body && (
-          <div>
-            <h2 class="text-2xl mb-4">Description</h2>
-            <div class="prose prose-lg max-w-none">
-              <Content />
-            </div>
-          </div>
-        )}
-
-        {data.testimony && (
-          <div class="card p-6 flex-col rotate-left">
-            <h3 class="text-xl font-semibold mb-2">Témoignage</h3>
-            <p class="text-xl text-black">"{data.testimony}"</p>
-          </div>
-        )}
-      </div>
-
-      <!-- Sidebar -->
-      <div class="space-y-6">
-        {data.clientName && (
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Client</h3>
-            <p class="text-black text-lg">{data.clientName}</p>
-            {data.clientDescription && (
-              <p class="text-base text-black mt-2">{data.clientDescription}</p>
-            )}
-          </div>
-        )}
-
-        {data.projectStatus && (
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Statut</h3>
-            <p class="text-black text-lg">{data.projectStatus}</p>
-          </div>
-        )}
-
-        {data.projectDuration && (
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Durée</h3>
-            <p class="text-black text-lg">
-              {data.projectDuration} {data.projectDurationUnit || ''}
-            </p>
-          </div>
-        )}
-
-        {data.projectStack && data.projectStack.length > 0 && (
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Technologies</h3>
+          {data.categories && data.categories.length > 0 && (
             <div class="flex flex-wrap gap-2">
-              {data.projectStack.map((tech: string) => (
-                <span class="badge">
-                  {tech}
+              {data.categories.map((cat: string) => (
+                <span class="badge" data-color={getCategoryColorClass(cat)}>
+                  {categoriesData[cat]?.name || cat}
                 </span>
               ))}
             </div>
-          </div>
-        )}
+          )}
+        </div>
 
-        {(data.projectLink || data.projectGit) && (
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Liens</h3>
-            <div class="space-y-2">
-              {data.projectLink && (
-                <a
-                  href={data.projectLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn block text-center py-2"
-                >
-                  Voir le projet
-                </a>
-              )}
-              {data.projectGit && (
-                <a
-                  href={data.projectGit}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn block text-center py-2"
-                >
-                  Code source
-                </a>
-              )}
-            </div>
+        <!-- Project Image -->
+        {data.projectThumbnail && (
+          <div class="relative">
+            <img
+              src={data.projectThumbnail}
+              alt={data.projectThumbnailAlt || data.title}
+              class="w-full rounded-[10px] border-2 border-black"
+              style="filter: drop-shadow(12px 12px 0 var(--color-border));"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         )}
       </div>
     </div>
 
-    <!-- Back link -->
-    <div class="mt-12 pt-8 ">
-      <a href="/projets" class="btn inline-block py-3">
-        ← Retour aux projets
-      </a>
+    <!-- Content Section -->
+    <div class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16">
+          <!-- Main Content -->
+          <div class="lg:col-span-2 space-y-16">
+            <!-- Resume -->
+            <div>
+              <h2 class="text-4xl font-display uppercase mb-6 pb-4 border-b-2 border-black">Le projet</h2>
+              <p class="text-2xl text-black leading-relaxed mt-6">{data.projectResume}</p>
+            </div>
+
+            <!-- Description -->
+            {body && (
+              <div>
+                <h2 class="text-4xl font-display uppercase mb-6 pb-4 border-b-2 border-black">Description</h2>
+                <div class="prose prose-lg max-w-none text-black mt-6">
+                  <Content />
+                </div>
+              </div>
+            )}
+
+            <!-- Testimony -->
+            {data.testimony && (
+              <div class="bg-green p-10 rounded-[10px] border-2 border-black relative" style="filter: drop-shadow(8px 8px 0 var(--color-border));">
+                <div class="text-8xl mb-4 leading-none text-purple absolute -top-4 -left-4">"</div>
+                <p class="text-2xl text-black leading-relaxed italic mb-6 mt-8">{data.testimony}</p>
+                {data.clientName && (
+                  <p class="text-xl font-semibold text-black">— {data.clientName}</p>
+                )}
+              </div>
+            )}
+          </div>
+
+          <!-- Sidebar -->
+          <div class="space-y-8">
+            <!-- Client Info -->
+            {data.clientName && (
+              <div>
+                <h3 class="text-2xl font-display uppercase mb-4">Client</h3>
+                <p class="text-black text-xl font-semibold">{data.clientName}</p>
+                {data.clientDescription && (
+                  <p class="text-lg text-black mt-3 leading-relaxed">{data.clientDescription}</p>
+                )}
+              </div>
+            )}
+
+            <!-- Project Info -->
+            <div class="space-y-6">
+              {data.projectStatus && (
+                <div>
+                  <h3 class="text-lg font-display uppercase mb-2 text-black/70">Statut</h3>
+                  <p class="text-black text-xl font-semibold">{data.projectStatus}</p>
+                </div>
+              )}
+
+              {data.projectDuration && (
+                <div>
+                  <h3 class="text-lg font-display uppercase mb-2 text-black/70">Durée</h3>
+                  <p class="text-black text-xl font-semibold">
+                    {data.projectDuration} {data.projectDurationUnit || ''}
+                  </p>
+                </div>
+              )}
+
+              {data.projectEnd && (
+                <div>
+                  <h3 class="text-lg font-display uppercase mb-2 text-black/70">Date de fin</h3>
+                  <p class="text-black text-xl font-semibold">{data.projectEnd}</p>
+                </div>
+              )}
+            </div>
+
+            <!-- Technologies -->
+            {data.projectStack && data.projectStack.length > 0 && (
+              <div>
+                <h3 class="text-2xl font-display uppercase mb-4">Technologies</h3>
+                <div class="flex flex-wrap gap-2">
+                  {data.projectStack.map((tech: string) => (
+                    <span class="badge">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <!-- Links -->
+            {(data.projectLink || data.projectGit) && (
+              <div class="space-y-3 pt-4">
+                {data.projectLink && (
+                  <a
+                    href={data.projectLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-orange block text-center"
+                  >
+                    Voir le projet →
+                  </a>
+                )}
+                {data.projectGit && (
+                  <a
+                    href={data.projectGit}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn block text-center"
+                  >
+                    Code source
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   </article>
 
   <Footer slot="footer" />
 </Layout>
+
+<style>
+  .prose :global(p) {
+    @apply text-black text-xl leading-relaxed mb-4;
+  }
+
+  .prose :global(ul),
+  .prose :global(ol) {
+    @apply text-black text-xl space-y-2 mb-4;
+  }
+
+  .prose :global(li) {
+    @apply text-black;
+  }
+
+  .prose :global(h2) {
+    @apply text-2xl font-display uppercase mb-4 mt-8;
+  }
+
+  .prose :global(h3) {
+    @apply text-xl font-semibold mb-3 mt-6;
+  }
+
+  .prose :global(a) {
+    @apply text-orange hover:underline;
+  }
+
+  .prose :global(strong) {
+    @apply font-semibold;
+  }
+
+  .prose :global(code) {
+    @apply bg-beige-dark px-2 py-1 rounded text-base;
+  }
+</style>

@@ -5,47 +5,48 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#000000',
+          DEFAULT: 'var(--color-border, #000000)',
           light: '#333333',
         },
         secondary: {
           DEFAULT: '#FFFFFF',
         },
+        black: 'var(--color-border, #000000)',
         beige: {
-          DEFAULT: '#FFF9F0',
+          DEFAULT: 'var(--color-beige, #FFF9F0)',
           dark: '#C4B89E',
         },
         yellow: {
-          DEFAULT: '#FBD26B',
-          dark: '#B8922C',
+          DEFAULT: 'var(--color-yellow, #FFB948)',
+          dark: '#CC8F1A',
         },
         orange: {
-          DEFAULT: '#F1722A',
-          dark: '#B82810',
+          DEFAULT: 'var(--color-orange, #FF8F14)',
+          dark: '#CC6500',
         },
         green: {
-          DEFAULT: '#82E1A0',
-          dark: '#4CAF70',
+          DEFAULT: 'var(--color-green, #00C763)',
+          dark: '#00A355',
         },
         blue: {
-          DEFAULT: '#A8CFEE',
-          dark: '#6B9DC8',
+          DEFAULT: 'var(--color-blue, #5C2EE0)',
+          dark: '#2A009E',
         },
         purple: {
-          DEFAULT: '#B4A7D6',
-          dark: '#8B7AB8',
+          DEFAULT: 'var(--color-purple, #7C3FE0)',
+          dark: '#6B1FCC',
         },
         pink: {
-          DEFAULT: '#FFB6C1',
-          dark: '#E08994',
+          DEFAULT: 'var(--color-pink, #FF6BA3)',
+          dark: '#CC2F61',
         },
         coral: {
-          DEFAULT: '#FF9B85',
-          dark: '#E67A63',
+          DEFAULT: 'var(--color-coral, #FF6B4A)',
+          dark: '#CC4426',
         },
         peach: {
-          DEFAULT: '#FFBD9B',
-          dark: '#E69E7A',
+          DEFAULT: 'var(--color-peach, #FFAD7A)',
+          dark: '#CC7D4A',
         },
         gray: {
           50: '#FAFAFA',

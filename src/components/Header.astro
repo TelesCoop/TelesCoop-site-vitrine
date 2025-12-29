@@ -8,6 +8,7 @@ interface Props {
 const { hideLogo = false } = Astro.props;
 ---
 
+<nav id="header" class="sticky top-0 z-50 bg-beige border-b-2 border-black">
   <div class="container mx-auto px-4">
     <div class="flex justify-between">
       <!-- Logo / Brand -->
@@ -23,21 +24,21 @@ const { hideLogo = false } = Astro.props;
         aria-expanded="false"
       >
         <div class="w-6 h-5 flex flex-col justify-between">
-          <span class="block h-0.5 w-full bg-black transition-all"></span>
-          <span class="block h-0.5 w-full bg-black transition-all"></span>
-          <span class="block h-0.5 w-full bg-black transition-all"></span>
+          <span class="block h-0.5 w-full bg-black"></span>
+          <span class="block h-0.5 w-full bg-black"></span>
+          <span class="block h-0.5 w-full bg-black"></span>
         </div>
       </button>
 
       <!-- Desktop Navigation -->
       <nav class="hidden lg:flex flex-1 justify-end items-center gap-6">
-        <a href="/coopérative" class="py-2 font-semibold uppercase hover:text-red transition-colors text-xl">
+        <a href="/coopérative" class="py-2 font-semibold uppercase hover:text-red text-xl">
           La coopérative
         </a>
-        <a href="/projets" class="py-2 font-semibold uppercase hover:text-red transition-colors text-xl">
+        <a href="/projets" class="py-2 font-semibold uppercase hover:text-red text-xl">
           Nos projets
         </a>
-        <a href="/blog" class="py-2 font-semibold uppercase hover:text-red transition-colors text-xl">
+        <a href="/blog" class="py-2 font-semibold uppercase hover:text-red text-xl">
           Blog
         </a>
         <a href="mailto:contact@telescoop.fr" class="tag tag-yellow">
@@ -63,7 +64,9 @@ const { hideLogo = false } = Astro.props;
   document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('mobile-menu-button');
     const menu = document.getElementById('mobile-menu');
+    const header = document.getElementById('header');
 
+    // Mobile menu toggle
     button?.addEventListener('click', () => {
       menu?.classList.toggle('hidden');
       const isExpanded = button.getAttribute('aria-expanded') === 'true';

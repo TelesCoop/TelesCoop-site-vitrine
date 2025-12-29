@@ -1,4 +1,6 @@
 ---
+import InlineSvg from './InlineSvg.astro';
+
 interface Props {
   title: string;
   description: string;
@@ -6,12 +8,33 @@ interface Props {
 }
 
 const { title, description, src } = Astro.props;
+
+// Color mapping for SVG adaptation
+const colorMapping = {
+  '#FFCD4E': '--color-yellow',
+  '#ffcd4e': '--color-yellow',
+  '#FF5631': '--color-coral',
+  '#ff5631': '--color-coral',
+  '#60E093': '--color-green',
+  '#60e093': '--color-green',
+  '#A8CFEE': '--color-blue',
+  '#a8cfee': '--color-blue',
+  '#1E1C1C': '--color-border',
+  '#1e1c1c': '--color-border',
+  '#000000': '--color-border',
+  '#000': '--color-border',
+};
 ---
 
 <div class="bg-beige border-2 border-gray-200 rounded-lg p-6 hover:border-gray-400 transition-all">
   {src && (
-    <div class="mb-4">
-      <img src={src} alt={title} class="w-16 h-16 mx-auto" />
+    <div class="mb-4 w-16 h-16 mx-auto">
+      <InlineSvg
+        src={src}
+        alt={title}
+        colors={colorMapping}
+        class="w-full h-full object-contain"
+      />
     </div>
   )}
   <h3 class="font-code text-xl mb-3 text-center">{title}</h3>
