@@ -82,34 +82,44 @@
     executable: /bin/bash
     creates: "{{ ansible_env.HOME }}/.nvm/{{ node_version.stdout }}_installed"
 
-- name: Install yarn globally
-  shell: "source /root/.nvm/nvm.sh && nvm exec {{ node_version.stdout }} npm install -g yarn"
-  args:
-    executable: /bin/bash
-    creates: "{{ ansible_env.HOME }}/.nvm/{{ node_version.stdout }}_yarn_installed"
+- name: Check if dist directory already exists
+  stat:
+    path: "{{ frontend_path }}/dist"
+  register: dist_dir_before
 
-- name: Install project node dependencies with yarn
-  # yamllint disable-line rule:line-length
-  shell: "source /root/.nvm/nvm.sh && nvm exec {{ node_version.stdout }} yarn install --frozen-lockfile"
+- name: Install project node dependencies with npm
+  shell: "source /root/.nvm/nvm.sh && nvm exec {{ node_version.stdout }} npm install"
   args:
     chdir: "{{ frontend_path }}"
     executable: /bin/bash
-  when: clonecode.changed or force_update is defined
+  when: clonecode.changed or force_update is defined or not dist_dir_before.stat.exists
 
-# build css first as it gets copied to _site during the next step
-- name: Build css
-  shell: "source /root/.nvm/nvm.sh && nvm exec {{ node_version.stdout }} yarn build:sass"
+- name: Build Astro site
+  shell: "source /root/.nvm/nvm.sh && nvm exec {{ node_version.stdout }} npm run build"
   args:
     chdir: "{{ frontend_path }}"
     executable: /bin/bash
-  when: clonecode.changed or force_update is defined
+  when: clonecode.changed or force_update is defined or not dist_dir_before.stat.exists
+  register: build_output
 
-- name: Build site
-  shell: "source /root/.nvm/nvm.sh && nvm exec {{ node_version.stdout }} yarn build"
-  args:
-    chdir: "{{ frontend_path }}"
-    executable: /bin/bash
-  when: clonecode.changed or force_update is defined
+- name: Display build output if build ran
+  debug:
+    var: build_output
+  when: build_output is defined and build_output.changed
+
+- name: Check if dist directory exists after build attempt
+  stat:
+    path: "{{ frontend_path }}/dist"
+  register: dist_dir
+
+- name: Display dist directory status
+  debug:
+    msg: "Dist directory exists: {{ dist_dir.stat.exists }}, Build was run: {{ build_output is defined and build_output.changed }}"
+
+- name: Fail if dist directory does not exist
+  fail:
+    msg: "Build failed - dist directory not found at {{ frontend_path }}/dist. Build output: {{ build_output }}"
+  when: not dist_dir.stat.exists
 
 - name: Make sure project files have the right owner after installs
   file:
@@ -132,7 +142,7 @@
 
 - name: update frontend static folder content
   synchronize:
-    src: "{{ frontend_path }}/_site/"
+    src: "{{ frontend_path }}/dist/"
     dest: "{{ frontend_static_path }}"
     rsync_opts:
       - "-og"

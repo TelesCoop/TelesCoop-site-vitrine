@@ -1,3 +1,6 @@
 [prod]
 telescoop.fr:42722 ansible_user=ubuntu
 
+[preprod]
+preprod.telescoop.fr:42722 ansible_user=ubuntu
+

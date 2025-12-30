@@ -3,11 +3,11 @@ frontend_application_port: 3040  # must be unique for each project on the same s
 environment_suffix: "_preprod"
 project_slug: "{{ base_project_slug }}{{ environment_suffix }}"
 
-public_hostname: telescoop.fr
-other_public_hostname: telescoop.fr
+public_hostname: preprod.telescoop.fr
+other_public_hostname: preprod.telescoop.fr
 project_dir: "{{project_base_dir}}{{ environment_suffix }}"
 backend_static_path: "{{ project_dir }}/backend_static"
 
-frontend_branch: main
+frontend_branch: dev
 
-environment_name: production
+environment_name: preprod
