@@ -1,0 +1,491 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Peps color palette (default) - can be overridden by JavaScript */
+    --color-beige: #FFF9F0;
+    --color-yellow: #FFB948;
+    --color-orange: #FF8F14;
+    --color-green: #00C763;
+    --color-blue: #5C2EE0;
+    --color-purple: #7C3FE0;
+    --color-pink: #FF6BA3;
+    --color-coral: #FF6B4A;
+    --color-peach: #FFAD7A;
+    --color-border: #000000;
+    --color-text: #000000;
+
+    /* Text colors for each background color */
+    --text-on-yellow: #000000;
+    --text-on-orange: #000000;
+    --text-on-green: #000000;
+    --text-on-blue: #FFF9F0;
+    --text-on-purple: #000000;
+    --text-on-pink: #000000;
+    --text-on-coral: #000000;
+    --text-on-peach: #000000;
+    --text-on-beige: #000000;
+  }
+
+  body {
+    @apply bg-beige;
+  }
+
+  /* Monochrome mode - apply grayscale filter to images */
+  body.monochrome-mode img,
+  body.monochrome-mode svg {
+    filter: grayscale(100%);
+  }
+
+  /* Keep color palette emojis in color in monochrome mode */
+  body.monochrome-mode #palette-toggle {
+    filter: none !important;
+  }
+
+  /* Preserve drop-shadows in monochrome mode */
+  body.monochrome-mode .btn,
+  body.monochrome-mode .card,
+  body.monochrome-mode .tag,
+  body.monochrome-mode .badge {
+    filter: grayscale(100%) drop-shadow(8px 8px 0 var(--color-border));
+  }
+
+  body.monochrome-mode .btn:hover {
+    filter: grayscale(100%) drop-shadow(4px 4px 0 var(--color-border));
+  }
+
+  body.monochrome-mode .btn:active {
+    filter: grayscale(100%) drop-shadow(0 0 0 var(--color-border));
+  }
+
+  body.monochrome-mode .tag:hover {
+    filter: grayscale(100%) drop-shadow(2px 2px 0 var(--color-border));
+  }
+
+  body.monochrome-mode .badge {
+    filter: grayscale(100%) drop-shadow(3px 3px 0 var(--color-border));
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-wider;
+  }
+
+  p {
+    @apply leading-tight text-xl;
+  }
+}
+
+@layer components {
+  /* Base button */
+  .btn {
+    @apply px-4 py-2 bg-beige text-black border-2 border-black rounded-[10px] cursor-pointer font-light tracking-wider font-display uppercase transition-all duration-200 text-base;
+    -webkit-text-fill-color: unset;
+    transform: translate3d(0, 0, 0);
+    filter: drop-shadow(8px 8px 0 var(--color-border));
+  }
+
+  .btn:hover {
+    filter: drop-shadow(4px 4px 0 var(--color-border));
+    transform: translate3d(4px, 4px, 0);
+  }
+
+  .btn:active {
+    filter: drop-shadow(0 0 0 var(--color-border));
+    transform: translate3d(8px, 8px, 0);
+  }
+
+  /* Button sizes */
+  .btn-sm {
+    @apply text-sm px-3 py-1.5;
+  }
+
+  .btn-md {
+    @apply text-base px-4 py-2;
+  }
+
+  .btn-lg {
+    @apply text-lg px-6 py-3;
+  }
+
+  .btn-xl {
+    @apply text-xl px-8 py-4;
+  }
+
+  /* Button colors */
+  .btn-yellow {
+    @apply bg-yellow;
+    color: var(--text-on-yellow);
+  }
+
+  .btn-orange {
+    @apply bg-orange;
+    color: var(--text-on-orange);
+  }
+
+  .btn-blue {
+    @apply bg-blue;
+    color: var(--text-on-blue);
+  }
+
+  .btn-pink {
+    @apply bg-pink;
+    color: var(--text-on-pink);
+  }
+
+  .btn-purple {
+    @apply bg-purple;
+    color: var(--text-on-purple);
+  }
+
+  .btn-green {
+    @apply bg-green;
+    color: var(--text-on-green);
+  }
+
+  .btn-beige {
+    @apply bg-beige;
+    color: var(--text-on-beige);
+  }
+
+  .btn-coral {
+    @apply bg-coral;
+    color: var(--text-on-coral);
+  }
+
+  .btn-peach {
+    @apply bg-peach;
+    color: var(--text-on-peach);
+  }
+
+  .card {
+    @apply p-0 rounded-[10px] bg-beige border-2 border-black flex flex-row flex-wrap justify-between items-start gap-0 text-black transition-all duration-200;
+    text-fill-color: unset;
+    -webkit-text-fill-color: unset;
+    transform: translate3d(0, 0, 0);
+    filter: drop-shadow(8px 8px 0 var(--color-border));
+  }
+
+  .card:hover {
+    filter: drop-shadow(4px 4px 0 var(--color-border));
+    transform: translate3d(4px, 4px, 0);
+  }
+
+  .card.rotate-left {
+    transform: translate3d(0, 0, 0) rotate(-0.5deg);
+  }
+
+  .card.rotate-right {
+    transform: translate3d(0, 0, 0) rotate(0.5deg);
+  }
+
+  .card.rotate-left:hover {
+    filter: drop-shadow(4px 4px 0 var(--color-border));
+    transform: translate3d(4px, 4px, 0) rotate(-1deg);
+  }
+
+  .card.rotate-right:hover {
+    filter: drop-shadow(4px 4px 0 var(--color-border));
+    transform: translate3d(4px, 4px, 0) rotate(1deg);
+  }
+
+  /* Base tag */
+  .tag {
+    @apply py-1.5 px-4 rounded-[10px] border-2 border-black inline-block font-normal font-display uppercase tracking-wider transition-all duration-200 bg-orange text-white text-base;
+    text-fill-color: unset;
+    -webkit-text-fill-color: unset;
+    transform: translate3d(0, 0, 0);
+    filter: drop-shadow(4px 4px 0 var(--color-border));
+  }
+
+  .tag:hover {
+    filter: drop-shadow(2px 2px 0 var(--color-border));
+    transform: translate3d(2px, 2px, 0);
+  }
+
+  /* Tag sizes */
+  .tag-sm {
+    @apply text-sm py-1 px-3;
+  }
+
+  .tag-md {
+    @apply text-base py-1.5 px-4;
+  }
+
+  .tag-lg {
+    @apply text-xl py-2 px-5;
+  }
+
+  .tag-xl {
+    @apply text-3xl py-2.5 px-6;
+  }
+
+  /* Tag colors */
+  .tag-yellow {
+    @apply bg-yellow;
+    color: var(--text-on-yellow);
+  }
+
+  .tag-orange {
+    @apply bg-orange;
+    color: var(--text-on-orange);
+  }
+
+  .tag-blue {
+    @apply bg-blue;
+    color: var(--text-on-blue);
+  }
+
+  .tag-pink {
+    @apply bg-pink;
+    color: var(--text-on-pink);
+  }
+
+  .tag-purple {
+    @apply bg-purple;
+    color: var(--text-on-purple);
+  }
+
+  .tag-green {
+    @apply bg-green;
+    color: var(--text-on-green);
+  }
+
+  .tag-beige {
+    @apply bg-beige;
+    color: var(--text-on-beige);
+  }
+
+  .tag-coral {
+    @apply bg-coral;
+    color: var(--text-on-coral);
+  }
+
+  .tag-peach {
+    @apply bg-peach;
+    color: var(--text-on-peach);
+  }
+
+  .filter-btn {
+    @apply py-1.5 px-2.5 text-lg text-center uppercase font-bold font-sans rounded-[10px] border-2 cursor-pointer transition-all duration-200;
+  }
+
+  .filter-btn:hover {
+    @apply opacity-90;
+  }
+
+  .filter-btn.active {
+    @apply scale-105 shadow-[0_0_0_3px_rgba(0,0,0,0.2)];
+  }
+
+  /* Filter button colors */
+  .filter-btn[data-color="yellow"] {
+    @apply bg-yellow border-black;
+    color: var(--text-on-yellow);
+  }
+
+  .filter-btn[data-color="orange"] {
+    @apply bg-orange border-black;
+    color: var(--text-on-orange);
+  }
+
+  .filter-btn[data-color="blue"] {
+    @apply bg-blue border-black;
+    color: var(--text-on-blue);
+  }
+
+  .filter-btn[data-color="beige"] {
+    @apply bg-beige border-black;
+    color: var(--text-on-beige);
+  }
+
+  .filter-btn[data-color="green"] {
+    @apply bg-green border-black;
+    color: var(--text-on-green);
+  }
+
+  .filter-btn[data-color="pink"] {
+    @apply bg-pink border-black;
+    color: var(--text-on-pink);
+  }
+
+  .filter-btn[data-color="purple"] {
+    @apply bg-purple border-black;
+    color: var(--text-on-purple);
+  }
+
+  .filter-btn[data-color="coral"] {
+    @apply bg-coral border-black;
+    color: var(--text-on-coral);
+  }
+
+  .filter-btn[data-color="peach"] {
+    @apply bg-peach border-black;
+    color: var(--text-on-peach);
+  }
+
+  .badge {
+    @apply py-1 px-3 rounded-[10px] border-2 border-black inline-block text-sm font-semibold uppercase bg-beige text-black;
+    transform: translate3d(0, 0, 0);
+    filter: drop-shadow(3px 3px 0 var(--color-border));
+  }
+
+  /* Badge colors */
+  .badge[data-color="yellow"] {
+    @apply bg-yellow border-black;
+    color: var(--text-on-yellow);
+  }
+
+  .badge[data-color="orange"] {
+    @apply bg-orange border-black;
+    color: var(--text-on-orange);
+  }
+
+  .badge[data-color="blue"] {
+    @apply bg-blue border-black;
+    color: var(--text-on-blue);
+  }
+
+  .badge[data-color="beige"] {
+    @apply bg-beige border-black;
+    color: var(--text-on-beige);
+  }
+
+  .badge[data-color="green"] {
+    @apply bg-green border-black;
+    color: var(--text-on-green);
+  }
+
+  .badge[data-color="pink"] {
+    @apply bg-pink border-black;
+    color: var(--text-on-pink);
+  }
+
+  .badge[data-color="purple"] {
+    @apply bg-purple border-black;
+    color: var(--text-on-purple);
+  }
+
+  .badge[data-color="coral"] {
+    @apply bg-coral border-black;
+    color: var(--text-on-coral);
+  }
+
+  .badge[data-color="peach"] {
+    @apply bg-peach border-black;
+    color: var(--text-on-peach);
+  }
+
+  .testimonial-card {
+    @apply absolute top-0 left-1/2 p-8 rounded-[10px] bg-beige border-2 border-black flex flex-row justify-between items-start gap-8 w-full max-w-4xl opacity-0 pointer-events-none transition-all duration-300;
+    -webkit-text-fill-color: unset;
+    transform: translateX(-50%);
+    filter: drop-shadow(8px 8px 0 var(--color-border));
+  }
+
+  .testimonial-card.active {
+    @apply opacity-100 pointer-events-auto z-10;
+  }
+
+  .testimonial-card.stack-1 {
+    @apply opacity-30 z-[9];
+    transform: translateX(-50%) translateY(10px) scale(0.98);
+  }
+
+  .testimonial-card.stack-2 {
+    @apply opacity-15 z-[8];
+    transform: translateX(-50%) translateY(20px) scale(0.96);
+  }
+
+  .testimonials-wrapper {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .slider-container {
+    @apply relative min-h-[500px] py-5 pb-20;
+  }
+
+  .testimonial-number {
+    @apply font-display text-6xl leading-none text-black min-w-[100px];
+  }
+
+  .testimonial-content {
+    @apply flex-1 flex flex-col gap-4;
+  }
+
+  .testimonial-card.rotate-left.active {
+    transform: translateX(-50%) rotate(-1deg);
+  }
+
+  .testimonial-card.rotate-right.active {
+    transform: translateX(-50%) rotate(1deg);
+  }
+
+  .testimonial-card.rotate-left.stack-1 {
+    transform: translateX(-50%) translateY(10px) scale(0.98) rotate(-1deg);
+  }
+
+  .testimonial-card.rotate-right.stack-1 {
+    transform: translateX(-50%) translateY(10px) scale(0.98) rotate(1deg);
+  }
+
+  .testimonial-card.rotate-left.stack-2 {
+    transform: translateX(-50%) translateY(20px) scale(0.96) rotate(-1deg);
+  }
+
+  .testimonial-card.rotate-right.stack-2 {
+    transform: translateX(-50%) translateY(20px) scale(0.96) rotate(1deg);
+  }
+
+  .testimonials-nav {
+    @apply flex justify-center gap-4 mt-8;
+  }
+
+  .nav-dot {
+    @apply w-12 h-12 rounded-[10px] bg-beige border-2 border-black flex items-center justify-center cursor-pointer transition-all duration-200 font-display text-base text-black;
+    filter: drop-shadow(4px 4px 0 var(--color-border));
+  }
+
+  .nav-dot:hover {
+    filter: drop-shadow(2px 2px 0 var(--color-border));
+    transform: translate3d(2px, 2px, 0);
+  }
+
+  .nav-dot.active {
+    @apply bg-orange text-white;
+  }
+
+  .grain-texture::before {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/texture/grain.webp');
+    background-repeat: repeat;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 1;
+    position: fixed;
+  }
+
+  @media (max-width: 768px) {
+    .testimonial-card {
+      min-width: 320px;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .testimonial-number {
+      font-size: 3rem;
+      min-width: auto;
+    }
+
+    .nav-dot {
+      width: 40px;
+      height: 40px;
+      font-size: 0.875rem;
+    }
+  }
+}

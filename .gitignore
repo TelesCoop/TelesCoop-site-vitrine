@@ -6,5 +6,6 @@ telescoop
 vault.key
 gi
 *.css
+!src/**/*.css
 .DS_Store
 dist
