@@ -1,6 +1,7 @@
 ---
 import { getEntry } from 'astro:content';
 import ColorPaletteSwitcher from '../components/ColorPaletteSwitcher.astro';
+import '../styles/global.css';
 
 interface Props {
   title?: string;
@@ -25,7 +26,6 @@ const pageDescription = description || metadataData.description;
       href="https://fonts.googleapis.com/css2?family=Anton:wght@300;400;500;600;700&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/src/styles/global.css" />
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
 

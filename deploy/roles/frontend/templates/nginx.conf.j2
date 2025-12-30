@@ -1,22 +1,24 @@
 {{ ansible_managed | comment }}
 
+{% if public_hostname != other_public_hostname %}
 server {
     server_name {{ other_public_hostname }};
     listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/telescoop.fr/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/telescoop.fr/privkey.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/{{ public_hostname }}/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/{{ public_hostname }}/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
     rewrite ^(.*) https://{{ public_hostname }} permanent;
 }
+{% endif %}
 
 server {
-    server_name {{ public_hostname }};
+    server_name {{ public_hostname }}{% if public_hostname != other_public_hostname %} {{ other_public_hostname }}{% endif %};
 
     listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/telescoop.fr/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/telescoop.fr/privkey.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/{{ public_hostname }}/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/{{ public_hostname }}/privkey.pem; # managed by Certbot
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
@@ -25,7 +27,7 @@ server {
 
     # http://stackoverflow.com/questions/15238506/djangos-suspiciousoperation-invalid-http-host-header
     # Deny illegal Host headers
-    if ($host !~* ^({{ public_hostname }}|{{other_public_hostname}})$ ) {
+    if ($host !~* ^({{ public_hostname }}{% if public_hostname != other_public_hostname %}|{{ other_public_hostname }}{% endif %})$ ) {
         return 444;
     }
 
@@ -50,12 +52,13 @@ server {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
+{% if public_hostname != other_public_hostname %}
     if ($host = {{ other_public_hostname }}) {
          return 301 https://$host$request_uri;
     } # managed by Certbot
-
+{% endif %}
 
     listen 80;
-    server_name {{ public_hostname }} {{ other_public_hostname }};
+    server_name {{ public_hostname }}{% if public_hostname != other_public_hostname %} {{ other_public_hostname }}{% endif %};
     return 404; # managed by Certbot
 }

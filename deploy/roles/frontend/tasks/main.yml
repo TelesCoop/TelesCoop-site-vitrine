@@ -57,7 +57,7 @@
     key_file: "{{ identity_file_path }}"
     accept_hostkey: true
     force: true
-    version: main
+    version: "{{ frontend_branch }}"
   become_user: "{{ main_user }}"
   register: clonecode
 
@@ -104,22 +104,31 @@
 
 - name: Display build output if build ran
   debug:
-    var: build_output
+    var: build_output.stdout_lines
   when: build_output is defined and build_output.changed
 
-- name: Check if dist directory exists after build attempt
+- name: Check if dist directory exists (Astro)
   stat:
     path: "{{ frontend_path }}/dist"
   register: dist_dir
 
-- name: Display dist directory status
-  debug:
-    msg: "Dist directory exists: {{ dist_dir.stat.exists }}, Build was run: {{ build_output is defined and build_output.changed }}"
+- name: Check if _site directory exists (Eleventy legacy)
+  stat:
+    path: "{{ frontend_path }}/_site"
+  register: site_dir
 
-- name: Fail if dist directory does not exist
+- name: Set build output directory
+  set_fact:
+    build_output_dir: "{{ 'dist' if dist_dir.stat.exists else '_site' if site_dir.stat.exists else 'none' }}"
+
+- name: Display detected build output directory
+  debug:
+    msg: "Build output directory detected: {{ build_output_dir }}"
+
+- name: Fail if no build output directory exists
   fail:
-    msg: "Build failed - dist directory not found at {{ frontend_path }}/dist. Build output: {{ build_output }}"
-  when: not dist_dir.stat.exists
+    msg: "Build failed - neither dist nor _site directory found at {{ frontend_path }}"
+  when: build_output_dir == 'none'
 
 - name: Make sure project files have the right owner after installs
   file:
@@ -142,7 +151,7 @@
 
 - name: update frontend static folder content
   synchronize:
-    src: "{{ frontend_path }}/dist/"
+    src: "{{ frontend_path }}/{{ build_output_dir }}/"
     dest: "{{ frontend_static_path }}"
     rsync_opts:
       - "-og"
