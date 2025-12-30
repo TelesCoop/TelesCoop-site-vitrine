@@ -6,6 +6,6 @@ export default defineConfig({
   publicDir: './public',
   integrations: [tailwind()],
   build: {
-    format: 'file'
+    format: 'directory'
   }
 });
