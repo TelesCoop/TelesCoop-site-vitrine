@@ -61,7 +61,6 @@ function getCategoryColorClass(categoryName: string) {
               src={data.projectThumbnail}
               alt={data.projectThumbnailAlt || data.title}
               class="w-full rounded-[10px] border-2 border-black"
-              style="filter: drop-shadow(12px 12px 0 var(--color-border));"
               loading="lazy"
               decoding="async"
             />
@@ -94,8 +93,8 @@ function getCategoryColorClass(categoryName: string) {
 
             <!-- Testimony -->
             {data.testimony && (
-              <div class="bg-green p-10 rounded-[10px] border-2 border-black relative" style="filter: drop-shadow(8px 8px 0 var(--color-border));">
-                <div class="text-8xl mb-4 leading-none text-purple absolute -top-4 -left-4">"</div>
+              <div class="bg-white p-10 rounded-[10px] border-2 border-black relative" style="filter: drop-shadow(8px 8px 0 var(--color-border));">
+                <div class="text-8xl mb-4 leading-none text-purple absolute top-0 left-6">"</div>
                 <p class="text-2xl text-black leading-relaxed italic mb-6 mt-8">{data.testimony}</p>
                 {data.clientName && (
                   <p class="text-xl font-semibold text-black">— {data.clientName}</p>

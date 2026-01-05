@@ -270,14 +270,18 @@
 
   .filter-btn {
     @apply py-1.5 px-2.5 text-lg text-center uppercase font-bold font-sans rounded-[10px] border-2 cursor-pointer transition-all duration-200;
+    filter: drop-shadow(3px 3px 0 var(--color-border));
+    transform: translate3d(0, 0, 0);
   }
 
-  .filter-btn:hover {
-    @apply opacity-90;
+  .filter-btn:hover:not(.active) {
+    filter: drop-shadow(2px 2px 0 var(--color-border));
+    transform: translate3d(1px, 1px, 0);
   }
 
   .filter-btn.active {
-    @apply scale-105 shadow-[0_0_0_3px_rgba(0,0,0,0.2)];
+    filter: drop-shadow(4px 4px 0 var(--color-border));
+    transform: translate3d(2px, 2px, 0) scale(1.02);
   }
 
   /* Filter button colors */

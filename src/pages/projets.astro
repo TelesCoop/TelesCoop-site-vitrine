@@ -112,7 +112,13 @@ const colorMapping = {
       ))}
     </div>
 
-    <p class="text-center mt-12 text-black">
+    <!-- No results message -->
+    <div id="no-results" class="hidden text-center mt-12">
+      <p class="text-2xl text-black font-semibold mb-4">Aucun projet trouvé</p>
+      <p class="text-lg text-black/70">Essayez de modifier vos critères de recherche ou de filtrage</p>
+    </div>
+
+    <p class="text-center mt-12 text-black" id="more-projects-text">
       Et bien d'autres projets...
     </p>
   </div>
@@ -126,6 +132,9 @@ const colorMapping = {
 
   function updateProjects() {
     const cards = document.querySelectorAll('.project-card');
+    const noResultsDiv = document.getElementById('no-results');
+    const moreProjectsText = document.getElementById('more-projects-text');
+    let visibleCount = 0;
 
     cards.forEach((card) => {
       const cardElement = card as HTMLElement;
@@ -142,8 +151,22 @@ const colorMapping = {
         cardDescription.includes(searchQuery.toLowerCase());
 
       // Show only if matches both filters
-      cardElement.style.display = matchesCategory && matchesSearch ? 'block' : 'none';
+      const shouldShow = matchesCategory && matchesSearch;
+      cardElement.style.display = shouldShow ? 'block' : 'none';
+
+      if (shouldShow) visibleCount++;
     });
+
+    // Show/hide "no results" message and "more projects" text
+    if (noResultsDiv && moreProjectsText) {
+      if (visibleCount === 0) {
+        noResultsDiv.classList.remove('hidden');
+        moreProjectsText.classList.add('hidden');
+      } else {
+        noResultsDiv.classList.add('hidden');
+        moreProjectsText.classList.remove('hidden');
+      }
+    }
   }
 
   // Category filters

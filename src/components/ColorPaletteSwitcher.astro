@@ -127,14 +127,27 @@ const palettesData = palettes.map(p => ({
     });
   });
 
-  // Load palette on page load
-  loadSavedPalette();
+  // Initialize palette
+  function initializePalette() {
+    loadSavedPalette();
 
-  // Mark active palette
-  const savedPalette = localStorage.getItem(PALETTE_KEY) || 'peps';
-  document.querySelectorAll('.palette-option').forEach(btn => {
-    if (btn.getAttribute('data-palette-id') === savedPalette) {
-      btn.classList.add('bg-green');
-    }
-  });
+    // Mark active palette
+    const savedPalette = localStorage.getItem(PALETTE_KEY) || 'peps';
+    document.querySelectorAll('.palette-option').forEach(btn => {
+      if (btn.getAttribute('data-palette-id') === savedPalette) {
+        btn.classList.add('bg-green');
+      }
+    });
+  }
+
+  // Load palette on page load
+  initializePalette();
+
+  // Also run on Astro view transitions (if enabled)
+  document.addEventListener('astro:page-load', initializePalette);
+
+  // Run when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializePalette);
+  }
 </script>
