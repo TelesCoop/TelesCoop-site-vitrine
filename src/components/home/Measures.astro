@@ -25,7 +25,7 @@ const { measures } = Astro.props;
         const colorClass = colors[index % colors.length];
         return (
           <div class={`card flex-col p-4 md:p-6 text-center ${index % 2 === 0 ? 'rotate-left' : 'rotate-right'}`}>
-            <span class={`w-full text-center text-3xl md:text-4xl lg:text-5xl ${colorClass} mb-4 font-display rounded-lg px-3 py-2 text-white inline-block`}>
+            <span class={`w-full text-center text-3xl md:text-4xl lg:text-5xl ${colorClass} mb-4 font-display rounded-lg px-3 py-2 text-black inline-block`}>
               {measure.value}
             </span>
             <span class="text-base md:text-lg lg:text-2xl font-semibold">

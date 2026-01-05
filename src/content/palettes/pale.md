@@ -6,7 +6,7 @@ icon: 🌸
 colors:
   beige: '#FFF9F0'
   yellow: '#FBD26B'
-  orange: '#F1722A'
+  orange: '#FE9A84'
   green: '#82E1A0'
   blue: '#A8CFEE'
   purple: '#B4A7D6'
