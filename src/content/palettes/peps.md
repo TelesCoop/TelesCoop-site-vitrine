@@ -20,7 +20,7 @@ textColors:
   orange: '#000000'
   green: '#000000'
   blue: '#FFF9F0'
-  purple: '#000000'
+  purple: '#FFFFFF'
   pink: '#000000'
   coral: '#000000'
   peach: '#000000'

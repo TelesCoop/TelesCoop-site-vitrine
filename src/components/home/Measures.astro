@@ -21,11 +21,28 @@ const { measures } = Astro.props;
 
     <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
       {measures.map((measure, index) => {
-        const colors = ['bg-orange', 'bg-blue', 'bg-green', 'bg-green', 'bg-yellow'];
-        const colorClass = colors[index % colors.length];
+        const bgColors = ['bg-orange', 'bg-blue', 'bg-green', 'bg-green', 'bg-yellow'];
+        const bgColorClass = bgColors[index % bgColors.length];
+
+        // Map background colors to their corresponding text colors based on CSS variables
+        const textColorMap = {
+          'bg-orange': 'text-on-orange',
+          'bg-blue': 'text-on-blue',
+          'bg-green': 'text-on-green',
+          'bg-yellow': 'text-on-yellow',
+          'bg-purple': 'text-on-purple',
+          'bg-pink': 'text-on-pink',
+          'bg-beige': 'text-on-beige',
+        };
+
+        const textColorVar = textColorMap[bgColorClass] || 'text-on-beige';
+
         return (
           <div class={`card flex-col p-4 md:p-6 text-center ${index % 2 === 0 ? 'rotate-left' : 'rotate-right'}`}>
-            <span class={`w-full text-center text-3xl md:text-4xl lg:text-5xl ${colorClass} mb-4 font-display rounded-lg px-3 py-2 text-black inline-block`}>
+            <span
+              class={`w-full text-center text-3xl md:text-4xl lg:text-5xl ${bgColorClass} mb-4 font-display rounded-lg px-3 py-2 inline-block`}
+              style={`color: var(--${textColorVar})`}
+            >
               {measure.value}
             </span>
             <span class="text-base md:text-lg lg:text-2xl font-semibold">
