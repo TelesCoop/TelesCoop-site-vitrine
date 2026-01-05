@@ -17,12 +17,12 @@ colors:
   text: '#000000'
 textColors:
   yellow: '#000000'
-  orange: '#FFFFFF'
+  orange: '#000000'
   green: '#000000'
   blue: '#FFFFFF'
   purple: '#FFFFFF'
   pink: '#000000'
-  coral: '#FFFFFF'
+  coral: '#000000'
   peach: '#000000'
   beige: '#000000'
 ---

@@ -2,6 +2,14 @@
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
+    screens: {
+      'xs': '400px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         primary: {
@@ -21,7 +29,7 @@ export default {
           dark: '#CC8F1A',
         },
         orange: {
-          DEFAULT: 'var(--color-orange, #FF8F14)',
+          DEFAULT: 'var(--color-orange, #D66A00)',
           dark: '#CC6500',
         },
         green: {
@@ -29,11 +37,11 @@ export default {
           dark: '#00A355',
         },
         blue: {
-          DEFAULT: 'var(--color-blue, #5C2EE0)',
+          DEFAULT: 'var(--color-blue, #4A1BC7)',
           dark: '#2A009E',
         },
         purple: {
-          DEFAULT: 'var(--color-purple, #7C3FE0)',
+          DEFAULT: 'var(--color-purple, #6929C7)',
           dark: '#6B1FCC',
         },
         pink: {

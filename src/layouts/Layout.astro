@@ -66,11 +66,34 @@ const pageDescription = description || metadataData.description;
   </head>
 
   <body class="grain-texture">
+    <a href="#main-content" class="skip-to-content">
+      Aller au contenu principal
+    </a>
     <slot name="header" />
-    <div>
+    <main id="main-content">
       <slot />
-    </div>
+    </main>
     <slot name="footer" />
     <ColorPaletteSwitcher />
   </body>
 </html>
+
+<style>
+  .skip-to-content {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1rem 1.5rem;
+    background-color: var(--color-orange);
+    color: var(--color-beige);
+    text-decoration: none;
+    border-radius: 0 0 0.5rem 0.5rem;
+    font-weight: bold;
+  }
+
+  .skip-to-content:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+</style>

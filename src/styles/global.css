@@ -7,10 +7,10 @@
     /* Peps color palette (default) - can be overridden by JavaScript */
     --color-beige: #FFF9F0;
     --color-yellow: #FFB948;
-    --color-orange: #FF8F14;
+    --color-orange: #D66A00;
     --color-green: #00C763;
-    --color-blue: #5C2EE0;
-    --color-purple: #7C3FE0;
+    --color-blue: #4A1BC7;
+    --color-purple: #6929C7;
     --color-pink: #FF6BA3;
     --color-coral: #FF6B4A;
     --color-peach: #FFAD7A;
@@ -31,6 +31,7 @@
 
   body {
     @apply bg-beige;
+    font-size: 1.125rem;
   }
 
   /* Monochrome mode - apply grayscale filter to images */
@@ -73,7 +74,7 @@
   }
 
   p {
-    @apply leading-tight text-xl;
+    @apply leading-relaxed text-lg md:text-xl;
   }
 }
 
@@ -378,10 +379,18 @@
   }
 
   .testimonial-card {
-    @apply absolute top-0 left-1/2 p-8 rounded-[10px] bg-beige border-2 border-black flex flex-row justify-between items-start gap-8 w-full max-w-4xl opacity-0 pointer-events-none transition-all duration-300;
+    @apply absolute top-0 left-1/2 p-4 md:p-6 lg:p-8 rounded-[10px] bg-beige border-2 border-black flex flex-col md:flex-row justify-between items-start gap-4 md:gap-6 lg:gap-8 opacity-0 pointer-events-none transition-all duration-300;
     -webkit-text-fill-color: unset;
     transform: translateX(-50%);
     filter: drop-shadow(8px 8px 0 var(--color-border));
+    width: calc(100% - 2rem);
+    max-width: 56rem;
+  }
+
+  @media (max-width: 768px) {
+    .testimonial-card {
+      filter: drop-shadow(4px 4px 0 var(--color-border));
+    }
   }
 
   .testimonial-card.active {
@@ -403,15 +412,56 @@
   }
 
   .slider-container {
-    @apply relative min-h-[500px] py-5 pb-20;
+    @apply relative py-5;
+    min-height: 340px;
+    padding-bottom: 2rem;
+    cursor: grab;
+    user-select: none;
+  }
+
+  @media (min-width: 400px) {
+    .slider-container {
+      min-height: 380px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .slider-container {
+      min-height: 420px;
+      padding-bottom: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .slider-container {
+      min-height: 500px;
+      padding-bottom: 5rem;
+    }
+  }
+
+  .slider-container:active {
+    cursor: grabbing;
   }
 
   .testimonial-number {
-    @apply font-display text-6xl leading-none text-black min-w-[100px];
+    @apply font-display text-3xl xs:text-4xl md:text-5xl lg:text-6xl leading-none text-black;
+    min-width: 50px;
+  }
+
+  @media (min-width: 400px) {
+    .testimonial-number {
+      min-width: 60px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .testimonial-number {
+      min-width: 100px;
+    }
   }
 
   .testimonial-content {
-    @apply flex-1 flex flex-col gap-4;
+    @apply flex-1 flex flex-col gap-3 md:gap-4;
   }
 
   .testimonial-card.rotate-left.active {
@@ -453,7 +503,7 @@
   }
 
   .nav-dot.active {
-    @apply bg-orange text-white;
+    @apply bg-orange text-black;
   }
 
   .grain-texture::before {
@@ -471,21 +521,14 @@
   }
 
   @media (max-width: 768px) {
-    .testimonial-card {
-      min-width: 320px;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .testimonial-number {
-      font-size: 3rem;
-      min-width: auto;
-    }
-
     .nav-dot {
-      width: 40px;
-      height: 40px;
-      font-size: 0.875rem;
+      @apply w-10 h-10 text-sm;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .nav-dot {
+      @apply w-9 h-9 text-xs;
     }
   }
 }

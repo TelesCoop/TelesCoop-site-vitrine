@@ -32,9 +32,12 @@ try {
     svgContent = svgContent.replace(/<svg/, `<svg class="${className}"`);
   }
 
-  // Add aria-label for accessibility
+  // Add aria-label and role for accessibility
   if (alt) {
-    svgContent = svgContent.replace(/<svg/, `<svg aria-label="${alt}"`);
+    svgContent = svgContent.replace(/<svg/, `<svg role="img" aria-label="${alt}"`);
+  } else {
+    // If no alt text, make it decorative
+    svgContent = svgContent.replace(/<svg/, `<svg role="presentation" aria-hidden="true"`);
   }
 } catch (error) {
   console.error(`Error loading SVG: ${svgPath}`, error);

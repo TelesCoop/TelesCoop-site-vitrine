@@ -8,15 +8,15 @@ import Logo from "./Logo.astro";
       <!-- Logo et description -->
       <div>
         <Logo class="text-white" />
-        <p class="text-white/80 text-lg">
+        <p class="text-white/80 text-base md:text-lg">
           Coopérative de développement pour des projets engagés
         </p>
         <!-- Logos partenaires -->
         <div class="pt-4 mb-6">
-          Partenaires :
-          <div class="flex justify-center items-center gap-8">
+          <p class="text-sm md:text-base mb-2">Partenaires :</p>
+          <div class="flex justify-start items-center gap-8">
             <a href="https://www.urscop.fr/" target="_blank" rel="noopener noreferrer" class="opacity-80 hover:opacity-100 transition-opacity">
-              <img src="/img/urscop-logo.png" alt="Logo URSCOP" class="h-12" loading="lazy" decoding="async" />
+              <img src="/img/urscop-logo.png" alt="Logo URSCOP" class="h-10 md:h-12" loading="lazy" decoding="async" />
             </a>
           </div>
         </div>
@@ -24,8 +24,8 @@ import Logo from "./Logo.astro";
 
       <!-- Navigation -->
       <div>
-        <h3 class="text-xl font-semibold mb-4">Navigation</h3>
-        <ul class="space-y-2">
+        <h3 class="text-lg md:text-xl font-semibold mb-4">Navigation</h3>
+        <ul class="space-y-2 text-sm md:text-base">
           <li><a href="/coopérative" class="text-white/80 hover:text-red transition-colors">La coopérative</a></li>
           <li><a href="/projets" class="text-white/80 hover:text-red transition-colors">Nos projets</a></li>
           <li><a href="/blog" class="text-white/80 hover:text-red transition-colors">Blog</a></li>
@@ -35,8 +35,8 @@ import Logo from "./Logo.astro";
 
       <!-- Contact et infos -->
       <div>
-        <h3 class="text-xl font-semibold mb-4">Contact</h3>
-        <ul class="space-y-2 text-white/80">
+        <h3 class="text-lg md:text-xl font-semibold mb-4">Contact</h3>
+        <ul class="space-y-2 text-white/80 text-sm md:text-base">
           <li>
             <a href="mailto:contact@telescoop.fr" class="hover:text-red transition-colors">
               contact@telescoop.fr
@@ -56,14 +56,16 @@ import Logo from "./Logo.astro";
     </div>
 
     <!-- Bottom bar -->
-    <div class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="text-white/60 text-sm">
-        © {new Date().getFullYear()} TelesCoop - SCOP
-      </p>
-      <p class="text-white/60 text-sm text-center">
-        Site écoconçu · <span id="page-weight">Calcul en cours...</span>
-      </p>
-      <p class="text-white/60 text-sm text-center">
+    <div class="border-t border-white/20 pt-8 flex flex-col gap-3 text-center md:text-left">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-3">
+        <p class="text-white/60 text-xs md:text-sm">
+          © {new Date().getFullYear()} TelesCoop - SCOP
+        </p>
+        <p class="text-white/60 text-xs md:text-sm">
+          Site écoconçu · <span id="page-weight">Calcul en cours...</span>
+        </p>
+      </div>
+      <p class="text-white/60 text-xs md:text-sm text-center md:text-left">
         Illustrations : <a href="https://www.lacooperativedesinternets.fr/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">La Coopérative des Internets</a>
       </p>
     </div>

@@ -9,7 +9,13 @@ import { getCollection, getEntry } from 'astro:content';
 const projectsCollection = await getCollection('projects', ({ data }) => !data.draft);
 const categories = await getEntry('data', 'categories');
 
-const projectsData = projectsCollection.map(p => ({ ...p.data, slug: p.slug, content: p.body }));
+const projectsData = projectsCollection
+  .map(p => ({ ...p.data, slug: p.slug, content: p.body }))
+  .sort((a, b) => {
+    const yearA = parseInt(a.projectEnd || '0');
+    const yearB = parseInt(b.projectEnd || '0');
+    return yearB - yearA;
+  });
 const categoriesData = categories?.data || {};
 
 const title = 'Nos projets';
@@ -49,16 +55,8 @@ const colorMapping = {
 
   <div class="container mx-auto px-4 py-16 mt-16">
     <div class="text-center mb-12">
-      <div class="md:hidden mx-auto mb-6" style="height: 120px">
-        <InlineSvg
-          src="/img/svg/illustration-projet.svg"
-          alt=""
-          colors={colorMapping}
-          class="mx-auto h-full"
-        />
-      </div>
-      <h1 class="uppercase text-4xl md:text-5xl mb-6">{title}</h1>
-      <p class="text-center text-2xl text-black max-w-3xl mx-auto">
+      <h1 class="uppercase text-3xl md:text-4xl lg:text-5xl mb-6">{title}</h1>
+      <p class="text-center text-lg md:text-xl lg:text-2xl text-black max-w-3xl mx-auto">
         {top}
       </p>
     </div>
@@ -67,12 +65,12 @@ const colorMapping = {
     <div class="border-t border-b border-gray-200 py-6 my-8">
       <div class="flex flex-col md:flex-row gap-6">
         <div class="md:w-1/4">
-          <h2 class="font-code text-xl font-semibold">Recherche & Filtres</h2>
+          <h2 class="font-code text-lg md:text-xl font-semibold">Recherche & Filtres</h2>
         </div>
         <div class="md:w-3/4 space-y-4">
           <!-- Search -->
           <div>
-            <label for="search-input" class="font-code text-sm mb-2 text-black block">Rechercher un projet</label>
+            <label for="search-input" class="font-code text-sm md:text-base mb-2 text-black block">Rechercher un projet</label>
             <input
               type="text"
               id="search-input"

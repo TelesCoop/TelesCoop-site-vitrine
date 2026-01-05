@@ -37,9 +37,16 @@ const rotateClass = index % 2 === 0 ? 'rotate-left' : 'rotate-right';
   data-title={project.title}
   data-description={project.projectResume}
 >
-  <h3 class="text-2xl uppercase mb-4 font-sans font-bold">
-    {project.title}
-  </h3>
+  <div class="w-full Ajoflex justify-between items-start gap-4 mb-4">
+    <h3 class="text-xl md:text-2xl uppercase font-sans font-bold flex-1">
+      {project.title}
+    </h3>
+    {project.projectEnd && (
+      <span class="text-black/60 text-lg font-semibold shrink-0">
+        {project.projectEnd}
+      </span>
+    )}
+  </div>
 
   {project.categories && project.categories.length > 0 && (
     <div class="flex flex-wrap gap-2 mb-4">
@@ -51,5 +58,5 @@ const rotateClass = index % 2 === 0 ? 'rotate-left' : 'rotate-right';
     </div>
   )}
 
-  <p class="mt-auto">{project.projectResume}</p>
+  <p class="mt-auto text-base md:text-lg">{project.projectResume}</p>
 </a>
