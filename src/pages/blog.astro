@@ -15,38 +15,14 @@ const categoriesData = categories?.data || {};
 const title = 'Notre blog';
 const description = 'Les articles du blog TelesCoop sur le développement web, l\'open source et l\'écologie numérique.';
 const top = 'Apprenez-en plus sur TelesCoop et nos valeurs grâce à ces quelques articles rédigés par nous (garantie sans IA 🤖 ).';
-
-// Color mapping for SVG adaptation
-const colorMapping = {
-  '#FFCD4E': '--color-yellow',
-  '#ffcd4e': '--color-yellow',
-  '#FF5631': '--color-coral',
-  '#ff5631': '--color-coral',
-  '#60E093': '--color-green',
-  '#60e093': '--color-green',
-  '#A8CFEE': '--color-blue',
-  '#a8cfee': '--color-blue',
-  '#1E1C1C': '--color-border',
-  '#1e1c1c': '--color-border',
-  '#000000': '--color-border',
-  '#000': '--color-border',
-};
 ---
 
 <Layout title={title} description={description}>
   <Header slot="header" />
 
-  <div class="container mx-auto px-4 py-16 mt-16">
+  <div class="container mx-auto px-4 py-16">
     <div class="text-center mb-12">
-      <div class="md:hidden mx-auto mb-6" style="height: 120px">
-        <InlineSvg
-          src="/img/svg/illustration-projet.svg"
-          alt=""
-          colors={colorMapping}
-          class="mx-auto h-full"
-        />
-      </div>
-      <h1 class="uppercase text-4xl md:text-5xl mb-6">{title}</h1>
+      <h1 class="uppercase text-5xl md:text-6xl mb-12 font-display">{title}</h1>
       <p class="text-center text-2xl text-black max-w-3xl mx-auto">
         {top}
       </p>
