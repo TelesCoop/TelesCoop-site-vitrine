@@ -37,7 +37,7 @@ const measuresData = measures?.data || [];
 
   <div>
     <!-- Hero Section -->
-    <div class="min-h-[calc(100vh-80px)] flex flex-col items-center justify-center text-center relative px-4 gap-6">
+    <section class="min-h-[calc(100vh-80px)] flex flex-col items-center justify-center text-center relative px-4 gap-6" aria-label="Section d'accueil">
 
       <h1 class="text-5xl lg:text-7xl font-light leading-tight z-10 max-w-6xl">
         Coopérative de développement pour des
@@ -46,44 +46,44 @@ const measuresData = measures?.data || [];
         </span>
       </h1>
 
-      <span class="text-lg md:text-xl lg:text-2xl text-black z-10 max-w-2xl">
+      <p class="text-lg md:text-xl lg:text-2xl text-black z-10 max-w-2xl">
         {homeData.tagline}
-      </span>
+      </p>
       <div class="z-10 mt-4">
         <a
           href="mailto:contact@telescoop.fr"
           class="btn btn-md md:btn-lg"
+          aria-label="Contactez TelesCoop par email"
         >
           Contactez-nous
         </a>
       </div>
-    </div>
+    </section>
 
     <!-- About Section -->
-    <div class="bg-yellow py-16">
+    <section class="bg-yellow py-16" aria-label="À propos de TelesCoop">
       <About />
-    </div>
+    </section>
 
     <!-- Skills Section -->
-    <div class="py-16">
+    <section class="py-16" aria-label="Notre offre de services">
       <Skills skills={skillsData} />
-    </div>
+    </section>
 
     <!-- Extra Section -->
-    <div class="bg-green py-16">
+    <section class="bg-green py-16" aria-label="Notre méthode">
       <Extra extra={extraData} />
-    </div>
-
-
+    </section>
 
     <!-- Clients Section -->
-    <div class="py-16">
+    <section class="py-16" aria-label="Témoignages clients">
       <Clients clients={testimonialsData} />
-    </div>
+    </section>
+
     <!-- Measures Section -->
-    <div class="bg-yellow py-16">
+    <section class="bg-yellow py-16" aria-label="Nos mesures d'impact">
       <Measures measures={measuresData} />
-    </div>
+    </section>
   </div>
 
   <Footer slot="footer" />

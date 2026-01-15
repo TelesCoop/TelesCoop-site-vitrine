@@ -13,7 +13,7 @@ projectStack:
   - PrimeVue
   - Tailwind
   - Ansible
-projectResume: Outil pour lutter contre le gaspillage alimentaire dans la restauration collective
+projectResume: Outil de gestion logistique pour la redistribution alimentaire
 projectDuration: '70'
 projectDurationUnit: ''
 projectLink: ''
@@ -25,4 +25,60 @@ projectThumbnailAlt: Capture d'écran du site Excellents Excédents
 testimony: ''
 ---
 
-<p>GreenMenu a été conçu pour lutter contre le gaspillage alimentaire dans la restauration collective, en collaboration avec des professionnels de la restauration. Cet outil bénéficie d’une conception cohérente avec la gestion d’un restaurant collectif. Il permet d'évaluer et calculer le gaspillage alimentaire, définir des plans de menu, comparer les campagnes de pesées et extraire des graphiques clairs utilisables pour les supports de communication. Cet outil accessible en ligne via un simple navigateur internet propose une segmentation des informations par composante de repas et par zones, pour une analyse en détail des causes de gaspillage et l’identification des solutions. Une des grandes forces de green-menu.fr se situe au niveau de sa modularité. Il peut être utilisé à son niveau le plus simple et assisté ou bien aller beaucoup plus loin dans le niveau de détail.</p>
+## Le contexte
+
+En France, la restauration collective génère d'importants volumes d'excédents alimentaires de qualité. Parallèlement, de nombreux organismes de solidarité peinent à accéder à des repas complets et équilibrés pour les personnes qu'ils accompagnent.
+
+**Excellent Excédents** est une entreprise de l'économie sociale et solidaire qui fait le lien entre ces deux mondes : elle collecte les repas excédentaires auprès des opérateurs de restauration collective et les redistribue aux structures d'aide alimentaire.
+
+## Le défi
+
+Gérer cette logistique complexe nécessite un outil adapté pour :
+- Coordonner les collectes auprès de multiples restaurants collectifs
+- Planifier les tournées de ramassage
+- Gérer les stocks de repas collectés
+- Organiser la redistribution vers les bénéficiaires
+- Tracer la qualité et la sécurité alimentaire
+- Optimiser les flux pour limiter le gaspillage
+
+## La solution
+
+TelesCoop a développé une **plateforme de gestion logistique** complète et sur-mesure pour Excellent Excédents, permettant d'orchestrer efficacement toute la chaîne de redistribution alimentaire.
+
+### Fonctionnalités principales
+
+**Gestion des collectes**
+- Planification des tournées de ramassage
+- Suivi en temps réel des volumes collectés
+- Interface dédiée pour les restaurants partenaires
+
+**Gestion des stocks**
+- Traçabilité des repas (dates, origines, allergènes)
+- Respect des règles de sécurité alimentaire
+- Alertes sur les dates de péremption
+- Vue d'ensemble des disponibilités
+
+**Redistribution optimisée**
+- Affectation des repas aux structures bénéficiaires
+- Planification des livraisons
+- Matching entre offre et besoins spécifiques
+- Historique et statistiques
+
+**Tableau de bord**
+- Volumes collectés et redistribués
+- Impact environnemental (repas sauvés du gaspillage)
+- Impact social (personnes nourries)
+- Indicateurs de performance logistique
+
+## Impact
+
+Grâce à cet outil, Excellent Excédents peut :
+- **Maximiser** les volumes de repas sauvés du gaspillage
+- **Sécuriser** la traçabilité alimentaire
+- **Optimiser** les tournées et réduire l'empreinte carbone
+- **Professionnaliser** la redistribution alimentaire
+- **Démontrer** son impact social et environnemental
+
+## Notre contribution
+
+TelesCoop a conçu et développé cette plateforme en collaboration étroite avec Excellent Excédents, en comprenant les contraintes spécifiques de la logistique alimentaire et de l'économie sociale et solidaire pour créer un outil réellement adapté au terrain.

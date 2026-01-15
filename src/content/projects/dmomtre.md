@@ -28,4 +28,42 @@ projectThumbnailAlt: Capture d'écran du site Démomètre, vue sur une question
 testimony: ''
 ---
 
-<p>Dans un contexte de crise démocratique, le collectif Démocratie Ouverte a souhaité créer une plateforme ouverte, gratuite, interactive et collaborative pour évaluer, améliorer et partager la démocratie locale. En collaboration avec la coopérative de designer Praticable, ainsi que le collectif Démocratie Ouverte, nous avons conçu et développé la plateforme DémoMètre. Cette application permet à des habitants, élus, agents et associations de créer une évaluation pour une commune ou intercommunalité, d'y participer et d'en observer les résultats en autonomie ou en atelier afin de créer du débat et faire vivre la démocratie locale. Développée sur un semestre, la plateforme permet aujourd'hui d'animer des ateliers sur l'indice de qualité démocratique, créant ainsi des débats entre les participants et faisant vivre la démocratie locale. Elle permet également à toute personne de répondre ou créer une évaluation pour sa commune ou intercommunalité en toute autonomie.</p>
+## Le contexte
+
+Dans un contexte de **crise démocratique** marqué par une défiance croissante envers les institutions, le collectif Démocratie Ouverte a identifié le besoin d'un outil permettant d'évaluer concrètement la qualité de la démocratie locale et d'engager le dialogue entre citoyens et élus.
+
+## La solution
+
+Le **DémoMètre** est une plateforme ouverte, gratuite, interactive et collaborative qui permet d'évaluer, d'améliorer et de partager les pratiques démocratiques à l'échelle locale.
+
+### Une plateforme collaborative
+
+Développée en collaboration avec la coopérative de designers **Praticable** et le collectif **Démocratie Ouverte**, la plateforme permet à différents acteurs de participer :
+- **Habitants** : contribuer à l'évaluation de leur commune
+- **Élus** : mesurer la qualité démocratique de leur territoire
+- **Agents territoriaux** : participer aux évaluations
+- **Associations** : animer des débats citoyens
+
+### Deux modes d'utilisation
+
+**En atelier**
+- Animation de débats entre participants
+- Création collective d'une évaluation
+- Visualisation des résultats en temps réel
+- Construction d'un dialogue constructif
+
+**En autonomie**
+- Création d'une évaluation pour sa commune ou intercommunalité
+- Participation aux évaluations existantes
+- Consultation des résultats publiés
+- Comparaison entre territoires
+
+### L'indice de qualité démocratique
+
+Le DémoMètre s'appuie sur des critères objectifs pour évaluer :
+- La transparence des institutions
+- La participation citoyenne
+- Les mécanismes de délibération
+- La reddition de compte
+- L'inclusion dans les processus démocratiques
+

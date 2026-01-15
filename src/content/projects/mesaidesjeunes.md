@@ -4,9 +4,9 @@ categories:
   - outil métier
   - service public
 tags:
-  - diffusion d’informations
+  - diffusion d'informations
 clientName: Beta.gouv
-clientDescription: "Aides jeunes est une startup d'état faisant partie du groupe Beta Gouv. Beta.gouv\_est un programme d’incubation qui aide les administrations publiques à construire des services numériques utiles, simples, faciles à utiliser et qui répondent vraiment aux besoins des gens. "
+clientDescription: "Aides jeunes est une startup d'état faisant partie du groupe Beta Gouv. Beta.gouv est un programme d'incubation qui aide les administrations publiques à construire des services numériques utiles, simples, faciles à utiliser et qui répondent vraiment aux besoins des gens."
 projectStack:
   - Vuejs
   - serveur expressJS avec mongoose
@@ -25,4 +25,27 @@ projectThumbnailAlt: ''
 testimony: ''
 ---
 
- <p>Les moins de 25 ans, qu’ils soient étudiant(e)s, demandeurs d’emploi ou en décrochage scolaire, sont parmi les premières victimes de la crise économique. Si des aides existent - au niveau national ou local -, elles peuvent s’apparenter à un maquis difficile à naviguer pour le public.  </p> <p class='is-bold'>Conséquence : le non-recours aux aides de la part des jeunes, par méconnaissance des dispositifs ou découragement.</p> <p>Le simulateur de Mes Aides Jeunes permet en répondant à des questions pendant 5 minutes, de trouver instantanément toutes les aides auxquelles ils/elles ont le droit. s le cadre du « plan 1 jeune, 1 solution ». Concrètement, vous les personnes répondent à différentes questions posées dans le formulaire notamment sur : la date de naissance ; la nationalité ; le statut (étudiant, demandeur d'emploi, en activité...) ; le nombre d'enfants à charge (si vous en avez) ; le logement (achat, location, etc.), le montant et sa localisation ; les différentes ressources (revenus, allocations, pensions, indemnités...) ; le permis de conduire (si vous prévoyez de le passer) ; et si vous êtes en situation de handicap. En fonction de vos réponses, une liste d'aides s'affiche, chacune renvoie vers un service en ligne dédié. Un récapitulatif peut vous êtes envoyé par messagerie.</p>
+## Le contexte
+
+Les moins de 25 ans, qu'ils soient étudiants, demandeurs d'emploi ou en décrochage scolaire, sont parmi les premières victimes des crises économiques. De nombreuses aides existent aux niveaux national et local, mais leur complexité décourage les jeunes qui y ont pourtant droit.
+
+**Résultat :** un taux de non-recours élevé par méconnaissance des dispositifs ou par découragement face aux démarches administratives.
+
+## La solution
+
+Le simulateur **MesAidesJeunes** permet en 5 minutes de découvrir toutes les aides auxquelles les jeunes ont droit, dans le cadre du plan « 1 jeune, 1 solution ».
+
+### Comment ça marche ?
+
+Le simulateur pose des questions simples sur :
+- La situation personnelle (âge, nationalité, statut)
+- Le logement et sa localisation
+- Les ressources actuelles
+- Les projets (permis de conduire, etc.)
+- La situation de handicap éventuelle
+
+En fonction des réponses, une liste personnalisée d'aides s'affiche instantanément. Chaque aide renvoie vers le service en ligne dédié pour faciliter les démarches. Un récapitulatif peut être envoyé par email pour conserver ces informations.
+
+## Notre contribution
+
+TelesCoop a participé au développement et à l'amélioration continue de cette plateforme essentielle qui aide des milliers de jeunes chaque mois à accéder à leurs droits.
