@@ -4,6 +4,7 @@ environment_suffix: ""
 project_slug: "{{ base_project_slug }}{{ environment_suffix }}"
 
 public_hostname: www.telescoop.fr
+url: "{{ public_hostname }}"
 other_public_hostname: telescoop.fr
 project_dir: "{{project_base_dir}}{{ environment_suffix }}"
 backend_static_path: "{{ project_dir }}/backend_static"
