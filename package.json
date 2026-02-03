@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "postinstall": "allow-scripts"
   },
   "repository": {
     "type": "git",
@@ -26,10 +27,18 @@
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {
+    "@lavamoat/allow-scripts": "^3.3.0",
     "@astrojs/sitemap": "^3.2.2",
     "@astrojs/tailwind": "^5.1.4",
     "tailwindcss": "^3.4.17",
     "autoprefixer": "^10.4.20",
     "typescript": "^5.7.2"
+  },
+  "lavamoat": {
+    "allowScripts": {
+      "$root$": false,
+      "astro>esbuild": true,
+      "astro>sharp": true
+    }
   }
 }
