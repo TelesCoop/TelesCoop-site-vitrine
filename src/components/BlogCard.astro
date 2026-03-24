@@ -6,23 +6,12 @@ interface Props {
     readTime: number;
     excerpt: string;
     categories?: string[];
+    slug: string;
   };
   categories?: Record<string, any>;
 }
 
 const { article, categories } = Astro.props;
-
-function slugify(text: string) {
-  return text
-    .toString()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, '-')
-    .replace(/[^\w\-]+/g, '')
-    .replace(/\-\-+/g, '-');
-}
 
 function getCategoryColorClass(categoryName: string) {
   const category = categories?.[categoryName];
@@ -33,7 +22,7 @@ const formattedDate = new Date(article.date).toLocaleDateString('fr-FR');
 ---
 
 <a
-  href={`/blog/${slugify(article.title)}/`}
+  href={`/blog/${article.slug}/`}
   class="card flex-col p-6"
 >
   <h3 class="text-xl mb-3 font-semibold">
