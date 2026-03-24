@@ -6,7 +6,7 @@ excerpt: "Si vous avez déjà entendu parler d'holacratie, vous avez probablemen
   soit un scepticisme poli. Chez TelesCoop, on est quelque part entre les deux,
   et c'est justement ce qu'on a envie de vous raconter."
 readTime: 15
-draft: false
+draft: true
 ---
 ## C'est quoi l'holacratie, en vrai ?
 
