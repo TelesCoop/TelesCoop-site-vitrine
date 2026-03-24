@@ -148,6 +148,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"travailler-en-holacratie-comment-ca-se-passe-chez-telescoop.md": {
+	id: "travailler-en-holacratie-comment-ca-se-passe-chez-telescoop.md";
+  slug: "travailler-en-holacratie-comment-ca-se-passe-chez-telescoop";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 };
 "palettes": {
 "colorblind.md": {
@@ -257,6 +264,13 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"la-beaute-sauvera-le-monde.md": {
+	id: "la-beaute-sauvera-le-monde.md";
+  slug: "la-beaute-sauvera-le-monde";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "le-mmo-des-fresques.md": {
 	id: "le-mmo-des-fresques.md";
   slug: "le-mmo-des-fresques";
@@ -292,6 +306,13 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"municipales-2026-velo-ile-de-france.md": {
+	id: "municipales-2026-velo-ile-de-france.md";
+  slug: "municipales-2026-velo-ile-de-france";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "openfoodfacts-searchalicious.md": {
 	id: "openfoodfacts-searchalicious.md";
   slug: "openfoodfacts-searchalicious";
@@ -316,6 +337,13 @@ declare module 'astro:content' {
 "terre-de-liens-campagne-de-donation-2024.md": {
 	id: "terre-de-liens-campagne-de-donation-2024.md";
   slug: "terre-de-liens-campagne-de-donation-2024";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"trajectoires-ecologiques.md": {
+	id: "trajectoires-ecologiques.md";
+  slug: "trajectoires-ecologiques";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
