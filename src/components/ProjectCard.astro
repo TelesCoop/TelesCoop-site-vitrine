@@ -4,6 +4,7 @@ interface Props {
     title: string;
     projectResume: string;
     categories?: string[];
+    slug: string;
   };
   categories?: Record<string, any>;
   index?: number;
@@ -11,19 +12,16 @@ interface Props {
 
 const { project, categories, index = 0 } = Astro.props;
 
-function slugify(text: string) {
-  return text
-    .toString()
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, '-')
-    .replace(/[^\w\-]+/g, '')
-    .replace(/\-\-+/g, '-');
-}
-
 function getCategoryColorClass(categoryName: string) {
   const category = categories?.[categoryName];
   return category?.colorClass || 'beige';
+}
+
+function slugify(text: string) {
+  return text.toString().toLowerCase().trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-');
 }
 
 const cardCategories = project.categories?.map(cat => slugify(cat)).join(' ') || '';
@@ -31,7 +29,7 @@ const rotateClass = index % 2 === 0 ? 'rotate-left' : 'rotate-right';
 ---
 
 <a
-  href={`/projet/${slugify(project.title)}/`}
+  href={`/projet/${project.slug}/`}
   class={`card project-card flex-col p-6 ${rotateClass}`}
   data-categories={cardCategories}
   data-title={project.title}
