@@ -87,6 +87,14 @@
     msg: "{{command_output.stdout}}"
   when: frontend_new_ssh_key.changed
 
+- name: Fix ownership before git pull
+  file:
+    path: "{{ frontend_path }}"
+    owner: "{{ main_user }}"
+    group: "{{ main_user }}"
+    recurse: true
+    state: directory
+
 - name: get latest frontend code
   git:
     repo: '{{ frontend_repo }}'

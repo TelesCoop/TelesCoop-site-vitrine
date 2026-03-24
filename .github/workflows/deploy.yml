@@ -9,28 +9,23 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1
-        with:
-          host: telescoop.fr
-          username: ubuntu
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 42722
-          script: |
-            FRONTEND_PATH="/telescoop/telescoop-site-vitrine/frontend"
-            STATIC_PATH="/telescoop/telescoop-site-vitrine/static"
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-            sudo bash -c "
-              git config --global --add safe.directory $FRONTEND_PATH
-              cd $FRONTEND_PATH
-              source /root/.nvm/nvm.sh
-              node_version=\$(cat .nvmrc)
-              git fetch origin main
-              git reset --hard origin/main
-              rm -rf .astro dist node_modules/.astro
-              nvm exec \$node_version npm install
-              nvm exec \$node_version npm run build
-              rm -rf $STATIC_PATH/*
-              cp -r dist/* $STATIC_PATH/
-              chown -R www-data:www-data $STATIC_PATH
-            "
+      - name: Install Ansible
+        run: pip install ansible
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p 42722 telescoop.fr >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Setup Ansible Vault key
+        run: echo "${{ secrets.ANSIBLE_VAULT_KEY }}" > deploy/vault.key
+
+      - name: Run Ansible playbook
+        run: |
+          cd deploy
+          ansible-playbook frontend.yml --limit prod -e force_update=true
