@@ -21,11 +21,13 @@ jobs:
             STATIC_PATH="/telescoop/telescoop-site-vitrine/static"
 
             sudo bash -c "
+              git config --global --add safe.directory $FRONTEND_PATH
               cd $FRONTEND_PATH
               source /root/.nvm/nvm.sh
               node_version=\$(cat .nvmrc)
               git fetch origin main
               git reset --hard origin/main
+              rm -rf .astro dist node_modules/.astro
               nvm exec \$node_version npm install
               nvm exec \$node_version npm run build
               rm -rf $STATIC_PATH/*
