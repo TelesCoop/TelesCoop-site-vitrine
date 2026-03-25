@@ -21,8 +21,7 @@ projectStack:
   - TypeScript
 projectResume: Plateforme de suivi des engagements vélo des candidat·es aux municipales 2026 en Île-de-France
 projectLink: https://municipales2026.velo-iledefrance.fr/
-projectStatus: En cours
-projectEnd: ''
+projectEnd: '2026'
 projectThumbnail: ''
 projectThumbnailAlt: ''
 draft: false

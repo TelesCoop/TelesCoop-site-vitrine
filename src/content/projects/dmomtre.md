@@ -21,8 +21,7 @@ projectDuration: '120'
 projectDurationUnit: 'jours'
 projectLink: https://demometre.org/
 projectGit: ''
-projectStatus: En cours
-projectEnd: '2022'
+projectEnd: ''
 projectThumbnail: ../../img/projet/demometre.png
 projectThumbnailAlt: Capture d'écran du site Démomètre, vue sur une question
 testimony: ''

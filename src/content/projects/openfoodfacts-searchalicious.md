@@ -18,7 +18,6 @@ projectDuration: '11'
 projectDurationUnit: ''
 projectLink: https://world.openfoodfacts.org/
 projectGit: https://github.com/openfoodfacts/search-a-licious
-projectStatus: Terminé
 projectEnd: '2024'
 projectThumbnail: ''
 projectThumbnailAlt: ''

@@ -17,7 +17,6 @@ projectDuration: ''
 projectDurationUnit: ''
 projectLink: https://soutien.terredeliens.org/
 projectGit: ''
-projectStatus: Terminé
 projectEnd: '2024'
 projectThumbnail: ''
 projectThumbnailAlt: ''

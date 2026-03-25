@@ -18,7 +18,6 @@ projectDuration: + de 50
 projectDurationUnit: ''
 projectLink: https://memo.fresque.earth/
 projectGit: https://memo.fresque.earth/
-projectStatus: En cours
 projectEnd: ''
 projectThumbnail: ../../img/projet/memo.png
 projectThumbnailAlt: Image d'illustration du Mémo de la Fresque du Numérique

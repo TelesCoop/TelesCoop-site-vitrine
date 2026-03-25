@@ -17,7 +17,6 @@ projectDuration: '70'
 projectDurationUnit: ''
 projectLink: ''
 projectGit: ''
-projectStatus: En cours
 projectEnd: ''
 projectThumbnail: ''
 projectThumbnailAlt: ''

@@ -18,7 +18,6 @@ projectDuration: + de 100
 projectDurationUnit: ''
 projectLink: https://aktivisda.earth/
 projectGit: https://framagit.org/aktivisda/aktivisda
-projectStatus: En cours
 projectEnd: ''
 projectThumbnail: ../../img/projet/aktivisda.png
 projectThumbnailAlt: Image d'illustration de Aktivisda

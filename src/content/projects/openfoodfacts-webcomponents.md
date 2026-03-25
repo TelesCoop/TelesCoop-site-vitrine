@@ -20,7 +20,6 @@ projectDuration: '47'
 projectDurationUnit: ''
 projectLink: https://world.openfoodfacts.org/
 projectGit: https://github.com/openfoodfacts/openfoodfacts-webcomponents
-projectStatus: Terminé
 projectEnd: '2025'
 projectThumbnail: ''
 projectThumbnailAlt: ''

@@ -18,7 +18,6 @@ projectDuration: '70'
 projectDurationUnit: ''
 projectLink: ''
 projectGit: ''
-projectStatus: En cours
 projectEnd: ''
 projectThumbnail: ../../img/projet/excellents-excedents.png
 projectThumbnailAlt: Capture d'écran du site Excellents Excédents

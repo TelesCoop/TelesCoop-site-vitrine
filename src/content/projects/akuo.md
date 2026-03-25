@@ -17,7 +17,6 @@ projectDuration: ~40
 projectDurationUnit: ''
 projectLink: ''
 projectGit: ''
-projectStatus: Terminé
 projectEnd: '2021'
 projectThumbnail: ../../img/projet/akuo.png
 projectThumbnailAlt: ''

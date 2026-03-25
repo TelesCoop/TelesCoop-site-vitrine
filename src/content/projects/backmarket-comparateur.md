@@ -17,7 +17,6 @@ projectDuration: ~15
 projectDurationUnit: ''
 projectLink: https://www.backmarket.fr/fr-fr
 projectGit: ''
-projectStatus: Terminé
 projectEnd: '2021'
 projectThumbnail: ../../img/projet/backmarket.png
 projectThumbnailAlt: ''

@@ -18,8 +18,7 @@ projectStack:
   - TypeScript
 projectResume: Site événementiel pour un rendez-vous annuel autour du design, de l'architecture et de l'insertion sociale
 projectLink: https://labeautesauveralemonde.org/
-projectStatus: Terminé
-projectEnd: ''
+projectEnd: '2026'
 projectThumbnail: ''
 projectThumbnailAlt: ''
 draft: false

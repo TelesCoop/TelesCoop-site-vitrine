@@ -23,8 +23,7 @@ projectDuration: '40'
 projectDurationUnit: ''
 projectLink: https://labo.societenumerique.gouv.fr/fr/
 projectGit: https://github.com/SocieteNumerique/Labo-Backend
-projectStatus: Terminé
-projectEnd: '09/2022'
+projectEnd: '2022'
 projectThumbnail: ''
 projectThumbnailAlt: ''
 testimony: ''

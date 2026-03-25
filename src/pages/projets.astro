@@ -12,9 +12,12 @@ const categories = await getEntry('data', 'categories');
 const projectsData = projectsCollection
   .map(p => ({ ...p.data, slug: p.slug, content: p.body }))
   .sort((a, b) => {
-    const yearA = parseInt(a.projectEnd || '0');
-    const yearB = parseInt(b.projectEnd || '0');
-    return yearB - yearA;
+    const hasEndA = !!a.projectEnd;
+    const hasEndB = !!b.projectEnd;
+    if (!hasEndA && hasEndB) return -1;
+    if (hasEndA && !hasEndB) return 1;
+    if (!hasEndA && !hasEndB) return 0;
+    return parseInt(b.projectEnd!) - parseInt(a.projectEnd!);
   });
 const categoriesData = categories?.data || {};
 

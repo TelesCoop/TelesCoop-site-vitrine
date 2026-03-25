@@ -16,8 +16,7 @@ projectDuration: '12'
 projectDurationUnit: ''
 projectLink: https://agissons.msf.fr/
 projectGit: ''
-projectStatus: Terminé
-projectEnd: fin d'année 2022
+projectEnd: '2022'
 projectThumbnail: ''
 projectThumbnailAlt: ''
 testimony: ''

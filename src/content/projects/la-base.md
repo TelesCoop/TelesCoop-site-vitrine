@@ -19,7 +19,6 @@ projectDuration: '150'
 projectDurationUnit: ''
 projectLink: https://labase.anct.gouv.fr
 projectGit: https://github.com/SocieteNumerique/La-Base-frontend
-projectStatus: En cours
 projectEnd: '2022'
 projectThumbnail: ''
 projectThumbnailAlt: ''

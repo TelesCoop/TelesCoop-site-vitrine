@@ -20,7 +20,6 @@ const projectsCollection = defineCollection({
     projectDurationUnit: z.string().optional(),
     projectLink: z.string().optional(),
     projectGit: z.string().optional(),
-    projectStatus: z.enum(['En cours', 'Terminé']).default('En cours'),
     projectEnd: z.string().optional(),
     projectThumbnail: z.string().optional(),
     projectThumbnailAlt: z.string().optional(),
@@ -38,18 +37,6 @@ const blogCollection = defineCollection({
     excerpt: z.string(),
     categories: z.array(z.string()).optional(),
     readTime: z.number(),
-    draft: z.boolean().default(false),
-  }),
-});
-
-// Collection pour l'équipe en Markdown
-const teamCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    name: z.string(),
-    title: z.string(),
-    photo: z.string().optional(),
-    order: z.number().default(0),
     draft: z.boolean().default(false),
   }),
 });
@@ -107,7 +94,6 @@ export const collections = {
   data: dataCollection,
   projects: projectsCollection,
   blog: blogCollection,
-  team: teamCollection,
   testimonials: testimonialsCollection,
   palettes: palettesCollection,
 };

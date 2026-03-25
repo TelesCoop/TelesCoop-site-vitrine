@@ -18,7 +18,6 @@ projectStack:
   - SurveyJS
   - Highcharts
 projectResume: Plateforme de questionnaire de recherche pour cartographier les trajectoires de transformation écologique
-projectStatus: En cours
 projectEnd: ''
 projectThumbnail: ''
 projectThumbnailAlt: ''

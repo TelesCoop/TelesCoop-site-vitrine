@@ -14,7 +14,7 @@ tags:
   - cartographie
   - Système d'information géographique (SIG)
   - Géomatique
-clientName: Iarbre
+clientName: IArbre
 clientDescription: "Le projet IA·rbre est une initiative collaborative dédiée à la transition écologique menée par un consortium comprenant la SCOP TelesCoop comme chef de file, la Métropole de Lyon et l'université Lyon 2 avec le laboratoire LIRIS."
 projectStack:
   - HTML & CSS
@@ -30,7 +30,6 @@ projectDuration: '3'
 projectDurationUnit: ans
 projectLink: https://www.iarbre.fr/
 projectGit: https://github.com/TelesCoop/iarbre
-projectStatus: En cours
 projectEnd: ''
 projectThumbnail: ../../img/projet/iarbre.jpg
 projectThumbnailAlt: Capture d'écran du site IA.rbre

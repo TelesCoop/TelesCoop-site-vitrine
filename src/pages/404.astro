@@ -18,9 +18,10 @@ const metadataData = metadata?.data || {};
     <link
       rel="icon"
       type="image/png"
-      sizes="64x64"
-      href="/img/logo_square.png"
+      sizes="32x32"
+      href="/img/favicon/favicon-32x32.png"
     />
+    <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico" />
 
     <!-- Open graph protocol -->
     <meta property="og:title" content={metadataData.title} />
@@ -35,8 +36,7 @@ const metadataData = metadata?.data || {};
 
   <body>
     <section
-      class="min-h-screen flex items-center justify-center bg-cover bg-center"
-      style="background-image: url(/img/galaxy.jpg);"
+      class="min-h-screen flex items-center justify-center bg-primary"
     >
       <div class="container mx-auto px-4 text-center">
         <h1 class="text-5xl md:text-6xl font-light text-white mb-6">
