@@ -7,7 +7,7 @@ tags:
   - design
   - intégration web
 clientName: League of Links
-clientDescription: League of Links est un réseau réunissant plusieurs Fresques ainsi que d'autres ateliers ayant comme objets les défits de notre siècles sur les sujets écologiques et sociales. 
+clientDescription: League of Links est un regroupement de fresques et ateliers ayant comme objets les défis de notre siècle sur les sujets écologiques et sociales.
 projectStack:
   - Astro
   - Tailwind
@@ -24,4 +24,4 @@ projectThumbnailAlt: ''
 testimony: ''
 ---
 
-Le site vitrine de League of Links a été conçu pour présenter ce nouveau réseau ainsi que promouvoir leur première action Elu.es pour Demain: Connecter les citoyens et leurs élus pour construire ensemble le monde de demain.
+Le site vitrine de League of Links a été conçu pour présenter ce nouveau regroupement ainsi que promouvoir leur première action Elu.es pour Demain: Connecter les citoyens et leurs élus pour construire ensemble le monde de demain.
