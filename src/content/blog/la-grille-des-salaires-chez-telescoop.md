@@ -24,7 +24,7 @@ Il restait donc à définir nos critères, qui sont propres à notre équipe et 
 #### Salaire au besoin
 L'autre objectif est que le coût de la vie quotidienne classique ne soit pas compliqué et que notre salaire nous permette de vivre normalement et dignement. Nous avons donc choisi de partir d'un salaire de base commun à toustes, 1878€ net avant impôts et d'y rajouter des bonus pour des critères tels que :
 \* Prix moyen des loyers et coût de la vie dans la ville\* Enfant à charge\* Remboursement d'un prêt étudiant\* Le niveau d'épargne personne avec 3 seuils (moins de 20k€, moins de 40k€ et plus)
-La pondération des critères s'est fait pour que les écarts de salaires restent contenus. Il est de 420€ net avant impôts, pour un salaire médian à 2198€ (ce qui se situe par hasard au niveau du \[salaire médian national](https://www.insee.fr/fr/statistiques/7457170#onglet-1%20en%202025) ).
+La pondération des critères s'est fait pour que les écarts de salaires restent contenus. Il est de 420€ net avant impôts, pour un salaire médian à 2198€ (ce qui se situe par hasard au niveau du [salaire médian national](https://www.insee.fr/fr/statistiques/7457170#onglet-1%20en%202025).
 Sur les 8 membres de l'équipe, 7 trouvent cette grille plus équitable que les grilles classique et 1 ne se positionne pas.
 ## Transparence
 Un tableau mis à jour en continu renseigne des salaires de chacun⋅e. On fait également confiance pour la déclaration des critères et des bonus, on ne demande pas de justificatif pour un prêt étudiant par exemple.
