@@ -7,8 +7,11 @@ excerpt: "Après avoir parlé de comment on travaille, c'est à dire en
   et sur quels critères. Pour faire une petite mise en bouche, cette répartition
   se fait sur la base de décisions collectives qui sont tous le temps en
   évolution : notre fonctionnement est adapté à notre collectif à un instant t."
+categories:
+  - Entreprise
+  - Salaire
 readTime: 7
-draft: true
+draft: false
 ---
 ## La volonté d'équité
 Au départ de cette grille de salaire vient une volonté d'équité entre toustes dans la coopérative, que ne peut pas satisfaire un salaire unique ou les grilles classiques.
