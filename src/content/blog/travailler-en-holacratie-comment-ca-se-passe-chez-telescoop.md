@@ -5,6 +5,9 @@ excerpt: "Si vous avez déjà entendu parler d'holacratie, vous avez probablemen
   rencontré deux types de réactions : soit un enthousiasme presque militant,
   soit un scepticisme poli. Chez TelesCoop, on est quelque part entre les deux,
   et c'est justement ce qu'on a envie de vous raconter."
+categories:
+  - Entreprise
+  - Organisation
 readTime: 15
 draft: false
 ---
