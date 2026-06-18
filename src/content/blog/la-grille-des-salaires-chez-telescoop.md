@@ -97,3 +97,11 @@ C'est donc un choix à la fois :
 
 - Insécurisant pour les coopérateurices : le salaire couvre les besoins mais permet souvent peu d'épargner et donc faire des projets comme un achat immobilier. C'est donc le variable qui joue le rôle d'épargne avec des fluctuations entre les années. C'est une vraie insécurité vécue comme telle pour la moitié des coopérateurices. Ce qui est clairement donc une limite de notre modèle.
 - Sécurisant pour la coopérative : notre masse salariale étant plutôt faible comparée aux autres entreprises de notre type, nous prenons peu de risques quand il y a des baisses d'activité. C'est donc de la résilience pour la coopérative, ce qui au final est sécurisant sur le long terme pour les salarié⋅e⋅s.
+
+### Aller plus loin, d'autres approches de salaire
+À TelesCoop, nous ne pensons pas détenir la meilleure manière de distribuer des salaires. D'autres structures ont d'autres fonctionnement :
+- Le salaire au besoin au Pain des Cairns (boulangerie à Grenoble) : https://www.lepaindescairns.fr/le-salaire-au-besoin/
+- La rémunération transparente et participative chez Sémawé : https://semawe.fr/blog/argent/remuneration-transparente-et-participative-comment-semawe-determine-ses-salaires-en-equipe
+- Le retour d'expérience chez Pathtech (autre coopérative de La.Zone) : https://pathtech.coop/blog/comment-mettre-politique-salariale/
+- Un partage de réflexion de Scopyleft (autre coopérative de La.Zone) : http://scopyleft.fr/blog/2023/petit-panorama-des-pratiques-de-remuneration-en-horizontalite/
+- 
