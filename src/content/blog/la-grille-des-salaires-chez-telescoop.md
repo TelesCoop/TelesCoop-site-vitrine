@@ -78,15 +78,6 @@ Les bonus actuels :
 * un bonus en fonction du <u>patrimoine net de chaque coopérateur·ice</u> basé sur trois paliers (moins de 20k€, 60k€ ou 90k€).
 
 
-
-1878€ net avant impôts et d'y rajouter des bonus pour des critères tels que : 
-
-- Prix moyen des loyers et coût de la vie dans la ville
-- Remboursement d'un prêt étudiant
-- Le niveau d'épargne personne avec 3 seuils (moins de 20k€, moins de 40k€ et plus)
-
-La pondération des critères s'est fait pour que les écarts de salaires restent contenus. Il est de 420€ net avant impôts, pour un salaire médian à 2198€ (ce qui se situe par hasard au niveau du [salaire médian national](https://www.insee.fr/fr/statistiques/7457170#onglet-1%20en%202025)).
-
 Sur les 8 membres de l'équipe, 7 trouvent cette grille plus équitable que les grilles classique et 1 ne se positionne pas.
 
 ## Salaire & rémunération en SCOP
