@@ -1,13 +1,13 @@
 ---
 - name: Accessibilité numérique
   src: "./img/svg/accessibility.svg"
-  description: Nous concevons des interfaces accessibles à toutes et tous, conformes aux standards WCAG et RGAA pour garantir l'inclusion numérique.
+  description: Nous concevons dès le départ des interfaces accessibles à toutes et tous, conformes aux référentiels WCAG et RGAA. Un service qui exclut une partie de son public manque sa cible.
 - name: Éco-conception web
   src: "./img/svg/eco-conception.svg"
-  description: Développement sobre et performant, hébergement responsable, optimisation des ressources pour réduire l'empreinte environnementale de nos projets.
+  description: Nous développons des solutions sobres et performantes, hébergées de façon responsable. Chaque choix technique est questionné au regard de son empreinte, tout au long de la vie du produit.
 - name: Méthode agile et collaborative
   src: "./img/svg/project-management.svg"
-  description: Co-construction avec les utilisateur·ices, itérations courtes, feedback continu et adaptation permanente pour répondre au mieux à vos besoins.
+  description: Nous co-construisons avec les utilisateur·ices, par cycles courts et retours continus, pour faire évoluer le produit au plus près des besoins réels et de leurs évolutions.
 - name: Respect de vos données
   src: "./img/svg/rgpd.svg"
-  description: Conformité RGPD, hébergement en France, transparence totale sur l'utilisation des données et respect de la vie privée de vos utilisateur·ices.
+  description: Nous limitons les données collectées au strict nécessaire, hébergées en France et en conformité RGPD, avec une transparence totale sur l'usage qui en est fait.

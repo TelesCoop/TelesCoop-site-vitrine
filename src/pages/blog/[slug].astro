@@ -31,7 +31,12 @@ const formattedDate = new Date(data.date).toLocaleDateString('fr-FR', {
 });
 ---
 
-<Layout title={data.title} description={data.excerpt}>
+<Layout
+  title={data.title}
+  description={data.excerpt}
+  type="article"
+  publishedDate={data.date}
+>
   <Header slot="header" />
 
   <article class="container mx-auto px-4 py-16 max-w-3xl">

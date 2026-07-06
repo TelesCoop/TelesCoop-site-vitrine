@@ -349,36 +349,6 @@ declare module 'astro:content' {
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 };
-"team": {
-"antoine.md": {
-	id: "antoine.md";
-  slug: "antoine";
-  body: string;
-  collection: "team";
-  data: InferEntrySchema<"team">
-} & { render(): Render[".md"] };
-"camille.md": {
-	id: "camille.md";
-  slug: "camille";
-  body: string;
-  collection: "team";
-  data: InferEntrySchema<"team">
-} & { render(): Render[".md"] };
-"clment.md": {
-	id: "clment.md";
-  slug: "clment";
-  body: string;
-  collection: "team";
-  data: InferEntrySchema<"team">
-} & { render(): Render[".md"] };
-"maxime-bellec.md": {
-	id: "maxime-bellec.md";
-  slug: "maxime-bellec";
-  body: string;
-  collection: "team";
-  data: InferEntrySchema<"team">
-} & { render(): Render[".md"] };
-};
 "testimonials": {
 "anthakarana.md": {
 	id: "anthakarana.md";
@@ -426,23 +396,8 @@ declare module 'astro:content' {
   collection: "data";
   data: any
 };
-"blog": {
-	id: "blog";
-  collection: "data";
-  data: any
-};
 "categories": {
 	id: "categories";
-  collection: "data";
-  data: any
-};
-"cooperative": {
-	id: "cooperative";
-  collection: "data";
-  data: any
-};
-"employees": {
-	id: "employees";
   collection: "data";
   data: any
 };
@@ -453,11 +408,6 @@ declare module 'astro:content' {
 };
 "extra": {
 	id: "extra";
-  collection: "data";
-  data: any
-};
-"filters": {
-	id: "filters";
   collection: "data";
   data: any
 };
@@ -473,21 +423,6 @@ declare module 'astro:content' {
 };
 "metadata": {
 	id: "metadata";
-  collection: "data";
-  data: any
-};
-"projects": {
-	id: "projects";
-  collection: "data";
-  data: any
-};
-"references": {
-	id: "references";
-  collection: "data";
-  data: any
-};
-"services": {
-	id: "services";
   collection: "data";
   data: any
 };
