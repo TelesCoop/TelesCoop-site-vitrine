@@ -141,6 +141,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"la-grille-des-salaires-chez-telescoop.md": {
+	id: "la-grille-des-salaires-chez-telescoop.md";
+  slug: "la-grille-des-salaires-chez-telescoop";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "le-teletravail-chez-telescoop.md": {
 	id: "le-teletravail-chez-telescoop.md";
   slug: "le-teletravail-chez-telescoop";
@@ -274,6 +281,13 @@ declare module 'astro:content' {
 "le-mmo-des-fresques.md": {
 	id: "le-mmo-des-fresques.md";
   slug: "le-mmo-des-fresques";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"league-of-links.md": {
+	id: "league-of-links.md";
+  slug: "league-of-links";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">

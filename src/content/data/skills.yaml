@@ -4,9 +4,10 @@
   items:
     - Audit technique / sécurité / performance
     - Accompagnement du CTO
-  description:
-    Nous vous accompagnons dans la définition de votre stratégie technologique et dans la mise en place de vos projets digitaux.
-    Nous croyons en la co-construction et en la collaboration pour créer des produits qui répondent à vos besoins et à ceux de vos utilisateur·s et utilisatrices.
+  description: >
+    Nous vous aidons à définir votre stratégie technologique et à prioriser vos projets numériques.
+    Audit, cadrage, accompagnement de CTO : nous partons de vos usages réels pour recommander
+    des solutions proportionnées à vos besoins, sans sur-ingénierie.
 
 - name: Développement de solutions
   src: "./img/svg/development-tool.svg"
@@ -16,25 +17,28 @@
     - Digital Factory
     - E-commerce
     - Site vitrine
-  description:
-    Nous développons des solutions sur-mesure pour répondre à vos besoins spécifiques. Nous croyons en la co-construction et en la collaboration pour créer des produits qui répondent à vos besoins et à ceux de vos utilisateur·s et utilisatrices.
-    Nous aimons travailler sur des projets qui ont du sens et qui ont un impact positif sur la société.
+  description: >
+    Nous développons des produits sur-mesure, co-construits avec vos équipes et vos utilisateur·ices.
+    Du premier prototype à la mise en production, nous avançons par cycles courts pour confronter
+    au plus tôt les solutions à leurs usages réels.
 - name: Maintenance et hébergement
   src: "./img/svg/website.svg"
   items:
     - Hébergement
     - Maintenance
     - DevOps
-  description:
-    Une fois votre projet développé, nous continuons à vous accompagner et à faire vivre votre produit grâce à nos offres d’hébergement et de maintenance.
-    Dans une logique de respect de la planète et des humains nous aimons concevoir des solutions évolutives et maintenables.
+  description: >
+    Une fois votre produit en production, nous continuons à le faire vivre grâce à nos offres
+    d'hébergement responsable et de maintenance. Nous concevons des solutions évolutives et
+    maintenables, pour un produit qui vieillit bien et reste sobre dans la durée.
 - name: No code
   src: "./img/svg/no-code.svg"
   items:
     - Création d'applications web et mobile
-  description:
-    Nous croyons en la démocratisation de la technologie et en la possibilité pour chacun·e de créer des applications web et mobile sans compétences techniques.
-    Nous vous accompagnons dans la création de votre application sans code, de la conception à la mise en production.
+  description: >
+    Quand le sur-mesure n'est pas justifié, le no-code permet de créer des applications web et
+    mobiles rapidement et à moindre coût. Nous vous accompagnons de la conception à la mise en
+    production, en vous transmettant les clés pour rester autonomes.
 - name: Data science
   src: "./img/svg/data.svg"
   items:
@@ -42,9 +46,10 @@
     - Data engineering
     - Data analyse
     - Machine-Learning
-  description:
-    Nous vous accompagnons dans la mise en place de votre projet data, de la collecte des données à la mise en production de vos modèles de machine learning.
-    Nous croyons en la démocratisation de la data science et en la possibilité pour chacun·e de tirer parti de ses données pour améliorer ses processus métiers.
+  description: >
+    Nous vous accompagnons de la collecte des données à la mise en production de vos modèles
+    de machine learning. Notre objectif est que vos données éclairent réellement vos décisions
+    et vos processus métiers, sans complexité inutile.
 - name: Service public
   src: "./img/svg/service-public.svg"
   items:
@@ -52,5 +57,7 @@
     - Développement de services numériques
     - Accessibilité numérique
     - Outils métiers
-  description:
-    Nous accompagnons les acteurs publics dans leur transformation numérique et dans le développement de services numériques accessibles à toutes et tous.
+  description: >
+    Nous accompagnons les acteurs publics dans leur transformation numérique, avec des services
+    accessibles à toutes et tous et des outils métiers pensés avec les agent·es qui les utilisent.
+    Le service public mérite des outils à la hauteur de ses missions.
