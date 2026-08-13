@@ -18,7 +18,7 @@ projectDurationUnit: ''
 projectLink: ''
 projectGit: ''
 projectEnd: '2021'
-projectThumbnail: ../../img/projet/akuo.png
+projectThumbnail: /img/projet/akuo.webp
 projectThumbnailAlt: ''
 testimony: ''
 ---

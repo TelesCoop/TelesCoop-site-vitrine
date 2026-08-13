@@ -6,6 +6,24 @@ interface Props {
 }
 
 const { hideLogo = false } = Astro.props;
+
+/**
+ * `sectionPaths` regroupe les URLs rattachées à une entrée de menu : les pages
+ * de détail (`/projet/<slug>`) doivent marquer la rubrique correspondante.
+ */
+const NAVIGATION_LINKS = [
+  { href: '/coopérative', label: 'La coopérative', sectionPaths: ['/coopérative'] },
+  { href: '/projets', label: 'Nos projets', sectionPaths: ['/projets', '/projet'] },
+  { href: '/blog', label: 'Blog', sectionPaths: ['/blog'] },
+];
+
+const currentPath = decodeURIComponent(Astro.url.pathname).replace(/\/$/, '') || '/';
+
+function isCurrentSection(sectionPaths: string[]) {
+  return sectionPaths.some(
+    (path) => currentPath === path || currentPath.startsWith(`${path}/`)
+  );
+}
 ---
 
 <nav id="header" class="sticky top-0 z-50 bg-beige border-b-2 border-black">
@@ -19,28 +37,29 @@ const { hideLogo = false } = Astro.props;
       <!-- Mobile menu button -->
       <button
         id="mobile-menu-button"
-        class="lg:hidden p-2"
+        class="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center"
         aria-label="Menu"
+        aria-controls="mobile-menu"
         aria-expanded="false"
       >
-        <div class="w-6 h-5 flex flex-col justify-between">
+        <span class="w-6 h-5 flex flex-col justify-between" aria-hidden="true">
           <span class="block h-0.5 w-full bg-black"></span>
           <span class="block h-0.5 w-full bg-black"></span>
           <span class="block h-0.5 w-full bg-black"></span>
-        </div>
+        </span>
       </button>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex flex-1 justify-end items-center gap-6">
-        <a href="/coopérative" class="py-2 font-semibold uppercase hover:text-red text-xl">
-          La coopérative
-        </a>
-        <a href="/projets" class="py-2 font-semibold uppercase hover:text-red text-xl">
-          Nos projets
-        </a>
-        <a href="/blog" class="py-2 font-semibold uppercase hover:text-red text-xl">
-          Blog
-        </a>
+      <nav class="hidden lg:flex flex-1 justify-end items-center gap-6" aria-label="Navigation principale">
+        {NAVIGATION_LINKS.map(({ href, label, sectionPaths }) => (
+          <a
+            href={href}
+            class="py-2 font-semibold uppercase hover:text-red text-xl aria-[current=page]:underline aria-[current=page]:decoration-2 aria-[current=page]:underline-offset-4"
+            aria-current={isCurrentSection(sectionPaths) ? 'page' : undefined}
+          >
+            {label}
+          </a>
+        ))}
         <a href="mailto:contact@telescoop.fr" class="tag tag-yellow">
           Nous contacter
         </a>
@@ -48,12 +67,18 @@ const { hideLogo = false } = Astro.props;
     </div>
 
     <!-- Mobile Navigation -->
-    <nav id="mobile-menu" class="hidden lg:hidden pb-4">
+    <nav id="mobile-menu" class="hidden lg:hidden pb-4" aria-label="Navigation principale">
       <div class="flex flex-col gap-3">
-        <a href="/" class="py-2 text-center font-semibold uppercase">Accueil</a>
-        <a href="/coopérative" class="py-2 text-center font-semibold uppercase">La coopérative</a>
-        <a href="/projets" class="py-2 text-center font-semibold uppercase">Nos projets</a>
-        <a href="/blog" class="py-2 text-center font-semibold uppercase">Blog</a>
+        <a href="/" class="py-3 text-center font-semibold uppercase" aria-current={currentPath === '/' ? 'page' : undefined}>Accueil</a>
+        {NAVIGATION_LINKS.map(({ href, label, sectionPaths }) => (
+          <a
+            href={href}
+            class="py-3 text-center font-semibold uppercase aria-[current=page]:underline aria-[current=page]:decoration-2 aria-[current=page]:underline-offset-4"
+            aria-current={isCurrentSection(sectionPaths) ? 'page' : undefined}
+          >
+            {label}
+          </a>
+        ))}
         <a href="mailto:contact@telescoop.fr" class="tag tag-yellow text-center">Nous contacter</a>
       </div>
     </nav>

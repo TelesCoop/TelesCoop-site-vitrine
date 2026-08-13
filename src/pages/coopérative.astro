@@ -2,177 +2,179 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import ValueCard from '../components/ValueCard.astro';
-import { getEntry } from 'astro:content';
-
-const values = await getEntry('data', 'values');
-const valuesData = values?.data || [];
-
-const engagements = await getEntry('data', 'engagements');
-const engagementsData = engagements?.data || {};
 
 const title = 'La coopérative';
 const description =
   'TelesCoop est une SCOP de développement web : gouvernance démocratique, technologies open-source, éco-conception et tarifs solidaires.';
+
+/**
+ * Les trois principes qui découlent du statut de SCOP. Ils décrivent un même
+ * fonctionnement sous trois angles et ne forment pas une progression : ni
+ * numérotation, ni ordre à respecter.
+ */
+const COOPERATIVE_PRINCIPLES = [
+  {
+    title: 'Gouvernance démocratique',
+    description:
+      "Chaque salarié·e est associé·e et dispose d'une voix lors des assemblées générales. Les décisions stratégiques sont prises collectivement.",
+  },
+  {
+    title: 'Bénéfices partagés',
+    description:
+      "Les bénéfices sont redistribués équitablement entre les coopérateur·ices selon leur temps de travail. Une partie est donnée à des associations et médias engagés.",
+  },
+  {
+    title: 'Capital détenu par l\'équipe',
+    description:
+      "Les salarié·es détiennent la majorité du capital. Cette propriété collective garantit l'indépendance de la coopérative et l'alignement des décisions avec nos valeurs.",
+  },
+];
+
+/**
+ * Conditions de travail effectives. La gouvernance et le partage des bénéfices
+ * en sont absents à dessein : ils relèvent des principes ci-dessus, et les
+ * répéter ici diluait les deux listes.
+ */
+const WORKPLACE_ADVANCES = [
+  {
+    label: 'Télétravail intégral',
+    description:
+      "100 % de l'équipe en télétravail, avec liberté géographique totale. Chacun·e choisit son lieu de travail et ses horaires.",
+  },
+  {
+    label: 'Semaine de 4 jours',
+    description:
+      "Chaque membre de l'équipe dispose d'une journée par semaine dédiée à son épanouissement personnel.",
+  },
+  {
+    label: 'Formation continue',
+    description:
+      'Budget de formation et temps dédié à la montée en compétences de chaque coopérateur·ice.',
+  },
+  {
+    label: 'Gouvernance holacratique',
+    description:
+      "Organisation horizontale : les rôles support sont répartis entre nous, chacun·e est autonome sur son périmètre.",
+  },
+  {
+    label: 'Tarifs solidaires',
+    description:
+      "Tarifs adaptés aux capacités financières des associations et des TPE, pour élargir l'accès au numérique responsable.",
+  },
+];
 ---
 
 <Layout title={title} description={description}>
   <Header slot="header" />
 
-  <!-- Hero Section -->
-  <div class="container mx-auto px-4 py-20 max-w-5xl">
-    <h1 class="text-5xl md:text-6xl mb-12 font-display">La coopérative</h1>
-    <p class="text-2xl text-black leading-loose mb-6">
-      <strong class="font-semibold">TelesCoop est une SCOP accréditée ESUS</strong> (Société Coopérative et Participative)
-      fondée avec la conviction que le numérique peut être un levier de transformation positive pour la société.
-    </p>
-    <p class="text-2xl text-black leading-loose">
-      Nous nous sommes donné une mission d'utilité publique et aspirons à travailler sur des projets à impacts positifs. Convaincu·e·s que les projets numériques développés de manière agile par des experts doivent être accessibles à tous, nous collaborons avec une grande diversité d'acteurs pour les aider à accroître leur impact dans leur domaine d'activité respectif. Cette diversité inclut des associations, des entreprises (des TPE aux grands groupes) ainsi que des collectivités locales et des institutions publiques.
-    </p>
-    <p class="text-2xl text-black leading-loose mb-8">
-      TelesCoop accompagne principalement des structures de l'<strong>Économie Sociale et Solidaire</strong> (ESS) :
-      associations, coopératives, collectivités et acteurs publics engagés dans la transition écologique et sociale.
+  <!-- Présentation -->
+  <section class="container mx-auto px-4 py-20 lg:py-24">
+    <h1 class="page-title mb-10">La coopérative</h1>
+
+    <p class="text-2xl md:text-3xl leading-snug max-w-4xl">
+      <strong class="font-semibold">TelesCoop est une SCOP accréditée ESUS</strong>, fondée avec la
+      conviction que le numérique peut être un levier de transformation positive pour la société.
     </p>
 
-    <p class="text-2xl text-black leading-loose">
-      Nous privilégions les partenariats de long terme avec nos client·es, dans une logique de co-construction
-      et d'accompagnement durable de leurs projets numériques.
-    </p>
-  </div>
+    <!-- Le détail passe en colonnes, à un corps plus petit : le chapô porte
+         l'essentiel, ces deux paragraphes le précisent. -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 mt-12 max-w-5xl">
+      <p class="text-lg md:text-xl leading-relaxed">
+        Nous nous sommes donné une mission d'utilité publique et travaillons sur des projets à
+        impacts positifs. Convaincu·e·s que les projets numériques doivent être accessibles à tous,
+        nous collaborons avec des associations, des entreprises — des TPE aux grands groupes — ainsi
+        qu'avec des collectivités locales et des institutions publiques.
+      </p>
+      <p class="text-lg md:text-xl leading-relaxed">
+        Nous accompagnons principalement des structures de l'<strong class="font-semibold">Économie
+        Sociale et Solidaire</strong> engagées dans la transition écologique et sociale, dans une
+        logique de co-construction et de partenariat de long terme.
+      </p>
+    </div>
+  </section>
 
-  <!-- Le modèle coopératif -->
-  <section class="bg-yellow py-20">
+  <!-- Le principe qui commande tout le reste. -->
+  <section class="container mx-auto px-4" aria-label="Notre principe de décision">
+    <p class="motto py-10 max-w-5xl">
+      Une personne <span class="motto-sign">=</span> une voix
+    </p>
+  </section>
+
+  <!-- Ce que le statut change -->
+  <section class="bg-blue py-20 mt-20">
     <div class="container mx-auto px-4">
-      <div class="flex flex-col gap-10 md:grid grid-cols-12">
-        <!-- Sidebar -->
-        <div class="col-span-12 lg:col-span-4">
-          <div class="sticky top-32 flex flex-col gap-6 pt-6">
-            <h2 class="text-4xl lg:text-5xl font-display">Nos 3 piliers</h2>
-            <p class="text-2xl text-black leading-loose">
-              Ce à quoi nous croyons, ce à quoi nous ne renoncerons jamais, ce que nous aurons toujours le courage de défendre.
-            </p>
+      <div class="max-w-3xl mb-14">
+        <h2 class="section-title mb-6">Ce que ce statut change</h2>
+        <p class="text-xl md:text-2xl leading-relaxed">
+          Être une SCOP n'est pas une mention en bas de page : cela détermine qui décide, qui perçoit
+          les bénéfices et qui détient l'entreprise.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {COOPERATIVE_PRINCIPLES.map((principle) => (
+          <div class="card flex-col p-8">
+            <h3 class="subsection-title mb-4">{principle.title}</h3>
+            <p class="text-base md:text-lg leading-relaxed">{principle.description}</p>
           </div>
-        </div>
-
-        <!-- Cards Grid -->
-        <div class="col-span-12 lg:col-span-8 lg:col-start-5 xl:col-span-7 xl:col-start-6">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="card p-8 flex-col rotate-left">
-              <span class="text-5xl font-display text-orange mb-4">01</span>
-              <h3 class="text-2xl font-semibold mb-4">Gouvernance démocratique</h3>
-              <p class="text-lg text-black leading-loose">
-                En tant que SCOP, chaque salarié·e est associé·e et dispose d'une voix lors des assemblées générales.
-                Les décisions stratégiques sont prises collectivement selon le principe <strong>une personne = une voix</strong>.
-              </p>
-            </div>
-
-            <div class="card p-8 flex-col rotate-right md:translate-y-12">
-              <span class="text-5xl font-display text-pink mb-4">02</span>
-              <h3 class="text-2xl font-semibold mb-4">Répartition équitable</h3>
-              <p class="text-lg text-black leading-loose">
-                Les bénéfices sont redistribués de manière équitable entre les coopérateurs·ices selon leur temps de travail.
-                Une partie est donnée à des associations et médias engagés.
-              </p>
-            </div>
-
-            <div class="card p-8 flex-col rotate-left">
-              <span class="text-5xl font-display text-purple mb-4">03</span>
-              <h3 class="text-2xl font-semibold mb-4">Capital partagé</h3>
-              <p class="text-lg text-black leading-loose">
-                Les salarié·es détiennent la majorité du capital de l'entreprise. Cette propriété collective garantit
-                l'indépendance de la coopérative et l'alignement des décisions avec nos valeurs.
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- Les avancées salariales -->
-  <section class="py-20 border-t-2 border-black/10">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-col gap-12 lg:grid grid-cols-12 lg:gap-20">
-        <!-- Sidebar -->
-        <div class="col-span-12 lg:col-span-5 pr-0 lg:pr-8">
-          <div class="sticky top-32 flex flex-col gap-5">
-            <h2 class="text-4xl lg:text-5xl font-display">Les avancées salariales</h2>
-            <p class="text-2xl text-black leading-loose">
-              TelesCoop s'est donné pour mission d'offrir un cadre de travail confortable à toutes les personnes salariées.
-              Voici les principales avancées mises en place depuis la création de la coopérative.
-            </p>
-          </div>
+  <!-- Conditions de travail -->
+  <section class="container mx-auto px-4 py-20">
+    <div class="max-w-3xl mb-14">
+      <h2 class="section-title mb-6">Nos conditions de travail</h2>
+      <p class="text-xl md:text-2xl leading-relaxed">
+        Les décisions collectives se traduisent en conditions concrètes. Voici celles que nous avons
+        mises en place depuis la création de la coopérative.
+      </p>
+    </div>
+
+    <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-16 max-w-5xl">
+      {WORKPLACE_ADVANCES.map((advance) => (
+        <div class="border-t-2 border-black py-6">
+          <dt class="subsection-title mb-2 font-bold">{advance.label}</dt>
+          <dd class="text-lg leading-relaxed">{advance.description}</dd>
         </div>
+      ))}
+    </dl>
+  </section>
 
-        <!-- List -->
-        <ul class="col-span-12 lg:col-span-7 flex list-none flex-col gap-8 px-0">
-          <li class="flex items-start gap-4 pb-8 border-b border-black/20Mai">
-            <svg class="w-7 h-7 shrink-0 text-purple mt-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-            </svg>
-            <p class="text-2xl text-black leading-loose">
-              <strong>Télétravail intégral</strong> : 100% de l'équipe en télétravail avec liberté géographique totale. Chacun·e est libre de choisir son lieu de travail et ses horaires.
-            </p>
-          </li>
-          <li class="flex items-start gap-4 border-b border-black/20 pb-8">
-            <svg class="w-7 h-7 shrink-0 text-orange mt-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-            </svg>
-            <p class="text-2xl text-black leading-loose">
-              <strong>Semaine de 4 jours</strong> : Afin d'établir un meilleur équilibre entre vie professionnelle et vie personnelle,
-              nous sommes passé·es à la semaine de 4 jours. Chaque membre de l'équipe dispose d'une journée par semaine
-              dédiée à son épanouissement personnel.
-            </p>
-          </li>
-
-          <li class="flex items-start gap-4 border-b border-black/20 pb-8">
-            <svg class="w-7 h-7 shrink-0 text-pink mt-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-            </svg>
-            <p class="text-2xl text-black leading-loose">
-              <strong>Formation continue</strong> : Budget formation et temps dédié à la montée en compétences de chaque coopérateur·ice.
-            </p>
-          </li>
-
-          <li class="flex items-start gap-4 border-b border-black/20 pb-8">
-            <svg class="w-7 h-7 shrink-0 text-blue mt-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-            </svg>
-            <p class="text-2xl text-black leading-loose">
-              <strong>Gouvernance démocratique</strong> : SCOP où 1 personne = 1 voix, garantissant un pouvoir décisionnel égal pour tous·tes.
-            </p>
-          </li>
-
-          <li class="flex items-start gap-4 border-b border-black/20 pb-8">
-            <svg class="w-7 h-7 shrink-0 text-purple mt-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-            </svg>
-            <p class="text-2xl text-black leading-loose">
-              <strong>Gouvernance holacratique</strong> : Organisation horizontale favorisant l'autonomie et la responsabilisation de chacun·e.
-            </p>
-          </li>
-
-          <li class="flex items-start gap-4 border-b border-black/20 pb-8">
-            <svg class="w-7 h-7 shrink-0 text-orange mt-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-            </svg>
-            <p class="text-2xl text-black leading-loose">
-              <strong>Répartition équitable des bénéfices</strong> : Redistribution selon le temps de travail, avec une partie reversée à des associations engagées.
-            </p>
-          </li>
-
-          <li class="flex items-start gap-4 border-b border-black/20 pb-8">
-            <svg class="w-7 h-7 shrink-0 text-pink mt-1 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-            </svg>
-            <p class="text-2xl text-black leading-loose">
-              <strong>Tarifs solidaires</strong> : Tarifs adaptés aux capacités financières des associations et TPE pour favoriser l'accès au numérique responsable.
-            </p>
-          </li>
-        </ul>
+  <!-- Deux portes de sortie : la preuve pour qui doute, le contact pour qui est convaincu. -->
+  <section class="container mx-auto px-4 pb-24">
+    <div class="max-w-5xl border-t-2 border-black pt-12">
+      <h2 class="section-title mb-6">Aller plus loin</h2>
+      <p class="text-xl md:text-2xl leading-relaxed max-w-3xl mb-10">
+        Nous publions aussi notre grille de salaires
+      </p>
+      <div class="flex flex-wrap gap-5">
+        <a href="/blog/la-grille-des-salaires-chez-telescoop/" class="btn btn-yellow btn-lg">
+          Lire notre grille de salaires
+        </a>
+        <a href="mailto:contact@telescoop.fr" class="btn btn-lg">Nous écrire</a>
       </div>
     </div>
   </section>
 
   <Footer slot="footer" />
 </Layout>
+
+<style>
+  /* La devise de la coopérative, traitée comme le seul moment typographique
+     fort de la page : elle tient en cinq mots et commande tout le reste. */
+  .motto {
+    @apply font-display uppercase tracking-wider leading-none;
+    font-size: clamp(2rem, 5.5vw, 4rem);
+  }
+
+  /* Le signe est posé sur un aplat plutôt qu'écrit en couleur : en vert sur
+     beige, son contraste tombe à 2,1:1, sous le seuil des grands textes — or
+     c'est lui qui porte le sens de la formule. */
+  .motto-sign {
+    background: var(--color-green);
+    color: var(--color-text);
+    padding: 0 0.12em;
+  }
+</style>

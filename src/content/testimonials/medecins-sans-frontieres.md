@@ -2,7 +2,7 @@
 name: Médecins sans frontières
 client: Domitille Duverne
 client_poste: Chargée de projet digital
-logo: /img/clients/medecins-sans-frontieres.png
+logo: /img/clients/medecins-sans-frontieres.webp
 borderColor: "#60E093"
 order: 5
 draft: false

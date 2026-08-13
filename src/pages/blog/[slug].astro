@@ -13,9 +13,13 @@ export async function getStaticPaths() {
   }));
 }
 
+/** En deçà de deux sections, un sommaire n'apporte rien au lecteur. */
+const MINIMUM_HEADINGS_FOR_SUMMARY = 2;
+const RELATED_ARTICLES_COUNT = 2;
+
 const { article } = Astro.props;
-const { data, body } = article;
-const { Content } = await article.render();
+const { data } = article;
+const { Content, headings } = await article.render();
 const categories = await getEntry('data', 'categories');
 const categoriesData = categories?.data || {};
 
@@ -24,11 +28,16 @@ function getCategoryColorClass(categoryName: string) {
   return category?.colorClass || 'beige';
 }
 
-const formattedDate = new Date(data.date).toLocaleDateString('fr-FR', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric'
-});
+const sections = headings.filter(({ depth }) => depth === 2);
+const hasSummary = sections.length >= MINIMUM_HEADINGS_FOR_SUMMARY;
+
+const relatedArticles = (await getCollection('blog', ({ data }) => !data.draft))
+  .filter(({ slug }) => slug !== article.slug)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, RELATED_ARTICLES_COUNT);
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 
 <Layout
@@ -39,45 +48,105 @@ const formattedDate = new Date(data.date).toLocaleDateString('fr-FR', {
 >
   <Header slot="header" />
 
-  <article class="container mx-auto px-4 py-16 max-w-3xl">
-    <!-- Header -->
-    <header class="mb-12">
-      <h1 class="text-4xl md:text-5xl font-display mb-6">{data.title}</h1>
-
-      <div class="flex items-center gap-4 text-black text-lg mb-6">
-        <time datetime={data.date.toISOString()}>{formattedDate}</time>
-        <span>•</span>
-        <span>{data.readTime} min de lecture</span>
-      </div>
-
-      {data.categories && data.categories.length > 0 && (
-        <div class="flex flex-wrap gap-2 mb-6">
-          {data.categories.map((cat: string) => (
-            <span class="badge" data-color={getCategoryColorClass(cat)}>
-              {categoriesData[cat]?.name || cat}
-            </span>
-          ))}
-        </div>
-      )}
-    </header>
-
-    <!-- Excerpt -->
-    {data.excerpt && (
-      <div class="border-l-4 border-red pl-6 mb-12">
-        <p class="text-xl text-black leading-loose font-semibold">{data.excerpt}</p>
-      </div>
-    )}
-
-    <!-- Content -->
-    <div class="prose prose-lg max-w-none mb-12">
-      <Content />
-    </div>
-
-    <!-- Back link -->
-    <div class="mt-12 pt-8 border-t-2 border-black/10">
-      <a href="/blog" class="btn inline-block py-3">
-        ← Retour au blog
+  <article class="container mx-auto px-4 py-16">
+    <div>
+      <a href="/blog" class="inline-flex items-center gap-2 mb-8 text-xl hover:text-orange">
+        <span aria-hidden="true">←</span>
+        <span>Retour au blog</span>
       </a>
+
+      <header class="mb-12">
+        <h1 class="page-title-doc mb-6">{data.title}</h1>
+
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-3">
+          <time datetime={data.date.toISOString()} class="meta-label">
+            {formatDate(data.date)}
+          </time>
+          <span class="meta-label" aria-hidden="true">•</span>
+          <span class="meta-label">{data.readTime} min de lecture</span>
+
+          {data.categories && data.categories.length > 0 && (
+            <div class="flex flex-wrap gap-2">
+              {data.categories.map((category: string) => (
+                <span class="badge" data-color={getCategoryColorClass(category)}>
+                  {categoriesData[category]?.name || category}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      </header>
+
+      {data.excerpt && (
+        <p class="text-xl md:text-2xl leading-relaxed font-semibold border-y-2 border-black py-6 mb-12 max-w-3xl">
+          {data.excerpt}
+        </p>
+      )}
+
+      <!-- Grille 12 colonnes : la colonne de lecture est bornée à 7/12 pour
+           garder une longueur de ligne confortable sur grand écran. Le sommaire
+           précède le contenu dans le DOM — c'est un outil de navigation, il doit
+           être atteint en premier au clavier et se placer en tête sur mobile. -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        {hasSummary && (
+          <aside
+            class="lg:col-span-4 lg:col-start-9 lg:row-start-1"
+            aria-labelledby="article-summary-title"
+          >
+            <nav class="lg:sticky lg:top-32">
+              <h2 id="article-summary-title" class="meta-label mb-4">Sommaire</h2>
+              <ol class="flex flex-col gap-3">
+                {sections.map(({ slug, text }, index) => (
+                  <li class="flex gap-3">
+                    <span class="font-display text-muted shrink-0" aria-hidden="true">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <a
+                      href={`#${slug}`}
+                      class="summary-link text-lg leading-snug hover:text-orange"
+                    >
+                      {text}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          </aside>
+        )}
+
+        <div class="rich-text lg:col-span-7 lg:row-start-1">
+          <Content />
+        </div>
+      </div>
+
+      <footer class="mt-20 pt-10 border-t-2 border-black">
+        {relatedArticles.length > 0 && (
+          <>
+            <h2 class="section-title mb-8">Continuer la lecture</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              {relatedArticles.map((related, index) => (
+                <a
+                  href={`/blog/${related.slug}/`}
+                  class={`card flex-col p-6 ${index % 2 === 0 ? 'rotate-left' : 'rotate-right'}`}
+                >
+                  <span class="meta-label mb-3">{formatDate(related.data.date)}</span>
+                  <h3 class="card-title-doc mb-3">{related.data.title}</h3>
+                  <p class="text-base md:text-lg">{related.data.excerpt}</p>
+                </a>
+              ))}
+            </div>
+          </>
+        )}
+
+        <div class="flex flex-col sm:flex-row sm:items-center gap-6">
+          <p class="text-lg md:text-xl">
+            Une question sur notre façon de travailler ?
+          </p>
+          <a href="mailto:contact@telescoop.fr" class="btn btn-orange self-start">
+            Écrivez-nous
+          </a>
+        </div>
+      </footer>
     </div>
   </article>
 
@@ -85,52 +154,71 @@ const formattedDate = new Date(data.date).toLocaleDateString('fr-FR', {
 </Layout>
 
 <style>
-  /* Style for the content */
-  .prose :global(h2) {
-    @apply text-3xl font-semibold mt-8 mb-4;
+  /* Décale l'ancre sous le header collant lors d'une navigation par sommaire. */
+  .rich-text :global(h2) {
+    scroll-margin-top: 7rem;
   }
 
-  .prose :global(h3) {
-    @apply text-2xl font-semibold mt-6 mb-3;
-  }
-
-  .prose :global(p) {
-    @apply mb-4 leading-relaxed text-black text-2xl;
-  }
-
-  .prose :global(ul), .prose :global(ol) {
-    @apply mb-4 ml-6;
-  }
-
-  .prose :global(li) {
-    @apply mb-2 text-2xl;
-  }
-
-  .prose :global(a) {
-    @apply text-blue hover:underline;
-  }
-
-  .prose :global(strong) {
-    @apply font-semibold text-black;
-  }
-
-  .prose :global(em) {
-    @apply font-bold;
-  }
-
-  .prose :global(blockquote) {
-    @apply border-l-4 border-gray-300 pl-4 italic text-black my-6;
-  }
-
-  .prose :global(code) {
-    @apply bg-gray-100 px-2 py-1 rounded text-sm font-mono;
-  }
-
-  .prose :global(pre) {
-    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-6;
-  }
-
-  .prose :global(pre code) {
-    @apply bg-transparent p-0;
+  .summary-link[aria-current='true'] {
+    @apply text-orange font-semibold;
   }
 </style>
+
+<script>
+  const summaryLinks = document.querySelectorAll<HTMLAnchorElement>('.summary-link');
+
+  // `link.hash` est URL-encodé : les titres accentués y deviennent des
+  // séquences `%C3%A9`, invalides comme sélecteur CSS. On travaille donc sur
+  // l'identifiant décodé.
+  const targets = [...summaryLinks]
+    .map((link) => ({
+      link,
+      section: document.getElementById(decodeURIComponent(link.hash.slice(1))),
+    }))
+    .filter(
+      (target): target is { link: HTMLAnchorElement; section: HTMLElement } =>
+        target.section !== null
+    );
+  const sections = targets.map(({ section }) => section);
+
+  if (sections.length > 0) {
+    // Hauteur du header collant : un titre est considéré comme atteint dès
+    // qu'il passe sous cette limite.
+    const READING_LINE_OFFSET = 140;
+
+    // La section courante est la dernière dont le titre a franchi la ligne de
+    // lecture — un IntersectionObserver ne couvrirait pas les longs passages
+    // sans titre, où aucune entrée n'est visible.
+    function highlightCurrentSection() {
+      const current = sections.reduce(
+        (reached, section) =>
+          section.getBoundingClientRect().top <= READING_LINE_OFFSET ? section : reached,
+        sections[0]
+      );
+
+      targets.forEach(({ link, section }) => {
+        if (section === current) {
+          link.setAttribute('aria-current', 'true');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    }
+
+    let frameRequested = false;
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (frameRequested) return;
+        frameRequested = true;
+        requestAnimationFrame(() => {
+          highlightCurrentSection();
+          frameRequested = false;
+        });
+      },
+      { passive: true }
+    );
+
+    highlightCurrentSection();
+  }
+</script>

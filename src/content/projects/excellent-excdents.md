@@ -19,7 +19,7 @@ projectDurationUnit: ''
 projectLink: ''
 projectGit: ''
 projectEnd: ''
-projectThumbnail: ../../img/projet/excellents-excedents.png
+projectThumbnail: /img/projet/excellents-excedents.webp
 projectThumbnailAlt: Capture d'écran du site Excellents Excédents
 testimony: ''
 ---

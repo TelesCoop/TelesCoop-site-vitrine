@@ -19,7 +19,7 @@ projectDurationUnit: ''
 projectLink: https://memo.fresque.earth/
 projectGit: https://memo.fresque.earth/
 projectEnd: ''
-projectThumbnail: ../../img/projet/memo.png
+projectThumbnail: /img/projet/memo.webp
 projectThumbnailAlt: Image d'illustration du Mémo de la Fresque du Numérique
 testimony: Nous connaissions le mémo grâce à la Fresque du Climat et nous avons demandé à Marc-Antoine la possibilité d'en disposer pour la Fresque des frontières planétaires. L'adaptation s'est très bien passée et nous avons pû facilement intégrer les informations co-construitent avec notre communauté d'animateur⋅rice. Nous avons également réussi à traduire le mêmo dans plusieurs langues (anglais, allemand, espagnol, chinois) toujours aidée de notre communauté. L'outil est très apprécié comme correction de la fresque par les participant⋅es dans le mail post-atelier, il est également utilisé comme pense-bête par certains animateur⋅rices car les liens entres les cartes sont nombreux. Nous sommes en train de réfléchir à un nouvel agencement des cartes et le memo va nous aider à visualiser cet agencement et mettre à disposition les deux versions sur le mémo. (Fresque des Frontières Planétaires)
 ---

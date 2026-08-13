@@ -2,7 +2,7 @@
 name: Open Food Facts
 client: Alex
 client_poste: Référent technique
-logo: /img/clients/openfoodfacts.png
+logo: /img/clients/openfoodfacts.webp
 borderColor: "#ff8714"
 order: 1
 draft: false

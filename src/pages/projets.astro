@@ -43,7 +43,7 @@ function slugify(text: string) {
 
   <div class="container mx-auto px-4 py-16">
     <div class="text-center mb-12">
-      <h1 class="uppercase text-5xl md:text-6xl mb-12 font-display">{title}</h1>
+      <h1 class="page-title mb-12">{title}</h1>
       <p class="text-center text-xl lg:text-2xl text-black max-w-3xl mx-auto">
         {top}
       </p>
@@ -53,12 +53,12 @@ function slugify(text: string) {
     <div class="border-t border-b border-gray-200 py-6 my-8">
       <div class="flex flex-col md:flex-row gap-6">
         <div class="md:w-1/4">
-          <h2 class="font-code text-lg md:text-xl font-semibold">Recherche & Filtres</h2>
+          <h2 class="subsection-title">Recherche & Filtres</h2>
         </div>
         <div class="md:w-3/4 space-y-4">
           <!-- Search -->
           <div>
-            <label for="search-input" class="font-code text-sm md:text-base mb-2 text-black block">Rechercher un projet</label>
+            <label for="search-input" class="meta-label mb-2 block">Rechercher un projet</label>
             <input
               type="text"
               id="search-input"
@@ -69,7 +69,7 @@ function slugify(text: string) {
 
           <!-- Category filters -->
           <div>
-            <h3 class="font-code text-sm mb-3 text-black">Types de projet</h3>
+            <h3 class="meta-label mb-3">Types de projet</h3>
             <div class="flex flex-wrap gap-2 mb-4">
               {projectCategories.map((category: any) => (
                 <button
@@ -103,7 +103,7 @@ function slugify(text: string) {
     <!-- No results message -->
     <div id="no-results" class="hidden text-center mt-12">
       <p class="text-2xl text-black font-semibold mb-4">Aucun projet trouvé</p>
-      <p class="text-lg text-black/70">Essayez de modifier vos critères de recherche ou de filtrage</p>
+      <p class="text-lg text-muted">Essayez de modifier vos critères de recherche ou de filtrage</p>
     </div>
 
     <p class="text-center mt-12 text-black" id="more-projects-text">

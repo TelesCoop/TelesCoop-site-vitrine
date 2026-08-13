@@ -18,7 +18,7 @@ projectDurationUnit: ''
 projectLink: https://www.backmarket.fr/fr-fr
 projectGit: ''
 projectEnd: '2021'
-projectThumbnail: ../../img/projet/backmarket.png
+projectThumbnail: /img/projet/backmarket.webp
 projectThumbnailAlt: ''
 testimony: ''
 ---

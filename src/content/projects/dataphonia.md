@@ -17,7 +17,7 @@ projectDurationUnit: ''
 projectLink: ''
 projectGit: ''
 projectEnd: ''
-projectThumbnail: ../../img/projet/dataphonia.png
+projectThumbnail: /img/projet/dataphonia.webp
 projectThumbnailAlt: ''
 testimony: ''
 ---

@@ -2,8 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { Image } from 'astro:assets';
 import { getCollection, getEntry } from 'astro:content';
+import { getImageDimensions } from '../../utils/images';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects', ({ data }) => !data.draft);
@@ -24,15 +24,19 @@ function getCategoryColorClass(categoryName: string) {
   const category = categoriesData[categoryName];
   return category?.colorClass || 'beige';
 }
+
+const thumbnailDimensions = data.projectThumbnail
+  ? await getImageDimensions(data.projectThumbnail)
+  : null;
 ---
 
 <Layout title={data.title} description={data.projectResume}>
   <Header slot="header" />
 
-  <article class="mt-16">
+  <article>
     <!-- Hero Section -->
     <div class="container mx-auto px-4 py-12">
-      <div class="max-w-5xl mx-auto">
+      <div>
         <!-- Back link -->
         <a href="/projets" class="inline-flex items-center gap-2 mb-8 text-xl hover:text-orange">
           <span>←</span>
@@ -41,7 +45,7 @@ function getCategoryColorClass(categoryName: string) {
 
         <!-- Title & Categories -->
         <div class="mb-8">
-          <h1 class="text-5xl md:text-6xl mb-6 font-display uppercase">{data.title}</h1>
+          <h1 class="page-title mb-6">{data.title}</h1>
 
           {data.categories && data.categories.length > 0 && (
             <div class="flex flex-wrap gap-2">
@@ -55,13 +59,16 @@ function getCategoryColorClass(categoryName: string) {
         </div>
 
         <!-- Project Image -->
-        {data.projectThumbnail && (
+        {data.projectThumbnail && thumbnailDimensions && (
           <div class="relative">
             <img
               src={data.projectThumbnail}
               alt={data.projectThumbnailAlt || data.title}
-              class="w-full rounded-[10px] border-2 border-black"
-              loading="lazy"
+              class="w-full h-auto rounded-[10px] border-2 border-black"
+              width={thumbnailDimensions.width}
+              height={thumbnailDimensions.height}
+              loading="eager"
+              fetchpriority="high"
               decoding="async"
             />
           </div>
@@ -72,20 +79,22 @@ function getCategoryColorClass(categoryName: string) {
     <!-- Content Section -->
     <div class="py-16">
       <div class="container mx-auto px-4">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16">
+        <!-- Grille 12 colonnes : la colonne de lecture est bornée à 7/12 pour
+             garder une longueur de ligne confortable sur grand écran. -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <!-- Main Content -->
-          <div class="lg:col-span-2 space-y-16">
+          <div class="lg:col-span-7 space-y-16">
             <!-- Resume -->
             <div>
-              <h2 class="text-4xl font-display uppercase mb-6 pb-4 border-b-2 border-black">Le projet</h2>
+              <h2 class="section-title mb-6 pb-4 border-b-2 border-black">Le projet</h2>
               <p class="text-2xl text-black leading-relaxed mt-6">{data.projectResume}</p>
             </div>
 
             <!-- Description -->
             {body && (
               <div>
-                <h2 class="text-4xl font-display uppercase mb-6 pb-4 border-b-2 border-black">Description</h2>
-                <div class="prose prose-lg max-w-none text-black mt-6">
+                <h2 class="section-title mb-6 pb-4 border-b-2 border-black">Description</h2>
+                <div class="rich-text mt-6">
                   <Content />
                 </div>
               </div>
@@ -104,11 +113,11 @@ function getCategoryColorClass(categoryName: string) {
           </div>
 
           <!-- Sidebar -->
-          <div class="space-y-8">
+          <div class="lg:col-span-4 lg:col-start-9 space-y-8">
             <!-- Client Info -->
             {data.clientName && (
               <div>
-                <h3 class="text-2xl font-display uppercase mb-4">Client</h3>
+                <h3 class="subsection-title mb-4">Client</h3>
                 <p class="text-black text-xl font-semibold">{data.clientName}</p>
                 {data.clientDescription && (
                   <p class="text-lg text-black mt-3 leading-relaxed">{data.clientDescription}</p>
@@ -119,7 +128,7 @@ function getCategoryColorClass(categoryName: string) {
             <!-- Project Info -->
             <div class="space-y-6">
               <div>
-                <h3 class="text-lg font-display uppercase mb-2 text-black/70">Statut</h3>
+                <h3 class="meta-label mb-2">Statut</h3>
                 <p class="text-black text-xl font-semibold">
                   {data.projectEnd ? 'Terminé' : 'En cours'}
                 </p>
@@ -127,7 +136,7 @@ function getCategoryColorClass(categoryName: string) {
 
               {data.projectDuration && (
                 <div>
-                  <h3 class="text-lg font-display uppercase mb-2 text-black/70">Durée</h3>
+                  <h3 class="meta-label mb-2">Durée</h3>
                   <p class="text-black text-xl font-semibold">
                     {data.projectDuration} {data.projectDurationUnit || ''}
                   </p>
@@ -136,7 +145,7 @@ function getCategoryColorClass(categoryName: string) {
 
               {data.projectEnd && (
                 <div>
-                  <h3 class="text-lg font-display uppercase mb-2 text-black/70">Date de fin</h3>
+                  <h3 class="meta-label mb-2">Date de fin</h3>
                   <p class="text-black text-xl font-semibold">{data.projectEnd}</p>
                 </div>
               )}
@@ -145,7 +154,7 @@ function getCategoryColorClass(categoryName: string) {
             <!-- Technologies -->
             {data.projectStack && data.projectStack.length > 0 && (
               <div>
-                <h3 class="text-2xl font-display uppercase mb-4">Technologies</h3>
+                <h3 class="subsection-title mb-4">Technologies</h3>
                 <div class="flex flex-wrap gap-2">
                   {data.projectStack.map((tech: string) => (
                     <span class="badge">
@@ -189,38 +198,3 @@ function getCategoryColorClass(categoryName: string) {
 
   <Footer slot="footer" />
 </Layout>
-
-<style>
-  .prose :global(p) {
-    @apply text-black text-xl leading-relaxed mb-4;
-  }
-
-  .prose :global(ul),
-  .prose :global(ol) {
-    @apply text-black text-xl space-y-2 mb-4;
-  }
-
-  .prose :global(li) {
-    @apply text-black;
-  }
-
-  .prose :global(h2) {
-    @apply text-2xl font-display uppercase mb-4 mt-8;
-  }
-
-  .prose :global(h3) {
-    @apply text-xl font-semibold mb-3 mt-6;
-  }
-
-  .prose :global(a) {
-    @apply text-orange hover:underline;
-  }
-
-  .prose :global(strong) {
-    @apply font-semibold;
-  }
-
-  .prose :global(code) {
-    @apply bg-beige-dark px-2 py-1 rounded text-base;
-  }
-</style>

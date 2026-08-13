@@ -30,8 +30,8 @@ const colorMapping = {
 };
 ---
 
-<section class="px-4">
-  <div class="container mx-auto">
+<section>
+  <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <!-- Text content -->
       <div class="space-y-6">
@@ -61,7 +61,7 @@ const colorMapping = {
             nos analyses, à la recherche permanente du meilleur équilibre.
           </p>
         </div>
-        <div class="flex justify-center lg:justify-start mt-6">
+        <div class="mt-6">
           <a
             href="mailto:contact@telescoop.fr"
             class="btn btn-md md:btn-lg"
@@ -74,8 +74,8 @@ const colorMapping = {
       <!-- Cards grid -->
       <div class="grid grid-cols-1 xs:grid-cols-2 gap-4">
         {extra.map((item) => (
-          <div class="card flex-col p-4 md:p-6 text-center items-center">
-            <div class="w-20 h-20 xs:w-16 xs:h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 mb-4">
+          <div class="card flex-col p-5 md:p-6">
+            <div class="w-16 h-16 lg:w-20 lg:h-20 mb-4">
               <InlineSvg
                 src={item.src}
                 alt={item.name}
@@ -83,8 +83,10 @@ const colorMapping = {
                 class="w-full h-full object-contain"
               />
             </div>
-            <h3 class="font-semibold mb-2 text-base xs:text-sm sm:text-base lg:text-lg">{item.name}</h3>
-            <p class="text-base xs:text-sm sm:text-base lg:text-lg">{item.description}</p>
+            <h3 class="card-title-doc text-base lg:text-lg mb-2">{item.name}</h3>
+            {/* Aligné à gauche : ces descriptions font plusieurs lignes, et un
+                texte centré oblige l'œil à rechercher le début de chacune. */}
+            <p class="text-base lg:text-lg leading-relaxed">{item.description}</p>
           </div>
         ))}
       </div>

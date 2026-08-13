@@ -19,7 +19,7 @@ projectDurationUnit: ''
 projectLink: https://fragilite-numerique.fr/
 projectGit: ''
 projectEnd: ''
-projectThumbnail: ../../img/projet/ifn.png
+projectThumbnail: /img/projet/ifn.webp
 projectThumbnailAlt: Capture d'écran du site de l'indice de fragilité numérique
 testimony: ''
 ---

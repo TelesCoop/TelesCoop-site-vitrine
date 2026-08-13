@@ -19,7 +19,7 @@ projectDurationUnit: ''
 projectLink: https://www.1jeune1solution.gouv.fr/mes-aides
 projectGit: https://github.com/betagouv/aides-jeunes
 projectEnd: '2022'
-projectThumbnail: ../../img/projet/aides-jeunes.png
+projectThumbnail: /img/projet/aides-jeunes.webp
 projectThumbnailAlt: ''
 testimony: ''
 ---

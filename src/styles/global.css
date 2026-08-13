@@ -124,6 +124,138 @@
   p {
     @apply leading-relaxed text-lg md:text-xl;
   }
+
+  /* Anneau de focus unique pour tout le site : l'outline par défaut du
+     navigateur est peu lisible sur le fond beige et sous les drop-shadows. */
+  :focus-visible {
+    outline: 3px solid var(--color-border);
+    outline-offset: 3px;
+  }
+
+  /* Les animations du site sont décoratives ou indicatives : elles peuvent
+     toutes être neutralisées. `!important` est nécessaire pour court-circuiter
+     les transitions déclarées au niveau des composants. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Échelle typographique des titres.
+   Le socle porte l'identité (famille, taille, casse) ; les marges restent des
+   utilitaires appliqués au cas par cas, la densité dépendant du contexte.
+   Le suffixe `-doc` désigne la déclinaison éditoriale : même échelle, casse
+   naturelle, pour les textes longs (articles, pages légales). */
+@layer components {
+  .page-title {
+    @apply text-5xl md:text-6xl uppercase;
+  }
+
+  .page-title-doc {
+    @apply text-4xl md:text-5xl normal-case;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl uppercase;
+  }
+
+  .section-title-doc {
+    @apply text-2xl md:text-3xl normal-case;
+  }
+
+  .subsection-title {
+    @apply text-xl md:text-2xl uppercase;
+  }
+
+  /* Titres de cartes : Barlow gras, pour se distinguer des titres de section
+     en Anton et rester lisible sur des libellés longs. */
+  .card-title {
+    @apply font-sans font-bold text-xl md:text-2xl uppercase;
+  }
+
+  .card-title-doc {
+    @apply font-sans font-bold text-xl md:text-2xl normal-case;
+  }
+
+  /* Intitulé de métadonnée : statut, durée, catégorie de filtre. */
+  .meta-label {
+    @apply text-base uppercase text-muted;
+  }
+
+  /* Contenu long rendu depuis Markdown : articles, descriptions de projet,
+     pages légales. Source unique de vérité pour le rythme de lecture, afin que
+     les styles ne divergent pas d'une page à l'autre. */
+  .rich-text p,
+  .rich-text li {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+
+  .rich-text > * + * {
+    @apply mt-6;
+  }
+
+  /* Le premier élément doit démarrer sur la même ligne que ce qui l'entoure
+     (sommaire, titre de section) : sa marge haute est annulée. */
+  .rich-text > *:first-child {
+    @apply mt-0;
+  }
+
+  .rich-text h2 {
+    @apply section-title-doc mt-12 mb-4;
+  }
+
+  .rich-text h3 {
+    @apply text-xl md:text-2xl mt-10 mb-3;
+  }
+
+  .rich-text h4 {
+    @apply text-lg md:text-xl mt-8 mb-2;
+  }
+
+  .rich-text ul {
+    @apply list-disc pl-6 space-y-2;
+  }
+
+  .rich-text ol {
+    @apply list-decimal pl-6 space-y-2;
+  }
+
+  /* Liens en noir souligné plutôt qu'en couleur : le contraste reste garanti
+     quelle que soit la palette active, et le soulignement porte l'affordance. */
+  .rich-text a {
+    @apply underline decoration-2 underline-offset-2 hover:text-orange;
+  }
+
+  .rich-text strong {
+    @apply font-semibold;
+  }
+
+  .rich-text code {
+    @apply bg-beige-dark px-2 py-1 rounded text-base;
+  }
+
+  .rich-text img {
+    @apply w-full h-auto rounded-[10px] border-2 border-black my-10;
+  }
+
+  .rich-text blockquote {
+    @apply bg-beige border-2 border-black rounded-[10px] px-6 py-5 my-10;
+    filter: drop-shadow(6px 6px 0 var(--color-border));
+  }
+
+  .rich-text blockquote p {
+    @apply italic;
+  }
+
+  .rich-text hr {
+    @apply my-12 border-t-2 border-divider;
+  }
 }
 
 @layer components {
@@ -430,13 +562,16 @@
     color: var(--text-on-peach);
   }
 
+  /* Toutes les cartes occupent la même cellule de grille : elles se
+     superposent sans sortir du flux, si bien que le conteneur prend la hauteur
+     du témoignage le plus long. En positionnement absolu, cette hauteur devait
+     être devinée par paliers, et les témoignages longs débordaient sur la
+     section suivante dès que la colonne se resserrait. */
   .testimonial-card {
-    @apply absolute top-0 left-1/2 p-4 md:p-6 lg:p-8 rounded-[10px] bg-beige border-2 border-black flex flex-col md:flex-row justify-between items-start gap-4 md:gap-6 lg:gap-8 opacity-0 pointer-events-none transition-all duration-300;
+    @apply p-4 md:p-6 lg:p-8 rounded-[10px] bg-beige border-2 border-black flex flex-col md:flex-row justify-between items-start gap-4 md:gap-6 lg:gap-8 opacity-0 pointer-events-none transition-all duration-300;
+    grid-area: 1 / 1;
     -webkit-text-fill-color: unset;
-    transform: translateX(-50%);
     filter: drop-shadow(8px 8px 0 var(--color-border));
-    width: calc(100% - 2rem);
-    max-width: 56rem;
   }
 
   @media (max-width: 768px) {
@@ -451,44 +586,20 @@
 
   .testimonial-card.stack-1 {
     @apply opacity-30 z-[9];
-    transform: translateX(-50%) translateY(10px) scale(0.98);
+    transform: translateY(10px) scale(0.98);
   }
 
   .testimonial-card.stack-2 {
     @apply opacity-15 z-[8];
-    transform: translateX(-50%) translateY(20px) scale(0.96);
-  }
-
-  .testimonials-wrapper {
-    @apply max-w-7xl mx-auto;
+    transform: translateY(20px) scale(0.96);
   }
 
   .slider-container {
-    @apply relative py-5;
-    min-height: 340px;
-    padding-bottom: 2rem;
+    @apply relative grid py-5;
+    /* Laisse voir les cartes empilées, décalées vers le bas. */
+    padding-bottom: 2.5rem;
     cursor: grab;
     user-select: none;
-  }
-
-  @media (min-width: 400px) {
-    .slider-container {
-      min-height: 380px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .slider-container {
-      min-height: 420px;
-      padding-bottom: 3rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .slider-container {
-      min-height: 500px;
-      padding-bottom: 5rem;
-    }
   }
 
   .slider-container:active {
@@ -517,27 +628,27 @@
   }
 
   .testimonial-card.rotate-left.active {
-    transform: translateX(-50%) rotate(-1deg);
+    transform: rotate(-1deg);
   }
 
   .testimonial-card.rotate-right.active {
-    transform: translateX(-50%) rotate(1deg);
+    transform: rotate(1deg);
   }
 
   .testimonial-card.rotate-left.stack-1 {
-    transform: translateX(-50%) translateY(10px) scale(0.98) rotate(-1deg);
+    transform: translateY(10px) scale(0.98) rotate(-1deg);
   }
 
   .testimonial-card.rotate-right.stack-1 {
-    transform: translateX(-50%) translateY(10px) scale(0.98) rotate(1deg);
+    transform: translateY(10px) scale(0.98) rotate(1deg);
   }
 
   .testimonial-card.rotate-left.stack-2 {
-    transform: translateX(-50%) translateY(20px) scale(0.96) rotate(-1deg);
+    transform: translateY(20px) scale(0.96) rotate(-1deg);
   }
 
   .testimonial-card.rotate-right.stack-2 {
-    transform: translateX(-50%) translateY(20px) scale(0.96) rotate(1deg);
+    transform: translateY(20px) scale(0.96) rotate(1deg);
   }
 
   .testimonials-nav {

@@ -31,7 +31,7 @@ projectDurationUnit: ans
 projectLink: https://www.iarbre.fr/
 projectGit: https://github.com/TelesCoop/iarbre
 projectEnd: ''
-projectThumbnail: ../../img/projet/iarbre.jpg
+projectThumbnail: /img/projet/iarbre.webp
 projectThumbnailAlt: Capture d'écran du site IA.rbre
 testimony: ''
 ---

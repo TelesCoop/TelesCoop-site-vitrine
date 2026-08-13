@@ -2,7 +2,7 @@
 name: Les Etablis
 client: Juliette Karpa & Corinne Ngotat
 client_poste: Co-fondatrices
-logo: /img/clients/les-etablis.png
+logo: /img/clients/les-etablis.webp
 borderColor: "#ffcd4e"
 order: 4
 draft: false

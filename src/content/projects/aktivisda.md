@@ -19,7 +19,7 @@ projectDurationUnit: ''
 projectLink: https://aktivisda.earth/
 projectGit: https://framagit.org/aktivisda/aktivisda
 projectEnd: ''
-projectThumbnail: ../../img/projet/aktivisda.png
+projectThumbnail: /img/projet/aktivisda.webp
 projectThumbnailAlt: Image d'illustration de Aktivisda
 testimony: La mise à disposition d'Aktivisda à la communauté d'animateur·ices de la Fresque du Climat nous a permis de faciliter la création de visuels personnalisés. Cela donne un degré de liberté dans la conception de matériel de communication tout en permettant un alignement autour de notre univers graphique. Nous avons pu l'intégrer avec notre outil de traduction collaboratif, ce qui permet de faire bénéficier l'outil à l'ensemble des fresqueurs et fresqueuses à travers le monde ! (La Fresque du Climat)
 ---

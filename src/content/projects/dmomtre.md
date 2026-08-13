@@ -22,7 +22,7 @@ projectDurationUnit: 'jours'
 projectLink: https://demometre.org/
 projectGit: ''
 projectEnd: ''
-projectThumbnail: ../../img/projet/demometre.png
+projectThumbnail: /img/projet/demometre.webp
 projectThumbnailAlt: Capture d'écran du site Démomètre, vue sur une question
 testimony: ''
 ---

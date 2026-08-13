@@ -11,15 +11,17 @@ interface Props {
 const { measures } = Astro.props;
 ---
 
-<section class="px-4">
-  <div class="container mx-auto">
+<section>
+  <div class="container mx-auto px-4">
     <div class="mb-12">
       <span class="tag tag-purple tag-xl">
         Nos mesures d'impact
       </span>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+    <!-- Liste de définitions : chaque chiffre est la valeur de l'intitulé qui
+         le suit, et cette relation doit survivre à une lecture non visuelle. -->
+    <dl class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
       {measures.map((measure, index) => {
         const bgColors = ['bg-orange', 'bg-blue', 'bg-green', 'bg-green', 'bg-yellow'];
         const bgColorClass = bgColors[index % bgColors.length];
@@ -37,20 +39,22 @@ const { measures } = Astro.props;
 
         const textColorVar = textColorMap[bgColorClass] || 'text-on-beige';
 
+        // L'intitulé précède sa valeur dans le DOM, comme l'exige une liste de
+        // définitions ; `flex-col-reverse` remet le chiffre au-dessus.
         return (
-          <div class={`card flex-col p-4 md:p-6 text-center ${index % 2 === 0 ? 'rotate-left' : 'rotate-right'}`}>
-            <span
-              class={`w-full text-center text-3xl md:text-4xl lg:text-5xl ${bgColorClass} mb-4 font-display rounded-lg px-3 py-2 inline-block`}
+          <div class={`card flex-col-reverse justify-end p-4 md:p-6 text-center ${index % 2 === 0 ? 'rotate-left' : 'rotate-right'}`}>
+            <dt class="text-base md:text-lg lg:text-2xl font-semibold">
+              {measure.description}
+            </dt>
+            <dd
+              class={`w-full text-3xl md:text-4xl lg:text-5xl ${bgColorClass} mb-4 font-display rounded-lg px-3 py-2`}
               style={`color: var(--${textColorVar})`}
             >
               {measure.value}
-            </span>
-            <span class="text-base md:text-lg lg:text-2xl font-semibold">
-              {measure.description}
-            </span>
+            </dd>
           </div>
         );
       })}
-    </div>
+    </dl>
   </div>
 </section>

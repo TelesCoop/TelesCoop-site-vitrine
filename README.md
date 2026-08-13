@@ -25,6 +25,30 @@ npm run build
 npm run preview
 ```
 
+## Médias
+
+### Optimiser les images
+
+À lancer après tout ajout d'image dans `public/img` (y compris via l'admin) :
+
+```bash
+npm run images:optimize
+```
+
+Le script redimensionne à 1600 px de large maximum, convertit en WebP et met à
+jour les références dans le contenu. Il est idempotent : relancer ne dégrade
+pas les images déjà traitées. Les favicons et l'image Open Graph sont exclues,
+leur format étant imposé.
+
+### Régénérer les favicons
+
+Les icônes sont dérivées d'une source unique décrite dans le script. À relancer
+après toute évolution de l'identité visuelle :
+
+```bash
+npm run favicons
+```
+
 ## Déploiement
 
 Le déploiement est automatique via GitHub Actions à chaque push sur `main`. Le workflow exécute le playbook Ansible `deploy/frontend.yml` qui :

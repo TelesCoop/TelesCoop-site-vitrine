@@ -13,25 +13,39 @@ interface Props {
 const { skills } = Astro.props;
 ---
 
-<section class="px-4">
-  <div class="container mx-auto">
+<section>
+  <div class="container mx-auto px-4">
     <div class="mb-12">
       <span class="tag tag-blue tag-xl">
         Notre offre
       </span>
     </div>
 
+    <!-- Onglets : le domaine choisi commande le panneau affiché. Les rôles ARIA
+         sont indispensables ici — sans eux, un lecteur d'écran annonce une
+         simple liste de boutons, sans dire lequel est sélectionné. -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-      <!-- Navigation à gauche -->
-      <div class="lg:col-span-4 space-y-2">
+      <div
+        class="lg:col-span-4 space-y-2"
+        role="tablist"
+        aria-orientation="vertical"
+        aria-label="Domaines d'intervention"
+      >
         {skills.map((skill, index) => {
           const colors = ['bg-orange', 'bg-blue', 'bg-pink', 'bg-purple', 'bg-green', 'bg-yellow'];
           const colorClass = colors[index % colors.length];
+          const isActive = index === 1;
           return (
             <button
-              class={`skill-nav-btn w-full text-left p-4 border-2 border-black rounded-[10px] transition-all duration-200 ${index === 1 ? 'active' : ''}`}
+              class={`skill-nav-btn w-full text-left p-4 border-2 border-black rounded-[10px] transition-all duration-200 ${isActive ? 'active' : ''}`}
               data-skill-index={index}
               data-color={colorClass}
+              type="button"
+              role="tab"
+              id={`skill-tab-${index}`}
+              aria-controls={`skill-panel-${index}`}
+              aria-selected={isActive ? 'true' : 'false'}
+              tabindex={isActive ? 0 : -1}
             >
               <span class="text-base md:text-lg lg:text-xl font-display uppercase">{skill.name}</span>
             </button>
@@ -39,27 +53,27 @@ const { skills } = Astro.props;
         })}
       </div>
 
-      <!-- Contenu à droite -->
       <div class="lg:col-span-8">
         {skills.map((skill, index) => (
           <div
             class={`skill-content ${index === 1 ? 'active' : 'hidden'}`}
             data-skill-content={index}
+            id={`skill-panel-${index}`}
+            role="tabpanel"
+            aria-labelledby={`skill-tab-${index}`}
+            tabindex="0"
           >
             <div class="space-y-6">
-              <h3 class="text-2xl md:text-3xl lg:text-4xl uppercase font-normal">
+              <h3 class="section-title">
                 {skill.name}
               </h3>
               <p class="text-black text-lg md:text-xl lg:text-2xl leading-relaxed">{skill.description}</p>
               {skill.items && skill.items.length > 0 && (
                 <div>
-                  <h4 class="font-semibold text-lg md:text-xl mb-4">Nos services :</h4>
-                  <ul class="space-y-3">
+                  <h4 class="meta-label text-black mb-4">Nos services</h4>
+                  <ul class="list-disc pl-6 space-y-3 marker:text-black">
                     {skill.items.map((item) => (
-                      <li class="flex items-start gap-3">
-                        <span class="text-black text-lg md:text-xl">•</span>
-                        <span class="text-black text-base md:text-lg lg:text-xl">{item}</span>
-                      </li>
+                      <li class="text-black text-base md:text-lg lg:text-xl">{item}</li>
                     ))}
                   </ul>
                 </div>
@@ -119,29 +133,43 @@ const { skills } = Astro.props;
 </style>
 
 <script>
-  const navButtons = document.querySelectorAll('.skill-nav-btn');
-  const contentSections = document.querySelectorAll('.skill-content');
+  const navButtons = [...document.querySelectorAll<HTMLButtonElement>('.skill-nav-btn')];
+  const contentSections = [...document.querySelectorAll('.skill-content')];
+
+  function selectSkill(index: number, moveFocus = false) {
+    navButtons.forEach((button, position) => {
+      const isActive = position === index;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-selected', String(isActive));
+      // Un seul onglet reste atteignable au Tab : les flèches circulent entre
+      // eux, comme l'attend le motif ARIA des onglets.
+      button.tabIndex = isActive ? 0 : -1;
+    });
+
+    contentSections.forEach((section, position) => {
+      const isActive = position === index;
+      section.classList.toggle('active', isActive);
+      section.classList.toggle('hidden', !isActive);
+    });
+
+    if (moveFocus) navButtons[index]?.focus();
+  }
 
   navButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-      // Remove active class from all buttons
-      navButtons.forEach(btn => btn.classList.remove('active'));
+    button.addEventListener('click', () => selectSkill(index));
 
-      // Add active class to clicked button
-      button.classList.add('active');
+    button.addEventListener('keydown', (event) => {
+      const deplacements: Record<string, number> = {
+        ArrowUp: -1,
+        ArrowLeft: -1,
+        ArrowDown: 1,
+        ArrowRight: 1,
+      };
+      const pas = deplacements[event.key];
+      if (pas === undefined) return;
 
-      // Hide all content sections
-      contentSections.forEach(section => {
-        section.classList.remove('active');
-        section.classList.add('hidden');
-      });
-
-      // Show corresponding content
-      const targetContent = document.querySelector(`[data-skill-content="${index}"]`);
-      if (targetContent) {
-        targetContent.classList.add('active');
-        targetContent.classList.remove('hidden');
-      }
+      event.preventDefault();
+      selectSkill((index + pas + navButtons.length) % navButtons.length, true);
     });
   });
 </script>

@@ -23,7 +23,7 @@ projectDurationUnit: ''
 projectLink: ''
 projectGit: ''
 projectEnd: '2022'
-projectThumbnail: ../../img/projet/mangmap.png
+projectThumbnail: /img/projet/mangmap.webp
 projectThumbnailAlt: Capture d'écran de l'outil MangMap
 testimony: ''
 ---

@@ -20,6 +20,11 @@ export default {
           DEFAULT: '#FFFFFF',
         },
         black: 'var(--color-border, #000000)',
+        /* Les couleurs de la charte sont des variables CSS : les modificateurs
+           d'opacité de Tailwind (`text-black/70`) ne peuvent pas s'y appliquer.
+           Les nuances atténuées sont donc déclarées comme couleurs sémantiques. */
+        muted: 'color-mix(in srgb, var(--color-text, #000000) 70%, transparent)',
+        divider: 'color-mix(in srgb, var(--color-border, #000000) 20%, transparent)',
         beige: {
           DEFAULT: 'var(--color-beige, #FFF9F0)',
           dark: '#C4B89E',

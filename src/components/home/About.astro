@@ -1,29 +1,38 @@
 ---
 ---
 
-<section class="px-4">
-  <div class="container mx-auto max-w-4xl">
+<section>
+  <div class="container mx-auto px-4">
     <div class="mb-12">
       <span class="tag tag-pink tag-xl">
         Qui sommes-nous ?
       </span>
     </div>
-    <div class="space-y-8 text-black leading-relaxed">
-      <p class="text-xl md:text-2xl lg:text-3xl">
-        Fondée en 2020, <strong class="font-semibold text-black">TelesCoop est une société coopérative et participative (SCOP) accréditée ESUS</strong>
-        spécialisée dans le développement web et la création d'outils numériques sur-mesure.
-      </p>
-      <p class="text-xl md:text-2xl lg:text-3xl">
-        Nous accompagnons <strong class="font-semibold text-black">associations, collectivités territoriales et entreprises engagées</strong>
+    <!-- Le premier paragraphe pose l'identité et reste en grand ; les deux
+         suivants passent en colonnes à un corps plus petit. Empilés à la même
+         taille, les quatre formaient un mur sans point d'entrée. -->
+    <p class="text-2xl md:text-3xl lg:text-4xl leading-snug max-w-4xl">
+      Fondée en 2020, <strong class="font-semibold">TelesCoop est une société coopérative et participative (SCOP) accréditée ESUS</strong>
+      spécialisée dans le développement web et la création d'outils numériques sur-mesure.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 mt-14 max-w-5xl">
+      <p class="text-lg md:text-xl leading-relaxed">
+        Nous accompagnons <strong class="font-semibold">associations, collectivités territoriales et entreprises engagées</strong>
         dans la réalisation de leurs projets numériques à impact positif. Du conseil stratégique au développement technique,
         en passant par le design d'interface, nous couvrons l'ensemble du cycle de vie de vos produits.
       </p>
-      <p class="text-xl md:text-2xl lg:text-3xl">
-        Notre équipe est unie autour de valeurs communes : <strong class="font-semibold text-black">écologie, justice sociale,
+      <p class="text-lg md:text-xl leading-relaxed">
+        Notre équipe est unie autour de valeurs communes : <strong class="font-semibold">écologie, justice sociale,
         transparence et coopération.</strong> Nous privilégions les technologies open-source, l'éco-conception et
         les pratiques responsables pour construire un numérique plus éthique et durable.
       </p>
-      <p class="text-lg md:text-xl lg:text-2xl">
+    </div>
+
+    <!-- Le filet reprend la largeur des colonnes ; seul le texte reste plus
+         étroit, pour garder une longueur de ligne confortable. -->
+    <div class="mt-14 pt-8 border-t-2 border-black max-w-5xl">
+      <p class="text-lg md:text-xl leading-relaxed max-w-3xl">
         Nous restons des humains imparfaits, en apprentissage permanent, mais engagé·e·s
         dans une démarche de progrès et d'amélioration continue.
       </p>
