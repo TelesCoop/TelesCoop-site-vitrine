@@ -9,3 +9,4 @@ gi
 !src/**/*.css
 .DS_Store
 dist
+.astro

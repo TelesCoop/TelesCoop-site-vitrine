@@ -34,7 +34,7 @@ const palettesData = palettes.map(p => ({
   <div
     id="palette-menu"
     class="hidden absolute bottom-16 right-0 bg-beige border-2 border-black rounded-[10px] p-4 min-w-[250px]"
-    style="filter: drop-shadow(8px 8px 0 var(--color-border));"
+    style="filter: drop-shadow(8px 8px 0 var(--palette-border));"
   >
     <h3 class="subsection-title text-lg mb-4">Palettes de couleurs</h3>
     <div class="space-y-2">
@@ -75,7 +75,7 @@ const palettesData = palettes.map(p => ({
   function applyPalette(colors, textColors, paletteId) {
     const root = document.documentElement;
     Object.entries(colors).forEach(([key, value]) => {
-      root.style.setProperty(`--color-${key}`, value);
+      root.style.setProperty(`--palette-${key}`, value);
     });
 
     // Apply text colors if provided

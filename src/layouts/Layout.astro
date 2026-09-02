@@ -172,12 +172,14 @@ const imageUrl = new URL(image, Astro.site);
 </html>
 
 <style>
+  @reference "../styles/global.css";
+
   .skip-to-content {
     position: absolute;
     left: -9999px;
     z-index: 999;
     padding: 1rem 1.5rem;
-    background-color: var(--color-orange);
+    background-color: var(--palette-orange);
     @apply text-black;
     text-decoration: none;
     border-radius: 0 0 0.5rem 0.5rem;

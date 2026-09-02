@@ -1,13 +1,15 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 // Collection pour les données YAML (configuration, etc.)
 const dataCollection = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '**/*.yaml', base: './src/content/data' }),
 });
 
 // Collection pour les projets en Markdown
 const projectsCollection = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/projects' }),
   schema: z.object({
     title: z.string(),
     categories: z.array(z.string()).optional(),
@@ -30,7 +32,7 @@ const projectsCollection = defineCollection({
 
 // Collection pour les articles de blog en Markdown
 const blogCollection = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/blog' }),
   schema: z.object({
     title: z.string(),
     date: z.date(),
@@ -43,7 +45,7 @@ const blogCollection = defineCollection({
 
 // Collection pour les témoignages en Markdown
 const testimonialsCollection = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/testimonials' }),
   schema: z.object({
     name: z.string(),
     client: z.string(),
@@ -57,7 +59,7 @@ const testimonialsCollection = defineCollection({
 
 // Collection pour les palettes de couleurs
 const palettesCollection = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/palettes' }),
   schema: z.object({
     name: z.string(),
     id: z.string(),

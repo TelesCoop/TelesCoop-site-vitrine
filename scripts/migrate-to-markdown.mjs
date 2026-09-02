@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import yaml from 'js-yaml';
+import { load, dump } from 'js-yaml';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -26,7 +26,7 @@ function migrateProjects() {
     path.join(projectRoot, 'src/content/data/projects.yaml'),
     'utf8'
   );
-  const projects = yaml.load(projectsYaml);
+  const projects = load(projectsYaml);
 
   projects.forEach((project, index) => {
     const slug = slugify(project.title);
@@ -52,7 +52,7 @@ function migrateProjects() {
     const content = project.projectDescription || '';
 
     const markdown = `---
-${yaml.dump(frontmatter, { lineWidth: -1 })}---
+${dump(frontmatter, { lineWidth: -1 })}---
 
 ${content}
 `;
@@ -73,7 +73,7 @@ function migrateBlog() {
     path.join(projectRoot, 'src/content/data/blog.yaml'),
     'utf8'
   );
-  const articles = yaml.load(blogYaml);
+  const articles = load(blogYaml);
 
   articles.forEach((article) => {
     const slug = slugify(article.title);
@@ -88,7 +88,7 @@ function migrateBlog() {
     const content = article.content || '';
 
     const markdown = `---
-${yaml.dump(frontmatter, { lineWidth: -1 })}---
+${dump(frontmatter, { lineWidth: -1 })}---
 
 ${content}
 `;
@@ -109,7 +109,7 @@ function migrateTeam() {
     path.join(projectRoot, 'src/content/data/employees.yaml'),
     'utf8'
   );
-  const employees = yaml.load(employeesYaml);
+  const employees = load(employeesYaml);
 
   employees.forEach((employee, index) => {
     const slug = slugify(employee.name);
@@ -123,7 +123,7 @@ function migrateTeam() {
     const content = employee.bio || '';
 
     const markdown = `---
-${yaml.dump(frontmatter, { lineWidth: -1 })}---
+${dump(frontmatter, { lineWidth: -1 })}---
 
 ${content}
 `;

@@ -2,21 +2,21 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 import { getImageDimensions } from '../../utils/images';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects', ({ data }) => !data.draft);
 
   return projects.map((project) => ({
-    params: { slug: project.slug },
+    params: { slug: project.id },
     props: { project }
   }));
 }
 
 const { project } = Astro.props;
 const { data, body } = project;
-const { Content } = await project.render();
+const { Content } = await render(project);
 const categories = await getEntry('data', 'categories');
 const categoriesData = categories?.data || {};
 
@@ -102,7 +102,7 @@ const thumbnailDimensions = data.projectThumbnail
 
             <!-- Testimony -->
             {data.testimony && (
-              <div class="bg-white p-10 rounded-[10px] border-2 border-black relative" style="filter: drop-shadow(8px 8px 0 var(--color-border));">
+              <div class="bg-white p-10 rounded-[10px] border-2 border-black relative" style="filter: drop-shadow(8px 8px 0 var(--palette-border));">
                 <div class="text-8xl mb-4 leading-none text-purple absolute top-0 left-6">"</div>
                 <p class="text-2xl text-black leading-relaxed italic mb-6 mt-8">{data.testimony}</p>
                 {data.clientName && (

@@ -87,17 +87,19 @@ const { skills } = Astro.props;
 </section>
 
 <style>
+  @reference "../../styles/global.css";
+
   .skill-nav-btn {
     @apply bg-beige;
   }
 
   .skill-nav-btn.active {
-    filter: drop-shadow(4px 4px 0 var(--color-border));
+    filter: drop-shadow(4px 4px 0 var(--palette-border));
     transform: translate3d(2px, 2px, 0);
   }
 
   .skill-nav-btn:hover:not(.active) {
-    filter: drop-shadow(2px 2px 0 var(--color-border));
+    filter: drop-shadow(2px 2px 0 var(--palette-border));
     transform: translate3d(1px, 1px, 0);
   }
 

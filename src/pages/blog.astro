@@ -8,7 +8,9 @@ import { getCollection, getEntry } from 'astro:content';
 const blogCollection = await getCollection('blog', ({ data }) => !data.draft);
 const categories = await getEntry('data', 'categories');
 
-const blogData = blogCollection.map(a => ({ ...a.data, slug: a.slug, content: a.body }));
+const blogData = blogCollection
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .map(a => ({ ...a.data, slug: a.id, content: a.body }));
 const categoriesData = categories?.data || {};
 
 const title = 'Notre blog';

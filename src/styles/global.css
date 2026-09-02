@@ -1,6 +1,52 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 25rem;
+
+  --color-primary: var(--palette-border, #000000);
+  --color-primary-light: #333333;
+  --color-secondary: #FFFFFF;
+  --color-black: var(--palette-border, #000000);
+
+  /* Les couleurs de la charte sont des variables CSS : les modificateurs
+     d'opacité de Tailwind (`text-black/70`) ne peuvent pas s'y appliquer.
+     Les nuances atténuées sont donc déclarées comme couleurs sémantiques. */
+  --color-muted: color-mix(in srgb, var(--palette-text, #000000) 70%, transparent);
+  --color-divider: color-mix(in srgb, var(--palette-border, #000000) 20%, transparent);
+
+  --color-beige: var(--palette-beige, #FFF9F0);
+  --color-beige-dark: #C4B89E;
+  --color-yellow: var(--palette-yellow, #FFB948);
+  --color-yellow-dark: #CC8F1A;
+  --color-orange: var(--palette-orange, #D66A00);
+  --color-orange-dark: #CC6500;
+  --color-green: var(--palette-green, #00C763);
+  --color-green-dark: #00A355;
+  --color-blue: var(--palette-blue, #4A1BC7);
+  --color-blue-dark: #2A009E;
+  --color-purple: var(--palette-purple, #6929C7);
+  --color-purple-dark: #6B1FCC;
+  --color-pink: var(--palette-pink, #FF6BA3);
+  --color-pink-dark: #CC2F61;
+  --color-coral: var(--palette-coral, #FF6B4A);
+  --color-coral-dark: #CC4426;
+  --color-peach: var(--palette-peach, #FFAD7A);
+  --color-peach-dark: #CC7D4A;
+
+  --color-gray-50: #FAFAFA;
+  --color-gray-100: #F5F5F5;
+  --color-gray-200: #EEEEEE;
+  --color-gray-300: #E0E0E0;
+  --color-gray-400: #BDBDBD;
+  --color-gray-500: #9E9E9E;
+  --color-gray-600: #757575;
+  --color-gray-700: #616161;
+  --color-gray-800: #424242;
+  --color-gray-900: #212121;
+
+  --font-sans: 'Barlow Condensed', system-ui, -apple-system, sans-serif;
+  --font-display: 'Anton', Impact, sans-serif;
+}
 
 @font-face {
   font-family: 'Anton';
@@ -53,17 +99,17 @@
 @layer base {
   :root {
     /* Peps color palette (default) - can be overridden by JavaScript */
-    --color-beige: #FFF9F0;
-    --color-yellow: #FFB948;
-    --color-orange: #D66A00;
-    --color-green: #00C763;
-    --color-blue: #4A1BC7;
-    --color-purple: #6929C7;
-    --color-pink: #FF6BA3;
-    --color-coral: #FF6B4A;
-    --color-peach: #FFAD7A;
-    --color-border: #000000;
-    --color-text: #000000;
+    --palette-beige: #FFF9F0;
+    --palette-yellow: #FFB948;
+    --palette-orange: #D66A00;
+    --palette-green: #00C763;
+    --palette-blue: #4A1BC7;
+    --palette-purple: #6929C7;
+    --palette-pink: #FF6BA3;
+    --palette-coral: #FF6B4A;
+    --palette-peach: #FFAD7A;
+    --palette-border: #000000;
+    --palette-text: #000000;
 
     /* Text colors for each background color */
     --text-on-yellow: #000000;
@@ -98,23 +144,23 @@
   body.monochrome-mode .card,
   body.monochrome-mode .tag,
   body.monochrome-mode .badge {
-    filter: grayscale(100%) drop-shadow(8px 8px 0 var(--color-border));
+    filter: grayscale(100%) drop-shadow(8px 8px 0 var(--palette-border));
   }
 
   body.monochrome-mode .btn:hover {
-    filter: grayscale(100%) drop-shadow(4px 4px 0 var(--color-border));
+    filter: grayscale(100%) drop-shadow(4px 4px 0 var(--palette-border));
   }
 
   body.monochrome-mode .btn:active {
-    filter: grayscale(100%) drop-shadow(0 0 0 var(--color-border));
+    filter: grayscale(100%) drop-shadow(0 0 0 var(--palette-border));
   }
 
   body.monochrome-mode .tag:hover {
-    filter: grayscale(100%) drop-shadow(2px 2px 0 var(--color-border));
+    filter: grayscale(100%) drop-shadow(2px 2px 0 var(--palette-border));
   }
 
   body.monochrome-mode .badge {
-    filter: grayscale(100%) drop-shadow(3px 3px 0 var(--color-border));
+    filter: grayscale(100%) drop-shadow(3px 3px 0 var(--palette-border));
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -125,10 +171,16 @@
     @apply leading-relaxed text-lg md:text-xl;
   }
 
+  /* Le preflight de Tailwind laisse le curseur par défaut sur les boutons. */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
   /* Anneau de focus unique pour tout le site : l'outline par défaut du
      navigateur est peu lisible sur le fond beige et sous les drop-shadows. */
   :focus-visible {
-    outline: 3px solid var(--color-border);
+    outline: 3px solid var(--palette-border);
     outline-offset: 3px;
   }
 
@@ -152,42 +204,42 @@
    utilitaires appliqués au cas par cas, la densité dépendant du contexte.
    Le suffixe `-doc` désigne la déclinaison éditoriale : même échelle, casse
    naturelle, pour les textes longs (articles, pages légales). */
+@utility page-title {
+  @apply text-5xl md:text-6xl uppercase;
+}
+
+@utility page-title-doc {
+  @apply text-4xl md:text-5xl normal-case;
+}
+
+@utility section-title {
+  @apply text-3xl md:text-4xl uppercase;
+}
+
+@utility section-title-doc {
+  @apply text-2xl md:text-3xl normal-case;
+}
+
+@utility subsection-title {
+  @apply text-xl md:text-2xl uppercase;
+}
+
+/* Titres de cartes : Barlow gras, pour se distinguer des titres de section
+   en Anton et rester lisible sur des libellés longs. */
+@utility card-title {
+  @apply font-sans font-bold text-xl md:text-2xl uppercase;
+}
+
+@utility card-title-doc {
+  @apply font-sans font-bold text-xl md:text-2xl normal-case;
+}
+
+/* Intitulé de métadonnée : statut, durée, catégorie de filtre. */
+@utility meta-label {
+  @apply text-base uppercase text-muted;
+}
+
 @layer components {
-  .page-title {
-    @apply text-5xl md:text-6xl uppercase;
-  }
-
-  .page-title-doc {
-    @apply text-4xl md:text-5xl normal-case;
-  }
-
-  .section-title {
-    @apply text-3xl md:text-4xl uppercase;
-  }
-
-  .section-title-doc {
-    @apply text-2xl md:text-3xl normal-case;
-  }
-
-  .subsection-title {
-    @apply text-xl md:text-2xl uppercase;
-  }
-
-  /* Titres de cartes : Barlow gras, pour se distinguer des titres de section
-     en Anton et rester lisible sur des libellés longs. */
-  .card-title {
-    @apply font-sans font-bold text-xl md:text-2xl uppercase;
-  }
-
-  .card-title-doc {
-    @apply font-sans font-bold text-xl md:text-2xl normal-case;
-  }
-
-  /* Intitulé de métadonnée : statut, durée, catégorie de filtre. */
-  .meta-label {
-    @apply text-base uppercase text-muted;
-  }
-
   /* Contenu long rendu depuis Markdown : articles, descriptions de projet,
      pages légales. Source unique de vérité pour le rythme de lecture, afin que
      les styles ne divergent pas d'une page à l'autre. */
@@ -237,7 +289,7 @@
   }
 
   .rich-text code {
-    @apply bg-beige-dark px-2 py-1 rounded text-base;
+    @apply bg-beige-dark px-2 py-1 rounded-sm text-base;
   }
 
   .rich-text img {
@@ -246,7 +298,7 @@
 
   .rich-text blockquote {
     @apply bg-beige border-2 border-black rounded-[10px] px-6 py-5 my-10;
-    filter: drop-shadow(6px 6px 0 var(--color-border));
+    filter: drop-shadow(6px 6px 0 var(--palette-border));
   }
 
   .rich-text blockquote p {
@@ -264,36 +316,40 @@
     @apply px-4 py-2 bg-beige text-black border-2 border-black rounded-[10px] cursor-pointer font-light tracking-wider font-display uppercase transition-all duration-200 text-base;
     -webkit-text-fill-color: unset;
     transform: translate3d(0, 0, 0);
-    filter: drop-shadow(8px 8px 0 var(--color-border));
+    filter: drop-shadow(8px 8px 0 var(--palette-border));
   }
 
   .btn:hover {
-    filter: drop-shadow(4px 4px 0 var(--color-border));
+    filter: drop-shadow(4px 4px 0 var(--palette-border));
     transform: translate3d(4px, 4px, 0);
   }
 
   .btn:active {
-    filter: drop-shadow(0 0 0 var(--color-border));
+    filter: drop-shadow(0 0 0 var(--palette-border));
     transform: translate3d(8px, 8px, 0);
   }
 
-  /* Button sizes */
-  .btn-sm {
-    @apply text-sm px-3 py-1.5;
-  }
+}
 
-  .btn-md {
-    @apply text-base px-4 py-2;
-  }
+/* Tailles de bouton. `@utility` et non `@layer components` : Tailwind ne génère
+   les variantes responsives (`md:btn-lg`) que pour les classes déclarées ainsi. */
+@utility btn-sm {
+  @apply text-sm px-3 py-1.5;
+}
 
-  .btn-lg {
-    @apply text-lg px-6 py-3;
-  }
+@utility btn-md {
+  @apply text-base px-4 py-2;
+}
 
-  .btn-xl {
-    @apply text-xl px-8 py-4;
-  }
+@utility btn-lg {
+  @apply text-lg px-6 py-3;
+}
 
+@utility btn-xl {
+  @apply text-xl px-8 py-4;
+}
+
+@layer components {
   /* Button colors */
   .btn-yellow {
     @apply bg-yellow;
@@ -345,11 +401,11 @@
     text-fill-color: unset;
     -webkit-text-fill-color: unset;
     transform: translate3d(0, 0, 0);
-    filter: drop-shadow(8px 8px 0 var(--color-border));
+    filter: drop-shadow(8px 8px 0 var(--palette-border));
   }
 
   .card:hover {
-    filter: drop-shadow(4px 4px 0 var(--color-border));
+    filter: drop-shadow(4px 4px 0 var(--palette-border));
     transform: translate3d(4px, 4px, 0);
   }
 
@@ -362,12 +418,12 @@
   }
 
   .card.rotate-left:hover {
-    filter: drop-shadow(4px 4px 0 var(--color-border));
+    filter: drop-shadow(4px 4px 0 var(--palette-border));
     transform: translate3d(4px, 4px, 0) rotate(-1deg);
   }
 
   .card.rotate-right:hover {
-    filter: drop-shadow(4px 4px 0 var(--color-border));
+    filter: drop-shadow(4px 4px 0 var(--palette-border));
     transform: translate3d(4px, 4px, 0) rotate(1deg);
   }
 
@@ -377,11 +433,11 @@
     text-fill-color: unset;
     -webkit-text-fill-color: unset;
     transform: translate3d(0, 0, 0);
-    filter: drop-shadow(4px 4px 0 var(--color-border));
+    filter: drop-shadow(4px 4px 0 var(--palette-border));
   }
 
   .tag:hover {
-    filter: drop-shadow(2px 2px 0 var(--color-border));
+    filter: drop-shadow(2px 2px 0 var(--palette-border));
     transform: translate3d(2px, 2px, 0);
   }
 
@@ -450,17 +506,17 @@
 
   .filter-btn {
     @apply py-1.5 px-2.5 text-lg text-center uppercase font-bold font-sans rounded-[10px] border-2 cursor-pointer transition-all duration-200;
-    filter: drop-shadow(3px 3px 0 var(--color-border));
+    filter: drop-shadow(3px 3px 0 var(--palette-border));
     transform: translate3d(0, 0, 0);
   }
 
   .filter-btn:hover:not(.active) {
-    filter: drop-shadow(2px 2px 0 var(--color-border));
+    filter: drop-shadow(2px 2px 0 var(--palette-border));
     transform: translate3d(1px, 1px, 0);
   }
 
   .filter-btn.active {
-    filter: drop-shadow(4px 4px 0 var(--color-border));
+    filter: drop-shadow(4px 4px 0 var(--palette-border));
     transform: translate3d(2px, 2px, 0) scale(1.02);
   }
 
@@ -513,7 +569,7 @@
   .badge {
     @apply py-1 px-3 rounded-[10px] border-2 border-black inline-block text-sm font-semibold uppercase bg-beige text-black;
     transform: translate3d(0, 0, 0);
-    filter: drop-shadow(3px 3px 0 var(--color-border));
+    filter: drop-shadow(3px 3px 0 var(--palette-border));
   }
 
   /* Badge colors */
@@ -571,12 +627,12 @@
     @apply p-4 md:p-6 lg:p-8 rounded-[10px] bg-beige border-2 border-black flex flex-col md:flex-row justify-between items-start gap-4 md:gap-6 lg:gap-8 opacity-0 pointer-events-none transition-all duration-300;
     grid-area: 1 / 1;
     -webkit-text-fill-color: unset;
-    filter: drop-shadow(8px 8px 0 var(--color-border));
+    filter: drop-shadow(8px 8px 0 var(--palette-border));
   }
 
   @media (max-width: 768px) {
     .testimonial-card {
-      filter: drop-shadow(4px 4px 0 var(--color-border));
+      filter: drop-shadow(4px 4px 0 var(--palette-border));
     }
   }
 
@@ -657,11 +713,11 @@
 
   .nav-dot {
     @apply w-12 h-12 rounded-[10px] bg-beige border-2 border-black flex items-center justify-center cursor-pointer transition-all duration-200 font-display text-base text-black;
-    filter: drop-shadow(4px 4px 0 var(--color-border));
+    filter: drop-shadow(4px 4px 0 var(--palette-border));
   }
 
   .nav-dot:hover {
-    filter: drop-shadow(2px 2px 0 var(--color-border));
+    filter: drop-shadow(2px 2px 0 var(--palette-border));
     transform: translate3d(2px, 2px, 0);
   }
 

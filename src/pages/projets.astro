@@ -10,7 +10,7 @@ const projectsCollection = await getCollection('projects', ({ data }) => !data.d
 const categories = await getEntry('data', 'categories');
 
 const projectsData = projectsCollection
-  .map(p => ({ ...p.data, slug: p.slug, content: p.body }))
+  .map(p => ({ ...p.data, slug: p.id, content: p.body }))
   .sort((a, b) => {
     const hasEndA = !!a.projectEnd;
     const hasEndB = !!b.projectEnd;
@@ -63,7 +63,7 @@ function slugify(text: string) {
               type="text"
               id="search-input"
               placeholder="Nom du projet, description..."
-              class="w-full px-4 py-2 border-2 border-black rounded-[10px] focus:outline-none focus:ring-2 focus:ring-orange"
+              class="w-full px-4 py-2 border-2 border-black rounded-[10px] focus:outline-hidden focus:ring-2 focus:ring-orange"
             />
           </div>
 
